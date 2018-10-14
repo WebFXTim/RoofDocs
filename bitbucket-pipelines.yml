@@ -16,10 +16,9 @@ pipelines:
               - echo "Building and Deploying the master branch."
               # - npm install -- NOT SURE I NEED TO DO THIS
               # - npm run build -- DITTO
-        - step:
+        - step: #TODO - Package this up into a nice folder
             name: Deploy to S3
             deployment: production   # set to test, staging or production
-            # trigger: manual  # uncomment to have a manual step
             image: atlassian/pipelines-awscli
             script:
               - echo "Deploying to AWS S3"
