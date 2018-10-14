@@ -12,7 +12,7 @@ pipelines:
         name: RoofDocsWebProd
         deployment: production # set to test, staging or production
         # trigger: manual  # uncomment to have a manual step
-        image: deployments/WebProd
+        image: deployments/web/prod
         script:
           - aws s3 sync --delete . s3://$S3_BUCKET
 
