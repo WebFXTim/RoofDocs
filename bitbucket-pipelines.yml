@@ -21,9 +21,9 @@ pipelines:
             name: Deploy to S3
             deployment: production   # set to test, staging or production
             # trigger: manual  # uncomment to have a manual step
-            image: deployments/web
+            image: atlassian/pipelines-awscli
             script:
-              - aws s3 sync --delete . s3://$S3_BUCKET
+              - aws s3 sync --delete . s3://$S3_BUCKET/deployments/web/prod
 
             
 
