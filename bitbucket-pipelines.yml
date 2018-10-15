@@ -22,7 +22,7 @@ pipelines:
       # trigger: manual  # uncomment to have a manual step
       image: atlassian/pipelines-awscli
       script:
-        - aws deploy push --application-name $APPLICATION_NAME --s3-location s3://$S3_BUCKET/test --ignore-hidden-files
+        - aws deploy push --application-name $APPLICATION_NAME --s3-location s3://$S3_BUCKET/test --region us-east-1 --ignore-hidden-files
         - aws deploy create-deployment --application-name $APPLICATION_NAME --s3-location bucket=$S3_BUCKET,key=test,bundleType=zip --deployment-group-name $DEPLOYMENT_GROUP_NAME
     
 
