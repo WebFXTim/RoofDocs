@@ -3,26 +3,20 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: node:6.9.4
+image: node:7.5.0
 
 pipelines:
-  branches:
-      master:
-        - step:
-            name: Build Application
-            caches:
-              - node
-            script:
-              - echo "Building and Deploying the master branch."
-              # - npm install -- NOT SURE I NEED TO DO THIS
-              # - npm run build -- DITTO
-        - step: #TODO - Package this up into a nice folder
-            name: Deploy to S3
-            deployment: production   # set to test, staging or production
-            image: atlassian/pipelines-awscli
-            script:
-              - echo "Deploying to AWS S3"
-              - aws s3 sync --delete . s3://$S3_BUCKET
+  default:
+    - step:
+        script:
+          - echo "Starting Deployment Process"
+          - apt-get update && apt-get install -y python-dev
+          - curl -O https://bootstrap.pypa.io/get-pip.py
+          - python get-pip.py
+          - pip install awscli
+          - aws deploy push --application-name $APPLICATION_NAME --s3-location s3://$S3_BUCKET/test --ignore-hidden-files
+          - aws deploy create-deployment --application-name $APPLICATION_NAME --s3-location bucket=$S3_BUCKET,key=test,bundleType=zip --deployment-group-name $DEPLOYMENT_GROUP_NAME
+
 
             
 
