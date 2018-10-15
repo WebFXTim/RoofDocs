@@ -8,6 +8,7 @@ image: node:7.5.0
 pipelines:
   default:
     - step:
+        image: atlassian/pipelines-awscli
         script:
           - echo "Starting Deployment Process"
           - apt-get update && apt-get install -y python-dev
