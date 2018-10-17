@@ -16,13 +16,11 @@ pipelines:
       # script:
         # - aws s3 sync --delete . s3://$S3_BUCKET
   - step:
-      # set AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY and AWS_DEFAULT_REGION as environment variables
-      name: Deploy to AWS
+      name: Upload to S3
       deployment: production # set to test, staging or production
-      # trigger: manual  # uncomment to have a manual step
       image: atlassian/pipelines-awscli
       script:
-        - aws deploy push --application-name $APPLICATION_NAME --s3-location s3://$S3_BUCKET/prod.zip --ignore-hidden-files
+        - aws deploy push --application-name $APPLICATION_NAME --s3-location s3://$S3_BUCKET/prod --ignore-hidden-files
         - aws deploy create-deployment --application-name $APPLICATION_NAME --s3-location bucket=$S3_BUCKET,key=prod,bundleType=zip --deployment-group-name $DEPLOYMENT_GROUP_NAME
     
 
