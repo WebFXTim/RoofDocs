@@ -18,12 +18,14 @@ class App extends Component {
           <header className="App-header">
                 <img src={logo} className="homeLogo" alt="logo" />
           </header>
-          <div className="navigation">
-              <ul>
-                  <a href="/"> <li> Meet The Docs </li> </a>
-                  <a href="#ourServices"> <li>Our Services </li> </a>
-                  <a href="#stormDamage"> <li>Storm Damage </li> </a>
-              </ul>
+          <div className="navigation d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+              <a href="/"><img src={footerLogo} alt="navigation logo" className="navLogo my-0 mr-md-auto font-weight-normal" /></a>
+              <nav className="my-2 my-md-0 mr-md-3">
+                  <a className="p-2-roofer text-dark-roofer" href="#ourServices">OUR SERVICES</a>
+                  <a className="p-2-roofer text-dark-roofer" href="#stormDamage">STORM DAMAGE</a>
+                  <a className="p-2-roofer text-dark-roofer" href="/">MEET THE DOCS</a>
+              </nav>
+              <a className="btn btn-outline-primary-roofer" href="http://portal.theroofdocs.com"> Client Portal </a>
           </div>
           <div className="ourServices" id="ourServices">
                 <div className="servicesHeader">

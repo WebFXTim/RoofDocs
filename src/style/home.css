@@ -7,14 +7,14 @@
   width: 100%;
 }
 
+/* 168, 36, 27*/
+
 /************** NAVIGATION **********/
 .navigation {
   width: 100%;
-  height: 60px;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
 }
 
 .navigation ul {
@@ -24,6 +24,13 @@
   overflow: hidden;
   height: 100%;
 
+}
+
+.navLogo {
+  height: 70px;
+  width: auto;
+  margin-top: 5px;
+  margin-right: 25px !important;
 }
 
 .navigation li {
@@ -53,6 +60,29 @@
   height: 100%;
   margin: 30px;
 }
+
+/* BOOTSTRAP TWEAKS */
+.btn-outline-primary-roofer {
+  color: rgb(168, 36, 27);
+  border-color: rgb(168, 36, 27)!important;
+}
+
+.btn-outline-primary-roofer:hover {
+  color: white;
+  background-color: rgb(168, 36, 27);
+  border-color: rgb(168, 36, 27)!important;
+}
+
+
+.p-2-roofer {
+  padding: 1.5rem!important;
+}
+
+.text-dark-roofer {
+  color: rgb(168, 36, 27)!important;
+  font: 16px Arial Black, Arial Bold, Gadget, sans-serif;
+}
+
 
 /************** SERVICES **********/
 .ourServices {
@@ -92,6 +122,8 @@
 .servicesItem {
   width: 100%;
 }
+
+
 
 .servicesItem p {
   color: rgb(208, 37, 45);
