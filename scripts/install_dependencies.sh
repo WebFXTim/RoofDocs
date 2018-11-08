@@ -1,8 +1,10 @@
 #!/bin/bash
 
-# remove site
-rm -rf /home/ec2-user/web
-echo "Previous Site Removed"
-mkdir /home/ec2-user/web
-cwd /home/ec2-user/web
-npm install
+# Remove Old Directory
+if [ -d /home/ec2-user/roofdocs-web ]; then
+   rm -rf /home/ec2-user/roofdocs-web
+fi
+
+# Create new Directory
+mkdir /home/ec2-user/roofdocs-web
+
