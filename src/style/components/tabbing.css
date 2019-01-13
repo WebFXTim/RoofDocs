@@ -1,0 +1,21 @@
+.tab-list {
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
+    display: flex;
+}
+
+.tab-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.tab-list-active {
+    background-color: rgb(182, 8, 7);
+    color: white;
+    border: solid #ccc;
+    border-width: 1px 1px 0 1px;
+}

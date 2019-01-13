@@ -1,0 +1,68 @@
+.ourWork {
+    width: 100%;
+    height: 100%
+}
+
+.workFooter {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+
+}
+
+.workFooterMainText {
+    float: right;
+    font-family: FranklinGothicHeavy, serif;
+    font-size: 48px;
+    color: rgb(182,8,7);
+    text-transform: uppercase;
+    margin-right: 30px;
+    word-spacing: 10px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: right;
+    width: 100%;
+
+}
+
+.workFooterSmallText {
+    float: right;
+    font-family: Bebas, serif;
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    margin-right: 30px;
+    word-spacing: 5px;
+    margin-top: -15px;
+    text-align: right;
+}
+
+.workImportant {
+    color: rgb(182,8,7);
+    font-size: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.workImageMap {
+    width: 60%;
+    height: 600px;
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.homeImage {
+    width: 100%;
+    height: auto;
+}
+.homeImageHotspot {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    z-index: 9999;
+    position: absolute;
+    left: 0;
+}

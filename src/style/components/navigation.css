@@ -1,0 +1,45 @@
+.navigation {
+
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: stretch;
+
+}
+
+.navigationItem img {
+    height: 100%;
+    width: auto;
+}
+
+
+.navigationItem {
+    color: black;
+    font-family: Bebas, serif;
+    word-spacing: 5px;
+    text-align: center;
+    line-height: 100px;
+    height: 100px;
+    font-size: 26px;
+    flex-grow: 1;
+    width: calc(100vw/5);
+}
+
+.navigationLogo {
+
+}
+
+.navigationLink {
+    border-bottom: 1px solid rgb(182,8,7);
+}
+
+/*.navigationLink:after {*/
+    /*content:'';*/
+    /*top: 100%;*/
+    /*left: calc(50% - 50px);*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*border-top: solid 25px #e15915;*/
+    /*border-left: solid 25px transparent;*/
+    /*border-right: solid 25px transparent;*/
+/*}*/

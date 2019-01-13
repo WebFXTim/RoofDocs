@@ -1,0 +1,27 @@
+.homeImageContainer {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.homeImageContainer img {
+    height: auto;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.homeFooter {
+    width: 100%;
+    height: 80px;
+}
+
+.homeFooterText {
+    float: right;
+    line-height: 80px;
+    font-family: FranklinGothicHeavy, serif;
+    font-size: 56px;
+    color: rgb(182,8,7);
+    text-transform: uppercase;
+    margin-right: 30px;
+    word-spacing: 10px;
+}

@@ -1,0 +1,88 @@
+.docsContainer {
+
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: stretch;
+}
+
+.docsView {
+    flex-grow: 1;
+    height: 400px;
+}
+
+.docsView img {
+    width: 400px;
+    height: 350px;
+    margin-left: calc(50% - 200px);
+}
+
+.docName {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Bebas, serif;
+    text-transform: uppercase;
+}
+
+.docBio {
+    position: relative;
+    top: -390px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 375px;
+    width: 400px;
+    opacity: 0;
+    transition: .25s ease;
+    background-color: rgba(0, 0, 0, 0.85);
+    margin-left: calc(50% - 200px);
+}
+
+
+
+.docsView:hover .docBio {
+    opacity: 1;
+}
+
+.docsFooter {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+
+}
+
+.docsFooterMainText {
+    float: right;
+    font-family: FranklinGothicHeavy, serif;
+    font-size: 48px;
+    color: rgb(182,8,7);
+    text-transform: uppercase;
+    margin-right: 30px;
+    word-spacing: 10px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: right;
+    width: 100%;
+
+}
+
+.docsFooterSmallText {
+    float: right;
+    font-family: Bebas, serif;
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    margin-right: 30px;
+    word-spacing: 5px;
+    margin-top: -15px;
+    text-align: right;
+}
+
+.docsImportant {
+    color: rgb(182,8,7);
+    font-size: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
