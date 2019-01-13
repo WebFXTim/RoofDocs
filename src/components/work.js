@@ -46,6 +46,8 @@ class OurWork extends Component {
     constructor(props) {
         super(props);
         this.state = { selectedItem: '' };
+
+        this.windowResized = this.windowResized.bind(this)
     }
 
     // Handle Window Resizing
@@ -84,12 +86,12 @@ class OurWork extends Component {
             ctx.drawImage(img, 0, 0, home.width, home.height);
         };
 
-        window.addEventListener("resize", this.windowResized.bind(this));
+        window.addEventListener("resize", this.windowResized, false);
     }
 
     // Remove event listener from window
     componentWillUnmount(){
-        window.removeEventListener("resize", this.windowResized.bind(this));
+        window.removeEventListener("resize", this.windowResized, false);
     }
 
     // Mouse moves inside home container
