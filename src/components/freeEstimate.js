@@ -17,6 +17,37 @@ function FieldGroup({ id, label, help, ...props }) {
 
 class FreeEstimate extends Component {
 
+     constructor(props){
+         super(props);
+
+         this.submitForm = this.submitForm.bind(this)
+     }
+
+     submitForm( e ) {
+
+         e.preventDefault();
+
+         // TODO: Finish This
+         const body = {
+             name: e.target.elements[0].value,
+             email: e.target.elements[1].value,
+             phoneNumber: e.target.elements[2].value,
+             address: e.target.elements[3].value,
+             stormDamage: e.target.elements[4].value,
+             roof: e.target.elements[5].value,
+             siding: e.target.elements[6].value,
+             gutters: e.target.elements[7].value,
+             windows: e.target.elements[8].value,
+             atticInsulation: e.target.elements[9].value,
+             details: e.target.elements[10].value,
+         };
+
+         // PERFORM VALIDATION
+
+         console.log(e.target.elements[5].target);
+
+     }
+
 
     render() {
         return (
@@ -24,7 +55,7 @@ class FreeEstimate extends Component {
                 <p className="pageHeader"> Free Estimate</p>
 
                 <div id="estimateFormContainer">
-                    <form>
+                    <form onSubmit={this.submitForm}>
                         <FieldGroup
                             id="formControlsName"
                             type="text"
@@ -50,7 +81,7 @@ class FreeEstimate extends Component {
                             placeholder="Enter Phone Number"
                         />
                         <FormGroup className="formGroupCustom">
-                            <ControlLabel className="estimateControlLabel">AREAS OF INTEREST</ControlLabel>
+                            <ControlLabel className="estimateControlLabel">ESTIMATE ITEMS</ControlLabel>
                             <Checkbox >STORM DAMAGE</Checkbox>
                             <Checkbox >ROOF</Checkbox>
                             <Checkbox >SIDING</Checkbox>

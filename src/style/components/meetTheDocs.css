@@ -1,6 +1,7 @@
 .docsContainer {
 
-    width: 100%;
+    width: 80%;
+    margin: 50px auto;
     background-color: white;
     display: flex;
     align-items: stretch;
@@ -11,10 +12,20 @@
     height: 400px;
 }
 
+.singleDocContainer {
+    width: 300px;
+    height: 250px;
+    margin-left: calc(50% - 150px);
+}
+
+.docsViewImageContainer {
+    width: 100%;
+    height: 100%;
+}
+
 .docsView img {
-    width: 400px;
-    height: 350px;
-    margin-left: calc(50% - 200px);
+    width: 100%;
+    height: 100%
 }
 
 .docName {
@@ -27,21 +38,21 @@
 
 .docBio {
     position: relative;
-    top: -390px;
+    top: -300px;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 375px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     opacity: 0;
     transition: .25s ease;
     background-color: rgba(0, 0, 0, 0.85);
-    margin-left: calc(50% - 200px);
+    margin-left: calc(50% - 150px);
 }
 
 
 
-.docsView:hover .docBio {
+.singleDocContainer:hover .docBio {
     opacity: 1;
 }
 
@@ -56,7 +67,7 @@
 .docsFooterMainText {
     float: right;
     font-family: FranklinGothicHeavy, serif;
-    font-size: 48px;
+    font-size: 64px;
     color: rgb(182,8,7);
     text-transform: uppercase;
     margin-right: 30px;
@@ -82,7 +93,7 @@
 
 .docsImportant {
     color: rgb(182,8,7);
-    font-size: 30px;
+    font-size: 24px;
     margin-left: 5px;
     margin-right: 5px;
 }

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // Styling
 import '../style/components/stormDamage.css';
 
-import StormDamageImage from '../resources/images/damage.png';
+import StormDamageImage from '../resources/images/stormDamage.jpeg';
 
 
 class StormDamage extends Component {
@@ -19,6 +19,11 @@ class StormDamage extends Component {
                 <div className="stormDamageContent">
                     <div className="stormDamageInfo">
                         <img src={StormDamageImage} alt="Storm Damage" />
+
+
+                    </div>
+                    <div className="stormReport">
+
                         <p id="stormDamageDescription"> The rise in the number of severe storms effecting
                             the DMV area has resulted in hundreds of millions of dollars worth of property
                             damage in just the last few years.  When a hail and/or wind storm tears through
@@ -28,8 +33,6 @@ class StormDamage extends Component {
                             inspection with one of our Roof Docs.
                         </p>
 
-                    </div>
-                    <div className="stormReport">
                         <a href="/estimate">
                             <button className="estimateButton"> Get Your Estimate Now</button>
                         </a>

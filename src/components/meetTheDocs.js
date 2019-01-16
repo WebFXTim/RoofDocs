@@ -19,17 +19,25 @@ class MeetTheDocs extends Component {
                 <p className="pageHeader"> Meet The Docs </p>
                 <div className="docsContainer">
                     <div className="docsView">
-                        <img src={Mike} alt="Mike Harvey"/>
-                        <p className="docName"> Mike Harvey </p>
-                        <div className="docBio">
+                        <div className="singleDocContainer">
+                            <div className="docsViewImageContainer">
+                                <img src={Mike} alt="Mike Harvey"/>
+                            </div>
+                            <p className="docName"> Mike Harvey </p>
+                            <div className="docBio">
+                        </div>
 
                         </div>
                     </div>
                     <div className="docsView">
-                        <img src={Oliver} alt="Oliver Brown"/>
-                        <p className="docName"> Oliver Brown </p>
-                        <div className="docBio">
+                        <div className="singleDocContainer">
+                            <div className="docsViewImageContainer">
+                                <img className="docsViewImage" src={Oliver} alt="Oliver Brown"/>
+                            </div>
+                            <p className="docName"> Oliver Brown </p>
+                            <div className="docBio">
 
+                            </div>
                         </div>
                     </div>
                 </div>

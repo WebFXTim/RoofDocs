@@ -4,23 +4,24 @@
 }
 
 .stormDamageInfo {
-    width: 50%;
+    width: 65%;
     height: 100%;
     float: left;
 }
 
 .stormDamageInfo img {
-    width: 70%;
+    width: 90%;
     height: auto;
-    margin-left: 15%;
+    margin-left: 5%;
+    box-shadow: 2px 2px dimgrey;
 }
 
 #stormDamageDescription {
     font-family: AgencyFB, serif;
     text-align: center;
     width: 80%;
-    margin: 30px auto;
-    font-size: 18px;
+    margin: 60px auto;
+    font-size: 20px;
 }
 
 .stormDamageImportant {
@@ -30,7 +31,7 @@
 }
 
 .stormReport {
-    width: 50%;
+    width: 35%;
     height: 100%;
     float: right;
 }
@@ -42,8 +43,8 @@
     color: white;
     font-family: Bebas, serif;
     word-spacing: 5px;
-    margin-left: calc(50% - 150px);
-    margin-top: 200px;
+    margin-top: 20px;
+    margin-left: calc(50% - 125px);
     border-radius: 5px;
 }
 
