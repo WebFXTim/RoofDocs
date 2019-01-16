@@ -23,7 +23,7 @@ class App extends Component {
 
         <BrowserRouter>
             <div className="App">
-                <Navigation/>
+                <Navigation />
                 <div className="content">
                     <Route exact path="/" component={Home} />
                     <Route path="/work" component={OurWork} />

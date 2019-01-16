@@ -7,35 +7,35 @@ import OurWorkInformation from './ourWorkInformation';
 // Styling
 import '../style/components/work.css';
 
-import Home from '../resources/images/home.png';
-import local from '../resources/images/hotmap.png';
+import Home from '../resources/images/house.png';
+import local from '../resources/images/houseHotspot.png';
 
 // MARK: - Colors for RGB Components
 const colors = [
 
     {
         name: 'Windows/Doors',
-        r: 0,
-        g: 120,
-        b: 24
-    },
-    {
-        name: 'Roofing',
-        r: 255,
-        g: 0,
-        b: 0
-    },
-    {
-        name: 'Siding',
         r: 246,
         g: 255,
         b: 0
     },
     {
-        name: 'Gutters',
+        name: 'Roofing',
         r: 0,
         g: 85,
         b: 128
+    },
+    {
+        name: 'Siding',
+        r: 255,
+        g: 0,
+        b: 0
+    },
+    {
+        name: 'Gutters',
+        r: 15,
+        g: 125,
+        b: 0
     }
 
 ];
@@ -97,8 +97,9 @@ class OurWork extends Component {
     // Mouse moves inside home container
     // Determine if user is over a spot
     // And update information
-    onMouseMove(e) {
+    imageClicked(e) {
 
+        // TODO: Catch Undefined for Canvas
         const canvas = this.refs.canvas;
         const ctx = canvas.getContext('2d');
         const home = this.refs.homeImage;
@@ -124,7 +125,11 @@ class OurWork extends Component {
             <div className="ourWork">
                 <p className="pageHeader"> Our Work </p>
 
-                <div className="workImageMap" onMouseMove={this.onMouseMove.bind(this)}>
+                <p className="workIntro"> The exterior of your home functions similarly to various systems
+                within the body.  Click on the icons to see how our Roof Docs diagnose
+                problems and prescribe remedies for your current exterior systems.</p>
+
+                <div className="workImageMap" onClick={this.imageClicked.bind(this)}>
                     <img ref="homeImage" id="homeImage" className="homeImage" src={Home} alt="home" />
                     <canvas ref="canvas" id="homeCanvas" className="homeImageHotspot" />
                 </div>
@@ -136,7 +141,7 @@ class OurWork extends Component {
                     <p className="workFooterMainText"> QUALITY. </p>
                     <p className="workFooterSmallText" >
                         ROOF+ER HANDLES YOUR REMOLDING PROJECT WITH CARE OF A
-                        <span className="workImportant">WORLD-CLASS</span> SURGEON.  PRECISION,
+                        <span className="workImportant">WORLD-CLASS</span> SURGEON. PRECISION,
                          CONSISTENCY, & ACCOUNTABILITY ON EVERY JOB
                     </p>
                 </div>

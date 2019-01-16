@@ -3,6 +3,34 @@
     height: 100%
 }
 
+.workIntro {
+    width: 50%;
+    text-align: center;
+    margin-left: 10%;
+    font-family: AgencyFB, serif;
+    font-size: 18px;
+}
+
+.workImageMap {
+    width: 60%;
+    height: 600px;
+    position: relative;
+    display: inline-block;
+}
+
+.homeImage {
+    width: 100%;
+    height: auto;
+}
+.homeImageHotspot {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    z-index: 9999;
+    position: absolute;
+    left: 0;
+}
+
 .workFooter {
     position: fixed;
     bottom: 15px;
@@ -43,26 +71,4 @@
     font-size: 24px;
     margin-left: 5px;
     margin-right: 5px;
-}
-
-.workImageMap {
-    width: 60%;
-    height: 600px;
-    position: relative;
-    display: inline-block;
-}
-
-
-
-.homeImage {
-    width: 100%;
-    height: auto;
-}
-.homeImageHotspot {
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    z-index: 9999;
-    position: absolute;
-    left: 0;
 }
