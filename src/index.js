@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import './style/index.css';
 import './style/components/navigation.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { unregister } from './serviceWorker.js';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Force Reload of App
+unregister();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
