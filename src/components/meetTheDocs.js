@@ -23,9 +23,17 @@ class MeetTheDocs extends Component {
                             <div className="docsViewImageContainer">
                                 <img src={Mike} alt="Mike Harvey"/>
                             </div>
-                            <p className="docName"> Mike Harvey </p>
+                            <p className="docName"> Michael Harvey </p>
                             <div className="docBio">
-                        </div>
+                                <p>Michael’s very first job was roofing at age 15. From there, he went on to receive a B.A. in International Affairs
+                                    and an MBA in finance, only to end up right back where it all started. He’s had almost enough schooling to be an M.D.,
+                                    but opted for his R.D. (Roof Doctorate) instead. Michael believes if you approach every endeavor with integrity, are
+                                    uncompromising on quality, and remain committed to simplicity, success will abound.
+                                    <br/>
+
+                                    (Michael is also a washed-up former college athlete. If you have a basketball hoop, he’ll be glad to show you)
+                                </p>
+                            </div>
 
                         </div>
                     </div>

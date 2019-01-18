@@ -1,9 +1,22 @@
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    height: 30px;
+    height: 150px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+
+}
+
+.footerContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(182, 8, 7);
+}
+
+.footerItem {
+    flex: 1 1 0;
+    width: 0;
 }
 
 footer p {
@@ -11,4 +24,56 @@ footer p {
     font-family: Bebas, serif;
     font-size: 16px;
     margin-left: 20px;
+    color: white;
+    display: inline-block;
+}
+
+.footerIcon {
+    color: white;
+    margin-top: 41px;
+    padding-left: 33%;
+    display: inline-block;
+}
+
+.footerInfoIcon {
+    color: white;
+    margin-top: 41px;
+    display: inline-block;
+}
+
+.footerLinkContainer {
+    margin: 30px auto;
+}
+
+.footerLinkContainer p {
+    font-size: 16px;
+    margin-bottom: 0;
+    display: block;
+}
+
+.footerLocationIcon {
+    float: left;
+}
+
+.footerAddress {
+    display: inline-block;
+    margin-top: 27px;
+}
+
+.footerPhone {
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.footerPhone p {
+    margin-top: 15px;
+}
+
+.footerAddress p {
+    font-size: 16px;
+}
+
+.footerLink {
+    display: block;
+    margin-bottom: 0;
 }

@@ -24,13 +24,13 @@ class App extends Component {
         <BrowserRouter>
             <div className="App">
                 <Navigation />
-                <div className="content">
+                {/*<div className="content">*/}
                     <Route exact path="/" component={Home} />
                     <Route path="/work" component={OurWork} />
                     <Route path="/docs" component={MeetTheDocs} />
                     <Route path="/damage" component={StormDamage} />
                     <Route path="/estimate" component={FreeEstimate} />
-                </div>
+                {/*</div>*/}
                 <Footer />
             </div>
         </BrowserRouter>

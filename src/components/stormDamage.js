@@ -15,12 +15,9 @@ class StormDamage extends Component {
 
             <div className="stormDamage">
                 <p className="pageHeader">Storm Damage</p>
-
                 <div className="stormDamageContent">
                     <div className="stormDamageInfo">
                         <img src={StormDamageImage} alt="Storm Damage" />
-
-
                     </div>
                     <div className="stormReport">
 
@@ -37,9 +34,13 @@ class StormDamage extends Component {
                             <button className="estimateButton"> Get Your Estimate Now</button>
                         </a>
                     </div>
+
                 </div>
                 <div className="stormDamageFooter">
-                    <p className="stormDamageFooterText"> INTEGRITY. QUALITY. SIMPLICITY.</p>
+                    <p className="stormDamageFooterText">
+                        <a className="damageLink" href="/docs"> INTEGRITY. </a>
+                        <a className="damageLink" href="/work"> QUALITY. </a>
+                        <a className="damageLink" href="/estimate"> SIMPLICITY. </a></p>
                 </div>
             </div>
 

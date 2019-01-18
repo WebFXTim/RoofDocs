@@ -1,6 +1,13 @@
+.stormDamage {
+    margin-top: 50px;
+    position: relative;
+    min-height: calc(100vh - 280px);
+
+}
+
 .stormDamageContent {
     width: 100%;
-    margin-top: 50px;
+
 }
 
 .stormDamageInfo {
@@ -52,8 +59,8 @@
 .stormDamageFooter {
     width: 100%;
     height: 80px;
-    position: fixed;
-    bottom: 20px;
+    position: absolute;
+    bottom: 0;
 }
 
 .stormDamageFooterText {
@@ -66,4 +73,13 @@
     margin-right: 30px;
     word-spacing: 10px;
     font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.damageLink {
+    color: rgb(182, 8, 7);
+}
+
+.damageLink:hover {
+    color: rgb(182, 8, 7);
 }

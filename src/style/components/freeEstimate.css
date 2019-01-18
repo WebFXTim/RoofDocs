@@ -1,3 +1,10 @@
+.freeEstimate {
+    height: calc(100vh - 280px);
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+}
+
 #estimateFormContainer {
     width: 70%;
     margin: 0 auto;
@@ -11,9 +18,9 @@
 
 .estimateFooter {
     width: 100%;
-    position: fixed;
-    bottom: 15px;
+    position: absolute;
     left: 0;
+    bottom: 0;
 
 }
 
@@ -42,6 +49,7 @@
     word-spacing: 5px;
     margin-top: -15px;
     text-align: right;
+    margin-bottom: 5px;
 }
 
 .estimateImportant {
