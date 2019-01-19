@@ -11,8 +11,9 @@ class NotFound extends Component {
     render() {
         return (
 
-            <p className="pageHeader"> The page you're looking for does not exist </p>
-
+            <div className="notFoundContainer">
+                <p className="pageHeader"> The page you're looking for does not exist </p>
+            </div>
         );
     }
 }
