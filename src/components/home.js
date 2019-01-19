@@ -19,7 +19,10 @@ class Home extends Component {
                     </p>
                 </div>
                 <div className="homeFooter">
-                    <p className="homeFooterText"> INTEGRITY. QUALITY. SIMPLICITY.</p>
+                    <p className="homeFooterText">
+                        <a className="damageLink" href="/docs"> INTEGRITY. </a>
+                        <a className="damageLink" href="/work"> QUALITY. </a>
+                        <a className="damageLink" href="/estimate"> SIMPLICITY. </a></p>
                 </div>
             </div>
         );

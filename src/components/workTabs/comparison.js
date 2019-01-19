@@ -15,7 +15,7 @@ class Comparison extends Component {
                             interior from harsh external elements.<br/>
                             Healthy skin relies on three layers, each serving a unique function to ensure
                             the system operates effectively.  A durable roofing system depends on the same
-                            three elements present in our skin.
+                            three functions of our skin's layers.
                         </p>
                         <table>
                             <tr>

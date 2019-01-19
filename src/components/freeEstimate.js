@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import {Button, Checkbox, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
+import {Button, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
+import Checkbox from './checkbox';
+// import axios from 'axios';
 
 
-// Stylingnpm
+
+// Styling
 import '../style/components/freeEstimate.css';
 
 
@@ -33,18 +36,19 @@ class FreeEstimate extends Component {
              email: e.target.elements[1].value,
              phoneNumber: e.target.elements[2].value,
              address: e.target.elements[3].value,
-             stormDamage: e.target.elements[4].value,
-             roof: e.target.elements[5].value,
-             siding: e.target.elements[6].value,
-             gutters: e.target.elements[7].value,
-             windows: e.target.elements[8].value,
-             atticInsulation: e.target.elements[9].value,
+             stormDamage: e.target.elements[4].checked,
+             roof: e.target.elements[5].checked,
+             siding: e.target.elements[6].checked,
+             gutters: e.target.elements[7].checked,
+             windows: e.target.elements[8].checked,
+             atticInsulation: e.target.elements[9].checked,
              details: e.target.elements[10].value,
          };
 
          // PERFORM VALIDATION
 
-         console.log(e.target.elements[5].target);
+
+         console.log(body);
 
      }
 
@@ -82,12 +86,12 @@ class FreeEstimate extends Component {
                         />
                         <FormGroup className="formGroupCustom">
                             <ControlLabel className="estimateControlLabel">ESTIMATE ITEMS</ControlLabel>
-                            <Checkbox >STORM DAMAGE</Checkbox>
-                            <Checkbox >ROOF</Checkbox>
-                            <Checkbox >SIDING</Checkbox>
-                            <Checkbox >GUTTERS</Checkbox>
-                            <Checkbox >WINDOWS & DOORS</Checkbox>
-                            <Checkbox >ATTIC INSULATION</Checkbox>
+                            <Checkbox name="STORM DAMAGE"/>
+                            <Checkbox name="ROOF"/>
+                            <Checkbox name="SIDING"/>
+                            <Checkbox name="GUTTERS"/>
+                            <Checkbox name="WINDOWS & DOORS"/>
+                            <Checkbox name="ATTIC INSULATION"/>
                         </FormGroup>
 
                             {/* MORE DETAILS */}

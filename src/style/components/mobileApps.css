@@ -1,0 +1,20 @@
+.mobileAppsContainer {
+    height: calc(100vh - 290px);
+    margin-top: 50px;
+    width: 100%;
+}
+
+.appTitle {
+    text-align: center;
+    font-family: Bebas, serif;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.mobileAppsContainer a {
+    color: black;
+}
+
+.mobileAppsContainer a:hover {
+    color: rgb(182, 8, 7);
+}

@@ -29,7 +29,7 @@ class MeetTheDocs extends Component {
                                     and an MBA in finance, only to end up right back where it all started. He’s had almost enough schooling to be an M.D.,
                                     but opted for his R.D. (Roof Doctorate) instead. Michael believes if you approach every endeavor with integrity, are
                                     uncompromising on quality, and remain committed to simplicity, success will abound.
-                                    <br/>
+                                    <br/><br/>
 
                                     (Michael is also a washed-up former college athlete. If you have a basketball hoop, he’ll be glad to show you)
                                 </p>
@@ -44,7 +44,14 @@ class MeetTheDocs extends Component {
                             </div>
                             <p className="docName"> Oliver Brown </p>
                             <div className="docBio">
+                                <p>Oliver once spent a summer loading shingles onto roofs and is very happy to have moved up the ladder in the
+                                    roofing industry. Since that summer, he has earned his B.S. in Business Marketing & MBA from Mount St. Mary’s University in
+                                    2013 & 2015, respectively. Oliver is a passionate sports fan, dog owner and food connoisseur who believes anything is
+                                    possible with a gritty, positive mindset.
+                                    <br/><br/>
 
+                                    (Oliver is a “less washed-up” college basketball player than Michael and would love to prove that in anyones driveway.)
+                                </p>
                             </div>
                         </div>
                     </div>

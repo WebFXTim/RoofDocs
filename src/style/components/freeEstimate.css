@@ -14,6 +14,7 @@
     font-family: Bebas, serif;
     font-size: 18px;
     word-spacing: 5px;
+    width: 100%;
 }
 
 .estimateFooter {
@@ -23,6 +24,7 @@
     bottom: 0;
 
 }
+
 
 .estimateFooterMainText {
     float: right;
@@ -74,7 +76,7 @@
 }
 
 .descriptionTextArea {
-    height: 250px !important;
+    height: 125px !important;
 }
 
 .checkbox label {

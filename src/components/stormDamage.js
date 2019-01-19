@@ -40,7 +40,8 @@ class StormDamage extends Component {
                     <p className="stormDamageFooterText">
                         <a className="damageLink" href="/docs"> INTEGRITY. </a>
                         <a className="damageLink" href="/work"> QUALITY. </a>
-                        <a className="damageLink" href="/estimate"> SIMPLICITY. </a></p>
+                        <a className="damageLink" href="/estimate"> SIMPLICITY. </a>
+                    </p>
                 </div>
             </div>
 

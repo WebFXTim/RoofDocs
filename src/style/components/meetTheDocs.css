@@ -46,10 +46,10 @@
     position: relative;
     top: -300px;
     bottom: 0;
-    left: 0;
+    left: -50px;
     right: 0;
     height: 300px;
-    width: 300px;
+    width: 400px;
     opacity: 0;
     transition: .25s ease;
     background-color: rgba(0, 0, 0, 0.85);
@@ -58,10 +58,11 @@
 
 .docBio p {
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     font-family: AgencyFB, serif;
     width: 90%;
     margin: 5px auto;
+    padding-top: 5px;
 }
 
 

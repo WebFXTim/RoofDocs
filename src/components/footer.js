@@ -19,7 +19,7 @@ class Footer extends Component {
                         {/*<p> 123-456-8890 </p>*/}
                         <i className="fas fa-phone fa-3x footerIcon footerLocationIcon" />
                         <div className="footerPhone">
-                            <p> 123-456-7890 </p>
+                            <p> 703-239-3738 </p>
                         </div>
                     </div>
                     <div className="footerItem">

@@ -9,7 +9,13 @@
     text-align: center;
     margin-left: 10%;
     font-family: AgencyFB, serif;
-    font-size: 18px;
+    font-size: 22px;
+}
+
+.clickIcon {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
 }
 
 .workImageMap {

@@ -9,6 +9,7 @@ import MeetTheDocs from './components/meetTheDocs';
 import StormDamage from './components/stormDamage';
 import FreeEstimate from './components/freeEstimate';
 import Footer from './components/footer';
+import MobileApps from './components/mobileApps';
 
 
 import './style/components/navigation.css';
@@ -24,13 +25,12 @@ class App extends Component {
         <BrowserRouter>
             <div className="App">
                 <Navigation />
-                {/*<div className="content">*/}
                     <Route exact path="/" component={Home} />
                     <Route path="/work" component={OurWork} />
                     <Route path="/docs" component={MeetTheDocs} />
                     <Route path="/damage" component={StormDamage} />
                     <Route path="/estimate" component={FreeEstimate} />
-                {/*</div>*/}
+                    <Route path="/downloads/apps" component={MobileApps} />
                 <Footer />
             </div>
         </BrowserRouter>
