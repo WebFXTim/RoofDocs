@@ -1,5 +1,5 @@
 .freeEstimate {
-    height: calc(100vh - 280px);
+    min-height: calc(100vh - 280px);
     width: 100%;
     position: relative;
     margin-top: 50px;
@@ -96,4 +96,36 @@
 
 .formGroupInput {
     width: 95% !important;
+}
+
+/* Submitted Estimate */
+.submittedEstimateContainer {
+    width: 60%;
+    margin: 20px auto;
+    display: block;
+    padding-bottom: 50px;
+}
+
+.submittedHeader {
+    font-family: Bebas, serif;
+    font-size: 24px;
+    color: rgb(182, 8, 7);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.submittedInfo {
+    font-family: AgencyFB, serif;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+
+.hideEstimate {
+    display: none;
+}
+
+.showEstimate {
+    display: block;
 }

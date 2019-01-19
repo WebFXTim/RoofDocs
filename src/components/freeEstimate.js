@@ -23,12 +23,15 @@ class FreeEstimate extends Component {
      constructor(props){
          super(props);
 
+         this.state = { estimatedSubmitted: false };
          this.submitForm = this.submitForm.bind(this)
      }
 
      submitForm( e ) {
 
          e.preventDefault();
+
+         this.setState({ estimateSubmitted: true});
 
          // TODO: Finish This
          const body = {
@@ -101,6 +104,15 @@ class FreeEstimate extends Component {
                         </FormGroup>
                         <Button className="submitButton" type="submit">Submit</Button>
                     </form>
+                </div>
+                <div className={"submittedEstimateContainer " + (this.state.estimateSubmitted ? 'showEstimate' : 'hideEstimate')}>
+                    <p className="submittedHeader">You have my info....What's Next?</p>
+                    <p className="submittedInfo">Once you have submitted your details, you will receive a call from one of our Roof
+                        Docs to set up a time to visit your home.  During the visit, your Roof Doc will do a thorough inspection of
+                        any issues and/or concerns you would like to have addressed and will be ready to prescribe solutions and next steps!
+                        Simple right?
+                    </p>
+
                 </div>
                 <div className="estimateFooter">
                     <p className="estimateFooterMainText"> SIMPLICITY. </p>
