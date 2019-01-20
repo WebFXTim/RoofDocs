@@ -12,7 +12,7 @@ class MobileApps extends Component {
         return (
             <div className="mobileAppsContainer">
                 <p className="pageHeader"> Mobile Apps </p>
-                <a href="invalidlink"><p className="appTitle">Download Sales App</p></a>
+                <a href="itms-services://?action=download-manifest&url=https://s3.amazonaws.com/theroofdocs.ios/theroofdocs.plist"><p className="appTitle">Download Sales App</p></a>
             </div>
 
         );

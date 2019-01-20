@@ -34,9 +34,9 @@ class Footer extends Component {
                     <div className="footerItem">
                         <i className="fas fa-info-circle fa-3x footerIcon footerLocationIcon" />
                         <div className="footerAddress">
-                            <p className="footerLink"> Terms of Service </p>
-                            <p className="footerLink"> Privacy Policy </p>
-                            <p className="footerLink"> Client Portal </p>
+                            <a className="footerLink" href="/tos"><p className="footerLinkText"> Terms of Service </p></a>
+                            <a className="footerLink" href="/privacy"><p className="footerLinkText"> Privacy Policy </p></a>
+                            <a className="footerLink" href="https://portal.theroofdocs.com"><p className="footerLinkText"> Client Portal </p></a>
                         </div>
                     </div>
                 </div>

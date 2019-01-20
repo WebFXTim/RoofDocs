@@ -1,12 +1,54 @@
 import React, { Component } from 'react';
 import {Button, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
 import Checkbox from './checkbox';
-// import axios from 'axios';
+import axios from 'axios';
 
 
 
 // Styling
 import '../style/components/freeEstimate.css';
+import '../style/components/modal.css'
+
+class Modal extends Component {
+
+    constructor(props){
+        super(props);
+
+        this.state = { hidden: true };
+
+    }
+
+    show() {
+        this.setState({ hidden: false });
+    }
+
+
+    closeModal() {
+
+        this.setState({hidden: true});
+    }
+
+
+    render() {
+        return (
+            <div className= {"modalContainer" + (this.state.hidden ? ' hiddenModal' : '')} onClick={this.closeModal.bind(this)}>
+                <div className="modalContent">
+
+                    <p className="modalHeader">Please correct errors on the following fields and submit again</p>
+
+                    { this.props.errors.map(err => (
+                        <p key={err} className="errorItem"> {err} </p>
+                    ))}
+
+
+                    <button className="errorOkButton">Got It!</button>
+
+                </div>
+
+            </div>
+        );
+    }
+}
 
 
 function FieldGroup({ id, label, help, ...props }) {
@@ -23,15 +65,13 @@ class FreeEstimate extends Component {
      constructor(props){
          super(props);
 
-         this.state = { estimatedSubmitted: false };
+         this.state = { estimatedSubmitted: false, errors: [] };
          this.submitForm = this.submitForm.bind(this)
      }
 
      submitForm( e ) {
 
          e.preventDefault();
-
-         this.setState({ estimateSubmitted: true});
 
          // TODO: Finish This
          const body = {
@@ -43,15 +83,47 @@ class FreeEstimate extends Component {
              roof: e.target.elements[5].checked,
              siding: e.target.elements[6].checked,
              gutters: e.target.elements[7].checked,
-             windows: e.target.elements[8].checked,
+             windowsDoors: e.target.elements[8].checked,
              atticInsulation: e.target.elements[9].checked,
              details: e.target.elements[10].value,
          };
 
-         // PERFORM VALIDATION
+         let errors = [];
+
+         // NAME
+         if(body.name.length === 0) {
+             errors.push("Name");
+         }
+
+         // EMAIL
+         const emailRegex = /\S+@\S+\.\S+/;
+         if(!emailRegex.test(body.email.toLowerCase())){
+            errors.push("Email");
+         }
+
+         // PHONE NUMBER
+         if(body.phoneNumber.length < 10) {
+             errors.push("Phone Number")
+         }
+
+         if(errors.length === 0) {
 
 
-         console.log(body);
+             axios.post('http://localhost:8080/v1/inquiry', body)
+                 .then(function (response) {
+                     console.log(response);
+                     this.setState({ estimateSubmitted: true });
+                 })
+                 .catch(function (error) {
+                     console.log(error);
+                 });
+         } else {
+
+             this.setState({errors: errors});
+             this.refs.errorModal.show();
+         }
+
+
 
      }
 
@@ -122,10 +194,9 @@ class FreeEstimate extends Component {
                         REMODELING PROJECTS EASIER THAN GOING IN FOR A ROUTINE CHECK-UP.
                     </p>
                 </div>
+                <Modal errors={this.state.errors} ref="errorModal" />
+
             </div>
-
-
-
         );
     }
 }

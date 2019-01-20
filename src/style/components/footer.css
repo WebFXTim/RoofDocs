@@ -74,6 +74,12 @@ footer p {
 }
 
 .footerLink {
+    text-decoration: none;
+    color: white;
+}
+
+.footerLinkText {
     display: block;
     margin-bottom: 0;
 }
+
