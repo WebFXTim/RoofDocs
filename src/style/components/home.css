@@ -28,10 +28,9 @@
 }
 
 .homeInfo {
-    font-family: AgencyFB, serif;
     color: white;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     margin: auto;
     width: 60%;
     border-bottom: 2px solid rgb(182, 8, 7);
