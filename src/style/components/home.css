@@ -1,5 +1,5 @@
 .home {
-    height: calc(100vh - 350px);
+    height: calc(100vh - 340px);
 }
 .homeImageContainer {
     /*width: 100%;*/
@@ -18,12 +18,12 @@
 
 .homeFooterText {
     float: right;
-    line-height: 80px;
     font-family: FranklinGothicHeavy, serif;
-    font-size: 56px;
+    font-size: 64px;
     color: rgb(182,8,7);
     text-transform: uppercase;
-    margin-right: 30px;
+    margin-right: 10px;
+    margin-bottom: 0;
     word-spacing: 10px;
 }
 
@@ -49,6 +49,7 @@
 
 .damageLink {
     color: rgb(182, 8, 7);
+    margin-right: 15px;
 }
 
 .damageLink:hover {

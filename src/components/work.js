@@ -21,7 +21,7 @@ import icon from '../resources/images/homeClickIcon.png'
 const colors = [
 
     {
-        name: 'Windows/Doors',
+        name: 'Doors & Windows',
         r: 255,
         g: 238,
         b: 0
@@ -79,7 +79,7 @@ class OurWork extends Component {
 
         if(obj) {
             switch (obj.name) {
-                case 'Windows/Doors':
+                case 'Doors & Windows':
                     this.setState({displayImage: HomeWindowsDoors});
                     break;
                 case 'Roofing':
@@ -91,10 +91,28 @@ class OurWork extends Component {
                 case 'Siding':
                     this.setState({displayImage: HomeSiding});
                     break;
-                default: break;
+                default:
+                    this.setState({displayImage: Home});
+                    break;
             }
         } else {
-            this.setState({displayImage: Home})
+            switch (this.state.selectedItem) {
+                case 'Doors & Windows':
+                    this.setState({displayImage: HomeWindowsDoors});
+                    break;
+                case 'Roofing':
+                    this.setState({displayImage: HomeRoofing});
+                    break;
+                case 'Gutters':
+                    this.setState({displayImage: HomeGutters});
+                    break;
+                case 'Siding':
+                    this.setState({displayImage: HomeSiding});
+                    break;
+                default:
+                    this.setState({displayImage: Home})
+                    break;
+            }
         }
     }
 
@@ -175,7 +193,7 @@ class OurWork extends Component {
                 <p className="pageHeader"> Our Work </p>
 
                 <p className="workIntro"> The exterior of your home functions similarly to various systems
-                within the body.  Click on the <img className="clickIcon" src={icon} alt="icon"/> to see how our Roof Docs diagnose
+                within the body.  Click on the various <img className="clickIcon" src={icon} alt="icon"/> icons to see how our Roof Docs diagnose
                 problems and prescribe remedies for your current exterior systems.</p>
 
                 <div className="workImageMap" onMouseMove={this.onMouseMove.bind(this)} onClick={this.imageClicked.bind(this)}>
@@ -189,7 +207,7 @@ class OurWork extends Component {
                 <div className="workFooter">
                     <p className="workFooterMainText"> QUALITY. </p>
                     <p className="workFooterSmallText" >
-                        ROOF+ER HANDLES YOUR REMOLDING PROJECT WITH CARE OF A
+                        ROOF-ER HANDLES YOUR REMODELING PROJECT WITH THE CARE OF A
                         <span className="workImportant">WORLD-CLASS</span> SURGEON. PRECISION,
                          CONSISTENCY, & ACCOUNTABILITY ON EVERY JOB
                     </p>

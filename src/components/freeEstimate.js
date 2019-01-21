@@ -65,7 +65,7 @@ class FreeEstimate extends Component {
      constructor(props){
          super(props);
 
-         this.state = { estimatedSubmitted: false, errors: [] };
+         this.state = { estimateSubmitted: false, errors: [] };
          this.submitForm = this.submitForm.bind(this)
      }
 
@@ -109,10 +109,13 @@ class FreeEstimate extends Component {
          if(errors.length === 0) {
 
 
-             axios.post('http://localhost:8080/v1/inquiry', body)
+             axios.post('http://api.theroofdocs.com/v1/inquiry', body)
                  .then(function (response) {
                      console.log(response);
                      this.setState({ estimateSubmitted: true });
+
+                     // TODO: Clear Text Fields
+
                  })
                  .catch(function (error) {
                      console.log(error);
@@ -157,7 +160,7 @@ class FreeEstimate extends Component {
                             id="formControlsAddress"
                             type="address"
                             label="ADDRESS"
-                            placeholder="Enter Phone Number"
+                            placeholder="Enter Address"
                         />
                         <FormGroup className="formGroupCustom">
                             <ControlLabel className="estimateControlLabel">ESTIMATE ITEMS</ControlLabel>
@@ -165,7 +168,7 @@ class FreeEstimate extends Component {
                             <Checkbox name="ROOF"/>
                             <Checkbox name="SIDING"/>
                             <Checkbox name="GUTTERS"/>
-                            <Checkbox name="WINDOWS & DOORS"/>
+                            <Checkbox name="DOORS & WINDOWS"/>
                             <Checkbox name="ATTIC INSULATION"/>
                         </FormGroup>
 
@@ -190,7 +193,7 @@ class FreeEstimate extends Component {
                     <p className="estimateFooterMainText"> SIMPLICITY. </p>
                     <p className="estimateFooterSmallText" >
                         A <span className="estimateImportant">TRANSPARENT</span>PROCESS WITH
-                        <span className="estimateImportant">CONSTANT</span>COMMUNICATION. ROOF+ER MAKES
+                        <span className="estimateImportant">CONSTANT</span>COMMUNICATION. ROOF-ER MAKES
                         REMODELING PROJECTS EASIER THAN GOING IN FOR A ROUTINE CHECK-UP.
                     </p>
                 </div>

@@ -1,12 +1,15 @@
 th {
-    font-family: AgencyFB, serif;
     font-size: 18px;
     text-align: center !important;
-    font-weight: normal !important;
+    font-weight: bold !important;
 }
 
 td {
-    font-family: AgencyFB, serif;
     font-size: 14px;
     font-weight: lighter;
+    text-align: center;
+}
+
+.comparisonInfo {
+    text-align: center;
 }

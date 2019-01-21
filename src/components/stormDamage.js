@@ -24,8 +24,8 @@ class StormDamage extends Component {
                         <p id="stormDamageDescription"> The rise in the number of severe storms effecting
                             the DMV area has resulted in hundreds of millions of dollars worth of property
                             damage in just the last few years.  When a hail and/or wind storm tears through
-                            your neighborhood, the exterior of your home can take a beating.  At ROOF+ER, we
-                            specialize in restoring your storm-damage roof, siding, gutters, along with other
+                            your neighborhood, the exterior of your home can take a beating.  At ROOF-ER, we
+                            specialize in restoring your storm-damaged roof, siding, gutters, along with other
                             exterior elements of your home.  Call us today to schedule a <span className="stormDamageImportant">FREE</span> storm-damage
                             inspection with one of our Roof Docs.
                         </p>

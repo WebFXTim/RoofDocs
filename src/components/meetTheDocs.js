@@ -46,11 +46,11 @@ class MeetTheDocs extends Component {
                             <div className="docBio">
                                 <p>Oliver once spent a summer loading shingles onto roofs and is very happy to have moved up the ladder in the
                                     roofing industry. Since that summer, he has earned his B.S. in Business Marketing & MBA from Mount St. Mary’s University in
-                                    2013 & 2015, respectively. Oliver is a passionate sports fan, dog owner and food connoisseur who believes anything is
+                                    2013 & 2015, respectively. Oliver is a passionate sports fan, dog owner, and food connoisseur who believes anything is
                                     possible with a gritty, positive mindset.
                                     <br/><br/>
 
-                                    (Oliver is a “less washed-up” college basketball player than Michael and would love to prove that in anyones driveway.)
+                                    (Oliver is a less "washed-up” college basketball player than Michael and would love to prove that in anyone's driveway.)
                                 </p>
                             </div>
                         </div>
