@@ -108,11 +108,11 @@ class FreeEstimate extends Component {
 
          if(errors.length === 0) {
 
-
+             const self = this;
              axios.post('https://api.theroofdocs.com/v1/inquiry', body)
                  .then(function (response) {
 
-                     this.setState({ estimateSubmitted: true });
+                     self.setState({ estimateSubmitted: true });
 
                      // TODO: Clear Text Fields
 
