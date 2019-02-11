@@ -6,6 +6,7 @@ import OurWorkInformation from './ourWorkInformation';
 
 // Styling
 import '../style/components/work.css';
+import '../style/components/modal.css'
 
 import Home from '../resources/images/house.png';
 import HomeGutters from '../resources/images/guttersHome.png';
@@ -18,6 +19,7 @@ import icon from '../resources/images/homeClickIcon.png'
 import roofing from '../resources/images/roofing.png';
 import siding from '../resources/images/siding.png';
 import gutters from '../resources/images/gutters.png';
+import doors from '../resources/images/doors.png';
 
 
 
@@ -51,6 +53,116 @@ const colors = [
 
 ];
 
+
+
+class MobileWorkModal extends Component {
+
+    constructor(props){
+        super(props);
+
+        this.state = { hidden: true, name: '', img: null, prescription: '', diagnosis: '' };
+
+    }
+
+    show() {
+        this.setState({ hidden: false });
+    }
+
+
+    setSelected( item ) {
+
+        this.setState({selectedItem: item});
+
+        // Logic
+        let diagnosis = '';
+        let prescription = '';
+        let name = '';
+        let img = '';
+        switch (item){
+            case 'roofing':
+
+                name = 'Roofing';
+                img = roofing;
+                prescription = 'When our Roof Docs find the symptoms of an ineffective roofing system, ' +
+                    'ROOF-ER prescribes a standard solution: a GAF Lifetime roofing system';
+                diagnosis = 'Our Roof Docs are trained how to properly diagnose potential issues with your roof.  ' +
+                    'Symptoms they look for include hail & wind damage, granule loss, streaking, blistering, and more.  ' +
+                    'Call us today to set up your free home check-up!';
+
+                break;
+            case 'siding':
+
+                name = 'Siding';
+                img = siding;
+                prescription = 'If your Roof Doc finds any ailments with your current siding material, your home may need a ' +
+                    'ROOF-ER siding prescription: a CertainTeed premium vinyl siding replacement.';
+                diagnosis = 'ur Roof Docs are able to perform check-ups on all forms of siding including vinyl, wood, aluminum, ' +
+                    'steel, stucco and more. Call us today to set up your free home check-up!';
+
+                break;
+            case 'windows':
+
+                name = 'Doors & Windows';
+                img = doors;
+                prescription = 'Today\'s homes require custom fitting doors and windows to operate at optimal efficiency. ' +
+                    'Our Roof Docs will perform a thorough assessment of your windows & doors to determine the proper treatment.';
+                diagnosis = 'Whether it\'s seal failure, draftiness, or cracked/warped framing, our Roof Docs are able ' +
+                    'to detect the cause of your home\'s symptoms and prescribe an effective solution. Call today to have a Roof ' +
+                    'Doc give your windows & doors a free check-up!';
+                break;
+            case 'gutters':
+
+                name = 'Gutters';
+                img = gutters;
+                prescription = 'If a Roof Doc notices any of the symptoms described in the diagnosis during your free check-up, ' +
+                    'ROOF-ER will prescribe an appropriate treatment.  If a full gutter replacement is necessary, our Roof Docs ' +
+                    'will document all required information for a custom-fitting gutter system.';
+                diagnosis = 'Your gutter system faces a number of potential ailments including clogging, being improperly secured, ' +
+                    'ineffective draining from the downspouts, leaks, etc. Call a Roof Doc today to schedule a free check-up to ' +
+                    'ensure your gutter system is functioning properly!';
+                break;
+            default: break;
+        }
+
+        // Update State
+        this.setState({name, img, prescription, diagnosis});
+
+    }
+
+
+    closeModal() {
+
+        this.setState({hidden: true});
+    }
+
+
+    render() {
+        return (
+            <div className= {"modalContainer" + (this.state.hidden ? ' hiddenModal' : '')} onClick={this.closeModal.bind(this)}>
+                <div className="modalContentWorkMobile">
+
+                    <p className="workHeaderDisplay">
+                        {this.state.name}
+                    </p>
+
+                    <img className="workMobileImage" src={this.state.img} alt={this.state.name} />
+
+                    <p className="workItemHeader">DIAGNOSIS</p>
+                    <p className="workItemModalDescription">{this.state.diagnosis}</p>
+
+                    <p className="workItemHeader">PRESCRIPTION</p>
+                    <p className="workItemModalDescription">{this.state.prescription}</p>
+
+
+                    <button className="workMobileCloseButton">Close</button>
+
+                </div>
+
+            </div>
+        );
+    }
+}
+
 class OurWork extends Component {
 
     // Constructor
@@ -59,6 +171,8 @@ class OurWork extends Component {
         this.state = { selectedItem: '', displayImage: Home};
 
         this.windowResized = this.windowResized.bind(this)
+        this.serviceItemClicked.bind(this);
+
     }
 
 
@@ -140,6 +254,16 @@ class OurWork extends Component {
 
     }
 
+    serviceItemClicked = e => {
+
+
+        // e.target.id
+        this.refs.mobileWorkModal.setSelected(e.target.id);
+        this.refs.mobileWorkModal.show();
+
+        // roofing, siding, windows, doors
+    };
+
     // Draw image to canvas when component mounts
     componentDidMount(){
 
@@ -220,37 +344,49 @@ class OurWork extends Component {
                 <div className="ourServices" id="ourServices">
                     <div className="servicesContainer">
                         <ul>
-                            <li>
+                            <li className="servicesItemLinked">
                                 <div className="servicesItem">
-                                    <img src={roofing} alt="roofing" />
-                                    <p className="servicesItemHeader">ROOFING</p>
-                                    <p className="description">
-                                        ROOF-ER uses premium GAF roofing materials and GAF factory certified installers
-                                        to ensure your new roof functions as a holistic roofing system, guaranteeing quality and longevity
-                                    </p>
+                                    {/*<img src={roofing} alt="roofing" />*/}
+                                    <p onClick={this.serviceItemClicked} id="roofing" className="servicesItemHeader">ROOFING</p>
+                                    {/*<p className="description">*/}
+                                        {/*ROOF-ER uses premium GAF roofing materials and GAF factory certified installers*/}
+                                        {/*to ensure your new roof functions as a holistic roofing system, guaranteeing quality and longevity*/}
+                                    {/*</p>*/}
                                 </div>
                             </li>
-                            <li>
+                            <li className="servicesItemLinked">
                                 <div className="servicesItem">
-                                    <img src={siding} alt="siding" />
-                                    <p className="servicesItemHeader">SIDING</p>
-                                    <p className="description">
-                                        We offer CertainTeed siding products and a 10-year labor warranty to ensure your new
-                                        siding replacement provides beauty, efficiency, and durability for years to come
-                                    </p>
+                                    {/*<img src={siding} alt="siding" />*/}
+                                    <p onClick={this.serviceItemClicked} id="siding" className="servicesItemHeader">SIDING</p>
+                                    {/*<p className="description">*/}
+                                        {/*We offer CertainTeed siding products and a 10-year labor warranty to ensure your new*/}
+                                        {/*siding replacement provides beauty, efficiency, and durability for years to come*/}
+                                    {/*</p>*/}
                                 </div>
                             </li>
-                            <li className="noBottomBorder">
+                            <li className="servicesItemLinked">
                                 <div className="servicesItem">
-                                    <img src={gutters} alt="gutters" />
-                                    <p className="servicesItemHeader">GUTTERS</p>
-                                    <p className="description">
-                                        Our gutter systems use high quality aluminum and custom fitting to properly divert
-                                        and drain excess water during heavy rain storms
-                                    </p>
+                                    {/*<img src={siding} alt="siding" />*/}
+                                    <p  onClick={this.serviceItemClicked} id="windows" className="servicesItemHeader">WINDOWS & DOORS</p>
+                                    {/*<p className="description">*/}
+                                    {/*We offer CertainTeed siding products and a 10-year labor warranty to ensure your new*/}
+                                    {/*siding replacement provides beauty, efficiency, and durability for years to come*/}
+                                    {/*</p>*/}
+                                </div>
+                            </li>
+                            <li className="servicesItemLinked noBottomBorder">
+                                <div className="servicesItem">
+                                    {/*<img src={gutters} alt="gutters" />*/}
+                                    <p onClick={this.serviceItemClicked} id="gutters" className="servicesItemHeader">GUTTERS</p>
+                                    {/*<p className="description">*/}
+                                        {/*Our gutter systems use high quality aluminum and custom fitting to properly divert*/}
+                                        {/*and drain excess water during heavy rain storms*/}
+                                    {/*</p>*/}
                                 </div>
                             </li>
                         </ul>
+
+                        <MobileWorkModal ref="mobileWorkModal"/>
                     </div>
                 </div>
 

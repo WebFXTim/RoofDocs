@@ -144,7 +144,10 @@
     .servicesContainer ul li {
         list-style: none;
         border-bottom: 1px solid rgb(182, 8, 7);
-        padding-bottom: 20px;
+    }
+
+    .servicesItemLinked {
+        width: 100%;
     }
 
     .servicesItem {
@@ -160,7 +163,9 @@
 
     .servicesItemHeader {
         margin-top: 10px;
-        font-size: 24px !important;
+        font-size: 22px !important;
+        display: block;
+        width: 100%;
 
     }
 
