@@ -73,7 +73,7 @@ class FreeEstimate extends Component {
 
          e.preventDefault();
 
-         // TODO: Finish This
+         // Create Body for API Call
          const body = {
              name: e.target.elements[0].value,
              email: e.target.elements[1].value,
@@ -109,9 +109,9 @@ class FreeEstimate extends Component {
          if(errors.length === 0) {
 
 
-             axios.post('http://api.theroofdocs.com/v1/inquiry', body)
+             axios.post('https://api.theroofdocs.com/v1/inquiry', body)
                  .then(function (response) {
-                     console.log(response);
+
                      this.setState({ estimateSubmitted: true });
 
                      // TODO: Clear Text Fields
