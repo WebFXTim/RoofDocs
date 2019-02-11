@@ -37,8 +37,8 @@ class Navigation extends Component {
                         FREE ESTIMATE
                     </div>
                 </NavLink>
-            </div>
 
+            </div>
         );
     }
 }

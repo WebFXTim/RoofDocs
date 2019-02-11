@@ -23,7 +23,7 @@ class Footer extends Component {
                         </div>
                     </div>
                     <div className="footerItem">
-                        <i className="fas fa-map-pin fa-3x footerIcon footerLocationIcon" />
+                        <i className="fas fa-map-pin fa-3x footerIcon footerLocationIcon footerIconPin" />
                         <div className="footerAddress">
                             <p> 2010 Corporate Ridge <br/>
                                 Suite 700 <br/>
@@ -34,11 +34,30 @@ class Footer extends Component {
                     <div className="footerItem">
                         <i className="fas fa-info-circle fa-3x footerIcon footerLocationIcon" />
                         <div className="footerAddress">
-                            <a className="footerLink" href="/tos"><p className="footerLinkText"> Terms of Service </p></a>
+                            <a className="footerLink" href="/"><p className="footerLinkText"> Home </p></a>
                             <a className="footerLink" href="/privacy"><p className="footerLinkText"> Privacy Policy </p></a>
                             <a className="footerLink" href="https://portal.theroofdocs.com"><p className="footerLinkText"> Client Portal </p></a>
                         </div>
                     </div>
+                </div>
+
+                <div className="footerContainerMobile">
+                    <div className="footerItemMobile" id="footerItemMobilePhone">
+                        <i className="fas fa-phone fa-2x" />
+                        <a href="tel:703-239-3738"><p id="mobilePhoneNumber">703-239-3738</p></a>
+
+                    </div>
+
+                    <div className="footerItemMobile" id="footerItemAddress">
+                        <p id="mobileAddress">2010 Corporate Ridge <br/> Suite 700 <br/> McLean, VA 22102</p>
+                    </div>
+
+                    <div className="footerItemMobile noBorder" id="footerItemAddress">
+                        <a className="footerLink" href="/"><p className="footerLinkTextMobile"> Home </p></a>
+                        <a className="footerLink" href="/privacy"><p className="footerLinkTextMobile"> Privacy Policy </p></a>
+                        <a className="footerLink" href="https://portal.theroofdocs.com"><p className="footerLinkTextMobile"> Client Portal </p></a>
+                    </div>
+
                 </div>
             </footer>
         );

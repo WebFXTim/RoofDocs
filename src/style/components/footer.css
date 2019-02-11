@@ -83,3 +83,134 @@ footer p {
     margin-bottom: 0;
 }
 
+.footerAddressMobile {
+    display: none;
+}
+
+.footerContainerMobile {
+    display: none;
+}
+
+/**
+Responsive Design
+ */
+
+/* TABLET */
+@media screen and (min-width: 601px) and (max-width: 1000px){
+
+    footer {
+        height: auto;
+    }
+
+    .footerPhone {
+        width: 100%
+    }
+
+    .footerPhone p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footerAddress {
+        width: 100%;
+    }
+
+    .footerAddress p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footerIcon {
+        margin-left: calc(50% - 24px);
+        padding-left: 0;
+    }
+
+    .footerIconPin {
+        margin-left: calc(50% - 14px);
+    }
+
+    .footerLinkText {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    footer p {
+        margin-left: auto;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+
+    footer {
+        position: inherit;
+        bottom: 0;
+        height: auto;
+
+    }
+
+
+    .footerContainer {
+        display: none;
+    }
+
+    .footerContainerMobile {
+        height: 100%;
+        width: 100%;
+        display: block;
+        padding-bottom: 10px;
+        background-color: rgb(182, 8, 7);
+    }
+
+    .footerItemMobile {
+        width: 100%;
+        border-bottom: 1px solid white;
+    }
+
+    .noBorder {
+        border-bottom: none;
+    }
+
+    #footerItemMobilePhone {
+        width: 100%;
+        height: 80px;
+    }
+
+    #mobilePhoneNumber {
+        font-size: 24px;
+        color: white;
+        font-family: Bebas, serif;
+        text-align: center;
+    }
+
+    .fa-phone {
+        color: white;
+        margin-top: 20px;
+        margin-left: calc(50vw - 110px);
+    }
+
+    #mobileAddress {
+        font-size: 24px;
+        color: white;
+        font-family: Bebas, serif;
+        text-align: center;
+        display: block;
+        padding-top: 10px;
+    }
+
+    .footerLinkTextMobile {
+        display: block;
+        text-align: center;
+        padding: 3px 0;
+        font-size: 24px;
+        margin-bottom: 0;
+        word-spacing: 2px;
+    }
+
+
+
+}
+
+
+

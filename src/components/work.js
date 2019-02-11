@@ -15,6 +15,10 @@ import HomeRoofing from '../resources/images/roofingHome.png';
 import local from '../resources/images/houseHotspot.png';
 import icon from '../resources/images/homeClickIcon.png'
 
+import roofing from '../resources/images/roofing.png';
+import siding from '../resources/images/siding.png';
+import gutters from '../resources/images/gutters.png';
+
 
 
 // MARK: - Colors for RGB Components
@@ -212,6 +216,44 @@ class OurWork extends Component {
                          CONSISTENCY, & ACCOUNTABILITY ON EVERY JOB
                     </p>
                 </div>
+
+                <div className="ourServices" id="ourServices">
+                    <div className="servicesContainer">
+                        <ul>
+                            <li>
+                                <div className="servicesItem">
+                                    <img src={roofing} alt="roofing" />
+                                    <p className="servicesItemHeader">ROOFING</p>
+                                    <p className="description">
+                                        ROOF-ER uses premium GAF roofing materials and GAF factory certified installers
+                                        to ensure your new roof functions as a holistic roofing system, guaranteeing quality and longevity
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="servicesItem">
+                                    <img src={siding} alt="siding" />
+                                    <p className="servicesItemHeader">SIDING</p>
+                                    <p className="description">
+                                        We offer CertainTeed siding products and a 10-year labor warranty to ensure your new
+                                        siding replacement provides beauty, efficiency, and durability for years to come
+                                    </p>
+                                </div>
+                            </li>
+                            <li className="noBottomBorder">
+                                <div className="servicesItem">
+                                    <img src={gutters} alt="gutters" />
+                                    <p className="servicesItemHeader">GUTTERS</p>
+                                    <p className="description">
+                                        Our gutter systems use high quality aluminum and custom fitting to properly divert
+                                        and drain excess water during heavy rain storms
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
 

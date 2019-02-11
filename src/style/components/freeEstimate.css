@@ -128,3 +128,102 @@
 .showEstimate {
     display: block;
 }
+
+
+
+
+@media screen and (max-width: 1000px){
+
+    .freeEstimate {
+       height: auto;
+        position: relative;
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #estimateFormContainer {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .estimateControlLabel {
+        font-family: Bebas, serif;
+        font-size: 18px;
+        word-spacing: 5px;
+        width: 100%;
+    }
+
+    .estimateFooter {
+        display: none;
+
+    }
+
+    .formGroupText {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .formGroupCustom {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .formGroupDetails {
+        float: right;
+    }
+
+    .descriptionTextArea {
+        height: 125px !important;
+    }
+
+    .checkbox label {
+        font-family: AgencyFB, serif;
+        font-size: 18px;
+    }
+
+    .submitButton {
+        background-color: rgb(182, 8, 7);
+        color: white;
+        font-family: Bebas, serif;
+        font-size: 12px;
+        width: 150px;
+        margin-top: 20px;
+        margin-left: calc(50% - 75px);
+    }
+
+    .formGroupInput {
+        width: 95% !important;
+    }
+
+    /* Submitted Estimate */
+    .submittedEstimateContainer {
+        width: 60%;
+        margin: 20px auto;
+        display: block;
+        padding-bottom: 50px;
+    }
+
+    .submittedHeader {
+        font-family: Bebas, serif;
+        font-size: 24px;
+        color: rgb(182, 8, 7);
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .submittedInfo {
+        font-size: 20px;
+        text-align: center;
+        color: black;
+    }
+
+    .hideEstimate {
+        display: none;
+    }
+
+    .showEstimate {
+        display: block;
+    }
+
+}

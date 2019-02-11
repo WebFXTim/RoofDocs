@@ -113,3 +113,113 @@
     margin-left: 5px;
     margin-right: 5px;
 }
+
+
+@media screen and (max-width: 600px) {
+
+    .meetTheDocs {
+        margin-top: 20px;
+        position: relative;
+        height: auto;
+    }
+
+    .docsContainer {
+
+        width: 80%;
+        margin: 10px auto;
+        background-color: white;
+        display: block;
+    }
+
+    .docsView {
+        height: 300px;
+    }
+
+    .singleDocContainer {
+        width: 300px;
+        height: 250px;
+        margin-left: calc(50% - 150px);
+    }
+
+    .docsViewImageContainer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .docsView img {
+        width: 100%;
+        height: 100%
+    }
+
+    .docName {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: Bebas, serif;
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
+
+    .docBio {
+        width: 100%;
+        margin: 5px auto;
+        opacity: 1;
+        background-color: white;
+        display: none;
+    }
+
+    .docBio p {
+        color: black;
+        font-size: 16px;
+        width: 90%;
+        margin: 5px auto;
+        padding-top: 5px;
+    }
+
+
+    .docsFooter {
+
+        /*position: inherit;*/
+        /*bottom: 0;*/
+        /*left: 0;*/
+        /*width: 90%;*/
+        display: none;
+
+    }
+
+    .docsFooterMainText {
+        float: right;
+        font-family: FranklinGothicHeavy, serif;
+        font-size: 64px;
+        color: rgb(182,8,7);
+        text-transform: uppercase;
+        margin-right: 30px;
+        word-spacing: 10px;
+        font-weight: bold;
+        margin-bottom: 0;
+        text-align: right;
+        width: 100%;
+
+    }
+
+    .docsFooterSmallText {
+        float: right;
+        font-family: Bebas, serif;
+        font-size: 18px;
+        color: black;
+        text-transform: uppercase;
+        margin-right: 30px;
+        word-spacing: 5px;
+        margin-top: -15px;
+        text-align: right;
+        margin-bottom: 5px;
+    }
+
+    .docsImportant {
+        color: rgb(182,8,7);
+        font-size: 24px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+}
