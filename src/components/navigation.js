@@ -5,6 +5,8 @@ import '../style/components/navigation.css';
 import logo from '../resources/images/logo.PNG';
 import { NavLink } from "react-router-dom";
 
+const portal = 'https://portal.theroofdocs.com';
+
 
 class Navigation extends Component {
 
@@ -37,7 +39,11 @@ class Navigation extends Component {
                         FREE ESTIMATE
                     </div>
                 </NavLink>
-
+                <a href={portal}>
+                    <div className="navigationItem navigationLink">
+                        Client Portal
+                    </div>
+                </a>
             </div>
         );
     }
