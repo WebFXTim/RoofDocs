@@ -213,6 +213,8 @@
 
     .stormReport {
         width: 100%;
+        float: none;
+        padding-bottom: 20px;
     }
 
     .estimateButton {
