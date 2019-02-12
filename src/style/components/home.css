@@ -57,6 +57,10 @@
 
 @media screen and (min-width: 601px) and (max-width: 1000px) {
 
+    .homeInfo {
+        width: 85%;
+    }
+
     .homeFooterText {
         font-size: 34px;
     }
