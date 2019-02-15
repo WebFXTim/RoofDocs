@@ -1,13 +1,13 @@
 .freeEstimate {
-    min-height: calc(100vh - 280px);
     width: 100%;
-    position: relative;
     margin-top: 50px;
+    min-height: calc(100vh - 225px);
 }
 
 #estimateFormContainer {
     width: 70%;
     margin: 0 auto;
+    height: calc(100% - 125px);
 }
 
 .estimateControlLabel {
@@ -19,7 +19,7 @@
 
 .estimateFooter {
     width: 100%;
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
 
