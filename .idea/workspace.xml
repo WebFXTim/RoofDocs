@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8da6a75c-ea77-4e65-8588-47f18a6c1f0e" name="Default Changelist" comment="ers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/components/freeEstimate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/components/freeEstimate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/components/stormDamage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/components/stormDamage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/components/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/components/home.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -102,7 +101,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="121" />
+          <entry key="CSS" value="122" />
           <entry key="HTML" value="7" />
           <entry key="Image" value="35" />
           <entry key="JSON" value="6" />
@@ -115,7 +114,7 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="14192" />
+          <entry key="css" value="14194" />
           <entry key="html" value="187" />
           <entry key="js" value="19186" />
           <entry key="sh" value="402" />
@@ -126,7 +125,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="PNG" value="4" />
-          <entry key="css" value="121" />
+          <entry key="css" value="122" />
           <entry key="html" value="7" />
           <entry key="jpg" value="12" />
           <entry key="js" value="126" />
@@ -141,7 +140,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="14192" />
+          <entry key="CSS" value="14194" />
           <entry key="HTML" value="187" />
           <entry key="JavaScript" value="19186" />
           <entry key="PLAIN_TEXT" value="405" />
@@ -153,13 +152,17 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/images/homeImage.jpg">
+        <entry file="file://$PROJECT_DIR$/src/resources/images/homeLogo.jpg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/images/homeLogo.jpg">
-          <provider selected="true" editor-type-id="images" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/style/components/home.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -186,7 +189,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/style/components/freeEstimate.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
@@ -302,11 +305,11 @@
         <option value="$PROJECT_DIR$/src/components/work.js" />
         <option value="$PROJECT_DIR$/src/style/components/modal.css" />
         <option value="$PROJECT_DIR$/src/components/freeEstimate.js" />
-        <option value="$PROJECT_DIR$/src/style/components/home.css" />
         <option value="$PROJECT_DIR$/src/components/navigation.js" />
         <option value="$PROJECT_DIR$/src/style/components/navigation.css" />
         <option value="$PROJECT_DIR$/src/style/components/stormDamage.css" />
         <option value="$PROJECT_DIR$/src/style/components/freeEstimate.css" />
+        <option value="$PROJECT_DIR$/src/style/components/home.css" />
       </list>
     </option>
   </component>
@@ -454,12 +457,12 @@
       <workItem from="1549848533313" duration="7328000" />
       <workItem from="1549936503636" duration="3044000" />
       <workItem from="1550080376889" duration="642000" />
-      <workItem from="1550254510715" duration="2792000" />
+      <workItem from="1550254510715" duration="4019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159111000" />
+    <option name="totallyTimeSpent" value="160338000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -764,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/components/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/style/components/modal.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
@@ -838,6 +834,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/style/components/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
         </state>
       </provider>
     </entry>
