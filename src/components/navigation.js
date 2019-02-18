@@ -41,7 +41,7 @@ class Navigation extends Component {
                 </NavLink>
                 <a href={portal}>
                     <div className="navigationItem navigationLink">
-                        Client Portal
+                        CUSTOMER PORTAL
                     </div>
                 </a>
             </div>

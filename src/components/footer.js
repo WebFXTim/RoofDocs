@@ -25,9 +25,9 @@ class Footer extends Component {
                     <div className="footerItem">
                         <i className="fas fa-map-pin fa-3x footerIcon footerLocationIcon footerIconPin" />
                         <div className="footerAddress">
-                            <p> 2010 Corporate Ridge <br/>
-                                Suite 700 <br/>
-                                McLean, VA 22102
+                            <p> 3100 Clarendon Blvd <br/>
+                                Ste 200 <br/>
+                                Arlington, VA 22201
                             </p>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ class Footer extends Component {
                     </div>
 
                     <div className="footerItemMobile" id="footerItemAddress">
-                        <p id="mobileAddress">2010 Corporate Ridge <br/> Suite 700 <br/> McLean, VA 22102</p>
+                        <p id="mobileAddress">3100 Clarendon Blvd <br/> Ste 200 <br/> Arlington, VA 22201</p>
                     </div>
 
                     <div className="footerItemMobile noBorder" id="footerItemAddress">
