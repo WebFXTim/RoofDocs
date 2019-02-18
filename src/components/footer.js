@@ -36,7 +36,7 @@ class Footer extends Component {
                         <div className="footerAddress">
                             <a className="footerLink" href="/"><p className="footerLinkText"> Home </p></a>
                             <a className="footerLink" href="/privacy"><p className="footerLinkText"> Privacy Policy </p></a>
-                            <a className="footerLink" href="https://portal.theroofdocs.com"><p className="footerLinkText"> Client Portal </p></a>
+                            <a className="footerLink" href="https://portal.theroofdocs.com"><p className="footerLinkText"> Customer Portal </p></a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ class Footer extends Component {
                     <div className="footerItemMobile noBorder" id="footerItemAddress">
                         <a className="footerLink" href="/"><p className="footerLinkTextMobile"> Home </p></a>
                         <a className="footerLink" href="/privacy"><p className="footerLinkTextMobile"> Privacy Policy </p></a>
-                        <a className="footerLink" href="https://portal.theroofdocs.com"><p className="footerLinkTextMobile"> Client Portal </p></a>
+                        <a className="footerLink" href="https://portal.theroofdocs.com"><p className="footerLinkTextMobile"> Customer Portal </p></a>
                     </div>
 
                 </div>
