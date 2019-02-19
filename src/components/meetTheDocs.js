@@ -6,7 +6,8 @@ import '../style/components/meetTheDocs.css';
 
 // Images
 import Mike from '../resources/images/MikeHeadshot.png';
-import Oliver from '../resources/images/OliverHeadshot.jpg';
+import Alex from '../resources/images/AlexHeadshot.png';
+import Oliver from '../resources/images/OliverHeadshot.png';
 
 
 class MeetTheDocs extends Component {
@@ -53,6 +54,22 @@ class MeetTheDocs extends Component {
                                     (Oliver is a less "washed-up” college basketball player than Michael and would love to prove that in anyone's driveway.)
                                 </p>
                             </div>
+                        </div>
+                    </div>
+                    <div className="docsView">
+                        <div className="singleDocContainer">
+                            <div className="docsViewImageContainer">
+                                <img src={Alex} alt="Alex Ortega"/>
+                            </div>
+                            <p className="docName"> Alex Ortega </p>
+                            <div className="docBio">
+                                <p>Alex was in the software development industry before switching over to roofing. He studied computer science
+                                    at Boston University and played lacrosse as a Terrier. Alex loves dogs and long walks on the beach. His
+                                    secret passion is cooking up a storm. Give him family recipes and you’ll make his day.
+                                </p>
+                                <br/><br/>
+                            </div>
+
                         </div>
                     </div>
                 </div>

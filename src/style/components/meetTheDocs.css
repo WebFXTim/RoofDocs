@@ -1,26 +1,24 @@
 .meetTheDocs {
     margin-top: 50px;
-    height: calc(100vh - 270px);
     position: relative;
 }
 
 .docsContainer {
-
     width: 80%;
-    margin: 50px auto;
+    margin: 50px auto 0 auto;
     background-color: white;
     display: flex;
-    align-items: stretch;
+    flex-flow: row wrap;
 }
 
 .docsView {
-    flex-grow: 1;
-    height: 400px;
+    width: 50%;
+    height: 450px;
 }
 
 .singleDocContainer {
-    width: 300px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
     margin-left: calc(50% - 150px);
 }
 
@@ -38,17 +36,18 @@
     text-align: center;
     font-size: 18px;
     font-weight: bold;
+    word-spacing: 5px;
     font-family: Bebas, serif;
     text-transform: uppercase;
 }
 
 .docBio {
     position: relative;
-    top: -300px;
+    top: -450px;
     bottom: 0;
     left: -50px;
     right: 0;
-    /*height: 350px;*/
+    height: 450px;
     width: 400px;
     opacity: 0;
     transition: .25s ease;
@@ -72,7 +71,6 @@
 }
 
 .docsFooter {
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -115,7 +113,9 @@
 }
 
 
-@media screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 1000px) {
 
     .meetTheDocs {
         margin-top: 20px;
@@ -132,12 +132,13 @@
     }
 
     .docsView {
-        height: 300px;
+        height: 350px;
+        width: auto;
     }
 
     .singleDocContainer {
         width: 300px;
-        height: 250px;
+        height: 300px;
         margin-left: calc(50% - 150px);
     }
 
