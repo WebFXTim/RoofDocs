@@ -96,7 +96,7 @@ class MobileWorkModal extends Component {
                 img = siding;
                 prescription = 'If your Roof Doc finds any ailments with your current siding material, your home may need a ' +
                     'ROOF-ER siding prescription: a CertainTeed premium vinyl siding replacement.';
-                diagnosis = 'ur Roof Docs are able to perform check-ups on all forms of siding including vinyl, wood, aluminum, ' +
+                diagnosis = 'Our Roof Docs are able to perform check-ups on all forms of siding including vinyl, wood, aluminum, ' +
                     'steel, stucco and more. Call us today to set up your free home check-up!';
 
                 break;
