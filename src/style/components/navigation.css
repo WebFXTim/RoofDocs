@@ -34,7 +34,7 @@
 }
 
 /* SPECIAL STYLING FOR NAVIGATION  */
-@media screen and (min-width: 1001px) and (max-width: 1250px){
+@media screen and (min-width: 1001px) and (max-width: 1500px){
 
     .navigationItem {
         color: black;
