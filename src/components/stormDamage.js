@@ -21,7 +21,7 @@ class StormDamage extends Component {
                     </div>
                     <div className="stormReport">
 
-                        <p id="stormDamageDescription"> The rise in the number of severe storms effecting
+                        <p id="stormDamageDescription"> The rise in the number of severe storms affecting
                             the DMV area has resulted in hundreds of millions of dollars worth of property
                             damage in just the last few years.  When a hail and/or wind storm tears through
                             your neighborhood, the exterior of your home can take a beating.  At ROOF-ER, we
