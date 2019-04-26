@@ -8,6 +8,7 @@ import '../style/components/meetTheDocs.css';
 import Mike from '../resources/images/MikeHeadshot.png';
 import Alex from '../resources/images/AlexHeadshot.png';
 import Oliver from '../resources/images/OliverHeadshot.png';
+import Lee from '../resources/images/LeeZiegler.png';
 
 
 class MeetTheDocs extends Component {
@@ -19,10 +20,11 @@ class MeetTheDocs extends Component {
             <div className="meetTheDocs">
                 <p className="pageHeader"> Meet The Docs </p>
                 <div className="docsContainer">
+                    {/* Michael Harvey */}
                     <div className="docsView">
                         <div className="singleDocContainer">
                             <div className="docsViewImageContainer">
-                                <img src={Mike} alt="Mike Harvey"/>
+                                <img src={Mike} alt="Michael Harvey"/>
                             </div>
                             <p className="docName"> Michael Harvey </p>
                             <div className="docBio">
@@ -38,6 +40,7 @@ class MeetTheDocs extends Component {
 
                         </div>
                     </div>
+                    {/* Oliver Brown */}
                     <div className="docsView">
                         <div className="singleDocContainer">
                             <div className="docsViewImageContainer">
@@ -56,6 +59,8 @@ class MeetTheDocs extends Component {
                             </div>
                         </div>
                     </div>
+
+                    {/* Alex Ortega */}
                     <div className="docsView">
                         <div className="singleDocContainer">
                             <div className="docsViewImageContainer">
@@ -70,6 +75,25 @@ class MeetTheDocs extends Component {
                                 <br/><br/>
                             </div>
 
+                        </div>
+                    </div>
+
+                    {/* Lee Gordon */}
+                    <div className="docsView">
+                        <div className="singleDocContainer">
+                            <div className="docsViewImageContainer">
+                                <img className="docsViewImage" src={Lee} alt="Lee Gordon"/>
+                            </div>
+                            <p className="docName"> Lee Gordon</p>
+                            <div className="docBio">
+                                <p>Lee is a lifelong roof climber and our resident quality control doc.  He went to Philadelphia University
+                                    where he studied business law, and is an avid golfer.  He goes by "OCLee" for his attention to detail and spent
+                                    time in college restoring stained glass in centuries old churches.
+                                    <br/><br/>
+
+                                    (Please don't bring up golf with Lee, he has a job to attend to, but he'll be happy to tee it up on the weekend.)
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
