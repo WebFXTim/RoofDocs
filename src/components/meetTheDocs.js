@@ -9,6 +9,7 @@ import Mike from '../resources/images/MikeHeadshot.png';
 import Alex from '../resources/images/AlexHeadshot.png';
 import Oliver from '../resources/images/OliverHeadshot.png';
 import Lee from '../resources/images/LeeZiegler.png';
+import Matt from '../resources/images/MattFoster.png';
 
 
 class MeetTheDocs extends Component {
@@ -92,6 +93,25 @@ class MeetTheDocs extends Component {
                                     <br/><br/>
 
                                     (Please don't bring up golf with Lee, he has a job to attend to, but he'll be happy to tee it up on the weekend.)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Matt Foster */}
+                    <div className="docsView">
+                        <div className="singleDocContainer">
+                            <div className="docsViewImageContainer">
+                                <img className="docsViewImage" src={Matt} alt="Matt Foster"/>
+                            </div>
+                            <p className="docName"> Matt Foster</p>
+                            <div className="docBio">
+                                <p> Matt has over 5 years of experience in the Roofing/Home Remodeling industry.  Before that he attended West
+                                    Virginia University in which he achieved majors in Communication Studies, History, and Criminology.  Matt’s
+                                    previous jobs were in logistics with the Department of Defense, freight brokering, and medical device sales.
+                                    He enjoys spending time near the water, his Goldendoodle Willis, and friends and family.  Matt finds his
+                                    gratitude through helping homeowners and improving the look of our neighborhoods. He is convinced he
+                                    holds the title of Mr. Basketball in the office.
                                 </p>
                             </div>
                         </div>
