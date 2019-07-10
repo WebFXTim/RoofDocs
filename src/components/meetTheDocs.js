@@ -10,6 +10,7 @@ import Alex from '../resources/images/AlexHeadshot.png';
 import Oliver from '../resources/images/OliverHeadshot.png';
 import Lee from '../resources/images/LeeZiegler.png';
 import Matt from '../resources/images/MattFoster.png';
+import Rees from '../resources/images/ReesNalley.png';
 
 
 class MeetTheDocs extends Component {
@@ -114,6 +115,24 @@ class MeetTheDocs extends Component {
                                     holds the title of Mr. Basketball in the office.
                                 </p>
                             </div>
+                        </div>
+                    </div>
+                    {/* Rees Nalley */}
+                    <div className="docsView">
+                        <div className="singleDocContainer">
+                            <div className="docsViewImageContainer">
+                                <img src={Rees} alt="Rees Nalley"/>
+                            </div>
+                            <p className="docName"> Rees Nalley </p>
+                            <div className="docBio">
+                                <p>Rees was introduced to the home remodeling industry just out of college when he worked as a site supervisor
+                                    for a family member’s construction company. While there, he discovered a deep satisfaction for improving
+                                    the quality of people’s homes and decided to make it his career. Before his work there, Rees graduated from
+                                    Mount St. Mary’s University where he achieved a B.A. in History and played four years of rugby as a
+                                    Mountaineer. When Rees isn’t on the job he’s in the gym, on a boat, or on the rugby pitch.
+                                </p>
+                            </div>
+
                         </div>
                     </div>
                 </div>

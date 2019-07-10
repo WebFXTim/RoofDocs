@@ -13,6 +13,7 @@ import MobileApps from './components/mobileApps';
 import ContractorApps from './components/contractorApps';
 import NotFound from './components/notFound';
 import PrivacyPolicy from './components/privacyPolicy';
+import EULA from './components/eula';
 
 
 import './style/components/navigation.css';
@@ -35,6 +36,7 @@ class App extends Component {
                         <Route path="/damage" component={StormDamage} />
                         <Route path="/estimate" component={FreeEstimate} />
                         <Route path="/privacy" component={PrivacyPolicy} />
+                        <Route path="/eula" component={EULA} />
                         <Route path="/downloads/apps" component={MobileApps} />
                         <Route path="/contractors/apps" component={ContractorApps} />
                         <Route component={NotFound} />
