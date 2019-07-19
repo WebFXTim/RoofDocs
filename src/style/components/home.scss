@@ -250,6 +250,7 @@ body {
   height: 60px;
   bottom: 0;
   margin: 35px auto 0 auto;
+  position: relative;
 }
 
 .learn-more-label {
@@ -425,5 +426,9 @@ img.brands-left-image, img.brands-right-image {
     max-width: 100%;
   }
 
+  .sectionText {
+    line-height: 30px;
+    font-size: 1.15em;
+  }
 
 }

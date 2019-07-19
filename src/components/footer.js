@@ -34,8 +34,8 @@ class Footer extends Component {
                     </div>
                     <div className="about-info">
                         <p> Address: <span> 3100 Clarendon Blvd. Ste. 200, Arlington, VA 22201</span> </p>
-                        <p> Phone: <span> 703-239-3738 </span></p>
-                        <p> Email:  <span> info@theroofdocs.com </span> </p>
+                        <p> Phone: <a className="footer-link-tag" href="tel:7032393738"><span> 703-239-3738 </span></a></p>
+                        <p> Email:  <a className="footer-link-tag" href="mailto:info@theroofdocs.com"><span> info@theroofdocs.com </span></a> </p>
                         <p> Class A License:  <span> 2705169915 </span> </p>
                     </div>
                 </div>
