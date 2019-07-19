@@ -5,12 +5,12 @@ import React, { Component } from 'react';
 import '../style/components/meetTheDocs.css';
 
 // Images
-import Mike from '../resources/images/MikeHeadshot.png';
-import Alex from '../resources/images/AlexHeadshot.png';
-import Oliver from '../resources/images/OliverHeadshot.png';
-import Lee from '../resources/images/LeeZiegler.png';
-import Matt from '../resources/images/MattFoster.png';
-import Rees from '../resources/images/ReesNalley.png';
+import Mike from '../resources/images/employees/MikeHeadshot.png';
+import Alex from '../resources/images/employees/AlexHeadshot.png';
+import Oliver from '../resources/images/employees/OliverHeadshot.png';
+import Lee from '../resources/images/employees/LeeZiegler.png';
+import Matt from '../resources/images/employees/MattFoster.png';
+import Rees from '../resources/images/employees/ReesNalley.png';
 
 
 class MeetTheDocs extends Component {
@@ -20,7 +20,7 @@ class MeetTheDocs extends Component {
         return (
 
             <div className="meetTheDocs">
-                <p className="pageHeader"> Meet The Docs </p>
+                <p className="sectionTitle"> Meet The Docs </p>
                 <div className="docsContainer">
                     {/* Michael Harvey */}
                     <div className="docsView">
@@ -62,6 +62,42 @@ class MeetTheDocs extends Component {
                         </div>
                     </div>
 
+                    {/* Matt Foster */}
+                    <div className="docsView">
+                        <div className="singleDocContainer">
+                            <div className="docsViewImageContainer">
+                                <img className="docsViewImage" src={Matt} alt="Matt Foster"/>
+                            </div>
+                            <p className="docName"> Matt Foster</p>
+                            <div className="docBio">
+                                <p> Matt has over 5 years of experience in the Roofing/Home Remodeling industry.  Before that he attended West
+                                    Virginia University in which he achieved majors in Communication Studies, History, and Criminology.  Matt’s
+                                    previous jobs were in logistics with the Department of Defense, freight brokering, and medical device sales.
+                                    He enjoys spending time near the water, his Goldendoodle Willis, and friends and family.  Matt finds his
+                                    gratitude through helping homeowners and improving the look of our neighborhoods. He is convinced he
+                                    holds the title of Mr. Basketball in the office.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Rees Nalley */}
+                    <div className="docsView">
+                        <div className="singleDocContainer">
+                            <div className="docsViewImageContainer">
+                                <img src={Rees} alt="Rees Nalley"/>
+                            </div>
+                            <p className="docName"> Rees Nalley </p>
+                            <div className="docBio">
+                                <p>Rees was introduced to the home remodeling industry just out of college when he worked as a site supervisor
+                                    for a family member’s construction company. While there, he discovered a deep satisfaction for improving
+                                    the quality of people’s homes and decided to make it his career. Before his work there, Rees graduated from
+                                    Mount St. Mary’s University where he achieved a B.A. in History and played four years of rugby as a
+                                    Mountaineer. When Rees isn’t on the job he’s in the gym, on a boat, or on the rugby pitch.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
                     {/* Alex Ortega */}
                     <div className="docsView">
                         <div className="singleDocContainer">
@@ -99,49 +135,6 @@ class MeetTheDocs extends Component {
                         </div>
                     </div>
 
-                    {/* Matt Foster */}
-                    <div className="docsView">
-                        <div className="singleDocContainer">
-                            <div className="docsViewImageContainer">
-                                <img className="docsViewImage" src={Matt} alt="Matt Foster"/>
-                            </div>
-                            <p className="docName"> Matt Foster</p>
-                            <div className="docBio">
-                                <p> Matt has over 5 years of experience in the Roofing/Home Remodeling industry.  Before that he attended West
-                                    Virginia University in which he achieved majors in Communication Studies, History, and Criminology.  Matt’s
-                                    previous jobs were in logistics with the Department of Defense, freight brokering, and medical device sales.
-                                    He enjoys spending time near the water, his Goldendoodle Willis, and friends and family.  Matt finds his
-                                    gratitude through helping homeowners and improving the look of our neighborhoods. He is convinced he
-                                    holds the title of Mr. Basketball in the office.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Rees Nalley */}
-                    <div className="docsView">
-                        <div className="singleDocContainer">
-                            <div className="docsViewImageContainer">
-                                <img src={Rees} alt="Rees Nalley"/>
-                            </div>
-                            <p className="docName"> Rees Nalley </p>
-                            <div className="docBio">
-                                <p>Rees was introduced to the home remodeling industry just out of college when he worked as a site supervisor
-                                    for a family member’s construction company. While there, he discovered a deep satisfaction for improving
-                                    the quality of people’s homes and decided to make it his career. Before his work there, Rees graduated from
-                                    Mount St. Mary’s University where he achieved a B.A. in History and played four years of rugby as a
-                                    Mountaineer. When Rees isn’t on the job he’s in the gym, on a boat, or on the rugby pitch.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div className="docsFooter">
-                    <p className="docsFooterMainText"> INTEGRITY. </p>
-                    <p className="docsFooterSmallText" >
-                        OUR ROOF DOCS AREN'T TRAINED TO DO THE RIGHT THING - WE JUST DON'T HIRE ANYONE UNLESS
-                        WE KNOW THEY'LL <span className="docsImportant">NEVER</span> DO THE WRONG THING
-                    </p>
                 </div>
             </div>
 

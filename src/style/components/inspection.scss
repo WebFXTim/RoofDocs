@@ -1,0 +1,144 @@
+
+
+
+
+.inspection-damage-report-container {
+  margin: 0;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+.home-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.inspection-background-image {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 100px);
+  opacity: 0.95;
+}
+
+.damage-report {
+  width: 35%;
+  position: absolute;
+  display: inline-block;
+  right: 10%;
+  float: right;
+  height: 90%;
+  margin-top: 2.5%;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.inspection-info-container {
+  width: 35%;
+  position: absolute;
+  display: inline-block;
+  float: left;
+  left: 10%;
+  height: 90%;
+  margin-top: 2.5%;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.inspection-process-container {
+
+
+}
+
+.inspection-description-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+
+.inspection-desc-info-container {
+  flex-grow: 1;
+  margin-left: 65px;
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+}
+
+.line-item-icon {
+  width: 45px;
+  height: auto;
+  display: inline-block;
+  float: left;
+  margin-top: 2px;
+  position: absolute;
+}
+
+.line-item-text {
+  display: inline-block;
+  margin-left: 55px;
+  font: 16px Roboto, sans-serif, serif;
+}
+
+
+.sectionSubheader {
+  width: 80%;
+  margin: 5px auto;
+  font: 16px Roboto, serif, sans-serif;
+}
+
+.storm-damage-report-thanks {
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+
+  .damage-report {
+    width: 40%;
+    box-shadow: none;
+    min-width: 425px;
+    right: 5%
+  }
+
+  .inspection-info-container {
+    width: 40%;
+    box-shadow: none;
+    min-width: 380px;
+    left: 5%
+  }
+
+  .home-container {
+    img {
+      min-height: 850px;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 900px) {
+
+  .home-container {
+    img {
+      display: none;
+    }
+  }
+
+  .inspection-info-container {
+    width: 100%;
+    box-shadow: none;
+    position: initial;
+    margin-bottom: 30px;
+  }
+
+  .damage-report {
+    width: 100%;
+    box-shadow: none;
+    position: initial;
+  }
+
+  .formGroupDetails {
+    float: initial !important;
+    width: 80% !important;
+  }
+
+}

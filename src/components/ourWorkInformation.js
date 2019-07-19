@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
 import Tabs from './tabbing/tabContainer';
-import Comparison from './workTabs/comparison';
-import Diagnosis  from './workTabs/diagnosis';
-import Prescription from './workTabs/prescription';
+
 
 // Styling
 import '../style/components/tabbing.css';

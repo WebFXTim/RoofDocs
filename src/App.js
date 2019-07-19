@@ -14,6 +14,7 @@ import ContractorApps from './components/contractorApps';
 import NotFound from './components/notFound';
 import PrivacyPolicy from './components/privacyPolicy';
 import EULA from './components/eula';
+import FAQs from './components/faqs';
 
 
 import './style/components/navigation.css';
@@ -34,7 +35,8 @@ class App extends Component {
                         <Route path="/work" component={OurWork} />
                         <Route path="/docs" component={MeetTheDocs} />
                         <Route path="/damage" component={StormDamage} />
-                        <Route path="/estimate" component={FreeEstimate} />
+                        <Route path="/faqs" component={FAQs} />
+                        <Route path="/inspection" component={FreeEstimate} />
                         <Route path="/privacy" component={PrivacyPolicy} />
                         <Route path="/eula" component={EULA} />
                         <Route path="/downloads/apps" component={MobileApps} />

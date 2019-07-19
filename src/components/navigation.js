@@ -13,7 +13,7 @@ class Navigation extends Component {
 
     render() {
         return (
-            <div className="navigation">
+            <div className="navigation" id="navigation">
                 <NavLink exact to="/">
                     <div className="navigationItem navigationLogo">
                         <img alt="logo" src={logo} />
@@ -21,27 +21,27 @@ class Navigation extends Component {
                 </NavLink>
                 <NavLink to='/work'>
                     <div className="navigationItem navigationLink">
-                        OUR WORK
+                        Our Work
                     </div>
                 </NavLink>
                 <NavLink to='/docs'>
                     <div className="navigationItem navigationLink">
-                        MEET THE DOCS
+                        Meet the Docs
                     </div>
                 </NavLink>
-                <NavLink to='/damage'>
+                <NavLink to='/inspection'>
                     <div className="navigationItem navigationLink">
-                        STORM DAMAGE
+                        Inspection
                     </div>
                 </NavLink>
-                <NavLink to='/estimate'>
+                <NavLink to='/faqs'>
                     <div className="navigationItem navigationLink">
-                        FREE ESTIMATE
+                        FAQs
                     </div>
                 </NavLink>
-                <a href={portal}>
+                <a href={portal} target="_blank" rel="noopener noreferrer" >
                     <div className="navigationItem navigationLink">
-                        CUSTOMER PORTAL
+                        Sign In
                     </div>
                 </a>
             </div>

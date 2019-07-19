@@ -4,6 +4,7 @@
     background-color: white;
     display: flex;
     align-items: stretch;
+    height: 100px;
 
 }
 
@@ -19,7 +20,7 @@
     word-spacing: 5px;
     text-align: center;
     line-height: 100px;
-    height: 100px;
+    height: 90px;
     font-size: 26px;
     flex-grow: 1;
     width: calc(100vw/6);
@@ -30,7 +31,7 @@
 }
 
 .navigationLink {
-    border-bottom: 1px solid rgb(182,8,7);
+    border-bottom: 2px solid rgb(182,8,7);
 }
 
 /* SPECIAL STYLING FOR NAVIGATION  */
@@ -47,6 +48,9 @@
     }
 
 }
+
+
+
 
 /* TABLET */
 @media screen and (min-width: 601px) and (max-width: 1000px){
@@ -91,6 +95,14 @@
     }
 }
 
+/* EXTRA MEDIA QUERY FOR NAVIGATION FONT SIZE */
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+
+    .navigationItem {
+        font-size: 18px;
+    }
+}
+
 /* MOBILE */
 @media screen and (max-width: 600px){
 
@@ -99,6 +111,7 @@
         width: 100%;
         background-color: white;
         display: block;
+        height: auto;
 
     }
 
