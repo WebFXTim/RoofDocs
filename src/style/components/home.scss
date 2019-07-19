@@ -1,0 +1,427 @@
+$redLogoColor: rgb(182, 8, 7);
+$headerFont: 3em OswaldBold, serif, sans-sefif;
+$sectionFont: 1.5em Roboto, serif, sans-serif;
+$subheaderFont: 2.5em OswaldBold, serif, sans-serif;
+
+.noBottomMargin {
+  margin-bottom: 0;
+}
+
+.main {
+
+  section {
+
+    margin: 0;
+
+    h1 {
+      font-size: 38px;
+      color: #fff;
+      margin: 0;
+      padding: 50px 0 20px;
+      text-align: center;
+    }
+  }
+}
+
+
+#pagination {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  margin: 20px 0;
+  background: rgb(182, 8, 7);
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  transition: all .2s ease;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.pagination-link {
+  position: absolute;
+  text-decoration: none;
+  left: 0;
+  top: 0;
+  color: rgb(182, 8, 7);
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+
+  @for $i from 1 to 6 {
+    &.page-#{$i} {
+      #pagination li:nth-of-type(#{$i}) {
+          @extend %active-dot;
+      }
+    }
+  }
+}
+
+%active-dot {
+  transform: scale(2);
+}
+
+
+/**
+  SECTION 1 - WHO
+ */
+
+#who {
+  margin: 0;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+.home-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.homeImage {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 100px);
+  opacity: 0.95;
+}
+
+.who-we-are {
+  width: 50%;
+  position: absolute;
+  display: inline-block;
+  margin-left: 5%;
+  float: left;
+  height: 90%;
+  margin-top: 2.5%;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.free-inspection {
+  width: 35%;
+  position: absolute;
+  display: inline-block;
+  float: right;
+  right: 5%;
+  height: 90%;
+  margin-top: 2.5%;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.free-inspection-submitted {
+
+}
+
+.sectionTitle {
+
+  color: $redLogoColor;
+  font: $headerFont;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
+  word-spacing: 3px;
+
+}
+
+.sectionSubheader {
+  width: 80%;
+  margin: 5px auto;
+  font: 16px Roboto, serif, sans-serif;
+}
+
+.sectionText {
+  font: $sectionFont;
+  text-align: center;
+  width: 80%;
+  line-height: 40px;
+  margin: 0 auto;
+}
+
+
+/**
+  SECTION 2 - VALUE
+ */
+
+.independent {
+  padding-top: 65px;
+  padding-bottom: 30px;
+}
+
+.values-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.value-item {
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 100%;
+  display: inline-block;
+}
+
+.value-item-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.value-item-label {
+  display: inline-block;
+  line-height: 100px;
+  width: 100%;
+  text-align: center;
+  font: $subheaderFont;
+  padding-top: 10px;
+}
+
+.value-item-icon {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+}
+
+.value-item-content {
+  width: 75%;
+  background-color: rgba(247, 247, 2467, 0.85);
+  min-height: 500px;
+  margin: 0 auto;
+  box-shadow: 5px 5px rgba(230, 230, 230, 1);
+}
+
+/**
+  SECTION 3 - WHAT
+ */
+
+.what-we-do-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+}
+
+.what-we-do-item {
+  flex-grow: 1;
+  height: 100%;
+  display: inline-block;
+}
+
+.what-we-do-item-container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+
+.what-we-do-item-icon {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  margin-left: 10%;
+}
+
+.what-we-do-image {
+  width: 100%;
+  height: auto;
+}
+
+.learn-more-container {
+  width: 60%;
+  min-width: 170px;
+  height: 60px;
+  bottom: 0;
+  margin: 35px auto 0 auto;
+}
+
+.learn-more-label {
+  display: inline-block;
+  line-height: 100px;
+  width: 100%;
+  text-align: right;
+  font: 16px RobotoMedium, serif, sans-serif;
+  padding-top: 5px;
+  color: $redLogoColor;
+}
+
+.learn-more-icon {
+  height: 25px;
+  width: 60px;
+  position: absolute;
+}
+
+.brands-container {
+  width: 100%;
+  height: 120px;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.image-left-container {
+  height: 100%;
+  width: 50%;
+  float: left;
+  display: inline-block;
+  position: relative;
+}
+
+.image-right-container {
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+img.brands-left-image, img.brands-right-image {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#gaf-logo {
+  max-height: 75%;
+  max-width: 75%;
+}
+
+#certainTeed-logo {
+  max-height: 120%;
+  max-width: 120%;
+}
+
+#iko-logo {
+  max-height: 140%;
+  max-width: 140%;
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+
+  .sectionText {
+    font-size: 1.15em;
+    line-height: 35px;
+  }
+
+  .who-we-are {
+    width: 45%;
+
+    .sectionText {
+      font-size: 1.15em;
+      line-height: 35px;
+    }
+  }
+
+  .free-inspection {
+    width: 45%;
+  }
+
+  .descriptionTextArea {
+    height: 80px !important;
+  }
+
+  .homeImage {
+    min-height: 850px;
+  }
+
+  .formGroupDetails {
+    float: none;
+    width: 80%;
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
+  #pagination {
+    display: none;
+  }
+
+  .formGroupDetails {
+    float: none;
+    width: 80%;
+  }
+
+  .who-we-are {
+    width: auto;
+    position: inherit;
+    margin-left: 0;
+    height: auto;
+    float: none;
+    margin-top: 2.5%;
+    z-index: 999;
+    box-shadow: none;
+  }
+
+  .homeImage {
+    display: none;
+  }
+
+  .free-inspection {
+    width: 100%;
+    float: right;
+    position: initial;
+  }
+
+  #values {
+    display: none;
+  }
+
+  .formGroupInput {
+    width: 80% !important;
+  }
+
+  .checkmark {
+    background-color: lightgray;
+  }
+
+  .what-we-do-item-icon {
+    display: none;
+  }
+
+  #how {
+    display: none;
+  }
+
+}
+
+
+@media screen and (max-width: 900px) {
+
+  #gaf-logo {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  #certainTeed-logo {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  #iko-logo {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+
+}

@@ -2,21 +2,53 @@
   font-family: 'Bebas';
   font-style: normal;
   font-weight: 100;
-  src: url('../resources/fonts/bebas.ttf'); /* IE9 Compat Modes */
+  src: url('../resources/fonts/bebas.ttf');
 }
 
 @font-face {
   font-family: 'AgencyFB';
   font-style: normal;
   font-weight: 100;
-  src: url('../resources/fonts/AgencyFB.ttf'); /* IE9 Compat Modes */
+  src: url('../resources/fonts/AgencyFB.ttf');
 }
 
 @font-face {
   font-family: 'FranklinGothicHeavy';
   font-style: normal;
   font-weight: 100;
-  src: url('../resources/fonts/FranklinGothicHeavy.ttf'); /* IE9 Compat Modes */
+  src: url('../resources/fonts/FranklinGothicHeavy.ttf');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../resources/fonts/Oswald.ttf');
+}
+
+@font-face {
+  font-family: 'OswaldBold';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../resources/fonts/OswaldBold.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../resources/fonts/Roboto.ttf');
+}
+
+@font-face {
+  font-family: 'RobotoMedium';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../resources/fonts/RobotoMedium.ttf'); /* IE9 Compat Modes */
+}
+
+.nameEnding {
+  color: rgb(182, 8, 7);
 }
 
 body {

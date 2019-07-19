@@ -3,61 +3,93 @@ import React, { Component } from 'react';
 
 
 // Styling
-import '../style/components/footer.css';
+import '../style/components/footer.scss';
+
+import footerLogo from '../resources/images/footer/roof-er-slogin.png';
+import gafCertified from '../resources/images/footer/gafCertified.png';
+import googleReviews from '../resources/images/footer/googleReviews.png';
+import roofERIcon from "../resources/images/logoSolo.png";
+
+const HomeAdvisiorIcon = 'http://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=85269159&key=8ada7f0ec568d330d285a447aaa81f61';
+const roofERHomeAdvisorLink = 'http://www.homeadvisor.com/rated.RoofER.85269159.html';
+const portalLink = 'https://portal.theroofdocs.com';
 
 
 class Footer extends Component {
 
 
+    constructor(props) {
+        super(props)
+
+        this.state = { year: new Date().getFullYear() }
+    }
+
+
     render() {
         return (
             <footer>
-
-                <div className="footerContainer">
-                    <div className="footerItem">
-                        {/*<i className="fas fa-phone fa-3x footerIcon" />*/}
-                        {/*<p> 123-456-8890 </p>*/}
-                        <i className="fas fa-phone fa-3x footerIcon footerLocationIcon" />
-                        <div className="footerPhone">
-                            <p> 703-239-3738 </p>
-                        </div>
+                <div className="footer-about">
+                    <div className="about-image">
+                        <img className="footer-logo" src={footerLogo} alt="RoofER" />
                     </div>
-                    <div className="footerItem">
-                        <i className="fas fa-map-pin fa-3x footerIcon footerLocationIcon footerIconPin" />
-                        <div className="footerAddress">
-                            <p> 3100 Clarendon Blvd <br/>
-                                Ste 200 <br/>
-                                Arlington, VA 22201
-                            </p>
-                        </div>
-                    </div>
-                    <div className="footerItem">
-                        <i className="fas fa-info-circle fa-3x footerIcon footerLocationIcon" />
-                        <div className="footerAddress">
-                            <a className="footerLink" href="/"><p className="footerLinkText"> Home </p></a>
-                            <a className="footerLink" href="/privacy"><p className="footerLinkText"> Privacy Policy </p></a>
-                            <a className="footerLink" href="https://portal.theroofdocs.com"><p className="footerLinkText"> Customer Portal </p></a>
-                        </div>
+                    <div className="about-info">
+                        <p> Address: <span> 3100 Clarendon Blvd. Ste. 200, Arlington, VA 22201</span> </p>
+                        <p> Phone: <span> 703-239-3738 </span></p>
+                        <p> Email:  <span> info@theroofdocs.com </span> </p>
+                        <p> Class A License:  <span> 2705169915 </span> </p>
                     </div>
                 </div>
-
-                <div className="footerContainerMobile">
-                    <div className="footerItemMobile" id="footerItemMobilePhone">
-                        <i className="fas fa-phone fa-2x" />
-                        <a href="tel:703-239-3738"><p id="mobilePhoneNumber">703-239-3738</p></a>
+                <div className="footer-links">
+                    <div className="footer-links-container">
+                        <a className="footer-href" href="work">
+                            <div className="single-footer-link-container">
+                                <img src={roofERIcon} alt="RoofER" className="footer-link-icon" />
+                                <p className="footer-link-label">Our Work</p>
+                            </div>
+                        </a>
+                        <a className="footer-href" href="docs">
+                            <div className="single-footer-link-container">
+                                <img src={roofERIcon} alt="RoofER" className="footer-link-icon" />
+                                <p className="footer-link-label">Meet The Docs</p>
+                            </div>
+                        </a>
+                        <a className="footer-href" href="inspection">
+                            <div className="single-footer-link-container">
+                                <img src={roofERIcon} alt="RoofER" className="footer-link-icon" />
+                                <p className="footer-link-label">Inspection</p>
+                            </div>
+                        </a>
+                        <a className="footer-href" href="faqs">
+                            <div className="single-footer-link-container">
+                                <img src={roofERIcon} alt="RoofER" className="footer-link-icon" />
+                                <p className="footer-link-label">FAQs</p>
+                            </div>
+                        </a>
+                        <a className="footer-href" href={portalLink} target="_blank" rel="noopener noreferrer" >
+                            <div className="single-footer-link-container">
+                                <img src={roofERIcon} alt="RoofER" className="footer-link-icon" />
+                                <p className="footer-link-label">Sign-in</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div className="footer-approval">
+                    <div className="approval-top-images">
+                        <div className="footer-image-left-container">
+                            <img src={googleReviews} className="footer-brands-left-image" alt="5 Start Google Reviews" />
+                        </div>
+                        <div className="footer-image-right-container">
+                            <a href={roofERHomeAdvisorLink} target="_blank" rel="noopener noreferrer" > <img src={HomeAdvisiorIcon} className="footer-brands-right-image" alt="HomeAdvisor Screened & Approved" /></a>
+                        </div>
 
                     </div>
-
-                    <div className="footerItemMobile" id="footerItemAddress">
-                        <p id="mobileAddress">3100 Clarendon Blvd <br/> Ste 200 <br/> Arlington, VA 22201</p>
+                    <div className="approval-bottom-images">
+                        <img className="gaf-bottom-image" src={gafCertified} alt="GAF" />
                     </div>
-
-                    <div className="footerItemMobile noBorder" id="footerItemAddress">
-                        <a className="footerLink" href="/"><p className="footerLinkTextMobile"> Home </p></a>
-                        <a className="footerLink" href="/privacy"><p className="footerLinkTextMobile"> Privacy Policy </p></a>
-                        <a className="footerLink" href="https://portal.theroofdocs.com"><p className="footerLinkTextMobile"> Customer Portal </p></a>
-                    </div>
-
+                </div>
+                <div className="footer-privacy-copyright">
+                    <p className="footer-item"> Copyright &#169; {this.state.year } RoofER | </p>
+                    <a href="/privacy"><p className="footer-item">  Privacy Policy </p></a>
                 </div>
             </footer>
         );

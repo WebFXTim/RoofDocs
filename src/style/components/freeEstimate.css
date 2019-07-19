@@ -1,8 +1,4 @@
-.freeEstimate {
-    width: 100%;
-    margin-top: 50px;
-    min-height: calc(100vh - 225px);
-}
+.inspection-page-container { }
 
 #estimateFormContainer {
     width: 70%;
@@ -12,7 +8,8 @@
 
 .estimateControlLabel {
     font-family: Bebas, serif;
-    font-size: 18px;
+    font-size: 15px;
+    margin-bottom: 0 !important;
     word-spacing: 5px;
     width: 100%;
 }
@@ -25,6 +22,9 @@
 
 }
 
+label.container {
+    font-size: 15px;
+}
 
 .estimateFooterMainText {
     float: right;
@@ -62,21 +62,20 @@
 }
 
 .formGroupText {
-    width: 50%;
+    width: 80%;
     display: inline-block;
+    margin-left: 10%;
 }
 
 .formGroupCustom {
-    width: 50%;
+    width: 80%;
     display: inline-block;
-}
-
-.formGroupDetails {
-    float: right;
+    margin-left: 10%;
+    margin-bottom: 0 !important;
 }
 
 .descriptionTextArea {
-    height: 125px !important;
+    height: 125px;
 }
 
 .checkbox label {
@@ -89,13 +88,14 @@
     color: white;
     font-family: Bebas, serif;
     font-size: 12px;
-    width: 150px;
+    width: 200px;
     margin-top: 20px;
-    margin-left: calc(50% - 75px);
+    margin-left: calc(50% - 100px);
+    word-spacing: 5px;
 }
 
 .formGroupInput {
-    width: 95% !important;
+    width: 95%;
 }
 
 /* Submitted Estimate */
@@ -132,6 +132,8 @@
 
 
 
+
+
 @media screen and (max-width: 1000px){
 
     .freeEstimate {
@@ -164,16 +166,12 @@
     }
 
     .formGroupCustom {
-        width: 100%;
+        width: 80%;
         display: inline-block;
     }
 
-    .formGroupDetails {
-        float: right;
-    }
-
     .descriptionTextArea {
-        height: 125px !important;
+        height: 125px;
     }
 
     .checkbox label {
@@ -186,13 +184,14 @@
         color: white;
         font-family: Bebas, serif;
         font-size: 12px;
-        width: 150px;
+        width: 200px;
         margin-top: 20px;
-        margin-left: calc(50% - 75px);
+        margin-left: calc(50% - 100px);
+        word-spacing: 5px;
     }
 
     .formGroupInput {
-        width: 95% !important;
+        width: 95%
     }
 
     /* Submitted Estimate */
