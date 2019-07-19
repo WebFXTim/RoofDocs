@@ -83,7 +83,6 @@ body {
 #who {
   margin: 0;
   width: 100%;
-  height: calc(100vh - 100px);
 }
 
 .home-container {
@@ -240,7 +239,9 @@ body {
 .what-we-do-image {
   width: 100%;
   height: auto;
+  z-index: 1;
 }
+
 
 .learn-more-container {
   width: 60%;
