@@ -12,7 +12,7 @@
   font: 22px RobotoMedium, serif, sans-seif;
   width: 100%;
   line-height: 60px;
-  text-indent: 15px;
+  padding-left: 15px;
   background-color: rgba(182,8,7, 0.75);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -45,4 +45,10 @@
   height:auto;
   transform:scaleY(1);
   transform-origin:top;
+}
+
+@media screen and (max-width: 900px) {
+  .faq-question-title {
+    line-height: 40px;
+  }
 }
