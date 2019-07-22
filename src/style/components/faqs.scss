@@ -6,7 +6,13 @@
   width: 80%;
   margin: 20px auto;
   border-radius: 10px;
+
+  :hover {
+    cursor: pointer;
+  }
+
 }
+
 
 .faq-question-title {
   font: 22px RobotoMedium, serif, sans-seif;

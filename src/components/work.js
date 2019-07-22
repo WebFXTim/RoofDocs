@@ -42,7 +42,7 @@ class OurWork extends Component {
                         <p className="work-section-label"> Roofing </p>
                     </div>
                     <div className="work-content-container">
-                        <p className="work-content-background"> Today's roofing products are designed to be installed as a system to ensure your home has a water-tight seal for your to come.
+                        <p className="work-content-background"> Today's roofing products are designed to be installed as a system to ensure your home has a water tight seal for your to come.
                             ROOF<span className="nameEnding">ER</span>'s installation team is a group of GAF factory-certified installers who follow the same
                             approved methods on every job.  The core components of a roofing job done right are:
                         </p>
@@ -90,6 +90,12 @@ class OurWork extends Component {
                                     <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
                                     <p className="line-item-text"> Hip & Ridge cap shingles  </p>
                                 </div>
+                                {/* Flashing Replacement */}
+
+                                <div className="logo-line-item">
+                                    <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
+                                    <p className="line-item-text"> Flashing replacement  </p>
+                                </div>
 
 
                             </div>
@@ -117,7 +123,7 @@ class OurWork extends Component {
                     </div>
                     <div className="work-content-container">
                         <p className="work-content-background"> Just like your roof, a proper siding replacement should be treated as a system. ROOF<span className="nameEnding">ER</span>'s
-                           team of installers perform hundreds of siding replacements each year, ensuring each replacement is installed with all necessary components.
+                           team of installers perform hundreds of siding replacements each year, ensuring each replacement is installed with all necessary components:
                         </p>
 
                         <div className="work-description-container">
@@ -141,7 +147,7 @@ class OurWork extends Component {
                                 {/* J-channels */}
                                 <div className="logo-line-item">
                                     <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                    <p className="line-item-text"> J-channels, outside corner posts, and inside corner posts  </p>
+                                    <p className="line-item-text"> Proper trim & corner pieces  </p>
                                 </div>
                                 {/* Lifetime siding */}
                                 <div className="logo-line-item">
@@ -188,7 +194,7 @@ class OurWork extends Component {
                                 {/* Match */}
                                 <div className="logo-line-item">
                                     <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                    <p className="line-item-text"> Proper match between gutter and downspout sizes  </p>
+                                    <p className="line-item-text"> Proper match between gutter & downspout sizes  </p>
                                 </div>
 
                             </div>

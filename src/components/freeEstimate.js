@@ -200,7 +200,7 @@ class FreeEstimate extends Component {
                         <div className="damage-report" style={ this.state.stormReportSubmitted ? {display: 'none'} : { display: 'inline-block'}}>
                             <p className="sectionTitle"> FREE STORM REPORT </p>
                             <p className="sectionSubheader"> Please use the form below to receive a <span className="nameEnding">FREE</span> storm report for your property to see if
-                                your property has been effected by storm damage! </p>
+                                your property has been affected by storm damage! </p>
 
                             <form onSubmit={this.submitFormStormReport}>
                                 <FieldGroup
@@ -307,7 +307,7 @@ class FreeEstimate extends Component {
                         <div className="work-content-container">
                             <p className="work-content-background"> Our Roof Docs are trained how to properly diagnose potential issues with your roof.  It is crucial to be able to make the distinction
                                 between storm-related damage and damage resulting from age or weathering.  ROOF<span className="nameEnding">ER</span> uses the following methodology to determine whether
-                                your property has been effected by storm  damage:
+                                your property has been affected by storm  damage:
                             </p>
 
                             <div className="inspection-description-container">
@@ -320,7 +320,7 @@ class FreeEstimate extends Component {
                                     {/* Perform */}
                                     <div className="logo-line-item">
                                         <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                        <p className="line-item-text">Perform a full roof inspection looking for dislodged granules, fractured matting, or creased shingles</p>
+                                        <p className="line-item-text">Perform a full roof inspection, looking for dislodged granules, fractured matting, or creased shingles</p>
                                     </div>
                                     {/* Examine */}
                                     <div className="logo-line-item">
@@ -332,9 +332,9 @@ class FreeEstimate extends Component {
                         </div>
                     </div>
                     {/* Prescribe */}
-                    <div className="work-section">
+                    <div className="work-section" style={{paddingTop: '50px'}}>
 
-                        <div className="work-heading-container">
+                        <div className="work-heading-container" >
                             <img src={prescribeIcon} className="work-section-icon" alt="Prescribe" />
                             <p className="work-section-label"> Prescribe </p>
                         </div>
@@ -355,12 +355,12 @@ class FreeEstimate extends Component {
                                     {/* Provide */}
                                     <div className="logo-line-item">
                                         <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                        <p className="line-item-text">Providing ROOF<span className="nameEnding">ER</span> with the insurance scope of loss to ensure it includes all items that were damages </p>
+                                        <p className="line-item-text">Providing ROOF<span className="nameEnding">ER</span> with the insurance scope of loss to ensure it includes all items that were damaged </p>
                                     </div>
                                     {/* Meeting */}
                                     <div className="logo-line-item">
                                         <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                        <p className="line-item-text">Meeting with your Roof Docs to discuss all project details, upgrades, and install time line </p>
+                                        <p className="line-item-text">Meeting with your Roof Docs to discuss all project details, upgrades, and installation timeline </p>
                                     </div>
                                 </div>
                             </div>

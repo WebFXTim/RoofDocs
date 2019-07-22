@@ -7,6 +7,10 @@ import '../style/components/faqs.scss';
 // Image
 import map from '../resources/images/FAQMap.JPG';
 
+const insurancePay = "1. Insurance companies include coverage for hail and wind damage because they are events out of your control, also known as Acts of God. Property damage resulting from a " +
+    "storm is not an act of negligence or directly attributable to someone that can be held accountable. If homeowner's insurance didn't cover these events, why have it at all? 2. When your roof is " +
+    "damaged by a hail or wind event, it is in the best interest of the insurance company to pay to replace it before more significant issues arise such as water-saturated insulation and/or drywall repairs";
+
 
 class FAQs extends Component {
 
@@ -30,17 +34,17 @@ class FAQs extends Component {
                          activeIndex={this.state.activeIndex}
                          image={map}
                          title="Does it really hail in Virginia?"
-                         answer="The map below shows the swath of hail storms over the last three years. All of Northern Virginia has been effected by at least one storm
-                         over that span. This does not guarantee that your home has storm damage; however, it does indicate the possibility that your property has been effected"
+                         answer="The map below shows the swath of hail storms over the last three years. All of Northern Virginia has been affected by at least one storm
+                         over that span. This does not guarantee that your home has storm damage; however, it does indicate the possibility that your property has been affected"
                 />
 
                 {/* I haven't had any issues */}
                 <FAQItem parent={this}
                          index='2'
                          activeIndex={this.state.activeIndex}
-                         title="I haven't had any issues, why should I worry about it now"
+                         title="I haven't had any issues, why should I worry about it now?"
                          answer="Potential leaks due to roof damage can remain latent for quite some time. If left unattended, the exposed layer of asphalt will begin deteriorating
-                         ue to UV exposure and thermal shock. Eventually, the asphalt layer will crack, allowing water to find a way into the home and leading to more costly repairs"
+                         due to UV exposure and thermal shock. Eventually, the asphalt layer will crack, allowing water to find a way into the home and leading to more costly repairs"
                 />
 
                 {/* Why would insurance pay */}
@@ -48,8 +52,7 @@ class FAQs extends Component {
                          index='3'
                          activeIndex={this.state.activeIndex}
                          title="Why would insurance pay for my roof and/or siding?"
-                         answer='The map below shows the swath of hail storms over the last three years. All of Northern Virginia has been effected by at least one storm
-                         over that span. This does not guarantee that your home has storm damage; however, it does indicate the possibility that your property has been effected'
+                         answer={insurancePay}
                 />
 
                 {/* Will my premiums go up */}
@@ -58,7 +61,7 @@ class FAQs extends Component {
                          activeIndex={this.state.activeIndex}
                          title="Will my premium go up for an insurance claim?"
                          answer="It is illegal for insurance companies to raise premiums due to natural disasters. However, insurance companies have to assess risk somehow, and
-                         when severe storms do affect an area, typically that entire zip code will see an increase in their property insurance rates. As a result, it is in your
+                         when severe storms do affect an area, typically that entire zip code will see an increase in its property insurance rates. As a result, it is in your
                          best interest to file a claim anytime there has been a significant storm and your property has been properly assessed for damage"
                 />
 
@@ -87,9 +90,9 @@ class FAQs extends Component {
                          index='7'
                          activeIndex={this.state.activeIndex}
                          title="Why should I work with ROOFER?"
-                         answer="When a storm affects your neighborhood, you should seek help from an experienced, honest, fair, and local contractor who will assess your
+                         answer='When a storm affects your neighborhood, you should seek help from an experienced, honest, fair, and local contractor who will assess your
                          damages and assist you through the storm restoration process. At ROOFER, we have experience handling hundreds of storm restoration projects each
-                         year and maintain an uncompromising commitment to serving every customer with integrity, quality, and simplicity"
+                         year and maintain an uncompromising commitment to serving every customer with integrity, quality, and simplicity'
                 />
 
             </div>
@@ -139,8 +142,15 @@ class FAQItem extends Component {
     setActive = e => {
         e.preventDefault();
 
-        const index = parseInt(this.props.index);
-        this.props.parent.setState ({ activeIndex: index });
+        if(parseInt(this.props.index) === this.props.activeIndex) {
+            this.props.parent.setState ({ activeIndex: 0 })
+            console.log('Setting Active Index to 0')
+        } else {
+            const index = parseInt(this.props.index);
+            this.props.parent.setState ({ activeIndex: index });
+        }
+
+
     }
 }
 
