@@ -58,7 +58,7 @@ li {
   -webkit-transition: all 0.5s ease;
 }
 
-html, body { overflow-x: hidden; }
+//html, body { overflow-x: hidden; }
 
 body {
   font-family: sans-serif;
@@ -204,6 +204,7 @@ body {
   min-height: 500px;
   margin: 0 auto;
   box-shadow: 5px 5px rgba(230, 230, 230, 1);
+  position: relative;
 }
 
 /**
@@ -250,7 +251,8 @@ body {
   height: 60px;
   bottom: 0;
   margin: 35px auto 0 auto;
-  position: relative;
+  position: absolute;
+  left: calc(50% - 95px);
 }
 
 .learn-more-label {
