@@ -117,23 +117,23 @@ class MeetTheDocs extends Component {
                     </div>
 
                     {/* Lee Gordon */}
-                    <div className="docsView">
-                        <div className="singleDocContainer">
-                            <div className="docsViewImageContainer">
-                                <img className="docsViewImage" src={Lee} alt="Lee Gordon"/>
-                            </div>
-                            <p className="docName"> Lee Gordon</p>
-                            <div className="docBio">
-                                <p>Lee is a lifelong roof climber and our resident quality control doc.  He went to Philadelphia University
-                                    where he studied business law, and is an avid golfer.  He goes by "OCLee" for his attention to detail and spent
-                                    time in college restoring stained glass in centuries old churches.
-                                    <br/><br/>
+                    {/*<div className="docsView">*/}
+                        {/*<div className="singleDocContainer">*/}
+                            {/*<div className="docsViewImageContainer">*/}
+                                {/*<img className="docsViewImage" src={Lee} alt="Lee Gordon"/>*/}
+                            {/*</div>*/}
+                            {/*<p className="docName"> Lee Gordon</p>*/}
+                            {/*<div className="docBio">*/}
+                                {/*<p>Lee is a lifelong roof climber and our resident quality control doc.  He went to Philadelphia University*/}
+                                    {/*where he studied business law, and is an avid golfer.  He goes by "OCLee" for his attention to detail and spent*/}
+                                    {/*time in college restoring stained glass in centuries old churches.*/}
+                                    {/*<br/><br/>*/}
 
-                                    (Please don't bring up golf with Lee, he has a job to attend to, but he'll be happy to tee it up on the weekend.)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                                    {/*(Please don't bring up golf with Lee, he has a job to attend to, but he'll be happy to tee it up on the weekend.)*/}
+                                {/*</p>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
 
                 </div>
             </div>

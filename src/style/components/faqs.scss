@@ -53,8 +53,17 @@
   transform-origin:top;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
+  .faq-container {
+    margin-top: 100px;
+  }
   .faq-question-title {
     line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .faq-container {
+    margin-top: 300px;
   }
 }

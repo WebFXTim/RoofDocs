@@ -81,8 +81,25 @@ class Home extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { formSubmitted: false, errors: [ ] };
+        this.state = { formSubmitted: false, errors: [ ], phoneNumber: ''};
     }
+
+    phoneChanged = e => {
+
+
+        let phone = '';
+
+        const cleaned = ('' + e.target.value).replace(/\D/g, '');
+        const match = cleaned.match(/^(1|)?(\d{3})(\d{3})(\d{4})$/);
+        if (match) {
+            phone = ['(', match[2], ') ', match[3], '-', match[4]].join('')
+        } else {
+            phone = e.target.value;
+        }
+
+        this.setState({ phoneNumber: phone })
+
+    };
 
     submitForm = e => {
 
@@ -155,19 +172,7 @@ class Home extends Component {
                 <div className="main">
                     <section id="who">
                         <div className="home-container">
-                            <div className="who-we-are">
-                                <p className="sectionTitle"> Who we are </p>
-                                <p className="sectionText">ROOF<span className="nameEnding">ER</span> is a team of dedicated professionals
-                                    specializing in storm restoration projects in Northern Virginia.  We are aware of the poor reputation
-                                    attributed to roofing contractors and have made it our mission to stamp out that stigma by providing
-                                    personalized, unparalleled service to our customers.  Our Roof Docs are trained to handle every project with
-                                    the care and integrity a patient would expect to receive from their own doctor.  With a commitment to integrity, quality,
-                                    and simplicity, ROOF<span className="nameEnding">ER</span> has become the most trusted name in the storm
-                                    restoration industry.  Call ROOF<span className="nameEnding">ER</span> at <a href="tel:7032393738"> (703) 239-3738 </a>
-                                    or use the inspection tool to the right to have our Roof Docs provide you with the proper prescription for
-                                    your home's ailments.
-                                </p>
-                            </div>
+
                             <div className="free-inspection" style={ this.state.formSubmitted ? {display: 'none'} : { display: 'inline-block'}}>
                                 <p className="sectionTitle noBottomMargin"> Free Inspection </p>
                                 <p className="sectionSubheader"> Please use the form below to set up a <span className="nameEnding">FREE</span> inspection by one of our Roof Docs today! </p>
@@ -188,6 +193,8 @@ class Home extends Component {
                                         id="formControlsPhone"
                                         type="phone"
                                         label="PHONE NUMBER"
+                                        value={this.state.phoneNumber}
+                                        onChange={this.phoneChanged}
                                         placeholder="Enter Phone Number"
                                     />
                                     <FieldGroup
@@ -219,16 +226,30 @@ class Home extends Component {
                                     Roof Docs within one business day. To learn more about our process, <a href="/inspection#process">click here</a>
                                 </p>
                             </div>
+                            <div className="who-we-are">
+                                <p className="sectionTitle"> Who we are </p>
+                                <p className="sectionText">ROOF<span className="nameEnding">ER</span> is a team of dedicated professionals
+                                    specializing in storm restoration projects in Northern Virginia.  We are aware of the poor reputation
+                                    attributed to roofing contractors and have made it our mission to stamp out that stigma by providing
+                                    personalized, unparalleled service to our customers.  Our Roof Docs are trained to handle every project with
+                                    the care and integrity a patient would expect to receive from their own doctor.  With a commitment to integrity, quality,
+                                    and simplicity, ROOF<span className="nameEnding">ER</span> has become the most trusted name in the storm
+                                    restoration industry.  Call ROOF<span className="nameEnding">ER</span> at <a href="tel:7032393738"> (703) 239-3738 </a>
+                                    or use the inspection tool to the right to have our Roof Docs provide you with the proper prescription for
+                                    your home's ailments.
+                                </p>
+                            </div>
                             <img src={home} className="homeImage" alt="Home"/>
 
                         </div>
+
                     </section>
 
                     <section id="values">
                         <p className="sectionTitle independent"> What we value </p>
                         <div className="values-container">
                             <div className="value-item">
-                                <div className="value-item-container">
+                                <div className="value-item-container integrity">
                                     <img src={integrity} alt="Integrity" className="value-item-icon" />
                                     <p className="value-item-label">Integrity</p>
                                 </div>
@@ -243,7 +264,7 @@ class Home extends Component {
                                 </div>
                             </div>
                             <div className="value-item">
-                                <div className="value-item-container">
+                                <div className="value-item-container quality">
                                     <img src={quality} alt="Quality" className="value-item-icon" />
                                     <p className="value-item-label">Quality</p>
                                 </div>
@@ -258,7 +279,7 @@ class Home extends Component {
                                 </div>
                             </div>
                             <div className="value-item">
-                                <div className="value-item-container">
+                                <div className="value-item-container simplicity">
                                     <img src={simplicity} alt="Simplicity" className="value-item-icon" />
                                     <p className="value-item-label">Simplicity</p>
                                 </div>
@@ -281,9 +302,19 @@ class Home extends Component {
                             <div className="what-we-do-item">
                                 <div className="what-we-do-item-container">
                                     <img src={roofingIcon} alt="Roofing" className="what-we-do-item-icon" />
-                                    <p className="value-item-label">Roofing</p>
+                                    <p className="what-we-do-item-label">Roofing</p>
                                 </div>
-                                <img src={roofingWhatWeDo} className="what-we-do-image" alt="What we do - Roofing" />
+
+
+                                <div className="what-we-do-image-container">
+                                    <img src={roofingWhatWeDo} className="what-we-do-image" alt="What we do - Roofing"/>
+                                        <a href="/work#roofing">
+                                            <div className="what-we-do-image-overlay">
+                                                <div className="what-we-do-image-text">Learn More</div>
+                                            </div>
+                                        </a>
+                                </div>
+
                                 <div className="brands-container">
                                     <div className="image-left-container">
                                         <img src={gaf} className="brands-left-image" id="gaf-logo" alt="GAF"/>
@@ -296,9 +327,17 @@ class Home extends Component {
                             <div className="what-we-do-item">
                                 <div className="what-we-do-item-container">
                                     <img src={sidingIcon} alt="Siding" className="what-we-do-item-icon" />
-                                    <p className="value-item-label">Siding</p>
+                                    <p className="what-we-do-item-label">Siding</p>
                                 </div>
-                                <img src={sidingWhatWeDo} className="what-we-do-image" alt="What we do - Siding" />
+
+                                <div className="what-we-do-image-container">
+                                    <img src={sidingWhatWeDo} className="what-we-do-image" alt="What we do - Siding"/>
+                                    <a href="/work#siding">
+                                        <div className="what-we-do-image-overlay">
+                                            <div className="what-we-do-image-text">Learn More</div>
+                                        </div>
+                                    </a>
+                                </div>
                                 <div className="brands-container">
                                     <div className="image-left-container">
                                         <img src={certainTeed} className="brands-left-image" id="certainTeed-logo" alt="Certain Teed" />
@@ -311,9 +350,16 @@ class Home extends Component {
                             <div className="what-we-do-item">
                                 <div className="what-we-do-item-container">
                                     <img src={guttersIcon} alt="Gutters" className="what-we-do-item-icon"  />
-                                    <p className="value-item-label">Gutters</p>
+                                    <p className="what-we-do-item-label">Gutters</p>
                                 </div>
-                                <img src={guttersWhatWeDo} className="what-we-do-image" alt="What we do - Gutters" />
+                                <div className="what-we-do-image-container">
+                                    <img src={guttersWhatWeDo} className="what-we-do-image" alt="What we do - Gutters"/>
+                                    <a href="/work#gutters">
+                                        <div className="what-we-do-image-overlay">
+                                            <div className="what-we-do-image-text">Learn More</div>
+                                        </div>
+                                    </a>
+                                </div>
                                 <div className="brands-container">
                                     <div className="image-left-container">
                                         <img src={plyGem} className="brands-left-image" alt="Ply Gem" />
@@ -331,7 +377,7 @@ class Home extends Component {
                         <p className="sectionTitle independent"> How we do it </p>
                         <div className="values-container">
                             <div className="value-item">
-                                <div className="value-item-container">
+                                <div className="value-item-container how-we-do-it-item">
                                     <img src={inspect} alt="Inspect" className="value-item-icon" />
                                     <p className="value-item-label">Inspect</p>
                                 </div>
@@ -342,16 +388,14 @@ class Home extends Component {
                                         a claim through your homeowner's insurance is warranted.
                                     </p>
                                     <div className="learn-more-container">
-                                        <div className="learn-more-container">
-                                            <img src={roofERIcon} alt="RoofER" className="learn-more-icon" />
-                                            <a href="/inspection"><p className="learn-more-label">LEARN MORE</p></a>
-                                        </div>
+                                        <img src={roofERIcon} alt="RoofER" className="learn-more-icon" />
+                                        <a href="/inspection"><p className="learn-more-label">LEARN MORE</p></a>
                                     </div>
                                 </div>
 
                             </div>
                             <div className="value-item">
-                                <div className="value-item-container">
+                                <div className="value-item-container how-we-do-it-item">
                                     <img src={assist} alt="Assist" className="value-item-icon" />
                                     <p className="value-item-label">Assist</p>
                                 </div>
@@ -362,15 +406,13 @@ class Home extends Component {
                                         the boundaries of the law.  Beware of contractors practicing unlawful Public Adjusting.
                                     </p>
                                     <div className="learn-more-container">
-                                        <div className="learn-more-container">
-                                            <img src={roofERIcon} alt="RoofER" className="learn-more-icon" />
-                                            <a href="/inspection"><p className="learn-more-label">LEARN MORE</p></a>
-                                        </div>
+                                        <img src={roofERIcon} alt="RoofER" className="learn-more-icon" />
+                                        <a href="/inspection"><p className="learn-more-label">LEARN MORE</p></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="value-item">
-                                <div className="value-item-container">
+                                <div className="value-item-container how-we-do-it-item">
                                     <img src={install} alt="Install" className="value-item-icon" />
                                     <p className="value-item-label">Install</p>
                                 </div>
@@ -382,10 +424,8 @@ class Home extends Component {
                                         inspection upon completion.
                                     </p>
                                     <div className="learn-more-container">
-                                        <div className="learn-more-container">
-                                            <img src={roofERIcon} alt="RoofER" className="learn-more-icon" />
-                                            <a href="/inspection"><p className="learn-more-label">LEARN MORE</p></a>
-                                        </div>
+                                        <img src={roofERIcon} alt="RoofER" className="learn-more-icon" />
+                                        <a href="/inspection"><p className="learn-more-label">LEARN MORE</p></a>
                                     </div>
                                 </div>
                             </div>

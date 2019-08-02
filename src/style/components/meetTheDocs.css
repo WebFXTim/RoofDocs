@@ -119,8 +119,10 @@
 
 @media screen and (max-width: 1000px) {
 
+
+
     .meetTheDocs {
-        margin-top: 20px;
+        margin-top: 120px;
         position: relative;
         height: auto;
     }
@@ -160,7 +162,8 @@
         font-weight: bold;
         font-family: Bebas, serif;
         text-transform: uppercase;
-        margin-top: 5px;
+        margin-top: 40px;
+        margin-left: 10%;
     }
 
     .docBio {
@@ -225,4 +228,14 @@
         margin-right: 5px;
     }
 
+}
+
+@media screen and (max-width: 600px) {
+
+    .meetTheDocs {
+        margin-top: 320px;
+        position: relative;
+        height: auto;
+        padding-bottom: 50px;
+    }
 }

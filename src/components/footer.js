@@ -76,7 +76,9 @@ class Footer extends Component {
                 <div className="footer-approval">
                     <div className="approval-top-images">
                         <div className="footer-image-left-container">
-                            <img src={googleReviews} className="footer-brands-left-image" alt="5 Start Google Reviews" />
+                            <a href="https://g.co/kgs/5NRKBM" target="_blank" rel="noopener noreferrer" >
+                                <img src={googleReviews} className="footer-brands-left-image" alt="5 Start Google Reviews" />
+                            </a>
                         </div>
                         <div className="footer-image-right-container">
                             <a href={roofERHomeAdvisorLink} target="_blank" rel="noopener noreferrer" > <img src={HomeAdvisiorIcon} className="footer-brands-right-image" alt="HomeAdvisor Screened & Approved" /></a>

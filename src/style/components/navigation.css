@@ -60,6 +60,9 @@
         background-color: white;
         display: flex;
         align-items: stretch;
+        position: fixed;
+        top: 0;
+        z-index: 9999;
 
     }
 
@@ -112,6 +115,9 @@
         background-color: white;
         display: block;
         height: auto;
+        position: fixed;
+        top: 0;
+        z-index: 9999;
 
     }
 

@@ -1,6 +1,8 @@
-
-
-
+.work-section-inspection {
+  background-color: white;
+  width: 90%;
+  margin-left: 10%;
+}
 
 .inspection-damage-report-container {
   margin: 0;
@@ -116,6 +118,12 @@
 
 }
 
+@media screen and (max-width: 1000px) {
+  .inspection-page-container {
+    margin-top: 100px;
+  }
+}
+
 @media screen and (max-width: 900px) {
 
   .home-container {
@@ -147,4 +155,10 @@
     margin-left: 0;
   }
 
+}
+
+@media screen and (max-width: 600px) {
+  .inspection-page-container {
+    margin-top: 300px;
+  }
 }

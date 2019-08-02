@@ -178,24 +178,36 @@ body {
 
 .value-item-container {
   position: relative;
-  width: 80%;
   margin: 0 auto;
   height: 100px;
+}
+
+.simplicity {
+  width: 250px;
+}
+
+.quality {
+  width: 210px;
+}
+
+.integrity {
+  width: 235px;
 }
 
 .value-item-label {
   display: inline-block;
   line-height: 100px;
-  width: 100%;
   text-align: center;
   font: $subheaderFont;
-  padding-top: 10px;
+  padding-left: 5px;
+  position: relative;
+  bottom: -10px;
+
 }
 
 .value-item-icon {
   height: 80px;
   width: 80px;
-  position: absolute;
 }
 
 .value-item-content {
@@ -226,16 +238,59 @@ body {
 
 .what-we-do-item-container {
   position: relative;
-  width: 100%;
+  width: 225px;
+  margin: 0 auto;
   height: 100px;
 }
 
+.what-we-do-item-label {
+  display: inline-block;
+  line-height: 100px;
+  text-align: center;
+  font: $subheaderFont;
+  padding-left: 15px;
+  position: relative;
+  bottom: -10px;
+
+}
 
 .what-we-do-item-icon {
   height: 80px;
   width: 80px;
+}
+
+.what-we-do-image-overlay {
   position: absolute;
-  margin-left: 10%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.7s ease;
+  background-color: black;
+}
+
+.what-we-do-image-container {
+  position: relative;
+}
+
+.what-we-do-image-container:hover .what-we-do-image-overlay {
+  opacity: 0.7;
+}
+
+.what-we-do-image-text {
+  color: white;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font: 24px Oswald, serif, sans-serif;
 }
 
 .what-we-do-image {
@@ -243,6 +298,7 @@ body {
   height: auto;
   z-index: 1;
 }
+
 
 
 .learn-more-container {
@@ -258,17 +314,18 @@ body {
 .learn-more-label {
   display: inline-block;
   line-height: 100px;
-  width: 100%;
   text-align: right;
   font: 16px RobotoMedium, serif, sans-serif;
   padding-top: 5px;
   color: $redLogoColor;
+  position: relative;
+  top: 2px;
+  left: 5px;
 }
 
 .learn-more-icon {
   height: 25px;
   width: 60px;
-  position: absolute;
 }
 
 .brands-container {
@@ -300,6 +357,10 @@ img.brands-left-image, img.brands-right-image {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+
+.how-we-do-it-item {
+  width: 220px;
 }
 
 #gaf-logo {
@@ -388,9 +449,7 @@ img.brands-left-image, img.brands-right-image {
     position: initial;
   }
 
-  #values {
-    display: none;
-  }
+
 
   .formGroupInput {
     width: 80% !important;
@@ -400,16 +459,18 @@ img.brands-left-image, img.brands-right-image {
     background-color: lightgray;
   }
 
-  .what-we-do-item-icon {
-    display: none;
-  }
-
-  #how {
-    display: none;
-  }
 
 }
 
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .home {
+    margin-top: 100px;
+  }
+
+  .value-item-content {
+    width: 90%;
+  }
+}
 
 @media screen and (max-width: 900px) {
 
@@ -432,5 +493,54 @@ img.brands-left-image, img.brands-right-image {
     line-height: 30px;
     font-size: 1.15em;
   }
+
+}
+
+@media screen and (max-width: 600px){
+  .home {
+     margin-top: 300px;
+  }
+
+  .what-we-do-container {
+      display: initial;
+  }
+
+
+  // Values
+  .values-container {
+    display: initial;
+  }
+
+  .value-item {
+    width: 100%;
+    display: block;
+  }
+
+  .value-item-content {
+    display: none;
+  }
+
+  .independent {
+    padding-top: 0;
+  }
+
+  // What We Do
+  .brands-container {
+      display: none;
+  }
+
+  .what-we-do-item {
+    display: block;
+  }
+
+  .what-we-do-item-label {
+    display: inline-block;
+    padding-left: 10px;
+  }
+
+  .what-we-do-image {
+    display: none
+  }
+
 
 }

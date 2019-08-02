@@ -299,7 +299,7 @@ class FreeEstimate extends Component {
 
                     <p className="sectionTitle" id="process"> The <span style={{color: 'black'}}>ROOF</span>ER Process </p>
                     {/* Diagnose */}
-                    <div className="work-section">
+                    <div className="work-section-inspection">
                         <div className="work-heading-container">
                             <img src={diagnoseIcon} className="work-section-icon" alt="Diagnose" />
                             <p className="work-section-label"> Diagnose </p>
@@ -332,7 +332,7 @@ class FreeEstimate extends Component {
                         </div>
                     </div>
                     {/* Prescribe */}
-                    <div className="work-section" style={{paddingTop: '50px'}}>
+                    <div className="work-section-inspection" style={{paddingTop: '50px'}}>
 
                         <div className="work-heading-container" >
                             <img src={prescribeIcon} className="work-section-icon" alt="Prescribe" />
