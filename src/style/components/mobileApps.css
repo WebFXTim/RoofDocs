@@ -36,3 +36,11 @@
     background-color: rgb(182,8, 7);
     border-radius: 5px;
 }
+
+
+@media screen and (max-width: 600px) {
+    .mobileAppsContainer {
+        margin-top: 300px;
+    }
+}
+
