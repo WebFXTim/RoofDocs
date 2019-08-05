@@ -46,7 +46,7 @@ class OurWork extends Component {
                                 <p className="work-section-label"> Roofing </p>
                             </div>
                             <div className="work-content-container">
-                                <p className="work-content-background"> Today's roofing products are designed to be installed as a system to ensure your home has a water tight seal for your to come.
+                                <p className="work-content-background"> Today's roofing products are designed to be installed as a system to ensure your home has a water tight seal for years to come.
                                     ROOF<span className="nameEnding">ER</span>'s installation team is a group of GAF factory-certified installers who follow the same
                                     approved methods on every job.  The core components of a roofing job done right are:
                                 </p>
