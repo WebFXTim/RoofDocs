@@ -3,14 +3,16 @@ $redLogoColor: rgb(182, 8, 7);
 .wrapper {
   /* The height needs to be set to a fixed value for the effect to work.
    * 100vh is the full height of the viewport. */
-  height: calc(100vh);
-
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
   perspective: 10px;
 }
+
+.wrapper::-webkit-scrollbar { width: 0 !important }
 
 .section {
   /* Needed for children to be absolutely positioned relative to the parent. */
