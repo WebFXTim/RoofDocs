@@ -360,7 +360,7 @@ class FreeEstimate extends Component {
                                     {/* Meeting */}
                                     <div className="logo-line-item">
                                         <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                        <p className="line-item-text">Meeting with your Roof Docs to discuss all project details, upgrades, and installation timeline </p>
+                                        <p className="line-item-text">Meeting with your Roof Doc to discuss all project details, upgrades, and installation timeline </p>
                                     </div>
                                 </div>
                             </div>

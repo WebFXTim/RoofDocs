@@ -3,20 +3,21 @@ $redLogoColor: rgb(182, 8, 7);
 .wrapper {
   /* The height needs to be set to a fixed value for the effect to work.
    * 100vh is the full height of the viewport. */
-  height: calc(100vh - 100px);
-  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  height: calc(100vh);
+
   overflow-x: hidden;
-  /* Enable scrolling on the page. */
   overflow-y: auto;
+
   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 2px;
+  perspective: 10px;
 }
 
 .section {
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 100vh;
+  height: 100%;
+
 
   /* For text formatting. */
   display: flex;
@@ -38,7 +39,8 @@ $redLogoColor: rgb(182, 8, 7);
   /* Move the pseudo-element back away from the camera,
    * then scale it back up to fill the viewport.
    * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-  transform: translateZ(-1px) scale(1.5);
+  transform: translateZ(-1px) scale(1);
+  -webkit-transform: translateZ(-1px) scale(1.15);
   /* Force the background image to fill the whole element. */
   background-size: 100%;
   /* Keep the image from overlapping sibling elements. */
@@ -52,20 +54,23 @@ $redLogoColor: rgb(182, 8, 7);
 
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 .bg1::after {
-  background-image: url('../../resources/images/ourWork/WorkRoofing.jpg');
+  background: url('../../resources/images/ourWork/WorkRoofing.jpg') no-repeat fixed center;
   background-size: cover;
+  min-height: 600px;
 
 }
 
 .bg2::after {
-  background-image: url('../../resources/images/ourWork/HouseSidingCropped.jpg');
+  background: url('../../resources/images/ourWork/HouseSidingCropped.jpg') no-repeat fixed center;
   background-size: cover;
+  min-height: 600px;
 }
 
 
 .bg3::after {
-  background-image: url('../../resources/images/ourWork/WorkGuttersCropped.jpg');
+  background: url('../../resources/images/ourWork/WorkGuttersCropped.jpg') no-repeat fixed center;
   background-size: cover;
+  min-height: 600px;
 }
 
 

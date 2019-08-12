@@ -229,7 +229,7 @@ class Home extends Component {
                             <div className="who-we-are">
                                 <p className="sectionTitle"> Who we are </p>
                                 <p className="sectionText">ROOF<span className="nameEnding">ER</span> is a team of dedicated professionals
-                                    specializing in storm restoration projects in Northern Virginia.  We are aware of the poor reputation
+                                    specializing in storm restoration projects in Northern Virginia and Maryland.  We are aware of the poor reputation
                                     attributed to roofing contractors and have made it our mission to stamp out that stigma by providing
                                     personalized, unparalleled service to our customers.  Our Roof Docs are trained to handle every project with
                                     the care and integrity a patient would expect to receive from their own doctor.  With a commitment to integrity, quality,
@@ -257,7 +257,7 @@ class Home extends Component {
                                     <p className="sectionText">
                                         Great businesses are built on trust: trust in the people, the process, and the product.
                                         ROOF<span className="nameEnding">ER</span>'s commitment to integrity starts with our training methods
-                                        and continues through our final quality inspection.  Customers known whaht to expect from us and as a result,
+                                        and continues through our final quality inspection.  Customers known what to expect from us and as a result,
                                         are confident in referring us to their friends and family.  ROOF<span className="nameEnding">ER</span> is
                                         proud to say 90% of our new customers are referrals.
                                     </p>
@@ -272,7 +272,7 @@ class Home extends Component {
                                     <p className="sectionText">
                                         Sustainability doesn't come through shortcuts.  By focusing on quality from start-to-finish,
                                         ROOF<span className="nameEnding">ER</span> is quickly becoming the premier roofing contractor in
-                                        Northern Virginia for those customers looking for a restoration project done right.  Whether it is our
+                                        Northern Virginia and Maryland for those customers looking for a restoration project done right.  Whether it is our
                                         detailed inspections or our quality assurance protocol, we focus on every last detail to ensure our
                                         customers know they've received the best service available.
                                     </p>
@@ -287,7 +287,7 @@ class Home extends Component {
                                     <p className="sectionText">
                                         Complexity = chaos.  After a storm. this equation has the potential to become even worse.
                                         ROOF<span className="nameEnding">ER</span> understands what homeowners want most after a storm: peace
-                                        of mind and a straightforward process to restoring theeir home.  Leveraging technology and emphasizing
+                                        of mind and a straightforward process to restoring their home.  Leveraging technology and emphasizing
                                         simplicity allows ROOF<span className="nameEnding">ER</span> to offer an unrivaled value proposition: an
                                         expert restoration project with minimal headaches.
                                     </p>
@@ -384,7 +384,7 @@ class Home extends Component {
                                 <div className="value-item-content">
                                     <p className="sectionText">
                                         ROOF<span className="nameEnding">ER</span>'s Roof Docs will perform a full storm-damage inspection for your property
-                                        to find evidence of window and/or hail.  Your Roof Docs will review the findings with you and determine whether or not
+                                        to find evidence of wind and/or hail damage.  Your Roof Docs will review the findings with you and determine whether or not
                                         a claim through your homeowner's insurance is warranted.
                                     </p>
                                     <div className="learn-more-container">

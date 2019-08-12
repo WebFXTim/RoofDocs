@@ -103,7 +103,7 @@ class OurWork extends Component {
                                         <img src={roofingSystem} alt="Roofing System" />
                                     </div>
                                 </div>
-                                <p className="oswaldText blackText"><a className="nameEnding" href={gafLink}> Learn more</a> about installation techniques by visiting GAF's video library</p>
+                                <p className="oswaldText blackText"><a className="nameEnding" href={gafLink}  target="_blank" rel="noopener noreferrer"> Learn more</a> about installation techniques by visiting GAF's video library</p>
                             </div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@ class OurWork extends Component {
                                         <img className="siding-system-image" src={sidingSystem} alt="Siding System" />
                                     </div>
                                 </div>
-                                <p className="oswaldText blackText"><a className="nameEnding" href={certainTeedLink}> Learn more</a> about installation techniques by visiting CertainTeeds's video library</p>
+                                <p className="oswaldText blackText"><a className="nameEnding" href={certainTeedLink} target="_blank" rel="noopener noreferrer"> Learn more</a> about installation techniques by visiting CertainTeeds's video library</p>
                             </div>
                         </div>
                     </div>
@@ -200,7 +200,7 @@ class OurWork extends Component {
                                         <img src={guttersSystem} alt="Gutters System" />
                                     </div>
                                 </div>
-                                <p className="oswaldText blackText"><a className="nameEnding" href={guttersLink}> Learn more</a> about installation techniques by visiting This Old House's gutter page</p>
+                                <p className="oswaldText blackText"><a className="nameEnding" href={guttersLink}  target="_blank" rel="noopener noreferrer"> Learn more</a> about installation techniques by visiting This Old House's gutter page</p>
                             </div>
                         </div>
                     </div>

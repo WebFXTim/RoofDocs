@@ -23,6 +23,10 @@ $subheaderFont: 2.5em OswaldBold, serif, sans-serif;
   }
 }
 
+#how {
+  margin-bottom: 100px;
+}
+
 
 #pagination {
   position: fixed;
@@ -358,6 +362,8 @@ img.brands-left-image, img.brands-right-image {
   left: 50%;
   transform: translate(-50%,-50%);
 }
+
+
 
 .how-we-do-it-item {
   width: 220px;

@@ -8,7 +8,6 @@ import '../style/components/meetTheDocs.css';
 import Mike from '../resources/images/employees/MikeHeadshot.png';
 import Alex from '../resources/images/employees/AlexHeadshot.png';
 import Oliver from '../resources/images/employees/OliverHeadshot.png';
-import Lee from '../resources/images/employees/LeeZiegler.png';
 import Matt from '../resources/images/employees/MattFoster.png';
 import Rees from '../resources/images/employees/ReesNalley.png';
 
