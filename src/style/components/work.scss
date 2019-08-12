@@ -8,8 +8,7 @@ $redLogoColor: rgb(182, 8, 7);
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 10px;
+  perspective: 7px;
 }
 
 .wrapper::-webkit-scrollbar { width: 0 !important }
@@ -18,8 +17,7 @@ $redLogoColor: rgb(182, 8, 7);
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 100%;
-
+  height: 100vh;
 
   /* For text formatting. */
   display: flex;
