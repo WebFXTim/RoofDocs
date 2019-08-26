@@ -133,27 +133,27 @@ class OurWork extends Component {
                             <div className="work-description-container">
                                 <div className="description-info-container">
 
-                                    /!* Sheathing *!/
+                                    {/* Sheathing */}
                                     <div className="logo-line-item">
                                         <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
                                         <p className="line-item-text"> Flat, sturdy sheathing  </p>
                                     </div>
-                                    /!* House Wrap *!/
+                                    {/* House Wrap */}
                                     <div className="logo-line-item">
                                         <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
                                         <p className="line-item-text"> House wrap barrier  </p>
                                     </div>
-                                    /!* Flashing *!/
+                                    {/* Flashing */}
                                     <div className="logo-line-item">
                                         <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
                                         <p className="line-item-text"> Flashing where necessary  </p>
                                     </div>
-                                    /!* J-channels *!/
+                                    {/* J-channels */}
                                     <div className="logo-line-item">
                                         <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
                                         <p className="line-item-text"> Proper trim & corner pieces  </p>
                                     </div>
-                                    /!* Lifetime siding *!/
+                                    {/* Lifetime siding */}
                                     <div className="logo-line-item">
                                         <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
                                         <p className="line-item-text"> Lifetime siding planks </p>
