@@ -204,7 +204,7 @@ class OurWork extends Component {
 
                                 </div>
                                 <div className="description-image-container">
-                                    <img src={guttersSystem} alt="Gutters System" />
+                                    <img style={ {maxWidth: '100%'}} src={guttersSystem} alt="Gutters System" />
                                 </div>
                             </div>
 
