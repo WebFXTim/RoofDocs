@@ -213,10 +213,7 @@ class OurWork extends Component {
                     </div>
                 </div>
             );
-            
-
         } else {
-
             return (
                 <div className="wrapper">
                     <section className="section parallax bg1">
