@@ -19,7 +19,7 @@ class DevMobileApps extends Component {
         if(this.state.authenticated) {
             return (
                 <div className="mobileAppsContainer">
-                    <p className="pageHeader"> The Roof Docs Contractor Mobile Apps - DEV </p>
+                    <p className="pageHeader"> The Roof Docs Mobile Apps - DEV </p>
                     <a href="itms-services://?action=download-manifest&url=https://s3.amazonaws.com/theroofdocs.ios/dev/Contractors.plist"><p className="appTitle">Download Contractor App</p></a>
                 </div>
             );
