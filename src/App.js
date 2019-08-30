@@ -10,6 +10,7 @@ import StormDamage from './components/stormDamage';
 import FreeEstimate from './components/freeEstimate';
 import Footer from './components/footer';
 import MobileApps from './components/mobileApps';
+import DevMobileApps from './components/devMobileApps';
 import ContractorApps from './components/contractorApps';
 import NotFound from './components/notFound';
 import PrivacyPolicy from './components/privacyPolicy';
@@ -40,6 +41,7 @@ class App extends Component {
                         <Route path="/privacy" component={PrivacyPolicy} />
                         <Route path="/eula" component={EULA} />
                         <Route path="/downloads/apps" component={MobileApps} />
+                        <Route path="/downloads/apps/dev" component={DevMobileApps} />
                         <Route path="/contractors/apps" component={ContractorApps} />
                         <Route component={NotFound} />
                     </Switch>
