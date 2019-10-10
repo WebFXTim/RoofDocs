@@ -24,6 +24,7 @@ class DevMobileApps extends Component {
                     <a href="itms-services://?action=download-manifest&url=https://s3.amazonaws.com/theroofdocs.ios/dev/Contractors.plist"><p className="appTitle">Download Contractor App</p></a>
                     <a href="itms-services://?action=download-manifest&url=https://s3.amazonaws.com/theroofdocs.ios/dev/ProjectMeeting.plist"><p className="appTitle">Download Project Meeting App</p></a>
                     <a href="itms-services://?action=download-manifest&url=https://s3.amazonaws.com/theroofdocs.ios/dev/FieldApp.plist"><p className="appTitle">Download Field Portal App</p></a>
+                    <a href="itms-services://?action=download-manifest&url=https://s3.amazonaws.com/theroofdocs.ios/dev/WrapUp.plist"><p className="appTitle">Download Wrap Up App</p></a>
                 </div>
             );
         } else {
