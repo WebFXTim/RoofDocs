@@ -10,6 +10,7 @@ import Alex from '../resources/images/employees/AlexHeadshot.png';
 import Oliver from '../resources/images/employees/OliverHeadshot.png';
 import Matt from '../resources/images/employees/MattFoster.png';
 import Rees from '../resources/images/employees/ReesNalley.png';
+import AlexJavad from '../resources/images/employees/AlexJavad.png';
 
 
 class MeetTheDocs extends Component {
@@ -110,6 +111,22 @@ class MeetTheDocs extends Component {
                                     secret passion is cooking up a storm. Give him family recipes and you’ll make his day.
                                 </p>
                                 <br/><br/>
+                            </div>
+
+                        </div>
+                    </div>
+                    {/* Alex Javad */}
+                    <div className="docsView">
+                        <div className="singleDocContainer">
+                            <div className="docsViewImageContainer">
+                                <img src={AlexJavad} alt="Alex Javad"/>
+                            </div>
+                            <p className="docName"> Alex Javad </p>
+                            <div className="docBio">
+                                <p>Alex graduated with a degree in Computer Science from the University of California at Berkeley in 2013. After spending some time consulting in technology,
+                                    he decided he would rather do something more expansive. With an interest in people, helping out, and seeing new places, he found himself fitting in naturally
+                                    here at Roof-ER
+                                </p>
                             </div>
 
                         </div>
