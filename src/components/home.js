@@ -111,15 +111,13 @@ class Home extends Component {
             email: e.target.elements[1].value,
             phoneNumber: e.target.elements[2].value,
             address: e.target.elements[3].value,
-            stormDamage: e.target.elements[4].checked,
-            roof: e.target.elements[5].checked,
-            siding: e.target.elements[6].checked,
-            gutters: e.target.elements[7].checked,
+            stormDamage: this.refs.damage.state.checked,
+            roof: this.refs.roof.state.checked,
+            siding: this.refs.siding.state.checked,
+            gutters: this.refs.gutters.state.checked,
             details: e.target.elements[8].value,
             requestType: 'inspection'
         };
-
-
 
         let errors = [];
 
@@ -205,10 +203,10 @@ class Home extends Component {
                                     />
                                     <FormGroup className="formGroupCustom">
                                         <ControlLabel className="estimateControlLabel">INSPECTION ITEMS</ControlLabel>
-                                        <Checkbox name="ROOF"/>
-                                        <Checkbox name="SIDING"/>
-                                        <Checkbox name="GUTTERS"/>
-                                        <Checkbox name="STORM DAMAGE"/>
+                                        <Checkbox ref="roof" name="ROOF"/>
+                                        <Checkbox ref="siding" name="SIDING"/>
+                                        <Checkbox ref="gutters" name="GUTTERS"/>
+                                        <Checkbox ref="damage" name="STORM DAMAGE"/>
                                     </FormGroup>
 
                                     {/* MORE DETAILS */}
