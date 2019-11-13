@@ -1,0 +1,19 @@
+.products-background {
+  width: 100%;
+  height: 120px;
+  background-color: #E6E6E6;
+}
+
+.products-container {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: auto;
+    height: 90px;
+    margin-top: 15px;
+  }
+}

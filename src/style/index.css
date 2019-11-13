@@ -47,6 +47,48 @@
   src: url('../resources/fonts/RobotoMedium.ttf'); /* IE9 Compat Modes */
 }
 
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../resources/fonts/Poppins-Regular.otf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'PoppinsMedium';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../resources/fonts/Poppins-Medium.otf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'PoppinsBlack';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../resources/fonts/Poppins-Black.otf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'PoppinsSemiBold';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../resources/fonts/Poppins-SemiBold.otf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'PoppinsBold';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../resources/fonts/Poppins-Bold.otf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'PoppinsLight';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../resources/fonts/Poppins-Light.otf'); /* IE9 Compat Modes */
+}
+
 .nameEnding {
   color: rgb(182, 8, 7);
 }
@@ -77,9 +119,3 @@ code {
 a:hover  {
   text-decoration: none !important;
 }
-
-a:hover .navigationItem {
-  font-size: 32px;
-}
-
-
