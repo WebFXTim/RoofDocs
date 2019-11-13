@@ -11,7 +11,7 @@ if [[ ! -e /home/ec2-user/roofdocs-web ]]; then
     cd /home/ec2-user/roofdocs-web
 
     # Clone Repo
-    git clone git@bitbucket.org:theroofdocs/web.git
+    sudo git clone git@bitbucket.org:theroofdocs/web.git
 
     # Change into web directory
     cd web
