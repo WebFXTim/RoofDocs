@@ -5,13 +5,13 @@ import React, { Component } from 'react';
 import '../style/components/products.scss';
 
 // IMAGES
-import GAF from '../resources/images/brands/gaf.png';
-import IKO from '../resources/images/brands/iko.png';
-import CERTAINTEED from '../resources/images/brands/certainTeed.png';
-import JAMESHARDIE from '../resources/images/brands/jamesHardie.png';
-import PLYGEM from '../resources/images/brands/plyGem.png';
-import LEAFSENTRY from '../resources/images/brands/leafSentry.png';
-// TESTING
+import GAF from '../resources/images/brands/logoband_gaf.png';
+import IKO from '../resources/images/brands/logoband_iko.png';
+import CERTAINTEED from '../resources/images/brands/logoband_cert.png';
+import JAMESHARDIE from '../resources/images/brands/logoband_jh.png';
+import PLYGEM from '../resources/images/brands/logoband_pg.png';
+import LEAFSENTRY from '../resources/images/brands/logoband_ls.png';
+
 
 
 class ProductContainer extends Component {
@@ -41,7 +41,6 @@ class Products extends Component {
                     <ProductContainer src={PLYGEM} />
                     <ProductContainer src={LEAFSENTRY} />
                 </div>
-
             </div>
         );
     }

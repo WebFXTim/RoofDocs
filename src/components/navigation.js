@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 
 
 import '../style/components/navigation.scss';
-import logo from '../resources/images/logo.PNG';
+import logo from '../resources/images/logos/logo_main.png';
 import { NavLink } from "react-router-dom";
-import LINKEDIN_ICON from '../resources/images/social/icon_sm_li_active.jpg';
-import FACEBOOK_ICON from '../resources/images/social/icon_sm_fb_inactive.jpg';
-import EMAIL_ICON from '../resources/images/social/icon_sm_email.jpg';
-import PHONE_ICON from '../resources/images/social/icon_sm_phone.jpg';
+import LINKEDIN_ICON from '../resources/images/social/icon_sm_li_inactive.png';
+import FACEBOOK_ICON from '../resources/images/social/icon_sm_fb_inactive.png';
+import EMAIL_ICON from '../resources/images/social/icon_sm_email.png';
+import PHONE_ICON from '../resources/images/social/icon_sm_phone.png';
 import SLASH from '../resources/images/misc/nav_divline.jpg';
 
 

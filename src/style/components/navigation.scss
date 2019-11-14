@@ -1,3 +1,5 @@
+$redLogoColor: rgb(183, 8, 8);
+
 .navigation {
   width: 100%;
   position: relative;
@@ -104,6 +106,10 @@
   margin-right: 20px;
   display: inline-block;
   float: right;
+}
+
+.nav-tag.active {
+  color: $redLogoColor;
 }
 
 .navigationLogo {
