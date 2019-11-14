@@ -21,7 +21,9 @@ import workGutters from '../resources/images/ourWork/WorkGuttersCropped.jpg';
 import guttersIcon from '../resources/images/guttersIcon.png';
 import guttersSystem from '../resources/images/ourWork/GuttersSystem.jpg'
 import rooferIcon from "../resources/images/logoSolo.png";
+
 import BANNER from "../resources/images/misc/background_banner.png";
+import BANNER_ICON_UP from '../resources/images/misc/plus_icon_up.png';
 
 
 const gafLink = 'https://www.gaf.com/en-us/for-professionals/installation-video-collection';
@@ -43,6 +45,7 @@ class OurWork extends Component {
                         <p className="banner-text-large"> See What We Do Everyday </p>
 
                     </div>
+                    <img className="banner-icon" src={BANNER_ICON_UP} />
 
                 </div>
 

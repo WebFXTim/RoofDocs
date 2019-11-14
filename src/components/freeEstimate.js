@@ -16,6 +16,7 @@ import diagnoseIcon from '../resources/images/inspection/clipboard.png';
 import prescribeIcon from '../resources/images/inspection/prescription.png';
 import rooferIcon from '../resources/images/logoSolo.png';
 import BANNER from "../resources/images/misc/background_banner.png";
+import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
 
 
 class Modal extends Component {
@@ -206,6 +207,7 @@ class FreeEstimate extends Component {
                         <p className="banner-text-small"> Know what you need before you pay a penny </p>
                         <p className="banner-text-large"> Free Inspections & Storm Reports </p>
                     </div>
+                    <img className="banner-icon" src={BANNER_ICON_UP} />
                 </div>
 
 

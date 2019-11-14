@@ -9,7 +9,17 @@
       width: 100%;
       height: auto;
     }
+
+    .banner-icon {
+      width: 100px;
+      height: auto;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 50px);
+    }
   }
+
+
 
   .docs-banner-text-container {
     position: absolute;

@@ -13,6 +13,7 @@ import Rees from '../resources/images/employees/ReesNalley.png';
 import AlexJavad from '../resources/images/employees/AlexJavad.png';
 
 import BANNER from "../resources/images/misc/background_banner.png";
+import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
 
 
 class MeetTheDocs extends Component {
@@ -29,6 +30,7 @@ class MeetTheDocs extends Component {
                         <p className="banner-text-small"> Our Team stands above the rest </p>
                         <p className="banner-text-large"> Meet the Docs </p>
                     </div>
+                    <img className="banner-icon" src={BANNER_ICON_UP} />
                 </div>
 
 

@@ -1,6 +1,7 @@
 $redLogoColor: rgb(182, 8, 7);
 
 .work-banner {
+
   position: relative;
   text-align: center;
   color: white;
@@ -9,7 +10,15 @@ $redLogoColor: rgb(182, 8, 7);
     width: 100%;
     height: auto;
   }
+  .banner-icon {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50px);
+  }
 }
+
 
 .work-banner-text-container {
   position: absolute;
