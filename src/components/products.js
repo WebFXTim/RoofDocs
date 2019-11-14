@@ -11,6 +11,7 @@ import CERTAINTEED from '../resources/images/brands/certainTeed.png';
 import JAMESHARDIE from '../resources/images/brands/jamesHardie.png';
 import PLYGEM from '../resources/images/brands/plyGem.png';
 import LEAFSENTRY from '../resources/images/brands/leafSentry.png';
+// TESTING
 
 
 class ProductContainer extends Component {
