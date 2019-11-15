@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
+
+
 import GoogleReviews from "./custom/googleReviews";
+import Process from './custom/process';
+import Products from './custom/products';
+
+
 import FieldGroup from './custom/fieldGroup';
 import {Button, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
 import Checkbox from './checkbox';
@@ -13,15 +19,12 @@ import ROOFING from '../resources/images/home/img_hp_roofing.jpg';
 import SIDING from '../resources/images/home/img_hp_siding.jpg';
 import GUTTERS from '../resources/images/home/img_hp_gutters.jpg';
 
-// COMPONENTS
-import Products from './products';
-
 
 // How We Do It
-import inspect from '../resources/images/inspect.png'
-import assist from '../resources/images/assist.png'
-import install from '../resources/images/install.png'
-import roofERIcon from '../resources/images/logoSolo.png';
+// import inspect from '../resources/images/inspect.png'
+// import assist from '../resources/images/assist.png'
+// import install from '../resources/images/install.png'
+// import roofERIcon from '../resources/images/logoSolo.png';
 
 class Modal extends Component {
 
@@ -191,10 +194,7 @@ class Home extends Component {
                     </div>
                 </div>
 
-                <div className="home-process">
-
-                </div>
-
+                <Process />
                 <div className="empty-space"> </div>
                 <Products />
                 <GoogleReviews />

@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
+
 import {Button, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
-import Checkbox from './checkbox';
+
 import axios from 'axios';
 
-
+import ImageInput from '../components/custom/imageInput';
 
 // Styling
 import '../style/components/inspection.scss';
 import '../style/components/freeEstimate.css';
-
 import '../style/components/modal.css'
 
-import inspection from '../resources/images/inspection/inspectionBackground.jpeg';
-import diagnoseIcon from '../resources/images/inspection/clipboard.png';
-import prescribeIcon from '../resources/images/inspection/prescription.png';
-import rooferIcon from '../resources/images/logoSolo.png';
 import BANNER from "../resources/images/misc/background_banner.png";
 import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
+import SUBMIT_ICON from '../resources/images/misc/btn_icon_arrow_rd.png';
+import ImageTextArea from "./custom/imageTextArea";
+import ImageMultiSelect from "./custom/imageMultiSelect";
+
+
 
 
 class Modal extends Component {
@@ -208,6 +209,32 @@ class FreeEstimate extends Component {
                         <p className="banner-text-large"> Free Inspections & Storm Reports </p>
                     </div>
                     <img className="banner-icon" src={BANNER_ICON_UP} />
+                </div>
+
+                <div className="inspection-report-container">
+
+                    <div className="inspection-container">
+                        <p className="header-text">1. Free Inspection </p>
+                        <p className="header-info-text">Fill out the short form below to set up a FREE inspection by one of our Roof Docs today!</p>
+                        <ImageInput type="name" />
+                        <ImageInput type="address" />
+                        <ImageInput type="email" />
+                        <ImageInput type="phone" />
+                        <ImageMultiSelect />
+                        <ImageTextArea />
+                        <button className="report-submit-button">Submit Free Inspection Form<span><img className="submit-button-image" src={SUBMIT_ICON} /></span></button>
+                    </div>
+
+                    <div className="report-container">
+                        <p className="header-text">2. Storm Report </p>
+                        <p className="header-info-text">Use the form below to get a FREE storm report to see if your property has been affected by storm damage!</p>
+                        <ImageInput type="name" />
+                        <ImageInput type="address" />
+                        <ImageInput type="email" />
+                        <ImageInput type="phone" />
+                        <button className="report-submit-button">Submit Storm Report Form<span><img className="submit-button-image" src={SUBMIT_ICON} /></span></button>
+                    </div>
+
                 </div>
 
 

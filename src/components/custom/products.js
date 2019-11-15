@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 
 // STYLING
-import '../style/components/products.scss';
+import '../../style/components/products.scss';
 
 // IMAGES
-import GAF from '../resources/images/brands/logoband_gaf.png';
-import IKO from '../resources/images/brands/logoband_iko.png';
-import CERTAINTEED from '../resources/images/brands/logoband_cert.png';
-import JAMESHARDIE from '../resources/images/brands/logoband_jh.png';
-import PLYGEM from '../resources/images/brands/logoband_pg.png';
-import LEAFSENTRY from '../resources/images/brands/logoband_ls.png';
+import GAF from '../../resources/images/brands/logoband_gaf.png';
+import IKO from '../../resources/images/brands/logoband_iko.png';
+import CERTAINTEED from '../../resources/images/brands/logoband_cert.png';
+import JAMESHARDIE from '../../resources/images/brands/logoband_jh.png';
+import PLYGEM from '../../resources/images/brands/logoband_pg.png';
+import LEAFSENTRY from '../../resources/images/brands/logoband_ls.png';
 
 
 

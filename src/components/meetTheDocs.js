@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import FreeQuote from "./custom/freeQuoteBanner";
+import Products from './custom/products';
 
 // Styling
 import '../style/components/meetTheDocs.scss';
@@ -32,6 +34,9 @@ class MeetTheDocs extends Component {
                     </div>
                     <img className="banner-icon" src={BANNER_ICON_UP} />
                 </div>
+
+                <Products />
+                <FreeQuote />
 
 
                 {/*<p className="sectionTitle"> Meet The Docs </p>*/}

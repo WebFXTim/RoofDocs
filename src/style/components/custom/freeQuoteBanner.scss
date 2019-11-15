@@ -1,0 +1,27 @@
+$redLogoColor: #B70808;
+
+.free-quote-container {
+  width: 100%;
+  height: 130px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.free-quote-button {
+  background-color: rgb(183, 8, 8);
+  color: white;
+  text-transform: uppercase;
+  border-radius: 12px;
+  font: 20px PoppinsSemiBold, serif, sans-serif;
+  height: 45px;
+  width: 260px;
+}
+
+.free-quote-text {
+  color: #B70808;
+  font: 24px PoppinsSemiBold, serif, sans-serif;
+  margin-bottom: 0;
+  margin-right: 20px
+}

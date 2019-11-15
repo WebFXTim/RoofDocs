@@ -45,7 +45,7 @@ class App extends Component {
                         <Route path="/contractors/apps" component={ContractorApps} />
                         <Route component={NotFound} />
                     </Switch>
-                {/*<Footer />*/}
+                <Footer />
             </div>
         </BrowserRouter>
     );

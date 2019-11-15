@@ -1,0 +1,52 @@
+.image-input-container {
+  width: 100%;
+  border-bottom: 3px solid #707070;
+  display: flex;
+  height: 50px;
+  margin-bottom: 30px;
+
+  &.error {
+    border: 2px solid red;
+  }
+
+  .phone {
+    width: 20px;
+    height: 18px;
+    margin-top: 14px;
+    margin-left: 5px;
+  }
+
+  .email {
+    width: 20px;
+    height: 15px;
+    margin-top: 16px;
+    margin-left: 5px;
+  }
+
+  .name {
+    width: 20px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+
+  .address {
+    width: 20px;
+    height: 27px;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+
+  input {
+    border: none;
+    height: 45px;
+    width: 100%;
+    text-indent: 10px;
+    font: 16px Poppins, serif, sans-serif;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+}

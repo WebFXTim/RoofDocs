@@ -1,3 +1,5 @@
+$redLogoColor: rgb(183, 8, 8);
+
 .inspection-banner {
   position: relative;
   text-align: center;
@@ -14,6 +16,55 @@
     bottom: 0;
     left: calc(50% - 50px);
   }
+}
+
+.inspection-report-container {
+  width: 80%;
+  height: 900px;
+  margin: 20px auto;
+
+  .header-text {
+    font: 48px PoppinsSemiBold, serif, sans-serif;
+    color: $redLogoColor;
+    margin-bottom: 0;
+  }
+
+  .header-info-text {
+    font: 16px Poppins, serif, sans-serif;
+  }
+
+  .inspection-container {
+    width: 45%;
+    float: left;
+    height: 100%;
+    display: inline-block;
+
+  }
+  .report-container {
+    width: 45%;
+    float: right;
+    height: 100%;
+    display: inline-block;
+  }
+}
+
+.report-submit-button {
+  text-transform: uppercase;
+  width: 315px;
+  background-color: $redLogoColor;
+  border-radius: 9px;
+  color: white;
+  height: 50px;
+  font: 15px PoppinsSemiBold, serif, sans-serif;
+  float: right;
+  margin-top: 20px;
+}
+
+.submit-button-image {
+  width: 40px;
+  border-radius: 9px;
+  height: 40px;
+  margin-left: 8px;
 }
 
 .inspection-banner-text-container {

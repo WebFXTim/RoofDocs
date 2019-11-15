@@ -8,7 +8,7 @@ import LINKEDIN_ICON from '../resources/images/social/icon_sm_li_inactive.png';
 import FACEBOOK_ICON from '../resources/images/social/icon_sm_fb_inactive.png';
 import EMAIL_ICON from '../resources/images/social/icon_sm_email.png';
 import PHONE_ICON from '../resources/images/social/icon_sm_phone.png';
-import SLASH from '../resources/images/misc/nav_divline.jpg';
+import SLASH from '../resources/images/misc/nav_divline.png';
 
 
 const PORTAL = 'https://portal.theroofdocs.com';
