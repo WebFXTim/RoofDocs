@@ -255,7 +255,7 @@ class Home extends Component {
                                     <p className="sectionText">
                                         Great businesses are built on trust: trust in the people, the process, and the product.
                                         ROOF<span className="nameEnding">ER</span>'s commitment to integrity starts with our training methods
-                                        and continues through our final quality inspection.  Customers known what to expect from us and as a result,
+                                        and continues through our final quality inspection.  Customers know what to expect from us and as a result,
                                         are confident in referring us to their friends and family.  ROOF<span className="nameEnding">ER</span> is
                                         proud to say 90% of our new customers are referrals.
                                     </p>
@@ -283,7 +283,7 @@ class Home extends Component {
                                 </div>
                                 <div className="value-item-content">
                                     <p className="sectionText">
-                                        Complexity = chaos.  After a storm. this equation has the potential to become even worse.
+                                        Complexity = chaos.  After a storm, this equation has the potential to become even worse.
                                         ROOF<span className="nameEnding">ER</span> understands what homeowners want most after a storm: peace
                                         of mind and a straightforward process to restoring their home.  Leveraging technology and emphasizing
                                         simplicity allows ROOF<span className="nameEnding">ER</span> to offer an unrivaled value proposition: an
