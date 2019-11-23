@@ -17,6 +17,12 @@ $redLogoColor: #B70808;
   font: 20px PoppinsSemiBold, serif, sans-serif;
   height: 45px;
   width: 260px;
+
+  &:hover {
+    color: rgb(183, 8, 8);
+    background-color: white;
+    border: 3px solid rgb(183, 8, 8);
+  }
 }
 
 .free-quote-text {

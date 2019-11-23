@@ -6,11 +6,27 @@ import React, { Component } from 'react';
 import '../style/components/footer.scss';
 
 import footerLogo from '../resources/images/footer/roof-er-slogin.png';
-import gafCertified from '../resources/images/footer/gafCertified.png';
+
 import googleReviews from '../resources/images/footer/googleReviews.png';
 import roofERIcon from "../resources/images/logoSolo.png";
+
 import FOOTER_BANNER from "../resources/images/misc/footer_banner.png";
 import BANNER_ICON_DOWN from "../resources/images/misc/plus_icon_down.png";
+import FOOTER_LOGO from '../resources/images/logos/logo_footer.png';
+import PHONE_ICON from "../resources/images/social/icon_sm_phone_ko.png";
+import EMAIL_ICON from "../resources/images/social/icon_sm_email_ko.png";
+import MAP_ICON from "../resources/images/social/icon_sm_address_ko.png";
+import GAF from '../resources/images/footer/gafCertified.png';
+import FACEBOOK from '../resources/images/social/icon_sm_fb_inactive@2x.png'
+import LINKEDIN from '../resources/images/social/icon_sm_li_inactive@2x.png'
+
+const EMAIL = 'mailto:info@theroofdocs.com';
+const EMAIL_ADDRESS = 'info@theroofdocs.com';
+const PHONE = 'tel:7032393739';
+const PHONE_TEXT = '703-239-3738';
+const MAP = 'https://goo.gl/maps/Wgkc5zBYAESWUWPS8';
+const ADDRESS = '3100 Clarendon Blvd. '//Ste. 200\n Arlington, VA 22201';
+
 
 const HomeAdvisiorIcon = 'https://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=85269159&key=8ada7f0ec568d330d285a447aaa81f61';
 const roofERHomeAdvisorLink = 'https://www.homeadvisor.com/rated.RoofER.85269159.html';
@@ -38,8 +54,36 @@ class Footer extends Component {
             <div className="footer">
                 <div className="footer-banner">
                     <img src={FOOTER_BANNER} alt="Banner" />
-                    {/*<div className="footer-content">*/}
-                    {/*</div>*/}
+                    <div className="footer-content">
+                        <div className="footer-contact">
+                            <img className="footer-logo-image" src={FOOTER_LOGO} />
+                            <FooterContactIcon type="phone" link={PHONE} icon={PHONE_ICON} text={PHONE_TEXT}/>
+                            <FooterContactIcon type="email" link={EMAIL} icon={EMAIL_ICON} text={EMAIL_ADDRESS}/>
+                            <FooterContactIcon type="map" link={MAP} icon={MAP_ICON} text={ADDRESS}/>
+
+                        </div>
+                        <div className="footer-services">
+                            <h3> Our Services </h3>
+                            <p> Roofing </p>
+                            <p> Siding </p>
+                            <p> Gutters </p>
+                            <p> Inspections </p>
+                            <p> FAQs </p>
+                            <p> Sign In </p>
+                        </div>
+                        <div className="footer-social">
+                            <div className="social-links">
+                                <img src={FACEBOOK} />
+                                <img src={LINKEDIN} />
+                            </div>
+
+                            <div className="certs">
+                                <img src={GAF} />
+                                <img src={HomeAdvisiorIcon} />
+                            </div>
+                        </div>
+
+                    </div>
                     <img className="banner-icon" src={BANNER_ICON_DOWN} />
                 </div>
                 <div className="footer-copyright">
@@ -53,3 +97,19 @@ class Footer extends Component {
 }
 
 export default Footer;
+
+
+class FooterContactIcon extends Component {
+
+    render() {
+        return (
+            <div className={ "footer-contact-icon " + this.props.type} >
+                <a href={this.props.link} rel="noopener noreferrer">
+                    <img src={this.props.icon} />
+                    <label> { this.props.text }</label>
+                </a>
+            </div>
+        );
+    }
+
+}

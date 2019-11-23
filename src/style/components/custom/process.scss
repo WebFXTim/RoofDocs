@@ -1,0 +1,60 @@
+.home-process {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .process-image-container {
+    height: 70%;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 80%;
+    }
+  }
+
+  .process-info-container {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .process-header {
+    text-transform: uppercase;
+    font: 24px PoppinsBold, serif, sans-serif;
+  }
+
+  .process-step-name {
+    color: #B70808;
+    font: 48px PoppinsSemiBold, sans-serif, serif;
+  }
+
+  .process-description {
+    font: 20px Poppins, sans-serif, serif;
+  }
+
+  .process-slides-container {
+    margin-top: auto;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: auto;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+    }
+
+  }
+
+
+}
+
