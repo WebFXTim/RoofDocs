@@ -203,10 +203,10 @@ class FreeEstimate extends Component {
         return (
             <div className="inspection-page-container">
                 <div className="inspection-banner">
-                    <img src={BANNER} alt="Banner" />
+                    <img className="inspection-banner-img" src={BANNER} alt="Banner" />
                     <div className="inspection-banner-text-container">
-                        <p className="banner-text-small"> Know what you need before you pay a penny </p>
-                        <p className="banner-text-large"> Free Inspections & Storm Reports </p>
+                        <p className="banner-text-small"> SIMPLICITY </p>
+                        <p className="banner-text-large"> Free Inspections for Full Peace of Mind </p>
                     </div>
                     <img className="banner-icon" src={BANNER_ICON_UP} />
                 </div>

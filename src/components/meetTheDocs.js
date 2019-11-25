@@ -59,8 +59,8 @@ class MeetTheDocs extends Component {
                 <div className="docs-banner">
                     <img src={BANNER} alt="Banner" />
                     <div className="docs-banner-text-container">
-                        <p className="banner-text-small"> Our Team stands above the rest </p>
-                        <p className="banner-text-large"> Meet the Docs </p>
+                        <p className="banner-text-small"> INTEGRITY </p>
+                        <p className="banner-text-large"> Honesty First. And Second. And Third... </p>
                     </div>
                     <img className="banner-icon" src={BANNER_ICON_UP} />
                 </div>
