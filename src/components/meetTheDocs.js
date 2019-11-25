@@ -21,9 +21,9 @@ import COLLAPSE_ICON from "../resources/images/misc/icon_closered.png";
 
 const MIKE_BIO = 'Michael’s very first job was roofing at age 15. From there, he went on to receive a B.A. in International Affairs and an MBA in finance, only to end up right back ' +
     'where it all started. He’s had almost enough schooling to be an M.D., but opted for his R.D. (Roof Doctorate) instead. Michael believes if you approach every endeavor with integrity, ' +
-    'are uncompromising on quality, and remain committed to simplicity, success will abound. \n\n(Michael is also a washed-up former college athlete. If you have a basketball hoop, he’ll be ' +
+    'are uncompromising on quality, and remain committed to simplicity, success will abound. (Michael is also a washed-up former college athlete. If you have a basketball hoop, he’ll be ' +
     'glad to show you)';
-const OLIVER_BIO = 'Oliver once spent a summer loading shingles onto roofs and is very happy to have moved up the ladder in theroofing industry. Since that summer, he has earned his B.S. in ' +
+const OLIVER_BIO = 'Oliver once spent a summer loading shingles onto roofs and is very happy to have moved up the ladder in the roofing industry. Since that summer, he has earned his B.S. in ' +
     'Business Marketing & MBA from Mount St. Mary’s University in2013 & 2015, respectively. Oliver is a passionate sports fan, dog owner, and food connoisseur who believes anything is ' +
     'possible with a gritty, positive mindset. (Oliver is a less "washed-up” college basketball player than Michael and would love to prove that in anyone\'s driveway.)';
 const MATT_BIO = 'Matt has over 5 years of experience in the Roofing/Home Remodeling industry.  Before that he attended West Virginia University in which he achieved majors in ' +

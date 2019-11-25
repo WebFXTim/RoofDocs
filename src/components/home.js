@@ -19,6 +19,7 @@ import ROOFING from '../resources/images/home/img_hp_roofing.jpg';
 import SIDING from '../resources/images/home/img_hp_siding.jpg';
 import GUTTERS from '../resources/images/home/img_hp_gutters.jpg';
 import ARROW_ICON from '../resources/images/misc/btn_icon_arrow_rd.png';
+import WorkBanner from "./custom/workBanner";
 
 
 // How We Do It
@@ -203,7 +204,7 @@ class Home extends Component {
                 </div>
 
                 <Process />
-                <div className="empty-space"> </div>
+                <WorkBanner />
                 <Products />
                 <GoogleReviews />
 

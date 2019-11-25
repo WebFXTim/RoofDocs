@@ -1,0 +1,78 @@
+.work-banner-container {
+  width: 100%;
+  height: 500px;
+
+  .who-we-are {
+
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .banner-image {
+      width: 100%;
+      height: auto;
+      position: absolute;
+    }
+
+    .work-info-container {
+      position: absolute;
+      left: 10%;
+      top: 15%;
+      width: 80%;
+
+      .small-header {
+        color: white;
+        font: 24px PoppinsBold, sans-serif, serif;
+      }
+
+      .large-header {
+        color: white;
+        font: 48px PoppinsSemiBold, sans-serif, serif;
+      }
+
+      .work-banner-description {
+        color: white;
+        font: 20px Poppins, sans-serif, serif;
+      }
+    }
+
+  }
+
+  .how-we-do-it {
+    width: 50%;
+    display: inline-block;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+
+    .banner-image {
+      width: 100%;
+      height: auto;
+      position: absolute;
+    }
+
+    .work-info-container {
+      position: absolute;
+      left: 10%;
+      top: 15%;
+      width: 80%;
+
+      .small-header {
+        color: white;
+        font: 24px PoppinsBold, sans-serif, serif;
+      }
+
+      .large-header {
+        color: white;
+        font: 48px PoppinsSemiBold, sans-serif, serif;
+      }
+
+      .work-banner-description {
+        color: white;
+        font: 20px Poppins, sans-serif, serif;
+      }
+    }
+  }
+}

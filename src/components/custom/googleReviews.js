@@ -38,12 +38,9 @@ class GoogleReviews extends Component {
         return (
             <div className="google-reviews-background">
                 <div className="reviews-content">
-                    <p className="success-text"> Success Stories </p>
-                    <p className=" success-subheader"> We prefer to let our customers speak about our work.</p>
-
+                    <p className="success-text"> Why we do it </p>
+                    <p className=" success-subheader"> Our customers are our reason.</p>
                 </div>
-
-
             </div>
         );
     }
