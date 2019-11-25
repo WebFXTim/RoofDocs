@@ -42,244 +42,90 @@ $redLogoColor: rgb(182, 8, 7);
   }
 }
 
-.wrapper {
-  /* The height needs to be set to a fixed value for the effect to work.
-   * 100vh is the full height of the viewport. */
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  perspective: 7px;
-}
-
-.wrapper::-webkit-scrollbar { width: 0 !important }
-
-.section {
-  /* Needed for children to be absolutely positioned relative to the parent. */
-  position: relative;
-  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 100vh;
-
-  /* For text formatting. */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  //text-shadow: 0 0 5px #000;
-}
-
-.parallax::after {
-  /* Display and position the pseudo-element */
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  /* Move the pseudo-element back away from the camera,
-   * then scale it back up to fill the viewport.
-   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-  transform: translateZ(-1px) scale(1);
-  -webkit-transform: translateZ(-1px) scale(1.15);
-  /* Force the background image to fill the whole element. */
-  background-size: 100%;
-  /* Keep the image from overlapping sibling elements. */
-  z-index: -1;
-}
-
-/* The styling for the static div. */
-//.static {
-//  background: red;
-//}
-
-/* Sets the actual background images to adorable kitties. This part is crucial. */
-.bg1::after {
-  background: url('../../resources/images/ourWork/WorkRoofing.jpg') no-repeat fixed center;
-  background-size: cover;
-  min-height: 600px;
-
-}
-
-.bg2::after {
-  background: url('../../resources/images/ourWork/HouseSidingCropped.jpg') no-repeat fixed center;
-  background-size: cover;
-  min-height: 600px;
-}
-
-
-.bg3::after {
-  background: url('../../resources/images/ourWork/WorkGuttersCropped.jpg') no-repeat fixed center;
-  background-size: cover;
-  min-height: 600px;
-}
-
-
-.ourWork {
-
-
-}
-
-.work-roofing-image {
-  width: 100%;
-  height: auto;
-}
-
-.work-section {
-  background-color: rgba(255, 255, 255, 1.0);
-  width: 100%;
-
-}
-
-.firefox-work-section {
+.gallery-container {
   width: 80%;
-  margin-left: 10%;
-}
+  margin: 50px auto;
 
-.work-parallax-container {
-  width: 90%;
-  margin-left: 10%;
-}
-
-.oswaldText {
-  font: 18px Oswald, serif, sans-serif;
-}
-
-.work-heading-container {
-  height: 85px;
-  position: relative;
-}
-
-.work-section-icon {
-  height: 80px;
-  width: 80px;
-  max-height: 100%;
-  max-width: 100%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.work-section-label {
-  width: calc(100% - 65px);
-  border-bottom: 2px solid $redLogoColor;
-  margin-left: 65px;
-  padding-top: 10px;
-  font: 36px OswaldBold, sans-serif, serif;
-  margin-top: 20px;
-  color: black
-}
-
-.work-content-container {
-
-
-}
-
-.work-content-background {
-  width: 85%;
-  margin: 5px 65px;
-  font: 18px Roboto, sans-serif, serif;
-  color: black
-
-}
-
-.work-description-container {
-
-  display: flex;
-  margin-top: 20px;
-
-}
-
-.blackText {
-  color: black;
-}
-
-.description-info-container {
-  flex-grow: 1;
-  margin-left: 65px;
-  display: flex;
-  height: 80%;
-  margin-top: 50px;
-  flex-direction: column;
-  position: relative;
-}
-
-.test {
-  flex-grow: 1;
-}
-
-.description-image-container {
-  flex-grow: 1;
-  position: relative;
-}
-
-.description-image {
-  max-height: 100%;
-  max-width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.siding-system-image {
-  max-height: 375px;
-}
-
-footer {
-  margin-top: 0;
-}
-
-/******
-
-TABLET
-
- ******/
-
-@media screen and (max-width: 1000px) and (min-width: 600px){
-
-  .work-description-container {
-    display: initial;
+  .main-text {
+    font: 48px PoppinsSemiBold, serif, sans-serif;
+    color: rgb(183, 8, 8);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0;
   }
 
-  .description-image-container {
+  .small-text {
+    font: 25px Poppins, serif, sans-serif;
+    text-align: center;
+  }
+}
 
-    img {
-      max-height: 100%;
-      max-width: 100%;
+.work-process-container {
+
+  .work-process-banner {
+    height: 250px;
+    width: 100%;
+    background-color: #E6E6E6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .banner-icon {
+      position: absolute;
+      top: 0;
+    }
+
+    .main-text {
+      font: 48px PoppinsSemiBold, serif, sans-serif;
+      color: rgb(183, 8, 8);
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .small-text {
+      font: 25px Poppins, serif, sans-serif;
+      text-align: center;
+      margin-bottom: 0;
     }
   }
 
-  .siding-system-image {
-    max-height: 100%;
-    max-width: 100%;
+  .work-process-content {
+    width: 80%;
+    margin: 50px auto;
+
+    .work-item-container {
+      width: 100%;
+      display: flex;
+      margin-top: 50px;
+
+      .work-item-icon-container {
+        width: 150px;
+
+        img {
+          width: 140px;
+          height: auto;
+        }
+      }
+
+      .work-item-info-container {
+        flex-grow: 1;
+
+        .step-header {
+          width: 100%;
+          font: 48px PoppinsSemiBold, serif, sans-serif;
+          color: rgb(183, 8, 8);
+          border-bottom: 1px solid red;
+
+        }
+
+        .step-info {
+          width: 100%;
+          font: 20px Poppins, serif, sans-serif;
+        }
+      }
+    }
   }
-
-
-}
-
-@media screen and (max-width: 600px){
-
-  .ourWork {
-    margin-top: 300px;
-  }
-
-  .description-image-container {
-    display: none;
-  }
-
-  .work-description-container {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-
-  .work-content-background {
-    margin: auto;
-  }
-
-
 }

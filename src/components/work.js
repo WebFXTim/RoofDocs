@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import Products from './custom/products';
+import FreeQuoteBanner from "./custom/freeQuoteBanner";
 
 // Styling
 import '../style/components/work.scss';
@@ -7,29 +8,28 @@ import '../style/components/modal.css'
 
 
 // Images
-// Roofing
-import workRoofing from '../resources/images/ourWork/WorkRoofing.jpg';
-import roofingIcon from '../resources/images/roofIcon.png';
-import roofingSystem from '../resources/images/ourWork/RoofingSystem.jpg';
-
-// Siding
-import workSiding from '../resources/images/ourWork/HouseSidingCropped.jpg';
-import sidingIcon from '../resources/images/sidingIcon.png';
-import sidingSystem from '../resources/images/ourWork/SidingSystem.jpg';
-
-import workGutters from '../resources/images/ourWork/WorkGuttersCropped.jpg';
-import guttersIcon from '../resources/images/guttersIcon.png';
-import guttersSystem from '../resources/images/ourWork/GuttersSystem.jpg'
-import rooferIcon from "../resources/images/logoSolo.png";
+import INSPECT from '../resources/images/ourWork/img_1inspect.png';
+import DIAGNOSE from '../resources/images/ourWork/img_2diagnose.png';
+import PRESCRIBE from '../resources/images/ourWork/img_3prescribe.png';
+import OPERATE from '../resources/images/ourWork/img_4operate.png';
 
 import BANNER from "../resources/images/misc/background_banner.png";
 import BANNER_ICON_UP from '../resources/images/misc/plus_icon_up.png';
+import BANNER_ICON_DOWN from "../resources/images/misc/plus_icon_down.png";
 
 
 const gafLink = 'https://www.gaf.com/en-us/for-professionals/installation-video-collection';
 const certainTeedLink = 'https://www.certainteed.com/siding/vinyl-siding-polymer-shakes-installation-videos/';
 const guttersLink = 'https://www.thisoldhouse.com/how-to/how-to-install-rain-gutters';
 
+
+const STEPS = [
+    { name: 'Inspect', icon: INSPECT, info: 'ROOFER will perform a FREE inspection of your roof, siding, and gutters to find evidence of wind, hail, or other damage.'},
+    { name: 'Diagnose', icon: DIAGNOSE, info: 'ROOFER and your Roof Doc will properly assess all findings to determine whether your exterior systems are storm-damaged, old, or perfectly fine.'},
+    { name: 'Prescribe', icon: PRESCRIBE, info: 'Your Roof Doc will provide you with an honest recommendation based on their findings. If damage is found, ROOFER may suggest filing an insurance claim.'},
+    { name: 'Operate', icon: OPERATE, info: 'If your roof, siding, or gutters are found to have an ailment, the last step is to review project details with your Roof Doc and let ROOFER\'s install team take care of the rest. '},
+
+];
 
 class OurWork extends Component {
 
@@ -41,13 +41,42 @@ class OurWork extends Component {
                 <div className="work-banner">
                     <img src={BANNER} alt="Banner" />
                     <div className="work-banner-text-container">
-                        <p className="banner-text-small"> We take pride in your entire home </p>
-                        <p className="banner-text-large"> See What We Do Everyday </p>
-
+                        <p className="banner-text-small"> QUALITY </p>
+                        <p className="banner-text-large"> Shortcuts Aren't In Our Vocabulary </p>
                     </div>
                     <img className="banner-icon" src={BANNER_ICON_UP} />
+                </div>
+
+                <div className="gallery-container" >
+                    <p className="main-text"> Our Gallery </p>
+                    <p className="small-text"> Sort below and click for more details about each project </p>
+                </div>
+
+                <div className="work-process-container">
+                    <div className="work-process-banner">
+                        <img className="banner-icon" src={BANNER_ICON_DOWN} />
+                        <p className="main-text"> OUR FOUR STEP PROCESS </p>
+                        <p className="small-text"> A standard approach to every job ensures a quality restoration </p>
+                    </div>
+                    <div className="work-process-content">
+
+                        { STEPS.map( (step, index) => (
+                            <div className="work-item-container">
+                                <div className="work-item-icon-container">
+                                    <img src={step.icon} />
+                                </div>
+                                <div className="work-item-info-container">
+                                    <p className="step-header"> { index + 1}. { step.name } </p>
+                                    <p className="step-info"> { step.info } </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
 
                 </div>
+
+                <Products />
+                <FreeQuoteBanner />
 
             </div>
         );

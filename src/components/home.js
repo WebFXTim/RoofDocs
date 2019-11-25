@@ -6,9 +6,6 @@ import Process from './custom/process';
 import Products from './custom/products';
 
 
-import FieldGroup from './custom/fieldGroup';
-import {Button, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
-import Checkbox from './checkbox';
 import axios from 'axios';
 
 // Styling
