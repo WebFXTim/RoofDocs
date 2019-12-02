@@ -113,7 +113,7 @@ class GoogleReviews extends Component {
         } else {
             return (
 
-                <div className="google-reviews-background">
+                <div className="google-reviews-background" style={{display: 'none'}}>
                     <div className="reviews-content">
                         <p className="success-text"> Why we do it </p>
                         <p className=" success-subheader"> Our customers are our reason.</p>
@@ -149,9 +149,8 @@ class GoogleReviews extends Component {
 
         const config = { headers: { 'Access-Control-Allow-Origin': '*' } };
         const self = this;
-        axios.get(`http://localhost:4000/v1/reviews/google`, config)
+        axios.get(`https://devapi.theroofdocs.com/v1/reviews/google`, config)
             .then(function (response) {
-
                 self.setState({ reviews: response.data.data });
             }).catch(function (error) {
             console.log(error);
@@ -162,8 +161,8 @@ class GoogleReviews extends Component {
 
 
 
-        const oAuth2Client = await this.getAuthenticatedClient();
-        console.log(oAuth2Client);
+        // const oAuth2Client = await this.getAuthenticatedClient();
+        // console.log(oAuth2Client);
 //         const oauth2Client = new google.auth.OAuth2(
 //             'abc',
 //             'cde',
