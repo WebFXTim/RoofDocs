@@ -47,7 +47,7 @@ class Process extends Component {
         return (
             <div className="home-process">
                 <div className="process-image-container">
-                    <img src={step.image} />
+                    <img src={step.image} alt="Process Icon"/>
                 </div>
                 <div className="process-info-container">
                     <p className="process-header"> The Roofer Process </p>
@@ -55,7 +55,7 @@ class Process extends Component {
                     <p className="process-description"> { step.description } </p>
                     <div className="process-slides-container">
                         { SLIDES.map ( (slide, index) => (
-                            <img id={index} onClick={this.slideClicked} key={index} src={index === this.state.processIndex ? slide.selected : slide.notSelected} />
+                            <img id={index} onClick={this.slideClicked} key={index} src={index === this.state.processIndex ? slide.selected : slide.notSelected} alt="Slide Icon"/>
                         ))}
                     </div>
                 </div>

@@ -46,25 +46,25 @@ class Navigation extends Component {
                             <div className="navigationItem">
                                 Our Work
                             </div>
-                            <img src={SLASH}/>
+                            <img src={SLASH} alt="Separator"/>
                         </NavLink>
                         <NavLink className="nav-tag" to='/docs'>
                             <div className="navigationItem">
                                 Meet the Docs
                             </div>
-                            <img src={SLASH}/>
+                            <img src={SLASH} alt="Separator"/>
                         </NavLink>
                         <NavLink className="nav-tag" to='/inspection'>
                             <div className="navigationItem">
                                 Inspection
                             </div>
-                            <img src={SLASH}/>
+                            <img src={SLASH} alt="Separator"/>
                         </NavLink>
                         <NavLink className="nav-tag" to='/faqs'>
                             <div className="navigationItem">
                                 FAQs
                             </div>
-                            <img src={SLASH}/>
+                            <img src={SLASH} alt="Separator"/>
                         </NavLink>
                         <a href={PORTAL} target="_blank" rel="noopener noreferrer" >
                             <div className="navigationItem">
@@ -85,7 +85,7 @@ class SocialMediaIcon extends Component {
         return (
             <div className={`sm-icon ${this.props.type}-icon`}>
                 <a href={this.props.link} target="_blank" rel="noopener noreferrer">
-                    <img src={this.props.icon} />
+                    <img src={this.props.icon} alt={this.props.type}/>
                 </a>
             </div>
         );
@@ -98,7 +98,7 @@ class ContactIcon extends  Component {
         return (
             <div className="contact-icon">
                 <a href={this.props.link} rel="noopener noreferrer">
-                    <img src={this.props.icon} />
+                    <img src={this.props.icon} alt="Contact"/>
                     <label> { this.props.text }</label>
                 </a>
             </div>

@@ -56,7 +56,7 @@ class Footer extends Component {
                     <img src={FOOTER_BANNER} alt="Banner" />
                     <div className="footer-content">
                         <div className="footer-contact">
-                            <img className="footer-logo-image" src={FOOTER_LOGO} />
+                            <img className="footer-logo-image" src={FOOTER_LOGO} alt="Footer Logo"/>
                             <FooterContactIcon type="phone" link={PHONE} icon={PHONE_ICON} text={PHONE_TEXT}/>
                             <FooterContactIcon type="email" link={EMAIL} icon={EMAIL_ICON} text={EMAIL_ADDRESS}/>
                             <FooterContactIcon type="map" link={MAP} icon={MAP_ICON} text={ADDRESS}/>
@@ -64,27 +64,27 @@ class Footer extends Component {
                         </div>
                         <div className="footer-services">
                             <h3> Our Services </h3>
-                            <p> Roofing </p>
-                            <p> Siding </p>
-                            <p> Gutters </p>
-                            <p> Inspections </p>
-                            <p> FAQs </p>
-                            <p> Sign In </p>
+                            <p><span className="service-icon"> + </span> Roofing </p>
+                            <p><span className="service-icon"> + </span> Siding </p>
+                            <p><span className="service-icon"> + </span> Gutters </p>
+                            <p><span className="service-icon"> + </span> Inspections </p>
+                            <p><span className="service-icon"> + </span> FAQs </p>
+                            <p><span className="service-icon"> + </span> Sign In </p>
                         </div>
                         <div className="footer-social">
                             <div className="social-links">
-                                <img src={FACEBOOK} />
-                                <img src={LINKEDIN} />
+                                <img src={FACEBOOK} alt="Facebook"/>
+                                <img src={LINKEDIN} alt="LinkedIn"/>
                             </div>
 
                             <div className="certs">
-                                <img src={GAF} />
-                                <img src={HomeAdvisiorIcon} />
+                                <img src={GAF} alt="GAF"/>
+                                <img src={HomeAdvisiorIcon} alt="HomeAdvisor"/>
                             </div>
                         </div>
 
                     </div>
-                    <img className="banner-icon" src={BANNER_ICON_DOWN} />
+                    <img className="banner-icon" src={BANNER_ICON_DOWN} alt="Banner Icon"/>
                 </div>
                 <div className="footer-copyright">
                     <p className="copyright-text"> Copyright &#169; { year } RoofER </p>
@@ -105,7 +105,7 @@ class FooterContactIcon extends Component {
         return (
             <div className={ "footer-contact-icon " + this.props.type} >
                 <a href={this.props.link} rel="noopener noreferrer">
-                    <img src={this.props.icon} />
+                    <img src={this.props.icon} alt={this.props.type}/>
                     <label> { this.props.text }</label>
                 </a>
             </div>

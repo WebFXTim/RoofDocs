@@ -64,12 +64,6 @@ const MARKETING_IMAGES = [
     { title: 'Roofing21', src: Roofing21 }
 ];
 
-
-const gafLink = 'https://www.gaf.com/en-us/for-professionals/installation-video-collection';
-const certainTeedLink = 'https://www.certainteed.com/siding/vinyl-siding-polymer-shakes-installation-videos/';
-const guttersLink = 'https://www.thisoldhouse.com/how-to/how-to-install-rain-gutters';
-
-
 const STEPS = [
     { name: 'Inspect', icon: INSPECT, info: 'ROOFER will perform a FREE inspection of your roof, siding, and gutters to find evidence of wind, hail, or other damage.'},
     { name: 'Diagnose', icon: DIAGNOSE, info: 'ROOFER and your Roof Doc will properly assess all findings to determine whether your exterior systems are storm-damaged, old, or perfectly fine.'},
@@ -91,7 +85,7 @@ class OurWork extends Component {
                         <p className="banner-text-small"> QUALITY </p>
                         <p className="banner-text-large"> Shortcuts Aren't In Our Vocabulary </p>
                     </div>
-                    <img className="banner-icon" src={BANNER_ICON_UP} />
+                    <img className="banner-icon" src={BANNER_ICON_UP} alt="Banner Up"/>
                 </div>
 
                 <div className="gallery-container" >
@@ -116,7 +110,7 @@ class OurWork extends Component {
 
                 <div className="work-process-container">
                     <div className="work-process-banner">
-                        <img className="banner-icon" src={BANNER_ICON_DOWN} />
+                        <img className="banner-icon" src={BANNER_ICON_DOWN} alt="Banner Down"/>
                         <p className="main-text"> OUR FOUR STEP PROCESS </p>
                         <p className="small-text"> A standard approach to every job ensures a quality restoration </p>
                     </div>
@@ -125,7 +119,7 @@ class OurWork extends Component {
                         { STEPS.map( (step, index) => (
                             <div key={index} className="work-item-container">
                                 <div className="work-item-icon-container">
-                                    <img src={step.icon} />
+                                    <img src={step.icon} alt="Step" />
                                 </div>
                                 <div className="work-item-info-container">
                                     <p className="step-header"> { index + 1}. { step.name } </p>
@@ -160,7 +154,7 @@ class WorkDisplayImage extends Component {
     render() {
         return (
             <div onClick={this.showImage} className="work-display-image-container">
-                <img src={this.props.image.src} />
+                <img src={this.props.image.src} alt="Property"/>
             </div>
         )
 
@@ -198,11 +192,11 @@ class WorkDisplayModal extends Component {
                 <div className= {"modalContainer" + (this.state.hidden ? ' hiddenModal' : '')} onClick={this.closeModal.bind(this)}>
                     <div className="view-work-modal-content">
                         <div className="view-work-image-container">
-                            <img src={this.state.src} />
+                            <img src={this.state.src} alt="Roofing"/>
                         </div>
 
                         <div className="view-work-icon-container">
-                            <img className="doc-expand-icon" onClick={this.closeBio} src={ COLLAPSE_ICON } />
+                            <img className="doc-expand-icon" onClick={this.closeImage} src={ COLLAPSE_ICON } alt="Collapse Icon" />
                         </div>
 
                     </div>
@@ -214,7 +208,7 @@ class WorkDisplayModal extends Component {
 
     }
 
-    closeBio = e => {
+    closeImage = e => {
         e.preventDefault();
         this.setState ({ src: null, hidden: true });
     }

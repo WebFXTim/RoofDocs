@@ -25,48 +25,6 @@ import WorkBanner from "./custom/workBanner";
 // import install from '../resources/images/install.png'
 // import roofERIcon from '../resources/images/logoSolo.png';
 
-class Modal extends Component {
-
-    constructor(props){
-        super(props);
-
-        this.state = { hidden: true };
-
-    }
-
-    show() {
-        this.setState({ hidden: false });
-    }
-
-
-    closeModal() {
-
-        this.setState({hidden: true});
-    }
-
-
-    render() {
-        return (
-            <div className= {"modalContainer" + (this.state.hidden ? ' hiddenModal' : '')} onClick={this.closeModal.bind(this)}>
-                <div className="modalContent">
-
-                    <p className="modalHeader">Please correct errors on the following fields and submit again</p>
-
-                    { this.props.errors.map(err => (
-                        <p key={err} className="errorItem"> {err} </p>
-                    ))}
-
-
-                    <button className="errorOkButton">Got It!</button>
-
-                </div>
-
-            </div>
-        );
-    }
-}
-
-
 class Home extends Component {
 
 
@@ -166,7 +124,7 @@ class Home extends Component {
                         <a href="inspection">
                             <div className="free-inspection-button-container">
                                 <p className="home-inspection-label"> Sign Up For A Free Inspection </p>
-                                <img className="home-inspection-img" src={ARROW_ICON} />
+                                <img className="home-inspection-img" src={ARROW_ICON} alt="Arrow" />
                             </div>
                         </a>
 
@@ -179,19 +137,19 @@ class Home extends Component {
                         <p className="largeText"> What we do. </p>
                         <div className="services-container">
                             <div className="single-service-container">
-                                <img src={ROOFING}/>
+                                <img src={ROOFING} alt="Roofing"/>
                                 <p className="service-header"> Roofing </p>
                                 <p className="service-description"> Our roofers are fully trained and certified to remedy any roofing issue your home may face. We are The Roof Docs for a reason.</p>
                                 <a href="/work#roofing"><p className="learn-more-link"> Learn More </p></a>
                             </div>
                             <div className="single-service-container">
-                                <img src={SIDING}/>
+                                <img src={SIDING} alt="Siding"/>
                                 <p className="service-header"> Siding </p>
                                 <p className="service-description"> While not in the name, our siding team treats your home like you'd expect to be treated during surgery - with great care and precision. </p>
                                 <a href="/work#siding"><p className="learn-more-link"> Learn More </p></a>
                             </div>
                             <div className="single-service-container">
-                                <img src={GUTTERS}/>
+                                <img src={GUTTERS} alt="Gutters"/>
                                 <p className="service-header"> Gutters </p>
                                 <p className="service-description"> Your gutters mean a great deal to the health of your home. That's why our team ensures each install follows local best practices. </p>
                                 <a href="/work#gutters"><p className="learn-more-link"> Learn More </p></a>

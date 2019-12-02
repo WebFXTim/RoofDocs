@@ -62,7 +62,7 @@ class MeetTheDocs extends Component {
                         <p className="banner-text-small"> INTEGRITY </p>
                         <p className="banner-text-large"> Honesty First. And Second. And Third... </p>
                     </div>
-                    <img className="banner-icon" src={BANNER_ICON_UP} />
+                    <img className="banner-icon" src={BANNER_ICON_UP} alt="Banner Icon" />
                 </div>
 
                 <div className="docs-list-container">
@@ -100,10 +100,10 @@ class DocDisplay extends Component {
         return (
             <div className="doc-container">
                 <div className="doc-image-container">
-                    <img src={this.props.doc.photo} />
+                    <img src={this.props.doc.photo} alt={this.props.doc.name}/>
                 </div>
                 <div className="doc-icon-container">
-                    <img className="doc-expand-icon" onClick={this.showDocBio} src={ EXPAND_ICON } />
+                    <img className="doc-expand-icon" onClick={this.showDocBio} src={ EXPAND_ICON } alt="Doc Bio"/>
                 </div>
                 <p className="doc-position"> {this.props.doc.position }</p>
                 <p className="doc-name"> {this.props.doc.name }</p>
@@ -143,10 +143,10 @@ class ViewDocModal extends Component {
 
                         <div className="doc-container-modal">
                             <div className="doc-image-container-modal">
-                                <img src={this.state.doc.photo} />
+                                <img src={this.state.doc.photo} alt={this.state.doc.name}/>
                             </div>
                             <div className="doc-icon-container-modal">
-                                <img className="doc-expand-icon" onClick={this.closeBio} src={ COLLAPSE_ICON } />
+                                <img className="doc-expand-icon" onClick={this.closeBio} src={ COLLAPSE_ICON } alt="Collapse Bio"/>
                             </div>
                             <p className="doc-position"> {this.state.doc.position }</p>
                             <p className="doc-name"> {this.state.doc.name }</p>

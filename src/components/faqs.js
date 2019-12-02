@@ -30,7 +30,7 @@ class FAQQuestion extends Component {
             <div className="question-container">
                 <div className="question-text-container">
                     <p className="question-text"> { this.props.questionText } </p>
-                    <img onClick={() => this.setState({ collapsed: !this.state.collapsed })} className="faq-action-icon-image" src={ this.state.collapsed ? EXPAND_ICON : COLLAPSE_ICON } />
+                    <img alt="Expand" onClick={() => this.setState({ collapsed: !this.state.collapsed })} className="faq-action-icon-image" src={ this.state.collapsed ? EXPAND_ICON : COLLAPSE_ICON } />
                 </div>
                 <div className={'question-answer-container' + (this.state.collapsed ? '' : ' expanded')}>
                     <p className="question-answer-text"> { this.props.questionAnswer } </p>
@@ -62,7 +62,7 @@ class FAQs extends Component {
                         <p className="banner-text-small"> Get the Basics, Then give us a call </p>
                         <p className="banner-text-large"> Frequently Asked Questions </p>
                     </div>
-                    <img className="banner-icon" src={BANNER_ICON_UP} />
+                    <img className="banner-icon" src={BANNER_ICON_UP} alt="Banner Icon Up" />
                 </div>
 
                 <div className="faq-questions-content">
@@ -114,60 +114,6 @@ class FAQs extends Component {
                 </div>
             </div>
         );
-    }
-}
-
-
-class FAQItem extends Component {
-
-    render() {
-
-
-        if(this.props.image) {
-            return (
-                <div className="faq-question-header">
-                    <p className="faq-question-title" style={(parseInt(this.props.index) !== this.props.activeIndex) ?
-                        { borderBottomLeftRadius: '10px',  borderBottomRightRadius: '10px'} :
-                        {borderBottomLeftRadius: '0', borderBottomRightRadius: '0'}}
-                       onClick={this.setActive}> {this.props.title} </p>
-                    <div
-                        className={"faq-question-answer-container " + (parseInt(this.props.index) === this.props.activeIndex ? 'active' : '')}>
-                        <p>{this.props.answer}</p>
-                        <img className="faq-image" src={this.props.image} alt="Damage Map" />
-                    </div>
-
-                </div>
-            );
-        } else {
-            return (
-                <div className="faq-question-header">
-                    <p className="faq-question-title" style={(parseInt(this.props.index) !== this.props.activeIndex) ? {
-                        borderBottomLeftRadius: '10px',
-                        borderBottomRightRadius: '10px'
-                    } : {borderBottomLeftRadius: '0', borderBottomRightRadius: '0'}}
-                       onClick={this.setActive}> {this.props.title} </p>
-                    <div
-                        className={"faq-question-answer-container " + (parseInt(this.props.index) === this.props.activeIndex ? 'active' : '')}>
-                        <p>{this.props.answer}</p>
-                    </div>
-
-                </div>
-            );
-        }
-    }
-
-    setActive = e => {
-        e.preventDefault();
-
-        if(parseInt(this.props.index) === this.props.activeIndex) {
-            this.props.parent.setState ({ activeIndex: 0 })
-            console.log('Setting Active Index to 0')
-        } else {
-            const index = parseInt(this.props.index);
-            this.props.parent.setState ({ activeIndex: index });
-        }
-
-
     }
 }
 

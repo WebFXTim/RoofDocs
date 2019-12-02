@@ -12,7 +12,7 @@ class ArrowButton extends Component {
             <a href={this.props.link}>
                 <div className="arrow-button-container">
                     <p className="arrow-button-label"> { this.props.text } </p>
-                    <img className="arrow-button-img" src={ARROW_ICON} />
+                    <img className="arrow-button-img" src={ARROW_ICON} alt="Arrow"/>
                 </div>
             </a>
         );

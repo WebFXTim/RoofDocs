@@ -17,7 +17,7 @@ class WorkBanner extends Component {
         return (
             <div className="work-banner-container">
                 <div className="who-we-are">
-                    <img className="banner-image" src={WHO_WE_ARE} />
+                    <img className="banner-image" src={WHO_WE_ARE} alt="Who We Are"/>
                     <div className="work-info-container">
                         <p className="small-header"> Who We Are </p>
                         <p className="large-header"> Our Hippocratic Oath </p>
@@ -26,7 +26,7 @@ class WorkBanner extends Component {
                     </div>
                 </div>
                 <div className="how-we-do-it">
-                    <img className="banner-image" src={HOW_WE_DO_IT} />
+                    <img className="banner-image" src={HOW_WE_DO_IT} alt="How We Do It"/>
                     <div className="work-info-container">
                         <p className="small-header"> How We Do It </p>
                         <p className="large-header">Integrity. Quality. Simplicity. </p>

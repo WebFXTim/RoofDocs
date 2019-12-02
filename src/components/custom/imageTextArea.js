@@ -25,7 +25,7 @@ class ImageTextArea extends Component {
 
         return (
             <div className="image-text-area-container">
-                <img src={Search}/>
+                <img src={Search} alt="Text Area Icon"/>
                 <textarea onChange={this.valueChanged} value={ this.state.value } placeholder='Enter any additional details'/>
             </div>
 

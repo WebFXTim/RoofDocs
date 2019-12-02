@@ -52,7 +52,7 @@ class ImageInput extends Component {
 
         return (
             <div className="image-input-container">
-                <img className={this.props.type} src={src}/>
+                <img className={this.props.type} src={src} alt="Input Icon"/>
                 <input onChange={this.valueChanged} value={ this.state.value } placeholder={Placeholders[this.props.type]}/>
             </div>
 

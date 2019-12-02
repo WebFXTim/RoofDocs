@@ -20,7 +20,7 @@ class ProductContainer extends Component {
 
         return (
             <div className="image-container">
-                <img src={this.props.src} />
+                <img src={this.props.src} alt="Product Icon"/>
             </div>
         )
     }

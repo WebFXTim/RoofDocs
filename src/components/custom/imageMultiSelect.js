@@ -24,7 +24,7 @@ class ImageMultiSelect extends Component {
         return (
             <div className="image-multi-select-container">
                 <div className="image-multi-select-info">
-                    <img src={Inspect}/>
+                    <img src={Inspect} alt="Multi Select"/>
                     <p> Select the areas that require inspection  </p>
                 </div>
                 <div className="image-multi-select-selection">
