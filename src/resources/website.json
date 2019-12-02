@@ -6,5 +6,5 @@
   "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
   "client_secret":"Lr6m6HMJo816Q02iDzWUtjlb",
   "client_email": "developer@theroofdocs.com",
-  "redirect_uris":["https://theroofdocs.com"]
+  "redirect_uris":["http://localhost:3000"]
 }

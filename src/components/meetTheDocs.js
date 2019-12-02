@@ -69,7 +69,6 @@ class MeetTheDocs extends Component {
                     { DOCS.map( (doc,index) => (
                         <DocDisplay key={doc.name} parent={this} doc={doc} index={index} />
                     ))}
-
                 </div>
 
                 <Products />
