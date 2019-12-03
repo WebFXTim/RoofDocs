@@ -17,6 +17,12 @@ import SUBMIT_ICON from '../resources/images/misc/btn_icon_arrow_rd.png';
 import ImageTextArea from "./custom/imageTextArea";
 import ImageMultiSelect from "./custom/imageMultiSelect";
 
+import Products from "./custom/products";
+import GoogleReviews from "./custom/googleReviews";
+import WorkBanner from "./custom/workBanner";
+import FreeQuoteBanner from "./custom/freeQuoteBanner";
+
+
 
 
 
@@ -235,6 +241,10 @@ class FreeEstimate extends Component {
                         <button className="report-submit-button">Submit Storm Report Form<span><img className="submit-button-image" src={SUBMIT_ICON} alt="Submit"/></span></button>
                     </div>
                 </div>
+                <WorkBanner />
+                <GoogleReviews />
+                <Products />
+                <FreeQuoteBanner />
             </div>
         );
     }

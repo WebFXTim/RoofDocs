@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import LineEllipsis from 'react-lines-ellipsis'
 // import moment from 'moment';
 
 
@@ -391,6 +392,7 @@ class GoogleReviewContainer extends Component  {
                 break;
         }
 
+
         return (
             <div className="review">
                 <div className="review-user-info">
@@ -407,9 +409,23 @@ class GoogleReviewContainer extends Component  {
                     </div>
                 </div>
                 <div className="review-comment-container">
-                    <p> { this.props.review.comment } </p>
+                    <LineEllipsis
+                        onClick={this.showComment}
+                        style={{ whiteSpace: 'pre-wrap' }}
+                        text={this.props.review.comment}
+                        maxLine='8'
+                        trimRight={false}
+                        ellipsis=' ...SHOW MORE'
+                        basedOn='words'
+                    />
+                    {/*<p>  </p>*/}
                 </div>
             </div>
         )
+    }
+
+    showComment = () => {
+
+        alert(this.props.review.comment);
     }
 }

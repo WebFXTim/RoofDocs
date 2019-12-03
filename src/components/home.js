@@ -13,8 +13,11 @@ import '../style/components/home.scss';
 
 // IMAGES
 import ROOFING from '../resources/images/home/img_hp_roofing.jpg';
+import ROOFING_MINI from '../resources/images/home/icon_sq_roofing.png';
 import SIDING from '../resources/images/home/img_hp_siding.jpg';
+import SIDING_MINI from '../resources/images/home/icon_sq_siding.png';
 import GUTTERS from '../resources/images/home/img_hp_gutters.jpg';
+import GUTTERS_MINI from '../resources/images/home/icon_sq_gutters.png';
 import ARROW_ICON from '../resources/images/misc/btn_icon_arrow_rd.png';
 import WorkBanner from "./custom/workBanner";
 
@@ -131,25 +134,28 @@ class Home extends Component {
                     </div>
                 </div>
 
-                <div className="whatWeDo" >
+                <div className="whatWeDo" id="whatWeDo" >
                     <div className="content">
                         <p className="smallText"> ROOF-ER SERVICES </p>
                         <p className="largeText"> What we do. </p>
                         <div className="services-container">
                             <div className="single-service-container">
                                 <img src={ROOFING} alt="Roofing"/>
-                                <p className="service-header"> Roofing </p>
+                                <img className="service-mini-image" src={ROOFING_MINI} alt="Roofing Icon" />
+                                <p className="service-header" id="roofing" > Roofing </p>
                                 <p className="service-description"> Our roofers are fully trained and certified to remedy any roofing issue your home may face. We are The Roof Docs for a reason.</p>
                                 <a href="/work#roofing"><p className="learn-more-link"> Learn More </p></a>
                             </div>
                             <div className="single-service-container">
-                                <img src={SIDING} alt="Siding"/>
+                                <img src={SIDING} alt="Siding" id="siding"/>
+                                <img className="service-mini-image" src={SIDING_MINI} alt="Siding Icon" />
                                 <p className="service-header"> Siding </p>
                                 <p className="service-description"> While not in the name, our siding team treats your home like you'd expect to be treated during surgery - with great care and precision. </p>
                                 <a href="/work#siding"><p className="learn-more-link"> Learn More </p></a>
                             </div>
                             <div className="single-service-container">
-                                <img src={GUTTERS} alt="Gutters"/>
+                                <img src={GUTTERS} alt="Gutters" id="gutters" />
+                                <img className="service-mini-image" src={GUTTERS_MINI} alt="Gutters Icon" />
                                 <p className="service-header"> Gutters </p>
                                 <p className="service-description"> Your gutters mean a great deal to the health of your home. That's why our team ensures each install follows local best practices. </p>
                                 <a href="/work#gutters"><p className="learn-more-link"> Learn More </p></a>

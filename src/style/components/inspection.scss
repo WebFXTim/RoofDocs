@@ -20,7 +20,7 @@ $redLogoColor: rgb(183, 8, 8);
 
 .inspection-report-container {
   width: 80%;
-  height: 900px;
+  height: 825px;
   margin: 20px auto;
 
   .header-text {
@@ -37,15 +37,18 @@ $redLogoColor: rgb(183, 8, 8);
     width: 45%;
     float: left;
     height: 100%;
-    display: inline-block;
-
+    display: flex;
+    flex-direction: column;
   }
+
   .report-container {
     width: 45%;
     float: right;
     height: 100%;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
   }
+
 }
 
 .report-submit-button {
@@ -57,7 +60,8 @@ $redLogoColor: rgb(183, 8, 8);
   height: 50px;
   font: 15px PoppinsSemiBold, serif, sans-serif;
   float: right;
-  margin-top: 20px;
+  margin-top: auto;
+  margin-left: calc(100% - 315px);
 }
 
 .submit-button-image {

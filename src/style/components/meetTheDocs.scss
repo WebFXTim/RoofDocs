@@ -43,7 +43,7 @@
 
   .docs-list-container {
     width: 80%;
-    margin: 100px auto;
+    margin: 100px auto 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -60,7 +60,8 @@ DOCS CONTAINER
 
 .doc-container {
   width: 30%;
-  height: 500px;
+  min-width: 350px;
+  height: 450px;
   background-color: white;
   position: relative;
 
@@ -97,6 +98,7 @@ DOCS CONTAINER
     font: 28px PoppinsSemiBold, serif, sans-serif;
     color: rgb(183, 8, 8);
     margin-bottom: 0;
+    margin-top: 10px;
   }
 
   .doc-position {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Products from './custom/products';
 import FreeQuoteBanner from "./custom/freeQuoteBanner";
 
 // Styling
@@ -65,17 +64,57 @@ const MARKETING_IMAGES = [
 ];
 
 const STEPS = [
-    { name: 'Inspect', icon: INSPECT, info: 'ROOFER will perform a FREE inspection of your roof, siding, and gutters to find evidence of wind, hail, or other damage.'},
-    { name: 'Diagnose', icon: DIAGNOSE, info: 'ROOFER and your Roof Doc will properly assess all findings to determine whether your exterior systems are storm-damaged, old, or perfectly fine.'},
-    { name: 'Prescribe', icon: PRESCRIBE, info: 'Your Roof Doc will provide you with an honest recommendation based on their findings. If damage is found, ROOFER may suggest filing an insurance claim.'},
-    { name: 'Operate', icon: OPERATE, info: 'If your roof, siding, or gutters are found to have an ailment, the last step is to review project details with your Roof Doc and let ROOFER\'s install team take care of the rest. '},
+    { name: 'Inspect', icon: INSPECT, info: ['ROOF', <span className="logo-text">ER</span>, ' will perform a FREE inspection of your roof, siding, and gutters to find evidence of wind, hail, or other damage.']},
+    { name: 'Diagnose', icon: DIAGNOSE, info: ['ROOF', <span className="logo-text">ER</span>, ' and your Roof Doc will properly assess all findings to determine whether your exterior systems are storm-damaged, old, or perfectly fine.']},
+    { name: 'Prescribe', icon: PRESCRIBE, info: ['Your Roof Doc will provide you with an honest recommendation based on their findings. If damage is found, ROOF', <span className="logo-text">ER</span>,  ' may suggest filing an insurance claim.']},
+    { name: 'Operate', icon: OPERATE, info: ['If your roof, siding, or gutters are found to have an ailment, the last step is to review project details with your Roof Doc and let ROOF',  <span className="logo-text">ER</span>, '\'s install team take care of the rest. ']},
 
 ];
 
+class GalleryImageContainer extends Component {
+
+    render() {
+
+        if(this.props.showMorePhotos) {
+            return (
+                <div className="gallery-images-container">
+                    { MARKETING_IMAGES.map( (img,index) => (
+                        <WorkDisplayImage key={index} index={index} parent={this} image={img} />
+                    ))}
+                </div>
+            )
+        } else {
+            const images = MARKETING_IMAGES.slice(0, 12);
+            return (
+                <div className="gallery-images-container">
+                    { images.map( (img,index) => (
+                        <WorkDisplayImage key={index} index={index} parent={this} image={img} />
+                    ))}
+                </div>
+
+            )
+        }
+    }
+}
+
 class OurWork extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = { showMorePhotos: false}
+    }
+
+    showPhotosClicked = () => {
+
+        this.setState({ showMorePhotos: !this.state.showMorePhotos })
+
+    };
 
 
     render() {
+
+        const buttonText = this.state.showMorePhotos ? 'Hide' : 'Show All';
 
         return (
             <div className="our-work-container">
@@ -92,19 +131,8 @@ class OurWork extends Component {
                     <p className="main-text"> Our Gallery </p>
                     <p className="small-text"> Click the images below to view the full image </p>
 
-                    {/*<div className="gallery-sort-container">*/}
-                    {/*    <p> Show All </p>*/}
-                    {/*    <p> Roofing </p>*/}
-                    {/*    <p> Siding </p>*/}
-                    {/*    <p> Gutters </p>*/}
-                    {/*    <p> Miscellaneous </p>*/}
-                    {/*</div>*/}
-
-                    <div className="gallery-images-container">
-                        { MARKETING_IMAGES.map( (img,index) => (
-                            <WorkDisplayImage key={index} index={index} parent={this} image={img} />
-                        ))}
-                    </div>
+                    <GalleryImageContainer ref="gallery" parent={this} showMorePhotos={this.state.showMorePhotos} />
+                    <button className="gallery-show-photos-button" onClick={this.showPhotosClicked}> { buttonText } </button>
 
                 </div>
 
@@ -131,7 +159,8 @@ class OurWork extends Component {
 
                 </div>
 
-                <Products />
+                {/*<Products />*/}
+                <div className="gray-banner" />
                 <FreeQuoteBanner />
                 <WorkDisplayModal ref="workDisplayModal"/>
             </div>
@@ -161,7 +190,7 @@ class WorkDisplayImage extends Component {
     }
 
     showImage = () => {
-        this.props.parent.showWorkImage( this.props.index );
+        this.props.parent.props.parent.showWorkImage( this.props.index );
     }
 
 }

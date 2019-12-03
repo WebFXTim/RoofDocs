@@ -114,17 +114,25 @@ html {
           height: auto;
         }
 
+        .service-mini-image {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          right: 50px;
+          bottom: 100px;
+        }
+
         .service-header {
           font: 18px PoppinsSemiBold, serif, sans-serif;
           color: $redLogoColor;
           margin-top: 10px;
-          margin-bottom: 0;
+          margin-bottom: 5px;
           text-transform: uppercase;
         }
 
         .service-description {
           font: 14px Poppins, serif, sans-serif;
-          margin-bottom: 5px;
+          margin-bottom: 10px;
         }
 
         .learn-more-link {

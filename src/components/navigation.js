@@ -71,7 +71,7 @@ class Navigation extends Component {
                                 Sign In
                             </div>
                         </a>
-                        <button className="navigation-free-inspection-button"> Get a Free Inspection </button>
+                        <a href="/inspection"><button className="navigation-free-inspection-button"> Get a Free Inspection </button></a>
                     </div>
                 </div>
             </div>

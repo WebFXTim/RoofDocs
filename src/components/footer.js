@@ -64,12 +64,12 @@ class Footer extends Component {
                         </div>
                         <div className="footer-services">
                             <h3> Our Services </h3>
-                            <p><span className="service-icon"> + </span> Roofing </p>
-                            <p><span className="service-icon"> + </span> Siding </p>
-                            <p><span className="service-icon"> + </span> Gutters </p>
-                            <p><span className="service-icon"> + </span> Inspections </p>
-                            <p><span className="service-icon"> + </span> FAQs </p>
-                            <p><span className="service-icon"> + </span> Sign In </p>
+                            <a href="/#whatWeDo"><p><span className="service-icon"> + </span> Roofing </p></a>
+                            <a href="/#whatWeDo"><p><span className="service-icon"> + </span> Siding </p></a>
+                            <a href="/#whatWeDo"><p><span className="service-icon"> + </span> Gutters </p></a>
+                            <a href="/inspection"><p><span className="service-icon"> + </span> Inspections </p></a>
+                            <a href="/faqs"><p><span className="service-icon"> + </span> FAQs </p></a>
+                            <a href="https://portal.theroofdocs.com/" rel="noopener noreferrer" target="_blank"><p><span className="service-icon"> + </span> Sign In </p></a>
                         </div>
                         <div className="footer-social">
                             <div className="social-links">

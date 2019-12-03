@@ -2,8 +2,8 @@ $redLogoColor: rgb(183, 8, 8);
 
 .google-reviews-background {
   width: 100%;
-  margin-bottom: 50px;
-  height: 600px;
+  margin-bottom: 100px;
+  height: 500px;
 
   .reviews-content {
     width: 80%;
@@ -112,7 +112,25 @@ $redLogoColor: rgb(183, 8, 8);
     font: 18px Poppins, sans-serif, serif;
   }
 
+  .LinesEllipsis {
+    font: 18px Poppins, sans-serif, serif;
+
+
+  }
+
+  .LinesEllipsis-ellipsis {
+    font: 14px PoppinsSemiBold, serif, sans-serif;
+    color: rgb(183, 8, 8);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
 }
+
+
+
 
 
 .star-rating-container {

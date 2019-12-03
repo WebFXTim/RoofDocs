@@ -5,6 +5,14 @@ $borderGray: rgb(93, 93, 93);
   padding-bottom: 20px;
 }
 
+.black-text {
+  color: black;
+}
+
+.logo-text {
+  color: rgb(183, 8, 8);
+}
+
 .faq-banner {
   position: relative;
   text-align: center;
@@ -48,7 +56,13 @@ $borderGray: rgb(93, 93, 93);
   transition: max-height .25s ease-in-out;
 
   &.expanded {
-    max-height: 500px;
+    max-height: 600px;
+  }
+
+  img {
+    width: 500px;
+    height: auto;
+    margin-bottom: 20px;
   }
 }
 

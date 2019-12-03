@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import FreeQuote from "./custom/freeQuoteBanner";
-import Products from './custom/products';
 
 // Styling
 import '../style/components/meetTheDocs.scss';
@@ -71,7 +70,7 @@ class MeetTheDocs extends Component {
                     ))}
                 </div>
 
-                <Products />
+                {/*<Products />*/}
                 <FreeQuote />
 
                 <ViewDocModal ref="viewDoc"/>
@@ -105,7 +104,7 @@ class DocDisplay extends Component {
                 <div className="doc-icon-container">
                     <img className="doc-expand-icon" onClick={this.showDocBio} src={ EXPAND_ICON } alt="Doc Bio"/>
                 </div>
-                <p className="doc-position"> {this.props.doc.position }</p>
+                {/*<p className="doc-position"> {this.props.doc.position }</p>*/}
                 <p className="doc-name"> {this.props.doc.name }</p>
             </div>
         )
@@ -148,7 +147,7 @@ class ViewDocModal extends Component {
                             <div className="doc-icon-container-modal">
                                 <img className="doc-expand-icon" onClick={this.closeBio} src={ COLLAPSE_ICON } alt="Collapse Bio"/>
                             </div>
-                            <p className="doc-position"> {this.state.doc.position }</p>
+                            {/*<p className="doc-position"> {this.state.doc.position }</p>*/}
                             <p className="doc-name"> {this.state.doc.name }</p>
                             <div className="doc-bio-modal-content">
                                 <p> { this.state.doc.bio }</p>
