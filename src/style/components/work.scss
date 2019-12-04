@@ -5,10 +5,11 @@ $redLogoColor: rgb(182, 8, 7);
   position: relative;
   text-align: center;
   color: white;
+  height: 290px;
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   .banner-icon {
     width: 100px;
@@ -25,6 +26,7 @@ $redLogoColor: rgb(182, 8, 7);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 
   .banner-text-small {
     text-transform: uppercase;
@@ -36,7 +38,7 @@ $redLogoColor: rgb(182, 8, 7);
   }
   .banner-text-large {
     color: white;
-    font: 44px PoppinsSemiBold, serif, sans-serif;
+    font: 56px PoppinsSemiBold, serif, sans-serif;
     text-align: center;
     text-shadow: 0 0 10px #000000;
   }
@@ -45,10 +47,10 @@ $redLogoColor: rgb(182, 8, 7);
 .gallery-container {
 
   width: 100%;
-  margin: 50px auto;
+  margin: 100px auto;
 
   .main-text {
-    font: 48px PoppinsSemiBold, serif, sans-serif;
+    font: 62px PoppinsSemiBold, serif, sans-serif;
     color: rgb(183, 8, 8);
     text-transform: uppercase;
     text-align: center;
@@ -56,8 +58,9 @@ $redLogoColor: rgb(182, 8, 7);
   }
 
   .small-text {
-    font: 25px Poppins, serif, sans-serif;
+    font: 28px Poppins, serif, sans-serif;
     text-align: center;
+    margin: 0 auto 30px auto;
   }
 
   .gallery-sort-container {
@@ -112,8 +115,8 @@ $redLogoColor: rgb(182, 8, 7);
     color: #fff;
     text-transform: uppercase;
     border-radius: 12px;
-    font: 20px PoppinsSemiBold,serif,sans-serif;
-    height: 45px;
+    font: 24px PoppinsSemiBold,serif,sans-serif;
+    height: 52px;
     width: 200px;
     margin-left: calc(50% - 100px);
 

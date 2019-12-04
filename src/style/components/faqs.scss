@@ -17,10 +17,11 @@ $borderGray: rgb(93, 93, 93);
   position: relative;
   text-align: center;
   color: white;
+  height: 290px;
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   .banner-icon {
     width: 100px;
@@ -46,8 +47,8 @@ $borderGray: rgb(93, 93, 93);
   display: inline-block;
   width: 90%;
   margin-bottom: 0;
-  line-height: 70px !important;
-  font: 30px PoppinsSemiBold, serif, sans-serif;
+  line-height: 100px !important;
+  font: 32px PoppinsSemiBold, serif, sans-serif;
 }
 
 .question-answer-container {
@@ -62,19 +63,19 @@ $borderGray: rgb(93, 93, 93);
   img {
     width: 500px;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 
 .question-answer-text {
-  margin: 18px auto;
+  margin: 18px auto 40px auto;
   font: 20px Poppins, serif, sans-serif;
   color: #414040
 }
 
 .faq-action-icon-image {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   display: inline-block;
   float: right;
 }
@@ -96,7 +97,7 @@ $borderGray: rgb(93, 93, 93);
   }
   .banner-text-large {
     color: white;
-    font: 44px PoppinsSemiBold, serif, sans-serif;
+    font: 56px PoppinsSemiBold, serif, sans-serif;
     text-align: center;
     text-shadow: 0 0 10px #000000;
   }

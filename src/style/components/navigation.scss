@@ -28,7 +28,7 @@ $redLogoColor: rgb(183, 8, 8);
 
 .nav-link-container {
   width: 100%;
-  height: 100px;
+  height: 120px;
 }
 
 .contact-icon {
@@ -57,8 +57,8 @@ $redLogoColor: rgb(183, 8, 8);
 .navigationItem {
   color: black;
   font-family: PoppinsSemiBold, serif, sans-serif;
-  font-size: 21px;
-  padding: 0 20px;
+  font-size: 19px;
+  padding: 0 30px;
   text-align: center;
   display: inline-block;
   line-height: 40px;
@@ -75,11 +75,11 @@ $redLogoColor: rgb(183, 8, 8);
 }
 
 .navigation-free-inspection-button {
-  height: 40px;
-  width: 200px;
+  height: 50px;
+  width: 270px;
   background-color: rgb(183, 8, 8);
   color: white;
-  font: 15px PoppinsSemiBold, serif, sans-serif;
+  font: 20px PoppinsSemiBold, serif, sans-serif;
   text-transform: uppercase;
   border-radius: 12px;
   margin-left: 20px;
@@ -93,16 +93,6 @@ $redLogoColor: rgb(183, 8, 8);
     cursor: pointer;
   }
 }
-
-
-//.navigationItem:after {
-//  content: "/";
-//  color: black;
-//  position: absolute;
-//  right: 0;
-//  top: 34%;
-//}
-
 .navigation-logo-container {
   height: 80px;
   margin-left: 20px;
@@ -111,7 +101,7 @@ $redLogoColor: rgb(183, 8, 8);
 
 .navigation-items-container {
   height: 40px;
-  margin-top: 30px;
+  margin-top: 40px;
   position: relative;
   margin-right: 20px;
   display: inline-block;
@@ -125,9 +115,11 @@ $redLogoColor: rgb(183, 8, 8);
 .navigationLogo {
   width: auto;
   height: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
 }
-//
-//.nav-tag:last-of-type:after {
-//  content: '';
-//}
+
+
+@media all and (max-width: 1920px) { }
+@media all and (max-width: 1440px) { }
+@media all and (max-width: 768px) { }
+@media all and (max-width: 425px) { }

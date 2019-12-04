@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 // STYLING
-import '../../style/components/products.scss';
+import '../../style/components/custom/products.scss';
 
 // IMAGES
 import GAF from '../../resources/images/brands/logoband_gaf.png';

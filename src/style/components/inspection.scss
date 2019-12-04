@@ -14,10 +14,11 @@ $redLogoColor: rgb(183, 8, 8);
   position: relative;
   text-align: center;
   color: white;
+  height: 290px;
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   .banner-icon {
     width: 100px;
@@ -30,17 +31,18 @@ $redLogoColor: rgb(183, 8, 8);
 
 .inspection-report-container {
   width: 80%;
-  height: 825px;
-  margin: 20px auto;
+  height: 950px;
+  margin: 100px auto;
 
   .header-text {
-    font: 48px PoppinsSemiBold, serif, sans-serif;
+    font: 62px PoppinsSemiBold, serif, sans-serif;
     color: $redLogoColor;
     margin-bottom: 0;
   }
 
   .header-info-text {
-    font: 16px Poppins, serif, sans-serif;
+    font: 20px Poppins, serif, sans-serif;
+    margin: 20px auto;
   }
 
   .inspection-container {
@@ -60,27 +62,6 @@ $redLogoColor: rgb(183, 8, 8);
   }
 
 }
-
-.report-submit-button {
-  text-transform: uppercase;
-  width: 315px;
-  background-color: $redLogoColor;
-  border-radius: 9px;
-  color: white;
-  height: 50px;
-  font: 15px PoppinsSemiBold, serif, sans-serif;
-  float: right;
-  margin-top: auto;
-  margin-left: calc(100% - 315px);
-}
-
-.submit-button-image {
-  width: 40px;
-  border-radius: 9px;
-  height: 40px;
-  margin-left: 8px;
-}
-
 .inspection-banner-text-container {
   position: absolute;
   top: 50%;
@@ -98,179 +79,40 @@ $redLogoColor: rgb(183, 8, 8);
   }
   .banner-text-large {
     color: white;
-    font: 44px PoppinsSemiBold, serif, sans-serif;
+    font: 56px PoppinsSemiBold, serif, sans-serif;
     text-align: center;
     text-shadow: 0 0 10px #000000;
   }
 }
 
+.report-submit-button {
+  margin-top: auto;
+  margin-left: calc(100% - 440px);
+  width: 440px;
+  height: 65px;
+  background-color: $redLogoColor;
+  box-shadow: 0 0 10px #00000076;
+  border-radius: 9px;
+  border: 2px solid rgba(183, 8, 8, 0);
 
-
-/***
-
-OLD
-
- */
-.work-section-inspection {
-  background-color: white;
-  width: 90%;
-  margin-left: 10%;
-}
-
-.inspection-damage-report-container {
-  margin: 0;
-  width: 100%;
-  height: calc(100vh - 100px);
-}
-
-.home-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.inspection-background-image {
-  width: 100%;
-  height: auto;
-  max-height: 900px;
-  opacity: 0.95;
-}
-
-.damage-report {
-  width: 35%;
-  position: absolute;
-  display: inline-block;
-  right: 10%;
-  float: right;
-  height: 90%;
-  margin-top: 2.5%;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.inspection-info-container {
-  width: 35%;
-  position: absolute;
-  display: inline-block;
-  float: left;
-  left: 10%;
-  height: 90%;
-  margin-top: 2.5%;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.inspection-process-container {
-  margin-bottom: 100px;
-}
-
-.inspection-description-container {
-  display: flex;
-  margin-top: 20px;
-}
-
-
-.inspection-desc-info-container {
-  flex-grow: 1;
-  margin-left: 65px;
-  display: flex;
-  height: 80%;
-  flex-direction: column;
-  position: relative;
-}
-
-.line-item-icon {
-  width: 45px;
-  height: auto;
-  display: inline-block;
-  float: left;
-  margin-top: 2px;
-  position: absolute;
-}
-
-.line-item-text {
-  display: inline-block;
-  margin-left: 55px;
-  font: 16px Roboto, sans-serif, serif;
-}
-
-
-.sectionSubheader {
-  width: 80%;
-  margin: 5px auto;
-  font: 16px Roboto, serif, sans-serif;
-}
-
-.storm-damage-report-thanks {
-
-}
-
-@media screen and (min-width: 900px) and (max-width: 1300px) {
-
-  .damage-report {
-    width: 40%;
-    box-shadow: none;
-    min-width: 425px;
-    right: 5%
+  &:hover {
+    cursor: pointer;
+    border: 2px solid white;
   }
 
-  .inspection-info-container {
-    width: 40%;
-    box-shadow: none;
-    min-width: 380px;
-    left: 5%
+  .report-submit-label {
+    text-transform: uppercase;
+    color: white;
+    font: 22px PoppinsSemiBold, Serif, sans-serif;
+    display: inline-block;
+    line-height: 63px;
+    margin-left: 15px;
   }
 
-  .home-container {
-    img {
-      min-height: 850px;
-    }
-  }
-
-
-}
-
-@media screen and (max-width: 1000px) {
-  .inspection-page-container {
-    margin-top: 100px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-
-  .home-container {
-    img {
-      display: none;
-    }
-  }
-
-  .inspection-info-container {
-    width: 100%;
-    box-shadow: none;
-    position: initial;
-    margin-bottom: 30px;
-  }
-
-  .damage-report {
-    width: 100%;
-    box-shadow: none;
-    position: initial;
-  }
-
-  .formGroupDetails {
-    float: initial !important;
-    width: 80% !important;
-  }
-
-  .inspection-desc-info-container {
-
-    margin-left: 0;
-  }
-
-}
-
-@media screen and (max-width: 600px) {
-  .inspection-page-container {
-    margin-top: 300px;
+  .report-submit-img {
+    float: right;
+    margin-right: 2px;
+    margin-top: 1px;
+    display: inline-block;
   }
 }

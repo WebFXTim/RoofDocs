@@ -10,7 +10,8 @@ import '../style/components/modal.css'
 
 import BANNER from "../resources/images/misc/background_banner.png";
 import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
-import SUBMIT_ICON from '../resources/images/misc/btn_icon_arrow_rd.png';
+import SUBMIT_ICON from '../resources/images/misc/btn_icon_arrow_rd_white.png';
+import ARROW_ICON from '../resources/images/misc/btn_icon_arrow_rd.png';
 import ImageTextArea from "./custom/imageTextArea";
 import ImageMultiSelect from "./custom/imageMultiSelect";
 
@@ -51,7 +52,10 @@ class FreeEstimate extends Component {
                         <ImageInput ref="inspectionPhone" type="phone" />
                         <ImageMultiSelect ref="inspectionSelect" type="inspection" />
                         <ImageTextArea ref="inspectionDetails" />
-                        <button onClick={this.submitInspection} className="report-submit-button">Submit Free Inspection Form<span><img className="submit-button-image" src={SUBMIT_ICON} alt="Submit"/></span></button>
+                        <div className="report-submit-button" onClick={this.submitInspection} >
+                            <p className="report-submit-label"> Submit Free Inspection Form </p>
+                            <img className="report-submit-img" src={SUBMIT_ICON} alt="Submit" />
+                        </div>
                     </div>
 
                     <div className="report-container">
@@ -63,7 +67,10 @@ class FreeEstimate extends Component {
                         <ImageInput ref="reportPhone" type="phone" />
                         <ImageMultiSelect ref="reportSelect" type="report"/>
                         <ImageTextArea ref="reportDetails" />
-                        <button onClick={this.submitReport} className="report-submit-button">Submit Storm Report Form<span><img className="submit-button-image" src={SUBMIT_ICON} alt="Submit"/></span></button>
+                        <div className="report-submit-button" onClick={this.submitReport} >
+                            <p className="report-submit-label"> Submit Storm Report Form </p>
+                            <img className="report-submit-img" src={SUBMIT_ICON} alt="Submit" />
+                        </div>
                     </div>
                 </div>
                 <WorkBanner />

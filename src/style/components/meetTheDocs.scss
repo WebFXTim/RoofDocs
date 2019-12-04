@@ -4,10 +4,11 @@
     position: relative;
     text-align: center;
     color: white;
+    height: 290px;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
     .banner-icon {
@@ -35,7 +36,7 @@
     }
     .banner-text-large {
       color: white;
-      font: 44px PoppinsSemiBold, serif, sans-serif;
+      font: 56px PoppinsSemiBold, serif, sans-serif;
       text-align: center;
       text-shadow: 0 0 10px #000000;
     }
@@ -82,7 +83,7 @@ DOCS CONTAINER
   .doc-icon-container {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 10%;
       width: 100px;
       height: 100px;
 
