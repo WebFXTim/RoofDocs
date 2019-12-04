@@ -14,26 +14,24 @@
 
 .modalContent {
     width: 500px;
-    margin-top: calc(50vh - 175px);
+    margin-top: 200px;
     margin-left: calc(50vw - 250px);
     background-color: white;
+    border-radius: 23px;
 }
 
 .modalHeader {
-    width: 80%;
+    width: 90%;
     margin: auto auto 30px;
     padding-top: 25px;
     text-align: center;
-    word-spacing: 5px;
-    font-family: Bebas, serif;
-    font-size: 24px;
-    color: rgb(182, 8, 7);
+    font: 24px PoppinsMedium, serif, sans-serif;
+    color: rgb(183, 8, 8);
 }
 
 .errorItem {
     color: black;
-    font-family: AgencyFB, serif;
-    font-size: 28px;
+    font: 28px Poppins, serif;
     text-align: center;
     margin-bottom: 0;
     width: 100%;
@@ -45,12 +43,23 @@
     color: white;
     margin-top: 40px;
     margin-bottom: 40px;
-    font-family: Bebas, serif;
+    font: 20px Poppins, serif;
     width: 150px;
     margin-left: calc(50% - 75px);
     height: 50px;
     word-spacing: 5px;
-    font-size: 20px;
+    border-radius: 12px;
+
+
+}
+
+.errorOkButton:hover {
+    cursor: pointer;
+}
+
+.errorOkButton:focus {
+    border: none;
+    outline: none;
 }
 
 .modalContentWorkMobile {

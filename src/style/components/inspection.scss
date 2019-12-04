@@ -1,4 +1,14 @@
 $redLogoColor: rgb(183, 8, 8);
+@keyframes modalFadeIn {
+  from {transform: translateY(-50%);opacity: 0;}
+  to {transform: translateY(0);opacity: 1;}
+}
+
+.animatedModal {
+  animation-name: modalFadeIn;
+  animation-duration: .5s;
+}
+
 
 .inspection-banner {
   position: relative;
