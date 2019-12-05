@@ -4,10 +4,10 @@ import React, { Component } from 'react';
 import '../../style/components/custom/process.scss';
 
 // Testing Images
-import ROOFING from '../../resources/images/home/img_hp_roofing.jpg';
+import INSPECT from '../../resources/images/custom/process/img_hp_1inspect.png';
 import DIAGNOSE from '../../resources/images/custom/process/img_hp_2diagnose.png';
-import SIDING from '../../resources/images/home/img_hp_siding.jpg';
-import GUTTERS from '../../resources/images/home/img_hp_gutters.jpg';
+import PRESCRIBE from '../../resources/images/custom/process/img_hp_3prescribe.png';
+import OPERATE from '../../resources/images/custom/process/img_hp_4operate.png';
 
 import SLIDE1_SELECTED from '../../resources/images/custom/process/btn_num1_active.png';
 import SLIDE1_NOT_SELECTED from '../../resources/images/custom/process/btn_num1_inactive.png';
@@ -27,10 +27,10 @@ const SLIDES = [
 ];
 
 const PROCESS_STEPS = [
-    { image: ROOFING, name: 'Inspect', description: ['ROOF', <span className="logo-text">ER</span>, ' will perform a FREE inspection of your roof, siding, and gutters to find evidence of wind, hail, or other damage.'] },
+    { image: INSPECT, name: 'Inspect', description: ['ROOF', <span className="logo-text">ER</span>, ' will perform a FREE inspection of your roof, siding, and gutters to find evidence of wind, hail, or other damage.'] },
     { image: DIAGNOSE, name: 'Diagnose', description: ['ROOF', <span className="logo-text">ER</span>, ' and your Roof Doc will properly assess all findings to determine whether your exterior systems are storm-damaged, old, or perfectly fine.']},
-    { image: GUTTERS, name: 'Prescribe', description: ['Your Roof Doc will provide you with an honest recommendation based on their findings. If damage is found, ROOF', <span className="logo-text">ER</span>, ' may suggest filing an insurance claim.']},
-    { image: SIDING, name: 'Operate', description: ['If your roof, siding, or gutters are found to have an ailment, the last step is to review project details with your Roof Doc and let ROOF', <span className="logo-text">ER</span>, '\'s install team take care of the rest.']}
+    { image: PRESCRIBE, name: 'Prescribe', description: ['Your Roof Doc will provide you with an honest recommendation based on their findings. If damage is found, ROOF', <span className="logo-text">ER</span>, ' may suggest filing an insurance claim.']},
+    { image: OPERATE, name: 'Operate', description: ['If your roof, siding, or gutters are found to have an ailment, the last step is to review project details with your Roof Doc and let ROOF', <span className="logo-text">ER</span>, '\'s install team take care of the rest.']}
 ];
 
 class Process extends Component {
@@ -51,7 +51,7 @@ class Process extends Component {
                     <img src={step.image} alt="Process Icon"/>
                 </div>
                 <div className="process-info-container">
-                    <p className="process-header"> The Roofer Process </p>
+                    <p className="process-header"> The Roof<span className="logo-text">er</span> Process </p>
                     <p className="process-step-name"> {this.state.processIndex + 1}. { step.name } </p>
                     <p className="process-description"> { step.description } </p>
                     <div className="process-slides-container">

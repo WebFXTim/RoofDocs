@@ -1,16 +1,17 @@
 .home-process {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 
   .process-image-container {
     height: 70%;
     display: flex;
     align-items: center;
+    margin-right: 200px;
 
     img {
-      height: 80%;
+      height: 90%;
     }
   }
 
@@ -34,6 +35,7 @@
 
   .process-description {
     font: 20px Poppins, sans-serif, serif;
+    color: #302F2F;
   }
 
   .process-slides-container {

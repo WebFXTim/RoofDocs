@@ -43,6 +43,7 @@ $redLogoColor: rgb(183, 8, 8);
   .header-info-text {
     font: 20px Poppins, serif, sans-serif;
     margin: 20px auto;
+    color: #414040;
   }
 
   .inspection-container {
@@ -115,4 +116,65 @@ $redLogoColor: rgb(183, 8, 8);
     margin-top: 1px;
     display: inline-block;
   }
+}
+
+
+
+/****
+
+ SMALL LAPTOPS
+
+ */
+
+@media all and (max-width: 1500px) and (min-width: 850px) {
+
+  .inspection-report-container {
+    width: 95%;
+    margin: 50px auto;
+
+    .header-text {
+      font: 42px PoppinsSemiBold, serif, sans-serif;
+    }
+
+    .header-info-text {
+      font: 17px Poppins, serif, sans-serif;
+      margin: 10px auto 20px auto;
+    }
+
+    .report-submit-button {
+      margin-top: auto;
+      margin-left: calc(100% - 340px);
+      width: 340px;
+      height: 65px;
+      background-color: $redLogoColor;
+      box-shadow: 0 0 10px #00000076;
+      border-radius: 9px;
+      border: 2px solid rgba(183, 8, 8, 0);
+
+
+      .report-submit-label {
+        text-transform: uppercase;
+        color: white;
+        font: 16px PoppinsSemiBold, Serif, sans-serif;
+        display: inline-block;
+        line-height: 63px;
+        margin-left: 15px;
+      }
+
+      .report-submit-img {
+        float: right;
+        margin-right: 2px;
+        margin-top: 1px;
+        display: inline-block;
+      }
+    }
+  }
+  .inspection-banner-text-container {
+    width: 100%;
+
+    .banner-text-large {
+      font: 42px PoppinsSemiBold, serif, sans-serif;
+    }
+  }
+
 }

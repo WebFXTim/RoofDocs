@@ -10,8 +10,7 @@ import '../style/components/modal.css'
 
 import BANNER from "../resources/images/misc/background_banner.png";
 import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
-import SUBMIT_ICON from '../resources/images/misc/btn_icon_arrow_rd_white.png';
-import ARROW_ICON from '../resources/images/misc/btn_icon_arrow_rd.png';
+import SUBMIT_ICON from '../resources/images/misc/btn_icon_arrow_ko.png';
 import ImageTextArea from "./custom/imageTextArea";
 import ImageMultiSelect from "./custom/imageMultiSelect";
 

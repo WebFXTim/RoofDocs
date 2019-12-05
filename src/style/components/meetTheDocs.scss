@@ -53,11 +53,7 @@
   }
 }
 
-/*******
-
-DOCS CONTAINER
-
- */
+/******* DOCS CONTAINER */
 
 .doc-container {
   width: 30%;
@@ -159,6 +155,7 @@ DOCS CONTAINER
       font: 28px PoppinsSemiBold, serif, sans-serif;
       color: rgb(183, 8, 8);
       margin-bottom: 0;
+      padding-top: 20px;
     }
     .doc-position {
       text-transform: uppercase;
@@ -169,8 +166,8 @@ DOCS CONTAINER
     .doc-bio-modal-content {
       background-color: #E6E6E6;
       height: 335px;
-      border-radius: 23px;
-      margin-top: 10px;
+      border-radius: 15px;
+      margin-top: 50px;
       width: 96%;
       margin-left: 2%;
 
@@ -181,7 +178,32 @@ DOCS CONTAINER
         font: 17px Poppins, sans-serif, serif;
       }
     }
-
-
   }
 }
+
+
+
+
+/*************** SMALL LAPTOPS ***************/
+
+@media all and (max-width: 1500px) and (min-width: 850px) {
+
+  .meet-the-docs-container {
+    .docs-banner-text-container {
+
+      .banner-text-large {
+        font: 35px PoppinsSemiBold, serif, sans-serif;
+      }
+    }
+
+    .docs-list-container {
+      width: 90%;
+    }
+  }
+}
+
+
+/*************** TABLETS ***************/
+
+
+/*************** MOBILE ***************/

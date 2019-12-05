@@ -57,13 +57,13 @@ $borderGray: rgb(93, 93, 93);
   transition: max-height .25s ease-in-out;
 
   &.expanded {
-    max-height: 600px;
+    max-height: 1800px;
   }
 
   img {
-    width: 500px;
-    height: auto;
-    margin-bottom: 40px;
+    max-height: 75%;
+    max-width: 75%;
+    margin: 0 12.5% 20px;
   }
 }
 
@@ -154,17 +154,23 @@ $borderGray: rgb(93, 93, 93);
   transform-origin:top;
 }
 
-@media screen and (max-width: 1000px) {
-  .faq-container {
-    margin-top: 100px;
-  }
-  .faq-question-title {
-    line-height: 40px;
-  }
-}
+/****************** SMALL LAPTOPS ****************/
+@media all and (max-width: 1500px) and (min-width: 850px) {
 
-@media screen and (max-width: 600px) {
-  .faq-container {
-    margin-top: 300px;
+  .faq-banner-text-container {
+
+    .banner-text-large {
+      font: 42px PoppinsSemiBold, serif, sans-serif;
+    }
   }
+
+  .faq-questions-content {
+    width: 90%;
+  }
+
+  .question-text {
+    line-height: 100px !important;
+    font: 26px PoppinsSemiBold, serif, sans-serif;
+  }
+
 }
