@@ -108,6 +108,10 @@ $redLogoColor: rgb(183, 8, 8);
   float: right;
 }
 
+.navigation-items-container-mobile {
+  display: none;
+}
+
 .nav-tag.active {
   color: $redLogoColor;
 }
@@ -119,7 +123,61 @@ $redLogoColor: rgb(183, 8, 8);
 }
 
 
-@media all and (max-width: 1920px) { }
-@media all and (max-width: 1440px) { }
+/****************** SMALL LAPTOPS ****************/
+@media all and (max-width: 1500px) and (min-width: 850px) {
+
+
+  .navigationItem {
+    color: black;
+    font-family: PoppinsSemiBold, serif, sans-serif;
+    font-size: 19px;
+    padding: 0 10px;
+    text-align: center;
+    display: inline-block;
+    line-height: 30px;
+
+    img {
+      padding: 0 25px;
+    }
+  }
+  .navigation-free-inspection-button {
+    height: 40px;
+    width: 220px;
+    font: 15px PoppinsSemiBold, serif, sans-serif;
+    margin-left: 10px;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media all and (max-width: 1150px) {
+    .navigation-free-inspection-button {
+      position: fixed;
+      top: 5px;
+      left: 10px;
+      box-shadow: 0 0 10px #00000076;
+    }
+
+    .navigationItem {
+      font-size: 18px;
+      padding: 0 6px;
+    }
+  }
+}
+
+
+
+@media all and (max-width: 849px) {
+  .navigation-items-container {
+    display: none;
+  }
+
+}
 @media all and (max-width: 768px) { }
 @media all and (max-width: 425px) { }

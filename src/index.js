@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.css';
-import './style/components/navigation.css';
 import App from './App';
 import { unregister } from './serviceWorker.js';
 

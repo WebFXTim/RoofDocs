@@ -165,12 +165,13 @@ $borderGray: rgb(93, 93, 93);
   }
 
   .faq-questions-content {
-    width: 90%;
+    width: 95%;
   }
 
   .question-text {
     line-height: 100px !important;
-    font: 26px PoppinsSemiBold, serif, sans-serif;
+    width: calc(100% - 100px);
+    font: 24px PoppinsSemiBold, serif, sans-serif;
   }
 
 }

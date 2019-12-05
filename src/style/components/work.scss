@@ -239,3 +239,26 @@ $redLogoColor: rgb(182, 8, 7);
     right: 5px;
   }
 }
+
+/****************** SMALL LAPTOPS ****************/
+@media all and (max-width: 1500px) and (min-width: 850px) {
+
+  .work-banner-text-container {
+    .banner-text-large {
+      font: 42px PoppinsSemiBold, serif, sans-serif;
+    }
+  }
+
+  .gallery-container {
+    margin: 50px auto;
+  }
+
+  .view-work-modal-content {
+    height: 500px;
+    width: 750px;
+    margin-top: calc(50vh - 313px);
+    margin-left: calc(50vw - 375px);
+  }
+
+
+}

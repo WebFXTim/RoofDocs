@@ -140,21 +140,21 @@ class Home extends Component {
                         <p className="largeText"> What we do. </p>
                         <div className="services-container">
                             <div className="single-service-container">
-                                <img src={ROOFING} alt="Roofing"/>
+                                <img className="main-service-image" src={ROOFING} alt="Roofing"/>
                                 <img className="service-mini-image" src={ROOFING_MINI} alt="Roofing Icon" />
                                 <p className="service-header" id="roofing" > Roofing </p>
                                 <p className="service-description"> Our roofers are fully trained and certified to remedy any roofing issue your home may face. We are The Roof Docs for a reason.</p>
                                 <a href="/work#roofing"><p className="learn-more-link"> Learn More > </p></a>
                             </div>
                             <div className="single-service-container">
-                                <img src={SIDING} alt="Siding" id="siding"/>
+                                <img className="main-service-image" src={SIDING} alt="Siding" id="siding"/>
                                 <img className="service-mini-image" src={SIDING_MINI} alt="Siding Icon" />
                                 <p className="service-header"> Siding </p>
                                 <p className="service-description"> While not in the name, our siding team treats your home like you'd expect to be treated during surgery - with great care and precision. </p>
                                 <a href="/work#siding"><p className="learn-more-link"> Learn More > </p></a>
                             </div>
                             <div className="single-service-container">
-                                <img src={GUTTERS} alt="Gutters" id="gutters" />
+                                <img className="main-service-image" src={GUTTERS} alt="Gutters" id="gutters" />
                                 <img className="service-mini-image" src={GUTTERS_MINI} alt="Gutters Icon" />
                                 <p className="service-header"> Gutters </p>
                                 <p className="service-description"> Your gutters mean a great deal to the health of your home. That's why our team ensures each install follows local best practices. </p>

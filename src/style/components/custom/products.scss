@@ -17,3 +17,29 @@
     margin-top: 15px;
   }
 }
+
+/****************** SMALL LAPTOPS ****************/
+@media all and (max-width: 1500px) and (min-width: 850px) {
+  .products-container {
+    width: 90%;
+  }
+}
+
+/****************** TABLETS & MOBILE ****************/
+@media all and (max-width: 849px) {
+  .products-background {
+    height: auto;
+  }
+  .products-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .image-container {
+      width: 100%
+    }
+  }
+
+
+
+}

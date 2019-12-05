@@ -73,6 +73,9 @@ class Navigation extends Component {
                         </a>
                         <a href="/inspection"><button className="navigation-free-inspection-button"> Get a Free Inspection </button></a>
                     </div>
+                    <div className="navigation-items-container-mobile">
+
+                    </div>
                 </div>
             </div>
         );

@@ -184,3 +184,84 @@ $redLogoColor: rgb(183, 8, 8);
     transform: rotate(35deg);
   }
 }
+
+/****************** SMALL LAPTOPS ****************/
+@media all and (max-width: 1500px) and (min-width: 850px) {
+
+  .google-reviews-background {
+    width: 100%;
+    margin-bottom: 50px;
+
+    .reviews-content {
+      width: 90%;
+      margin: 0 auto;
+
+      .success-text {
+        margin-top: 25px;
+        font-size: 56px;
+      }
+
+      .success-subheader {
+        font-size: 24px;
+      }
+
+    }
+
+
+    .reviews-holder {
+      height: 300px;
+      margin-top: 40px;
+    }
+
+    .reviews-arrow-container {
+      width: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      &.left {
+        float: left;
+      }
+
+      &.right {
+        float: right;
+      }
+
+      img {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+      }
+    }
+
+    .google-reviews-list {
+      width: 90%;
+      display: flex;
+      float: left;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .review {
+        width:50%;
+        height: 100%;
+      }
+    }
+
+    /** REVIEW ITEM */
+    .review-user-info {
+      height: 90px;
+      display: flex;
+    }
+
+  }
+  .review-comment-container {
+    .LinesEllipsis {
+      font: 16px Poppins, sans-serif, serif;
+    }
+  }
+}
+
+/****************** TABLETS & MOBILE ****************/
+@media all and (max-width: 849px) { }

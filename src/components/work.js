@@ -35,7 +35,7 @@ import Roofing16 from '../resources/images/marketing/IMG_3403.jpg'
 import Roofing17 from '../resources/images/marketing/IMG_3404.jpg';
 import Roofing18 from '../resources/images/marketing/IMG_3406.jpg';
 import Roofing19 from '../resources/images/marketing/IMG_3409.jpg';
-import Roofing20 from '../resources/images/marketing/IMG_3410.jpg';
+// import Roofing20 from '../resources/images/marketing/IMG_3410.jpg';
 import Roofing21 from '../resources/images/marketing/IMG_3415.jpg';
 import COLLAPSE_ICON from "../resources/images/misc/icon_closered.png";
 
@@ -51,15 +51,14 @@ const MARKETING_IMAGES = [
     { title: 'Roofing9', src: Roofing9 },
     { title: 'Roofing10', src: Roofing10 },
     { title: 'Roofing11', src: Roofing11 },
-    { title: 'Roofing12', src: Roofing12 },
     { title: 'Roofing13', src: Roofing13 },
     { title: 'Roofing14', src: Roofing14 },
     { title: 'Roofing15', src: Roofing15 },
     { title: 'Roofing16', src: Roofing16 },
     { title: 'Roofing17', src: Roofing17 },
+    { title: 'Roofing12', src: Roofing12 },
     { title: 'Roofing18', src: Roofing18 },
     { title: 'Roofing19', src: Roofing19 },
-    { title: 'Roofing20', src: Roofing20 },
     { title: 'Roofing21', src: Roofing21 }
 ];
 
