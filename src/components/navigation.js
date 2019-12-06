@@ -22,6 +22,12 @@ const PHONE_TEXT = '703-239-3738';
 
 class Navigation extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = { collapsed: false };
+    }
+
     render() {
         return (
             <div className="navigation" id="navigation">
@@ -35,42 +41,46 @@ class Navigation extends Component {
                 {/* Navigation Links */}
                 <div className="nav-link-container">
                     <div className="navigation-logo-container">
-                        <NavLink className="nav-tag" exact to="/">
+                        <NavLink onClick={this.navLinkClicked} className="nav-tag" exact to="/">
                             <div className="navigationItem navigationLogo">
                                 <img alt="logo" src={logo} />
                             </div>
                         </NavLink>
                     </div>
+
                     <div className="navigation-items-container">
-                        <NavLink className="nav-tag" to='/work'>
-                            <div className="navigationItem">
-                                Our Work
-                            </div>
-                            <img src={SLASH} alt="Separator"/>
-                        </NavLink>
-                        <NavLink className="nav-tag" to='/docs'>
-                            <div className="navigationItem">
-                                Meet the Docs
-                            </div>
-                            <img src={SLASH} alt="Separator"/>
-                        </NavLink>
-                        <NavLink className="nav-tag" to='/inspection'>
-                            <div className="navigationItem">
-                                Inspection
-                            </div>
-                            <img src={SLASH} alt="Separator"/>
-                        </NavLink>
-                        <NavLink className="nav-tag" to='/faqs'>
-                            <div className="navigationItem">
-                                FAQs
-                            </div>
-                            <img src={SLASH} alt="Separator"/>
-                        </NavLink>
-                        <a href={PORTAL} target="_blank" rel="noopener noreferrer" >
-                            <div className="navigationItem">
-                                Sign In
-                            </div>
-                        </a>
+                        <i className="fa fa-bars"  aria-hidden="true"  onClick={ () => this.setState({ collapsed: !this.state.collapsed })} />
+                        <div className={`navigation-links-container ${this.state.collapsed ? "is-expanded" : ""}`}>
+                            <NavLink onClick={this.navLinkClicked} className="nav-tag" to='/work'>
+                                <div className="navigationItem">
+                                    Our Work
+                                </div>
+                                <img src={SLASH} alt="Separator"/>
+                            </NavLink>
+                            <NavLink onClick={this.navLinkClicked} className="nav-tag" to='/docs'>
+                                <div className="navigationItem">
+                                    Meet the Docs
+                                </div>
+                                <img src={SLASH} alt="Separator"/>
+                            </NavLink>
+                            <NavLink onClick={this.navLinkClicked} className="nav-tag" to='/inspection'>
+                                <div className="navigationItem">
+                                    Inspection
+                                </div>
+                                <img src={SLASH} alt="Separator"/>
+                            </NavLink>
+                            <NavLink onClick={this.navLinkClicked} className="nav-tag" to='/faqs'>
+                                <div className="navigationItem">
+                                    FAQs
+                                </div>
+                                <img src={SLASH} alt="Separator"/>
+                            </NavLink>
+                            <a href={PORTAL} target="_blank" rel="noopener noreferrer" >
+                                <div className="navigationItem">
+                                    Sign In
+                                </div>
+                            </a>
+                        </div>
                         <a href="/inspection"><button className="navigation-free-inspection-button"> Get a Free Inspection </button></a>
                     </div>
                     <div className="navigation-items-container-mobile">
@@ -79,6 +89,13 @@ class Navigation extends Component {
                 </div>
             </div>
         );
+    }
+
+
+    navLinkClicked = () => {
+
+        this.setState ({ collapsed: false });
+
     }
 }
 

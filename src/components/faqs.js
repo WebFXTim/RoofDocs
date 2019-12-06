@@ -23,8 +23,20 @@ class FAQQuestion extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { collapsed: true }
+        this.state = { collapsed: true };
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+    }
+
+    updateWindowDimensions() {
+        if(window.innerWidth < 620) {
+            this.setState({ collapsed: false });
+        }
+    }
+
 
     render() {
         if(this.props.src) {
@@ -81,7 +93,7 @@ class FAQs extends Component {
                     <img className="banner-icon" src={BANNER_ICON_UP} alt="Banner Icon Up" />
                 </div>
 
-                <div className="faq-questions-content">
+                <div className="faq-questions-content" key="test">
 
                     <FAQQuestion key="1"
                         questionText="Does it really hail in Virginia?"
@@ -122,8 +134,8 @@ class FAQs extends Component {
                     />
 
                     <FAQQuestion key="7"
-                        questionText={["Why should I work with ROOF", <span className="black-text">ER</span>, "?"]}
-                        questionAnswer={["When a storm affects your neighborhood, you should seek help from an experienced, honest, fair, and local contractor who will assess your damages and assist you through the storm restoration process. At ROOF", <span className="logo-text">ER</span>, ', we have experience handling hundreds of storm restoration projects each year and maintain an uncompromising commitment to serving every customer with integrity, quality, and simplicity']}
+                        questionText={["Why should I work with ROOF", <span className="black-text" key="3">ER</span>, "?"]}
+                        questionAnswer={["When a storm affects your neighborhood, you should seek help from an experienced, honest, fair, and local contractor who will assess your damages and assist you through the storm restoration process. At ROOF", <span className="logo-text" key="3">ER</span>, ', we have experience handling hundreds of storm restoration projects each year and maintain an uncompromising commitment to serving every customer with integrity, quality, and simplicity']}
                     />
 
                 </div>

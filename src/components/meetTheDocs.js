@@ -6,12 +6,12 @@ import FreeQuote from "./custom/freeQuoteBanner";
 import '../style/components/meetTheDocs.scss';
 
 // Images
-import Mike from '../resources/images/employees/MikeHeadshot.png';
-import Alex from '../resources/images/employees/AlexHeadshot.png';
+import Mike from '../resources/images/employees/MikeHarvey.png';
+import ChrisDavis from '../resources/images/employees/ChrisDavis.png';
 import Oliver from '../resources/images/employees/OliverHeadshot.png';
 import Matt from '../resources/images/employees/MattFoster.png';
 import Rees from '../resources/images/employees/ReesNalley.png';
-import AlexJavad from '../resources/images/employees/AlexJavad.png';
+import GregCampbell from '../resources/images/employees/GregCampbell.png';
 
 import BANNER from "../resources/images/misc/background_banner.png";
 import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
@@ -32,19 +32,19 @@ const MATT_BIO = 'Matt has over 5 years of experience in the Roofing/Home Remode
 const REES_BIO = 'Rees was introduced to the home remodeling industry just out of college when he worked as a site supervisor for a family member’s construction company. While there, he ' +
     'discovered a deep satisfaction for improving the quality of people’s homes and decided to make it his career. Before his work there, Rees graduated from Mount St. Mary’s University ' +
     'where he achieved a B.A. in History and played four years of rugby as a Mountaineer. When Rees isn’t on the job he’s in the gym, on a boat, or on the rugby pitch.';
-const ALEX_BIO = 'Alex was in the software development industry before switching over to roofing. He studied computer science at Boston University and played lacrosse as a Terrier. Alex ' +
+const CHRIS_BIO = 'Alex was in the software development industry before switching over to roofing. He studied computer science at Boston University and played lacrosse as a Terrier. Alex ' +
     'loves dogs and long walks on the beach. His secret passion is cooking up a storm. Give him family recipes and you’ll make his day.';
-const ALEX_JAVAD_BIO = 'Alex graduated with a degree in Computer Science from the University of California at Berkeley in 2013. After spending some time consulting in technology, ' +
+const GREG_BIO = 'Alex graduated with a degree in Computer Science from the University of California at Berkeley in 2013. After spending some time consulting in technology, ' +
     'he decided he would rather do something more expansive. With an interest in people, helping out, and seeing new places, he found himself fitting in naturally here at Roof-ER';
 
 
 const DOCS = [
     { name: 'Michael Harvey', position: 'President / Job Lead', photo: Mike, bio: MIKE_BIO },
     { name: 'Oliver Brown', position: 'Manager', photo: Oliver, bio: OLIVER_BIO },
+    { name: 'Chris Davis', position: 'Manager', photo: ChrisDavis, bio: CHRIS_BIO },
     { name: 'Matt Foster', position: 'Team Leader', photo: Matt, bio: MATT_BIO },
     { name: 'Rees Nalley', position: 'President / Job Lead', photo: Rees, bio: REES_BIO },
-    { name: 'Alex Ortega', position: 'Manager', photo: Alex, bio: ALEX_BIO },
-    { name: 'Alex Javad', position: 'Team Leader', photo: AlexJavad, bio: ALEX_JAVAD_BIO },
+    { name: 'Greg Campbell', position: 'Team Leader', photo: GregCampbell, bio: GREG_BIO },
 ];
 
 class MeetTheDocs extends Component {

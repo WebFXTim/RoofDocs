@@ -32,3 +32,42 @@ $redLogoColor: #B70808;
   margin-bottom: 0;
   margin-right: 20px
 }
+
+/******************* TABLETS & SMALLER **************************/
+@media all and (max-width: 849px) {
+
+
+  .free-quote-container {
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .free-quote-button {
+    background-color: rgb(183, 8, 8);
+    color: white;
+    text-transform: uppercase;
+    border-radius: 12px;
+    font: 20px PoppinsSemiBold, serif, sans-serif;
+    height: 52px;
+    width: 350px;
+    margin-bottom: 20px;
+
+    &:hover {
+      color: rgb(183, 8, 8);
+      background-color: white;
+      border: 3px solid rgb(183, 8, 8);
+      cursor: pointer;
+    }
+  }
+
+  .free-quote-text {
+    color: #B70808;
+    font: 28px PoppinsSemiBold, serif, sans-serif;
+    margin: 20px auto 10px auto;
+  }
+
+}

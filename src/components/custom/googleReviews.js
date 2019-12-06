@@ -104,7 +104,7 @@ class GoogleReviews extends Component {
                             {/* Reviews List */}
                             <div className="google-reviews-list">
                                 <GoogleReviewContainer review={review1} />
-                                <GoogleReviewContainer review={review2} />
+                                <GoogleReviewContainer id="review2" review={review2} />
                             </div>
                             <div className="reviews-arrow-container right">
                                 <img id="right" onClick={this.arrowClicked} src={RIGHT_ARROW} alt="Next"/>
@@ -394,7 +394,7 @@ class GoogleReviewContainer extends Component  {
 
 
         return (
-            <div className="review">
+            <div className="review" id={this.props.id}>
                 <div className="review-user-info">
                     <div className="review-photo-container">
                         <img src={this.props.review.profilePhotoURL} alt="Profile"/>

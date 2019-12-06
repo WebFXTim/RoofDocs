@@ -70,3 +70,72 @@
   }
 }
 
+/************************ TABLETS ***********************/
+@media all and (max-width: 849px)  {
+
+  .home-process {
+    display: block;
+    height: inherit !important;
+
+    .process-image-container {
+
+      width: 80%;
+      padding-top: 20px;
+      margin: 0 auto;
+      img {
+        /* width: auto; */
+        margin: 0 auto 10px;
+        height: auto;
+        max-width: 350px;
+      }
+    }
+
+    .process-info-container {
+      width: 90%;
+      height: inherit;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .process-header {
+      margin-bottom: 5px;
+    }
+
+    .process-step-name {
+      color: #B70808;
+      margin-bottom: 5px;
+      font: 36px PoppinsSemiBold, sans-serif, serif;
+    }
+
+    .process-description {
+      text-align: center;
+      font: 18px Poppins, sans-serif, serif;
+      color: #302F2F;
+    }
+
+    .process-slides-container {
+      height: 40px;
+      width: 300px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      img {
+        width: 40px;
+        height: auto;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+      }
+
+    }
+  }
+
+
+}
+

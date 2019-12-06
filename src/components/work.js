@@ -63,10 +63,10 @@ const MARKETING_IMAGES = [
 ];
 
 const STEPS = [
-    { name: 'Inspect', icon: INSPECT, info: ['ROOF', <span className="logo-text">ER</span>, ' will perform a FREE inspection of your roof, siding, and gutters to find evidence of wind, hail, or other damage.']},
-    { name: 'Diagnose', icon: DIAGNOSE, info: ['ROOF', <span className="logo-text">ER</span>, ' and your Roof Doc will properly assess all findings to determine whether your exterior systems are storm-damaged, old, or perfectly fine.']},
-    { name: 'Prescribe', icon: PRESCRIBE, info: ['Your Roof Doc will provide you with an honest recommendation based on their findings. If damage is found, ROOF', <span className="logo-text">ER</span>,  ' may suggest filing an insurance claim.']},
-    { name: 'Operate', icon: OPERATE, info: ['If your roof, siding, or gutters are found to have an ailment, the last step is to review project details with your Roof Doc and let ROOF',  <span className="logo-text">ER</span>, '\'s install team take care of the rest. ']},
+    { name: 'Inspect', icon: INSPECT, info: ['ROOF', <span className="logo-text" key="1">ER</span>, ' will perform a FREE inspection of your roof, siding, and gutters to find evidence of wind, hail, or other damage.']},
+    { name: 'Diagnose', icon: DIAGNOSE, info: ['ROOF', <span className="logo-text" key="2">ER</span>, ' and your Roof Doc will properly assess all findings to determine whether your exterior systems are storm-damaged, old, or perfectly fine.']},
+    { name: 'Prescribe', icon: PRESCRIBE, info: ['Your Roof Doc will provide you with an honest recommendation based on their findings. If damage is found, ROOF', <span className="logo-text" key="3">ER</span>,  ' may suggest filing an insurance claim.']},
+    { name: 'Operate', icon: OPERATE, info: ['If your roof, siding, or gutters are found to have an ailment, the last step is to review project details with your Roof Doc and let ROOF',  <span className="logo-text" key="4">ER</span>, '\'s install team take care of the rest. ']},
 
 ];
 

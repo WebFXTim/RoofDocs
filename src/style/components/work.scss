@@ -20,7 +20,6 @@ $redLogoColor: rgb(182, 8, 7);
   }
 }
 
-
 .work-banner-text-container {
   position: absolute;
   top: 50%;
@@ -259,6 +258,194 @@ $redLogoColor: rgb(182, 8, 7);
     margin-top: calc(50vh - 313px);
     margin-left: calc(50vw - 375px);
   }
+}
 
+/****************** SMALL LAPTOPS ****************/
+@media all and (max-width: 1500px) and (min-width: 850px) {
+
+  .work-banner-text-container {
+    .banner-text-large {
+      font: 42px PoppinsSemiBold, serif, sans-serif;
+    }
+  }
+
+  .gallery-container {
+    margin: 50px auto;
+  }
+
+  .view-work-modal-content {
+    height: 500px;
+    width: 750px;
+    margin-top: calc(50vh - 313px);
+    margin-left: calc(50vw - 375px);
+  }
+}
+
+/****************** TABLETS ****************/
+@media all and (max-width: 849px) and (min-width: 500px) {
+
+  .work-banner-text-container {
+    .banner-text-large {
+      font: 42px PoppinsSemiBold, serif, sans-serif;
+    }
+  }
+
+  .gallery-container {
+    margin: 50px auto;
+  }
+
+  .view-work-modal-content {
+    height: 500px;
+    width: 90%;
+    margin-top: calc(50vh - 200px);
+    margin-left: calc(50vw - 45%);
+  }
+
+  .gallery-container {
+    width: 100%;
+    margin: 30px auto;
+
+    .main-text {
+      font: 42px PoppinsSemiBold, serif, sans-serif;
+    }
+
+    .small-text {
+      text-align: center;
+      margin: 0 auto 20px auto;
+    }
+
+    .gallery-images-container {
+      width: 95%;
+      margin: 0 auto 20px auto;
+      display: flex;
+      flex-direction: row;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+
+
+      .work-display-image-container {
+        width: 40%;
+        display: flex;
+        margin-bottom: 30px;
+        background-color: white;
+        box-shadow: 0 0 10px #00000052;
+        border: 10px solid #FFFFFF;
+      }
+    }
+  }
+
+  .work-process-container {
+
+    .work-process-banner {
+
+      .banner-icon {
+        position: absolute;
+        top: 0;
+      }
+
+      .main-text {
+        font: 36px PoppinsSemiBold, serif, sans-serif;
+      }
+
+      .small-text {
+        font: 22px Poppins, serif, sans-serif;
+      }
+    }
+
+    .work-process-content {
+      .work-item-container {
+        .work-item-info-container {
+          .step-header {
+            font: 42px PoppinsSemiBold, serif, sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 499px) {
+
+  .work-banner-text-container {
+    .banner-text-large {
+      font: 42px PoppinsSemiBold, serif, sans-serif;
+    }
+  }
+
+  .gallery-container {
+    margin: 50px auto;
+  }
+
+  .view-work-modal-content {
+    height: 500px;
+    width: 90%;
+    margin-top: calc(50vh - 313px);
+    margin-left: calc(50vw - 45%);
+  }
+
+  .gallery-container {
+    width: 100%;
+    margin: 30px auto;
+
+    .main-text {
+      font: 42px PoppinsSemiBold, serif, sans-serif;
+    }
+
+    .small-text {
+      text-align: center;
+      margin: 0 auto 20px auto;
+    }
+
+    .gallery-images-container {
+      width: 95%;
+      margin: 0 auto 20px auto;
+      display: flex;
+      flex-direction: row;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+
+
+      .work-display-image-container {
+        width: 90%;
+        display: flex;
+        margin-bottom: 30px;
+        background-color: white;
+        box-shadow: 0 0 10px #00000052;
+        border: 10px solid #FFFFFF;
+      }
+    }
+  }
+
+  .work-process-container {
+
+    .work-process-banner {
+
+      .banner-icon {
+        position: absolute;
+        top: 0;
+      }
+
+      .main-text {
+        font: 26px PoppinsSemiBold, serif, sans-serif;
+      }
+
+      .small-text {
+        font: 18px Poppins, serif, sans-serif;
+      }
+    }
+
+    .work-process-content {
+      width: 90%;
+      margin: 25px auto;
+      .work-item-container {
+        flex-direction: column;
+        .work-item-info-container {
+          .step-header {
+            font: 42px PoppinsSemiBold, serif, sans-serif;
+          }
+        }
+      }
+    }
+  }
 
 }
