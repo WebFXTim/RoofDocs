@@ -25,14 +25,12 @@ const EMAIL_ADDRESS = 'info@theroofdocs.com';
 const PHONE = 'tel:7032393739';
 const PHONE_TEXT = '703-239-3738';
 const MAP = 'https://goo.gl/maps/Wgkc5zBYAESWUWPS8';
-const ADDRESS = '3100 Clarendon Blvd. '//Ste. 200\n Arlington, VA 22201';
+const ADDRESS = ['3100 Clarendon Blvd. Ste. 200', <br key="1"/> ,'Arlington, VA 22201'];
 
 
 const HomeAdvisiorIcon = 'https://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=85269159&key=8ada7f0ec568d330d285a447aaa81f61';
-// const roofERHomeAdvisorLink = 'https://www.homeadvisor.com/rated.RoofER.85269159.html';
-// const portalLink = 'https://portal.theroofdocs.com';
-// const googleReviewsLink = 'https://www.google.com/search?client=safari&hl=en-us&output=search&q=ROOF-ER&ludocid=16180371932207541581&kgs=f6e05b70eaef79b0&shndl=-1&source=sh/x/kp/local&entrypoint=sh/x/kp/local&npsic=0&rflfq=1&rlha=0&rllag=38881417,-77293204,18387&tbm=lcl&rldimm=16180371932207541581&ved=2ahUKEwiiuZ6wtpnkAhVCiFkKHUwpCnkQvS4wAHoECAoQCA&rldoc=1&tbs=lrf:!3sIAE,lf:1,lf_ui:14&rlst=f#lrd=0x89b64b2fcb5573a1:0xe08c3a8b88ee6d4d,1,,,&rldoc=1'
-//
+const roofERHomeAdvisorLink = 'https://www.homeadvisor.com/rated.RoofER.85269159.html';
+
 
 
 
@@ -79,7 +77,9 @@ class Footer extends Component {
 
                             <div className="certs">
                                 <img src={GAF} alt="GAF"/>
-                                <img src={HomeAdvisiorIcon} alt="HomeAdvisor"/>
+                                <a href={roofERHomeAdvisorLink} rel="noopener noreferrer" target="_blank">
+                                    <img src={HomeAdvisiorIcon} alt="HomeAdvisor"/>
+                                </a>
                             </div>
                         </div>
 
