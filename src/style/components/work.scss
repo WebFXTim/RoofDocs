@@ -1,7 +1,7 @@
 $redLogoColor: rgb(182, 8, 7);
 
 .work-banner {
-
+  background: transparent url('../../resources/images/misc/background_banner.png') center center repeat padding-box;
   position: relative;
   text-align: center;
   color: white;
@@ -407,7 +407,7 @@ $redLogoColor: rgb(182, 8, 7);
 
       .work-display-image-container {
         width: 90%;
-        display: flex;
+        display: block;
         margin-bottom: 30px;
         background-color: white;
         box-shadow: 0 0 10px #00000052;

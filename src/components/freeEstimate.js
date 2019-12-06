@@ -8,7 +8,6 @@ import '../style/components/inspection.scss';
 import '../style/components/freeEstimate.css';
 import '../style/components/modal.css'
 
-import BANNER from "../resources/images/misc/background_banner.png";
 import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
 import SUBMIT_ICON from '../resources/images/misc/btn_icon_arrow_ko.png';
 import ImageTextArea from "./custom/imageTextArea";
@@ -32,7 +31,6 @@ class FreeEstimate extends Component {
         return (
             <div className="inspection-page-container">
                 <div className="inspection-banner">
-                    <img className="inspection-banner-img" src={BANNER} alt="Banner" />
                     <div className="inspection-banner-text-container">
                         <p className="banner-text-small"> SIMPLICITY </p>
                         <p className="banner-text-large"> Free Inspections for Full Peace of Mind </p>

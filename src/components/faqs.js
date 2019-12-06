@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 import '../style/components/faqs.scss';
 
 // Banner
-import BANNER from '../resources/images/misc/background_banner.png';
 import BANNER_ICON_UP from '../resources/images/misc/plus_icon_up.png';
 import EXPAND_ICON from "../resources/images/misc/icon_plusred.png";
 import COLLAPSE_ICON from "../resources/images/misc/icon_closered.png";
@@ -85,7 +84,6 @@ class FAQs extends Component {
 
             <div className="faq-container">
                 <div className="faq-banner">
-                    <img src={BANNER} alt="Banner" />
                     <div className="faq-banner-text-container">
                         <p className="banner-text-small"> Get the Basics, Then give us a call </p>
                         <p className="banner-text-large"> Frequently Asked Questions </p>

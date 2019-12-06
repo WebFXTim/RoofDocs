@@ -13,7 +13,6 @@ import Matt from '../resources/images/employees/MattFoster.png';
 import Rees from '../resources/images/employees/ReesNalley.png';
 import GregCampbell from '../resources/images/employees/GregCampbell.png';
 
-import BANNER from "../resources/images/misc/background_banner.png";
 import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
 import EXPAND_ICON from "../resources/images/misc/icon_plusred.png";
 import COLLAPSE_ICON from "../resources/images/misc/icon_closered.png";
@@ -56,7 +55,6 @@ class MeetTheDocs extends Component {
             <div className="meet-the-docs-container">
 
                 <div className="docs-banner">
-                    <img src={BANNER} alt="Banner" />
                     <div className="docs-banner-text-container">
                         <p className="banner-text-small"> INTEGRITY </p>
                         <p className="banner-text-large"> Honesty First. And Second. And Third... </p>

@@ -12,7 +12,6 @@ import DIAGNOSE from '../resources/images/ourWork/img_2diagnose.png';
 import PRESCRIBE from '../resources/images/ourWork/img_3prescribe.png';
 import OPERATE from '../resources/images/ourWork/img_4operate.png';
 
-import BANNER from "../resources/images/misc/background_banner.png";
 import BANNER_ICON_UP from '../resources/images/misc/plus_icon_up.png';
 import BANNER_ICON_DOWN from "../resources/images/misc/plus_icon_down.png";
 
@@ -118,7 +117,6 @@ class OurWork extends Component {
         return (
             <div className="our-work-container">
                 <div className="work-banner">
-                    <img src={BANNER} alt="Banner" />
                     <div className="work-banner-text-container">
                         <p className="banner-text-small"> QUALITY </p>
                         <p className="banner-text-large"> Shortcuts Aren't In Our Vocabulary </p>

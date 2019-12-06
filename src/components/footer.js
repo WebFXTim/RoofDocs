@@ -5,12 +5,6 @@ import React, { Component } from 'react';
 // Styling
 import '../style/components/footer.scss';
 
-// import footerLogo from '../resources/images/footer/roof-er-slogin.png';
-//
-// import googleReviews from '../resources/images/footer/googleReviews.png';
-// import roofERIcon from "../resources/images/logoSolo.png";
-
-import FOOTER_BANNER from "../resources/images/misc/footer_banner.png";
 import BANNER_ICON_DOWN from "../resources/images/misc/plus_icon_down.png";
 import FOOTER_LOGO from '../resources/images/logos/logo_footer.png';
 import PHONE_ICON from "../resources/images/social/icon_sm_phone_ko.png";
@@ -51,7 +45,6 @@ class Footer extends Component {
         return (
             <div className="footer">
                 <div className="footer-banner">
-                    <img src={FOOTER_BANNER} alt="Banner" />
                     <div className="footer-content">
                         <div className="footer-contact">
                             <img className="footer-logo-image" src={FOOTER_LOGO} alt="Footer Logo"/>
