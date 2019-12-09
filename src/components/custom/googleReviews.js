@@ -152,7 +152,7 @@ class GoogleReviews extends Component {
 
         const config = { headers: { 'Access-Control-Allow-Origin': '*' } };
         const self = this;
-        axios.get(`https://devapi.theroofdocs.com/v1/reviews/google`, config)
+        axios.get(`https://api.theroofdocs.com/v1/reviews/google`, config)
             .then(function (response) {
                 self.setState({ reviews: response.data.data });
             }).catch(function (error) {

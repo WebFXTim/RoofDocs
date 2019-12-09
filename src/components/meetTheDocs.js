@@ -8,7 +8,7 @@ import '../style/components/meetTheDocs.scss';
 // Images
 import Mike from '../resources/images/employees/MikeHarvey.png';
 import ChrisDavis from '../resources/images/employees/ChrisDavis.png';
-import Oliver from '../resources/images/employees/OliverHeadshot.png';
+import Oliver from '../resources/images/employees/OliverBrown.png';
 import Matt from '../resources/images/employees/MattFoster.png';
 import Rees from '../resources/images/employees/ReesNalley.png';
 import GregCampbell from '../resources/images/employees/GregCampbell.png';
@@ -31,10 +31,10 @@ const MATT_BIO = 'Matt has over 5 years of experience in the Roofing/Home Remode
 const REES_BIO = 'Rees was introduced to the home remodeling industry just out of college when he worked as a site supervisor for a family member’s construction company. While there, he ' +
     'discovered a deep satisfaction for improving the quality of people’s homes and decided to make it his career. Before his work there, Rees graduated from Mount St. Mary’s University ' +
     'where he achieved a B.A. in History and played four years of rugby as a Mountaineer. When Rees isn’t on the job he’s in the gym, on a boat, or on the rugby pitch.';
-const CHRIS_BIO = 'Alex was in the software development industry before switching over to roofing. He studied computer science at Boston University and played lacrosse as a Terrier. Alex ' +
-    'loves dogs and long walks on the beach. His secret passion is cooking up a storm. Give him family recipes and you’ll make his day.';
-const GREG_BIO = 'Alex graduated with a degree in Computer Science from the University of California at Berkeley in 2013. After spending some time consulting in technology, ' +
-    'he decided he would rather do something more expansive. With an interest in people, helping out, and seeing new places, he found himself fitting in naturally here at Roof-ER';
+const CHRIS_BIO = 'Chris is not the ideal candidate to inspect a roof, which is why he\'s kept behind a desk.  Chris has a bachelor\'s degree in Computer Science, and is in charge of software development with The Roof ' +
+    'Docs.  He enjoys streamlining business processes through software, which helps the Docs when they\'re out in the field.  He\'s slowly learning the industry, who knows, maybe one day he\'ll be qualified enough ' +
+    'to help with your inspection';
+const GREG_BIO = 'Greg will be completing this shortly..hopefully..';
 
 
 const DOCS = [

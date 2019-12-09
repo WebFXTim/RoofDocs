@@ -132,7 +132,7 @@ class FreeEstimate extends Component {
         if(errors.length === 0) {
 
             const self = this;
-            axios.post('https://devapi.theroofdocs.com/v1/inquiry', inspectionBody)
+            axios.post('https://api.theroofdocs.com/v1/inquiry', inspectionBody)
                 .then(function (response) {
 
                     // Show Modal
@@ -201,7 +201,7 @@ class FreeEstimate extends Component {
         if(errors.length === 0) {
 
             const self = this;
-            axios.post('https://devapi.theroofdocs.com/v1/inquiry', reportBody)
+            axios.post('https://api.theroofdocs.com/v1/inquiry', reportBody)
                 .then(function (response) {
 
                     // Show Modal

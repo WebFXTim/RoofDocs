@@ -24,6 +24,8 @@ const ADDRESS = ['3100 Clarendon Blvd. Ste. 200', <br key="1"/> ,'Arlington, VA 
 
 const HomeAdvisiorIcon = 'https://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=85269159&key=8ada7f0ec568d330d285a447aaa81f61';
 const roofERHomeAdvisorLink = 'https://www.homeadvisor.com/rated.RoofER.85269159.html';
+const LINKEDIN_LINK = 'https://www.linkedin.com/company/the-roof-docs-llc/';
+const FACEBOOK_LINK = 'https://www.facebook.com/theroofdocs/';
 
 
 
@@ -64,8 +66,8 @@ class Footer extends Component {
                         </div>
                         <div className="footer-social">
                             <div className="social-links">
-                                <img src={FACEBOOK} alt="Facebook"/>
-                                <img src={LINKEDIN} alt="LinkedIn"/>
+                                <a href={FACEBOOK_LINK} rel="noopener noreferrer" target="_blank"><img src={FACEBOOK} alt="Facebook"/></a>
+                                <a href={LINKEDIN_LINK} rel="noopener noreferrer" target="_blank"><img src={LINKEDIN} alt="LinkedIn"/></a>
                             </div>
 
                             <div className="certs">
