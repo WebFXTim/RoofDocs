@@ -92,6 +92,7 @@ $redLogoColor: rgb(182, 8, 7);
 
     .work-display-image-container {
       width: 30%;
+
       display: flex;
       margin-bottom: 30px;
       background-color: white;
@@ -100,7 +101,7 @@ $redLogoColor: rgb(182, 8, 7);
 
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
 
         &:hover {
           cursor: pointer;
@@ -407,7 +408,7 @@ $redLogoColor: rgb(182, 8, 7);
 
       .work-display-image-container {
         width: 90%;
-        display: block;
+        display: flex;
         margin-bottom: 30px;
         background-color: white;
         box-shadow: 0 0 10px #00000052;
