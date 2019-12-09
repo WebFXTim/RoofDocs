@@ -107,7 +107,7 @@ $redLogoColor: rgb(183, 8, 8);
   float: right;
   max-height: 325px;
   margin: auto;
-  overflow: scroll;
+  overflow: hidden;
 
   p {
     font: 18px Poppins, sans-serif, serif;
@@ -353,7 +353,7 @@ $redLogoColor: rgb(183, 8, 8);
     float: inherit;
     max-height: 325px;
     margin: auto;
-    overflow: scroll;
+    overflow: hidden;
 
     p {
       text-align: center;
@@ -382,5 +382,12 @@ $redLogoColor: rgb(183, 8, 8);
       .google-reviews-background {
         display: none;
       }
+  }
+}
+
+/** Edge Doesn't Support Space Evently **/
+@supports (-ms-accelerator: true) {
+  .google-reviews-list {
+      justify-content: space-around;
   }
 }
