@@ -12,12 +12,16 @@ html {
 }
 
 .intro {
-  background: transparent url('../../resources/images/home/background.png') 0 0 no-repeat padding-box;
+  background: transparent url('../../resources/images/home/background.png') center center no-repeat padding-box;
   opacity: 1;
   height: 800px;
   margin-top: -150px;
   width: 100%;
   position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .intro-basics {
