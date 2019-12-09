@@ -24,8 +24,3 @@ pipelines:
             - aws deploy push --application-name $APPLICATION_NAME_DEV --s3-location s3://$S3_BUCKET/webDev --ignore-hidden-files
             - aws deploy create-deployment --application-name $APPLICATION_NAME_DEV --s3-location bucket=$S3_BUCKET,key=webDev,bundleType=zip --deployment-group-name $DEPLOYMENT_GROUP_NAME_DEV
     
-
-
-            
-
-
