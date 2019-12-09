@@ -131,8 +131,162 @@ class Home extends Component {
                             </div>
                         </a>
 
+<<<<<<< HEAD
                     </div>
                 </div>
+=======
+                        </div>
+
+                    </section>
+
+                    <section id="values">
+                        <p className="sectionTitle independent"> What we value </p>
+                        <div className="values-container">
+                            <div className="value-item">
+                                <div className="value-item-container integrity">
+                                    <img src={integrity} alt="Integrity" className="value-item-icon" />
+                                    <p className="value-item-label">Integrity</p>
+                                </div>
+                                <div className="value-item-content">
+                                    <p className="sectionText">
+                                        Great businesses are built on trust: trust in the people, the process, and the product.
+                                        ROOF<span className="nameEnding">ER</span>'s commitment to integrity starts with our training methods
+                                        and continues through our final quality inspection.  Customers know what to expect from us and as a result,
+                                        are confident in referring us to their friends and family.  ROOF<span className="nameEnding">ER</span> is
+                                        proud to say 90% of our new customers are referrals.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="value-item">
+                                <div className="value-item-container quality">
+                                    <img src={quality} alt="Quality" className="value-item-icon" />
+                                    <p className="value-item-label">Quality</p>
+                                </div>
+                                <div className="value-item-content">
+                                    <p className="sectionText">
+                                        Sustainability doesn't come through shortcuts.  By focusing on quality from start-to-finish,
+                                        ROOF<span className="nameEnding">ER</span> is quickly becoming the premier roofing contractor in
+                                        Northern Virginia and Maryland for those customers looking for a restoration project done right.  Whether it is our
+                                        detailed inspections or our quality assurance protocol, we focus on every last detail to ensure our
+                                        customers know they've received the best service available.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="value-item">
+                                <div className="value-item-container simplicity">
+                                    <img src={simplicity} alt="Simplicity" className="value-item-icon" />
+                                    <p className="value-item-label">Simplicity</p>
+                                </div>
+                                <div className="value-item-content">
+                                    <p className="sectionText">
+                                        Complexity = chaos.  After a storm, this equation has the potential to become even worse.
+                                        ROOF<span className="nameEnding">ER</span> understands what homeowners want most after a storm: peace
+                                        of mind and a straightforward process to restoring their home.  Leveraging technology and emphasizing
+                                        simplicity allows ROOF<span className="nameEnding">ER</span> to offer an unrivaled value proposition: an
+                                        expert restoration project with minimal headaches.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    <section id="what">
+                        <p className="sectionTitle independent"> What we do </p>
+                        <div className="what-we-do-container">
+                            <div className="what-we-do-item">
+                                <div className="what-we-do-item-container">
+                                    <img src={roofingIcon} alt="Roofing" className="what-we-do-item-icon" />
+                                    <p className="what-we-do-item-label">Roofing</p>
+                                </div>
+
+
+                                <div className="what-we-do-image-container">
+                                    <img src={roofingWhatWeDo} className="what-we-do-image" alt="What we do - Roofing"/>
+                                        <a href="/work#roofing">
+                                            <div className="what-we-do-image-overlay">
+                                                <div className="what-we-do-image-text">Learn More</div>
+                                            </div>
+                                        </a>
+                                </div>
+
+                                <div className="brands-container">
+                                    <div className="image-left-container">
+                                        <img src={gaf} className="brands-left-image" id="gaf-logo" alt="GAF"/>
+                                    </div>
+                                    <div className="image-right-container">
+                                        <img src={iko} className="brands-right-image" id="iko-logo" alt="IKO" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="what-we-do-item">
+                                <div className="what-we-do-item-container">
+                                    <img src={sidingIcon} alt="Siding" className="what-we-do-item-icon" />
+                                    <p className="what-we-do-item-label">Siding</p>
+                                </div>
+
+                                <div className="what-we-do-image-container">
+                                    <img src={sidingWhatWeDo} className="what-we-do-image" alt="What we do - Siding"/>
+                                    <a href="/work#siding">
+                                        <div className="what-we-do-image-overlay">
+                                            <div className="what-we-do-image-text">Learn More</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div className="brands-container">
+                                    <div className="image-left-container">
+                                        <img src={certainTeed} className="brands-left-image" id="certainTeed-logo" alt="Certain Teed" />
+                                    </div>
+                                    <div className="image-right-container">
+                                        <img src={jamesHardie} className="brands-right-image" alt="James Hardie" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="what-we-do-item">
+                                <div className="what-we-do-item-container">
+                                    <img src={guttersIcon} alt="Gutters" className="what-we-do-item-icon"  />
+                                    <p className="what-we-do-item-label">Gutters</p>
+                                </div>
+                                <div className="what-we-do-image-container">
+                                    <img src={guttersWhatWeDo} className="what-we-do-image" alt="What we do - Gutters"/>
+                                    <a href="/work#gutters">
+                                        <div className="what-we-do-image-overlay">
+                                            <div className="what-we-do-image-text">Learn More</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div className="brands-container">
+                                    <div className="image-left-container">
+                                        <img src={plyGem} className="brands-left-image" alt="Ply Gem" />
+                                    </div>
+                                    <div className="image-right-container">
+                                        <img src={leafSentry} className="brands-right-image" alt="Leaf Sentry" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* How We Do It */}
+                    <section id="how">
+                        <p className="sectionTitle independent"> How we do it </p>
+                        <div className="values-container">
+                            <div className="value-item">
+                                <div className="value-item-container how-we-do-it-item">
+                                    <img src={inspect} alt="Inspect" className="value-item-icon" />
+                                    <p className="value-item-label">Inspect</p>
+                                </div>
+                                <div className="value-item-content">
+                                    <p className="sectionText">
+                                        ROOF<span className="nameEnding">ER</span>'s Roof Docs will perform a full storm-damage inspection for your property
+                                        to find evidence of wind and/or hail damage.  Your Roof Docs will review the findings with you and determine whether or not
+                                        a claim through your homeowner's insurance is warranted.
+                                    </p>
+                                    <div className="learn-more-container">
+                                        <img src={roofERIcon} alt="RoofER" className="learn-more-icon" />
+                                        <a href="/inspection"><p className="learn-more-label">LEARN MORE</p></a>
+                                    </div>
+                                </div>
+>>>>>>> 3c9300d6944b50324a05715645a8bb03935791fe
 
                 <div className="whatWeDo" id="whatWeDo" >
                     <div className="content">
