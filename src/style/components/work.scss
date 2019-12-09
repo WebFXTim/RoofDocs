@@ -448,5 +448,13 @@ $redLogoColor: rgb(182, 8, 7);
       }
     }
   }
+}
 
+/** Edge Doesn't Support Space Evently **/
+@supports (-ms-accelerator: true) {
+  .gallery-container {
+    .gallery-images-container {
+      justify-content: space-around;
+    }
+  }
 }
