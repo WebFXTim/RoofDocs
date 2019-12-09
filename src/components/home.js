@@ -1,79 +1,32 @@
 import React, { Component } from 'react';
-import FieldGroup from './custom/fieldGroup';
-import {Button, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
-import Checkbox from './checkbox';
+
+
+import GoogleReviews from "./custom/googleReviews";
+import Process from './custom/process';
+import Products from './custom/products';
+
+
 import axios from 'axios';
 
 // Styling
 import '../style/components/home.scss';
 
-// Images
-import home from '../resources/images/homeImage.jpg';
-import integrity from '../resources/images/integrity.png';
-import simplicity from '../resources/images/simplicity.png'
-import quality from '../resources/images/quality.png';
-import roofingIcon from '../resources/images/roofIcon.png';
-import roofingWhatWeDo from '../resources/images/Roofing.jpg';
-import sidingWhatWeDo from '../resources/images/HardiePlankSiding.jpg';
-import sidingIcon from '../resources/images/sidingIcon.png';
-import guttersIcon from '../resources/images/guttersIcon.png';
-import guttersWhatWeDo from '../resources/images/SeamlessGutter.jpg';
+// IMAGES
+import ROOFING from '../resources/images/home/img_hp_roofing.jpg';
+import ROOFING_MINI from '../resources/images/home/icon_sq_roofing.png';
+import SIDING from '../resources/images/home/img_hp_siding.jpg';
+import SIDING_MINI from '../resources/images/home/icon_sq_siding.png';
+import GUTTERS from '../resources/images/home/img_hp_gutters.jpg';
+import GUTTERS_MINI from '../resources/images/home/icon_sq_gutters.png';
+import ARROW_ICON from '../resources/images/misc/btn_icon_arrow_rd.png';
+import WorkBanner from "./custom/workBanner";
 
-// Brands
-import gaf from '../resources/images/brands/gaf.png';
-import iko from '../resources/images/brands/iko.png';
-import certainTeed from '../resources/images/brands/certainTeed.png';
-import jamesHardie from '../resources/images/brands/jamesHardie.png';
-import plyGem from '../resources/images/brands/plyGem.png';
-import leafSentry from '../resources/images/brands/leafSentry.png';
 
 // How We Do It
-import inspect from '../resources/images/inspect.png'
-import assist from '../resources/images/assist.png'
-import install from '../resources/images/install.png'
-import roofERIcon from '../resources/images/logoSolo.png';
-
-class Modal extends Component {
-
-    constructor(props){
-        super(props);
-
-        this.state = { hidden: true };
-
-    }
-
-    show() {
-        this.setState({ hidden: false });
-    }
-
-
-    closeModal() {
-
-        this.setState({hidden: true});
-    }
-
-
-    render() {
-        return (
-            <div className= {"modalContainer" + (this.state.hidden ? ' hiddenModal' : '')} onClick={this.closeModal.bind(this)}>
-                <div className="modalContent">
-
-                    <p className="modalHeader">Please correct errors on the following fields and submit again</p>
-
-                    { this.props.errors.map(err => (
-                        <p key={err} className="errorItem"> {err} </p>
-                    ))}
-
-
-                    <button className="errorOkButton">Got It!</button>
-
-                </div>
-
-            </div>
-        );
-    }
-}
-
+// import inspect from '../resources/images/inspect.png'
+// import assist from '../resources/images/assist.png'
+// import install from '../resources/images/install.png'
+// import roofERIcon from '../resources/images/logoSolo.png';
 
 class Home extends Component {
 
@@ -167,78 +120,21 @@ class Home extends Component {
         return (
 
             <div className="home">
-                <div className="main">
-                    <section id="who">
-                        <div className="home-container">
-
-                            <div className="free-inspection" style={ this.state.formSubmitted ? {display: 'none'} : { display: 'inline-block'}}>
-                                <p className="sectionTitle noBottomMargin"> Free Inspection </p>
-                                <p className="sectionSubheader"> Please use the form below to set up a <span className="nameEnding">FREE</span> inspection by one of our Roof Docs today! </p>
-                                <form onSubmit={this.submitForm}>
-                                    <FieldGroup
-                                        id="formControlsName"
-                                        type="text"
-                                        label="NAME"
-                                        placeholder="Enter Name"
-                                    />
-                                    <FieldGroup
-                                        id="formControlsEmail"
-                                        type="email"
-                                        label="EMAIL"
-                                        placeholder="Enter Email"
-                                    />
-                                    <FieldGroup
-                                        id="formControlsPhone"
-                                        type="phone"
-                                        label="PHONE NUMBER"
-                                        value={this.state.phoneNumber}
-                                        onChange={this.phoneChanged}
-                                        placeholder="Enter Phone Number"
-                                    />
-                                    <FieldGroup
-                                        id="formControlsAddress"
-                                        type="address"
-                                        label="ADDRESS"
-                                        placeholder="Enter Address"
-                                    />
-                                    <FormGroup className="formGroupCustom">
-                                        <ControlLabel className="estimateControlLabel">INSPECTION ITEMS</ControlLabel>
-                                        <Checkbox ref="roof" name="ROOF"/>
-                                        <Checkbox ref="siding" name="SIDING"/>
-                                        <Checkbox ref="gutters" name="GUTTERS"/>
-                                        <Checkbox ref="damage" name="STORM DAMAGE"/>
-                                    </FormGroup>
-
-                                    {/* MORE DETAILS */}
-                                    <FormGroup className="formGroupCustom formGroupDetails" controlId="formControlsTextarea">
-                                        <ControlLabel className="estimateControlLabel">More Details</ControlLabel>
-                                        <FormControl className="descriptionTextArea" componentClass="textarea" placeholder="Enter more information..." />
-                                    </FormGroup>
-                                    <Button className="submitButton" type="submit">Submit</Button>
-                                </form>
-                                <Modal errors={this.state.errors} ref="errorModal" />
+                <div className="intro">
+                    <div className="intro-basics">
+                        <p className="intro-header"> The RoofDocs Difference </p>
+                        <p className="intro-description"> A FREE, HONEST roof inspection. Every time. </p>
+                        <a href="inspection">
+                            <div className="free-inspection-button-container">
+                                <p className="home-inspection-label"> Sign Up For A Free Inspection </p>
+                                <img className="home-inspection-img" src={ARROW_ICON} alt="Arrow" />
                             </div>
-                            <div className="free-inspection" style={ !this.state.formSubmitted ? {display: 'none'} : { display: 'inline-block'}}>
-                                <p className="sectionTitle noBottomMargin"> Free Inspection </p>
-                                <p className="sectionText"> Thank you for submitting your information! You will be contacted by one of our
-                                    Roof Docs within one business day. To learn more about our process, <a href="/inspection#process">click here</a>
-                                </p>
-                            </div>
-                            <div className="who-we-are">
-                                <p className="sectionTitle"> Who we are </p>
-                                <p className="sectionText">ROOF<span className="nameEnding">ER</span> is a team of dedicated professionals
-                                    specializing in storm restoration projects in Northern Virginia and Maryland.  We are aware of the poor reputation
-                                    attributed to roofing contractors and have made it our mission to stamp out that stigma by providing
-                                    personalized, unparalleled service to our customers.  Our Roof Docs are trained to handle every project with
-                                    the care and integrity a patient would expect to receive from their own doctor.  With a commitment to integrity, quality,
-                                    and simplicity, ROOF<span className="nameEnding">ER</span> has become the most trusted name in the storm
-                                    restoration industry.  Call ROOF<span className="nameEnding">ER</span> at <a href="tel:7032393738"> (703) 239-3738 </a>
-                                    or use the inspection tool to the right to have our Roof Docs provide you with the proper prescription for
-                                    your home's ailments.
-                                </p>
-                            </div>
-                            <img src={home} className="homeImage" alt="Home"/>
+                        </a>
 
+<<<<<<< HEAD
+                    </div>
+                </div>
+=======
                         </div>
 
                     </section>
@@ -390,52 +286,43 @@ class Home extends Component {
                                         <a href="/inspection"><p className="learn-more-label">LEARN MORE</p></a>
                                     </div>
                                 </div>
+>>>>>>> 3c9300d6944b50324a05715645a8bb03935791fe
 
+                <div className="whatWeDo" id="whatWeDo" >
+                    <div className="content">
+                        <p className="smallText"> ROOF-ER SERVICES </p>
+                        <p className="largeText"> What we do. </p>
+                        <div className="services-container">
+                            <div className="single-service-container">
+                                <img className="main-service-image" src={ROOFING} alt="Roofing"/>
+                                <img className="service-mini-image" src={ROOFING_MINI} alt="Roofing Icon" />
+                                <p className="service-header" id="roofing" > Roofing </p>
+                                <p className="service-description"> Our roofers are fully trained and certified to remedy any roofing issue your home may face. We are The Roof Docs for a reason.</p>
+                                <a href="/work#roofing"><p className="learn-more-link"> Learn More > </p></a>
                             </div>
-                            <div className="value-item">
-                                <div className="value-item-container how-we-do-it-item">
-                                    <img src={assist} alt="Assist" className="value-item-icon" />
-                                    <p className="value-item-label">Assist</p>
-                                </div>
-                                <div className="value-item-content">
-                                    <p className="sectionText">
-                                        Homeowner's claims can have a lot of moving parts, resulting in a lot of confusion.
-                                        ROOF<span className="nameEnding">ER</span> guides you through the process in a streamlined fashion while acting within
-                                        the boundaries of the law.  Beware of contractors practicing unlawful Public Adjusting.
-                                    </p>
-                                    <div className="learn-more-container">
-                                        <img src={roofERIcon} alt="RoofER" className="learn-more-icon" />
-                                        <a href="/inspection"><p className="learn-more-label">LEARN MORE</p></a>
-                                    </div>
-                                </div>
+                            <div className="single-service-container">
+                                <img className="main-service-image" src={SIDING} alt="Siding" id="siding"/>
+                                <img className="service-mini-image" src={SIDING_MINI} alt="Siding Icon" />
+                                <p className="service-header"> Siding </p>
+                                <p className="service-description"> While not in the name, our siding team treats your home like you'd expect to be treated during surgery - with great care and precision. </p>
+                                <a href="/work#siding"><p className="learn-more-link"> Learn More > </p></a>
                             </div>
-                            <div className="value-item">
-                                <div className="value-item-container how-we-do-it-item">
-                                    <img src={install} alt="Install" className="value-item-icon" />
-                                    <p className="value-item-label">Install</p>
-                                </div>
-                                <div className="value-item-content">
-                                    <p className="sectionText">
-                                        Once your claim has been approved and finalized with insurance, ROOF<span className="nameEnding">ER</span> will review
-                                        the scope of work with you, discuss installation details, and schedule an installation date.
-                                        ROOF<span className="nameEnding">ER</span>'s on-site project manager will oversee the job and perform a full quality
-                                        inspection upon completion.
-                                    </p>
-                                    <div className="learn-more-container">
-                                        <img src={roofERIcon} alt="RoofER" className="learn-more-icon" />
-                                        <a href="/inspection"><p className="learn-more-label">LEARN MORE</p></a>
-                                    </div>
-                                </div>
+                            <div className="single-service-container">
+                                <img className="main-service-image" src={GUTTERS} alt="Gutters" id="gutters" />
+                                <img className="service-mini-image" src={GUTTERS_MINI} alt="Gutters Icon" />
+                                <p className="service-header"> Gutters </p>
+                                <p className="service-description"> Your gutters mean a great deal to the health of your home. That's why our team ensures each install follows local best practices. </p>
+                                <a href="/work#gutters"><p className="learn-more-link"> Learn More > </p></a>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
-                <ul id="pagination" >
-                    <li> <a className="pagination-link" href="#navigation"> </a></li>
-                    <li> <a className="pagination-link" href="#values"> </a></li>
-                    <li> <a className="pagination-link" href="#what"> </a></li>
-                    <li> <a className="pagination-link" href="#how"> </a></li>
-                </ul>
+
+                <Process />
+                <WorkBanner />
+                <Products />
+                <GoogleReviews />
+
             </div>
 
 

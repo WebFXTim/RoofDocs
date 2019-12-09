@@ -1,0 +1,10 @@
+{
+  "client_id": "954747352059-fd74v4lak6fosc2h8fe69l7monnv46ko.apps.googleusercontent.com",
+  "project_id":"website-258914",
+  "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+  "token_uri":"https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+  "client_secret":"Lr6m6HMJo816Q02iDzWUtjlb",
+  "client_email": "developer@theroofdocs.com",
+  "redirect_uris":["http://localhost:3000"]
+}

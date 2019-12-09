@@ -1,4 +1,4 @@
-$redLogoColor: rgb(182, 8, 7);
+$redLogoColor: rgb(183, 8, 8);
 $headerFont: 3em OswaldBold, serif, sans-sefif;
 $sectionFont: 1.3em Roboto, serif, sans-serif;
 $subheaderFont: 2.5em OswaldBold, serif, sans-serif;
@@ -7,556 +7,311 @@ html {
   overflow: -moz-scrollbars-none;
 }
 
-//::-webkit-scrollbar {
-//  width: 0;
-//  background: transparent; /* make scrollbar transparent */
-//}
+.home {
 
-
-.noBottomMargin {
-  margin-bottom: 0;
 }
 
-.main {
+.intro {
+  background: transparent url('../../resources/images/home/background.png') 0 0 no-repeat padding-box;
+  opacity: 1;
+  height: 800px;
+  margin-top: -150px;
+  width: 100%;
+  position: relative;
+}
 
-  section {
+.intro-basics {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: calc(50% - 165px);
+  left: 250px;
 
-    margin: 0;
+  .intro-header {
+    font: 24px PoppinsBold, sans-serif, serif;
+    color: white;
+    text-shadow: 0 0 10px #000000;
+    text-transform: uppercase;
+  }
 
-    h1 {
-      font-size: 38px;
-      color: #fff;
-      margin: 0;
-      padding: 50px 0 20px;
-      text-align: center;
+  .intro-description {
+    font: 56px PoppinsSemiBold, sans-serif, serif;
+    color: white;
+    text-shadow: 0 0 10px #000000;
+  }
+
+  .free-inspection-button-container {
+    width: 92%;
+    height: 65px;
+    background-color: white;
+    box-shadow: 0 0 10px #00000076;
+    border-radius: 9px;
+    border: 2px solid rgba(183, 8, 8, 0);
+
+
+    &:hover {
+      cursor: pointer;
+      border: 2px solid $redLogoColor;
+    }
+
+    .home-inspection-label {
+      text-transform: uppercase;
+      color: $redLogoColor;
+      font: 22px PoppinsSemiBold, Serif, sans-serif;
+      display: inline-block;
+      line-height: 63px;
+      margin-left: 15px;
+    }
+
+    .home-inspection-img {
+      float: right;
+      margin-right: 2px;
+      margin-top: 1px;
+      display: inline-block;
     }
   }
 }
 
-#how {
-  margin-bottom: 100px;
-}
+.whatWeDo {
 
+  .content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 100px auto;
 
-#pagination {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 30px;
-  list-style: none;
-}
+    .smallText {
+      font: 24px PoppinsBold, serif, sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
 
-li {
-  position: relative;
-  margin: 20px 0;
-  background: rgb(182, 8, 7);
-  border-radius: 100%;
-  width: 8px;
-  height: 8px;
-  transition: all .2s ease;
+    .largeText {
+      font: 62px PoppinsSemiBold, serif, sans-serif;
+      color: $redLogoColor;
+    }
 
-  &:hover {
-    transform: scale(1.5);
-  }
-}
+    .services-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
 
-.pagination-link {
-  position: absolute;
-  text-decoration: none;
-  left: 0;
-  top: 0;
-  color: rgb(182, 8, 7);
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-}
+      .single-service-container {
+        max-width: 350px;
+        height: 100%;
+        flex-grow: 1;
+        position: relative;
 
-//html, body { overflow-x: hidden; }
+        .main-service-image {
+          box-shadow: 0 0 5px #00000076;
+        }
 
-body {
-  font-family: sans-serif;
-  margin: 0;
+        img {
+          width: 100%;
+          height: auto;
+        }
 
-  @for $i from 1 to 6 {
-    &.page-#{$i} {
-      #pagination li:nth-of-type(#{$i}) {
-          @extend %active-dot;
+        .service-mini-image {
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          right: 30px;
+          top: 180px;
+        }
+
+        .service-header {
+          font: 28px PoppinsSemiBold, serif, sans-serif;
+          color: $redLogoColor;
+          margin-top: 10px;
+          margin-bottom: 5px;
+          text-transform: uppercase;
+        }
+
+        .service-description {
+          font: 20px Poppins, serif, sans-serif;
+          color: #414040;
+          margin-bottom: 10px;
+        }
+
+        .learn-more-link {
+          font: 14px PoppinsSemiBold, serif, sans-serif;
+          color: $redLogoColor;
+          text-transform: uppercase;
+        }
       }
     }
   }
 }
 
-%active-dot {
-  transform: scale(2);
-}
-
-
-/**
-  SECTION 1 - WHO
+/***
+PROCESS CONTAINER
  */
-
-#who {
-  margin: 0;
+.home-process {
   width: 100%;
+  height: 600px;
+  background-color: #E6E6E6;
 }
 
-.home-container {
+.process-image-container {
+
+}
+
+.process-info-container {
+
+}
+
+.empty-space {
   width: 100%;
-  height: 100%;
-  position: relative;
+  height: 150px;
+  background-color: lightcoral;
 }
 
-.homeImage {
-  width: 100%;
-  height: auto;
-  opacity: 0.95;
-}
+/****************** SMALL LAPTOPS ****************/
+@media all and (max-width: 1500px) and (min-width: 850px) {
 
-.who-we-are {
-  width: 50%;
-  position: absolute;
-  display: inline-block;
-  margin-left: 5%;
-  float: left;
-  height: 90%;
-  margin-top: 2.5%;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.8);
-}
+  .whatWeDo {
 
-.free-inspection {
-  width: 35%;
-  position: absolute;
-  display: inline-block;
-  float: right;
-  right: 5%;
-  height: 90%;
-  margin-top: 2.5%;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.8);
-}
+    .content {
+      width: 95%;
+      max-width: 1200px;
+      margin: 50px auto;
 
-.free-inspection-submitted {
-
-}
-
-.sectionTitle {
-
-  color: $redLogoColor;
-  font: $headerFont;
-  text-decoration: underline;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 20px;
-  word-spacing: 3px;
-
-}
-
-.sectionSubheader {
-  width: 80%;
-  margin: 5px auto;
-  font: 16px Roboto, serif, sans-serif;
-}
-
-.sectionText {
-  font: $sectionFont;
-  text-align: center;
-  width: 80%;
-  line-height: 40px;
-  margin: 0 auto;
-}
-
-
-/**
-  SECTION 2 - VALUE
- */
-
-.independent {
-  padding-top: 65px;
-  padding-bottom: 30px;
-}
-
-.values-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-
-.value-item {
-  flex-grow: 1;
-  flex-basis: 0;
-  height: 100%;
-  display: inline-block;
-}
-
-.value-item-container {
-  position: relative;
-  margin: 0 auto;
-  height: 100px;
-}
-
-.simplicity {
-  width: 250px;
-}
-
-.quality {
-  width: 210px;
-}
-
-.integrity {
-  width: 235px;
-}
-
-.value-item-label {
-  display: inline-block;
-  line-height: 100px;
-  text-align: center;
-  font: $subheaderFont;
-  padding-left: 5px;
-  position: relative;
-  bottom: -10px;
-
-}
-
-.value-item-icon {
-  height: 80px;
-  width: 80px;
-}
-
-.value-item-content {
-  width: 75%;
-  background-color: rgba(247, 247, 2467, 0.85);
-  min-height: 500px;
-  margin: 0 auto;
-  box-shadow: 5px 5px rgba(230, 230, 230, 1);
-  position: relative;
-}
-
-/**
-  SECTION 3 - WHAT
- */
-
-.what-we-do-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-
-}
-
-.what-we-do-item {
-  flex-grow: 1;
-  height: 100%;
-  display: inline-block;
-}
-
-.what-we-do-item-container {
-  position: relative;
-  width: 225px;
-  margin: 0 auto;
-  height: 100px;
-}
-
-.what-we-do-item-label {
-  display: inline-block;
-  line-height: 100px;
-  text-align: center;
-  font: $subheaderFont;
-  padding-left: 15px;
-  position: relative;
-  bottom: -10px;
-
-}
-
-.what-we-do-item-icon {
-  height: 80px;
-  width: 80px;
-}
-
-.what-we-do-image-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.7s ease;
-  background-color: black;
-}
-
-.what-we-do-image-container {
-  position: relative;
-}
-
-.what-we-do-image-container:hover .what-we-do-image-overlay {
-  opacity: 0.7;
-}
-
-.what-we-do-image-text {
-  color: white;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font: 24px Oswald, serif, sans-serif;
-}
-
-.what-we-do-image {
-  width: 100%;
-  height: auto;
-  z-index: 1;
-}
-
-
-
-.learn-more-container {
-  width: 60%;
-  min-width: 170px;
-  height: 60px;
-  bottom: 0;
-  margin: 35px auto 0 auto;
-  position: absolute;
-  left: calc(50% - 95px);
-}
-
-.learn-more-label {
-  display: inline-block;
-  line-height: 100px;
-  text-align: right;
-  font: 16px RobotoMedium, serif, sans-serif;
-  padding-top: 5px;
-  color: $redLogoColor;
-  position: relative;
-  top: 2px;
-  left: 5px;
-}
-
-.learn-more-icon {
-  height: 25px;
-  width: 60px;
-}
-
-.brands-container {
-  width: 100%;
-  height: 120px;
-  margin-top: 30px;
-  display: inline-block;
-}
-
-.image-left-container {
-  height: 100%;
-  width: 50%;
-  float: left;
-  display: inline-block;
-  position: relative;
-}
-
-.image-right-container {
-  height: 100%;
-  width: 50%;
-  display: inline-block;
-  position: relative;
-}
-
-img.brands-left-image, img.brands-right-image {
-  max-height: 100%;
-  max-width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-
-
-.how-we-do-it-item {
-  width: 220px;
-}
-
-#gaf-logo {
-  max-height: 75%;
-  max-width: 75%;
-}
-
-#certainTeed-logo {
-  max-height: 120%;
-  max-width: 120%;
-}
-
-#iko-logo {
-  max-height: 140%;
-  max-width: 140%;
-}
-
-
-@media screen and (min-width: 900px) and (max-width: 1300px) {
-
-  .sectionText {
-    font-size: 1.15em;
-    line-height: 35px;
-  }
-
-  .who-we-are {
-    width: 45%;
-
-    .sectionText {
-      font-size: 1.15em;
-      line-height: 35px;
+      .largeText {
+        font: 56px PoppinsSemiBold, serif, sans-serif;
+        color: $redLogoColor;
+      }
     }
   }
 
-  .free-inspection {
-    width: 45%;
-  }
+  @media all and (max-width: 1150px) {
 
-  .descriptionTextArea {
-    height: 80px !important;
-  }
+    .whatWeDo {
+      .content {
+        .services-container {
+          .single-service-container {
+            max-width: initial;
+            width: 30%;
+            height: 100%;
+            flex-grow: initial;
+            position: relative;
 
-  .homeImage {
-    min-height: 850px;
-  }
+            .service-mini-image {
+              display: none;
+            }
 
-  .formGroupDetails {
-    float: none;
-    width: 80%;
-  }
+            .service-header {
+              font-size: 24px;
+              margin-top: 5px;
+              margin-bottom: 0;
+            }
 
-
-}
-
-
-
-@media screen and (max-width: 1000px) {
-
-  #pagination {
-    display: none;
-  }
-
-  .formGroupDetails {
-    float: none;
-    width: 80%;
-  }
-
-  .who-we-are {
-    width: auto;
-    position: inherit;
-    margin-left: 0;
-    height: auto;
-    float: none;
-    margin-top: 2.5%;
-    z-index: 999;
-    box-shadow: none;
-  }
-
-  .homeImage {
-    display: none;
-  }
-
-  .free-inspection {
-    width: 100%;
-    float: right;
-    position: initial;
-  }
-
-
-
-  .formGroupInput {
-    width: 80% !important;
-  }
-
-  .checkmark {
-    background-color: lightgray;
-  }
-
-
-}
-
-@media screen and (min-width: 600px) and (max-width: 1000px) {
-  .home {
-    margin-top: 100px;
-  }
-
-  .value-item-content {
-    width: 90%;
+            .service-description {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-@media screen and (max-width: 900px) {
+/****************** TABLETS ****************/
+@media all and (max-width: 849px) {
 
-  #gaf-logo {
-    max-height: 100%;
-    max-width: 100%;
+  .intro {
+    background: transparent url('../../resources/images/home/background.png') center center repeat padding-box;
+    height: 700px;
   }
 
-  #certainTeed-logo {
-    max-height: 100%;
-    max-width: 100%;
+  .intro-basics {
+    width: 360px;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 180px);
+
+    .intro-description {
+      font: 42px PoppinsSemiBold, sans-serif, serif;
+    }
+
+    .free-inspection-button-container {
+      width: 350px;
+      height: 45px;
+
+      .home-inspection-label {
+        font: 18px PoppinsSemiBold, Serif, sans-serif;
+        display: inline-block;
+        line-height: 43px;
+        margin-left: 5px;
+      }
+
+      .home-inspection-img {
+        width: 39px;
+        height: 39px;
+      }
+    }
   }
 
-  #iko-logo {
-    max-height: 100%;
-    max-width: 100%;
+  .whatWeDo {
+
+    .content {
+      width: 90%;
+      margin: 30px auto 20px auto;
+
+      .smallText {
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      .largeText {
+        font: 42px PoppinsSemiBold, serif, sans-serif;
+        color: $redLogoColor;
+        text-align: center;
+      }
+
+      .services-container {
+        width: 100%;
+        display: block;
+        justify-content: space-between;
+
+        .single-service-container {
+          max-width: inherit;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          border-bottom: 1px solid rgb(183, 8, 8);
+          margin-bottom: 10px;
+          align-items: center;
+
+          .service-mini-image {
+            display: none;
+          }
+
+          img {
+            max-width: 450px;
+          }
+
+          .service-header {
+            font: 24px PoppinsSemiBold, serif, sans-serif;
+            color: $redLogoColor;
+            margin-top: 5px;
+          }
+
+          .service-description {
+            font: 18px Poppins, serif, sans-serif;
+            color: #414040;
+            margin-bottom: 5px;
+            text-align: center;
+          }
+
+          .learn-more-link {
+            font: 14px PoppinsSemiBold, serif, sans-serif;
+            color: $redLogoColor;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
   }
-
-  .sectionText {
-    line-height: 30px;
-    font-size: 1.15em;
-  }
-
-}
-
-@media screen and (max-width: 600px){
-  .home {
-     margin-top: 300px;
-  }
-
-  .what-we-do-container {
-      display: initial;
-  }
-
-
-  // Values
-  .values-container {
-    display: initial;
-  }
-
-  .value-item {
-    width: 100%;
-    display: block;
-  }
-
-  .value-item-content {
-    display: none;
-  }
-
-  .independent {
-    padding-top: 0;
-  }
-
-  // What We Do
-  .brands-container {
-      display: none;
-  }
-
-  .what-we-do-item {
-    display: block;
-  }
-
-  .what-we-do-item-label {
-    display: inline-block;
-    padding-left: 10px;
-  }
-
-  .what-we-do-image {
-    display: none
-  }
-
-
 }

@@ -1,0 +1,386 @@
+$redLogoColor: rgb(183, 8, 8);
+
+.google-reviews-background {
+  width: 100%;
+  margin-bottom: 100px;
+
+  .reviews-content {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+
+    .success-text {
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 0;
+      font: 62px PoppinsSemiBold, serif, sans-serif;
+      color: $redLogoColor
+    }
+
+    .success-subheader {
+      text-align: center;
+      font: 28px Poppins, serif, sans-serif;
+      color: #302F2F;
+    }
+  }
+
+}
+
+
+.reviews-holder {
+  height: 350px;
+  margin-top: 50px;
+}
+
+.reviews-arrow-container {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  &.left {
+    float: left;
+  }
+
+  &.right {
+    float: right;
+  }
+
+  img {
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+  }
+}
+
+.google-reviews-list {
+  width: 80%;
+  display: flex;
+  float: left;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  .review {
+    width: 40%;
+    height: 100%;
+  }
+}
+
+/** REVIEW ITEM */
+.review-user-info {
+  width: 100%;
+  height: 90px;
+  display: flex;
+
+  .review-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+
+}
+
+.review-name-rating-container {
+
+  display: flex;
+  flex-direction: column;
+
+  .review-name {
+    font: 25px PoppinsMedium, sans-serif, serif;
+    margin-bottom: 0;
+    text-indent: 15px;
+  }
+}
+
+.review-comment-container {
+  width: calc(100% - 75px);
+  float: right;
+  max-height: 325px;
+  margin: auto;
+  overflow: scroll;
+
+  p {
+    font: 18px Poppins, sans-serif, serif;
+  }
+
+  .LinesEllipsis {
+    font: 18px Poppins, sans-serif, serif;
+    color: #302F2F;
+
+
+  }
+
+  .LinesEllipsis-ellipsis {
+    font: 14px PoppinsSemiBold, serif, sans-serif;
+    color: rgb(183, 8, 8);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+}
+
+
+
+
+
+.star-rating-container {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 5px;
+}
+
+/** STAR **/
+.star {
+  position: relative;
+
+  display: inline-block;
+  width: 0;
+  height: 0;
+
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+
+  border-right:  .3em solid transparent;
+  border-bottom: .7em  solid #FC0;
+  border-left:   .3em solid transparent;
+
+  /* Controls the size of the stars. */
+  font-size: 17px;
+
+  &:before, &:after {
+    content: '';
+
+    display: block;
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    top: .6em;
+    left: -1em;
+
+    border-right:  1em solid transparent;
+    border-bottom: .7em  solid #FC0;
+    border-left:   1em solid transparent;
+
+    transform: rotate(-35deg);
+  }
+
+  &:after {
+    transform: rotate(35deg);
+  }
+}
+
+/****************** SMALL LAPTOPS ****************/
+@media all and (max-width: 1500px) and (min-width: 850px) {
+
+  .google-reviews-background {
+    width: 100%;
+    margin-bottom: 20px;
+
+    .reviews-content {
+      width: 90%;
+      margin: 0 auto;
+
+      .success-text {
+        margin-top: 25px;
+        font-size: 56px;
+      }
+
+      .success-subheader {
+        font-size: 24px;
+      }
+
+    }
+
+
+    .reviews-holder {
+      height: 380px;
+      margin-top: 40px;
+    }
+
+    .reviews-arrow-container {
+      width: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      &.left {
+        float: left;
+      }
+
+      &.right {
+        float: right;
+      }
+
+      img {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+      }
+    }
+
+    .google-reviews-list {
+      width: 90%;
+      display: flex;
+      float: left;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .review {
+        width:50%;
+        height: 100%;
+      }
+    }
+
+    /** REVIEW ITEM */
+    .review-user-info {
+      height: 90px;
+      display: flex;
+    }
+
+    .review-comment-container {
+      float: inherit;
+    }
+
+  }
+  .review-comment-container {
+    .LinesEllipsis {
+      font: 16px Poppins, sans-serif, serif;
+    }
+  }
+}
+
+/****************** TABLETS & MOBILE ****************/
+@media all and (max-width: 849px) {
+
+  .google-reviews-background {
+    width: 100%;
+    margin-bottom: 20px;
+
+    .reviews-content {
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+
+      .success-text {
+        margin-top: 20px;
+        font: 36px PoppinsSemiBold, serif, sans-serif;
+      }
+
+      .success-subheader {
+        font: 22px Poppins, serif, sans-serif;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+
+  .reviews-holder {
+    height: 400px;
+    margin-top: 10px;
+  }
+
+  .google-reviews-list {
+    width: 80%;
+    display: flex;
+    float: left;
+    flex-direction: column;
+    //justify-content: space-evenly;
+
+    .review {
+      width: 100%;
+      height: 100%;
+    }
+
+    #review2 {
+      display: none;
+    }
+  }
+
+  /** REVIEW ITEM */
+  .review-user-info {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+
+    .review-photo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+
+  }
+
+  .review-name-rating-container {
+
+    display: flex;
+    flex-direction: column;
+
+    .review-name {
+      font: 25px PoppinsMedium, sans-serif, serif;
+      margin-bottom: 0;
+      text-indent: 15px;
+    }
+  }
+
+  .review-comment-container {
+    width: calc(100% - 75px);
+    float: inherit;
+    max-height: 325px;
+    margin: auto;
+    overflow: scroll;
+
+    p {
+      text-align: center;
+      font: 16px Poppins, sans-serif, serif;
+    }
+
+    .LinesEllipsis {
+      text-align: center;
+      font: 16px Poppins, sans-serif, serif;
+      color: #302F2F;
+
+
+    }
+
+    .LinesEllipsis-ellipsis {
+      font: 14px PoppinsSemiBold, serif, sans-serif;
+      color: rgb(183, 8, 8);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media all and (max-width: 500px) {
+      .google-reviews-background {
+        display: none;
+      }
+  }
+}

@@ -1,23 +1,293 @@
 import React, { Component } from 'react';
-import {Button, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
-import Checkbox from './checkbox';
 import axios from 'axios';
 
-
+import ImageInput from '../components/custom/imageInput';
 
 // Styling
 import '../style/components/inspection.scss';
 import '../style/components/freeEstimate.css';
-
 import '../style/components/modal.css'
 
-import inspection from '../resources/images/inspection/inspectionBackground.jpeg';
-import diagnoseIcon from '../resources/images/inspection/clipboard.png';
-import prescribeIcon from '../resources/images/inspection/prescription.png';
-import rooferIcon from '../resources/images/logoSolo.png';
+import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
+import SUBMIT_ICON from '../resources/images/misc/btn_icon_arrow_ko.png';
+import ImageTextArea from "./custom/imageTextArea";
+import ImageMultiSelect from "./custom/imageMultiSelect";
+
+import Products from "./custom/products";
+import GoogleReviews from "./custom/googleReviews";
+import WorkBanner from "./custom/workBanner";
+import FreeQuoteBanner from "./custom/freeQuoteBanner";
 
 
-class Modal extends Component {
+class FreeEstimate extends Component {
+
+     constructor(props){
+         super(props);
+
+         this.state = { formSubmitted: false, errors: [], stormReportSubmitted: false, stormReportErrors: []}
+     }
+
+    render() {
+        return (
+            <div className="inspection-page-container">
+                <div className="inspection-banner">
+                    <div className="inspection-banner-text-container">
+                        <p className="banner-text-small"> SIMPLICITY </p>
+                        <p className="banner-text-large"> Free Inspections for Full Peace of Mind </p>
+                    </div>
+                    <img className="banner-icon" src={BANNER_ICON_UP} alt="Banner Up Icon"/>
+                </div>
+
+                <div className="inspection-report-container">
+
+                    <div className="inspection-container">
+                        <p className="header-text">1. Free Inspection </p>
+                        <p className="header-info-text">Fill out the short form below to set up a FREE inspection by one of our Roof Docs today!</p>
+                        <ImageInput ref="inspectionName" type="name" />
+                        <ImageInput ref="inspectionAddress" type="address" />
+                        <ImageInput ref="inspectionEmail" type="email" />
+                        <ImageInput ref="inspectionPhone" type="phone" />
+                        <ImageMultiSelect ref="inspectionSelect" type="inspection" />
+                        <ImageTextArea ref="inspectionDetails" />
+                        <div className="report-submit-button" onClick={this.submitInspection} >
+                            <p className="report-submit-label"> Submit Free Inspection Form </p>
+                            <img className="report-submit-img" src={SUBMIT_ICON} alt="Submit" />
+                        </div>
+                    </div>
+
+                    <div className="report-container">
+                        <p className="header-text">2. Storm Report </p>
+                        <p className="header-info-text">Use the form below to get a FREE storm report to see if your property has been affected by storm damage!</p>
+                        <ImageInput ref="reportName" type="name" />
+                        <ImageInput ref="reportAddress" type="address" />
+                        <ImageInput ref="reportEmail" type="email" />
+                        <ImageInput ref="reportPhone" type="phone" />
+                        <ImageMultiSelect ref="reportSelect" type="report"/>
+                        <ImageTextArea ref="reportDetails" />
+                        <div className="report-submit-button" onClick={this.submitReport} >
+                            <p className="report-submit-label"> Submit Storm Report Form </p>
+                            <img className="report-submit-img" src={SUBMIT_ICON} alt="Submit" />
+                        </div>
+                    </div>
+                </div>
+                <WorkBanner />
+                <GoogleReviews />
+                <Products />
+                <FreeQuoteBanner />
+                <ErrorModal errors={this.state.errors} ref="errorModal" />
+                <SuccessModal ref="successModal"/>
+            </div>
+        );
+    }
+
+    submitInspection = () => {
+
+         const name = this.refs.inspectionName.state.value;
+         const address = this.refs.inspectionAddress.state.value;
+         const email = this.refs.inspectionEmail.state.value;
+         const phone = this.refs.inspectionPhone.state.value;
+         const details = this.refs.inspectionDetails.state.value;
+         const roof = this.refs.inspectionSelect.refs.roof.state.checked;
+         const siding = this.refs.inspectionSelect.refs.siding.state.checked;
+         const gutters = this.refs.inspectionSelect.refs.gutters.state.checked;
+         const damage = this.refs.inspectionSelect.refs.damage.state.checked;
+
+        // Create Body for API Call
+        const inspectionBody = {
+            name: name,
+            email: email,
+            phoneNumber: phone,
+            address: address,
+            stormDamage: damage,
+            roof: roof,
+            siding: siding,
+            gutters: gutters,
+            details: details,
+            requestType: 'inspection'
+        };
+
+        let errors = [];
+
+        // NAME
+        if(inspectionBody.name.length === 0) {
+            errors.push("Name");
+        }
+
+        // ADDRESS
+        if(inspectionBody.address.length === 0) {
+            errors.push("Address");
+        }
+
+        // EMAIL
+        const emailRegex = /\S+@\S+\.\S+/;
+        if(!emailRegex.test(inspectionBody.email.toLowerCase())){
+            errors.push("Invalid Email");
+        }
+
+        // PHONE NUMBER
+        if(inspectionBody.phoneNumber.length < 10) {
+            errors.push("Phone Number")
+        }
+
+        if(errors.length === 0) {
+
+            const self = this;
+            axios.post('https://api.theroofdocs.com/v1/inquiry', inspectionBody)
+                .then(function (response) {
+
+                    // Show Modal
+                    self.refs.successModal.show();
+
+                    // Clear Text Fields
+                    self.clearInspectionFields();
+
+                }).catch(function (error) {
+                    console.log(error);
+                });
+        } else {
+
+            this.setState({ errors: errors });
+            this.refs.errorModal.show();
+        }
+
+
+    };
+
+    submitReport = () => {
+
+        const reportName = this.refs.reportName.state.value;
+        const reportAddress = this.refs.reportAddress.state.value;
+        const reportEmail = this.refs.reportEmail.state.value;
+        const reportPhone = this.refs.reportPhone.state.value;
+        const details = this.refs.reportDetails.state.value;
+        const hail = this.refs.reportSelect.refs.hail.state.checked;
+        const wind = this.refs.reportSelect.refs.wind.state.checked;
+        const rain = this.refs.reportSelect.refs.rain.state.checked;
+        const other = this.refs.reportSelect.refs.other.state.checked;
+
+        // Create Body for API Call
+        const reportBody = {
+            name: reportName,
+            email: reportEmail,
+            phoneNumber: reportPhone,
+            address: reportAddress,
+            hail: hail,
+            wind: wind,
+            rain: rain,
+            other: other,
+            details: details,
+            requestType: 'stormReport'
+
+        };
+
+        let errors = [];
+
+        // NAME
+        if(reportBody.name.length === 0) {
+            errors.push("Name");
+        }
+
+        // EMAIL
+        const emailRegex = /\S+@\S+\.\S+/;
+        if(!emailRegex.test(reportBody.email.toLowerCase())){
+            errors.push("Invalid Email");
+        }
+
+        if(reportBody.address.length === 0) {
+            errors.push("Address");
+        }
+
+
+        if(errors.length === 0) {
+
+            const self = this;
+            axios.post('https://api.theroofdocs.com/v1/inquiry', reportBody)
+                .then(function (response) {
+
+                    // Show Modal
+                    self.refs.successModal.show();
+
+                    // Clear Text Fields
+                    self.clearReportFields();
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        } else {
+
+            this.setState({ errors: errors});
+            this.refs.errorModal.show();
+        }
+
+    };
+
+    clearInspectionFields() {
+
+        this.refs.inspectionName.setState({ value: '' });
+        this.refs.inspectionAddress.setState({ value: '' });
+        this.refs.inspectionEmail.setState({ value: '' });
+        this.refs.inspectionPhone.setState({ value: '' });
+        this.refs.inspectionDetails.setState({ value: '' });
+        this.refs.inspectionSelect.refs.roof.setState({ checked: false });
+        this.refs.inspectionSelect.refs.siding.setState({ checked: false });
+        this.refs.inspectionSelect.refs.gutters.setState({ checked: false });
+        this.refs.inspectionSelect.refs.damage.setState({ checked: false });
+    }
+
+    clearReportFields() {
+
+        this.refs.reportName.setState({ value: '' });
+        this.refs.reportAddress.setState({ value: '' });
+        this.refs.reportEmail.setState({ value: '' });
+        this.refs.reportPhone.setState({ value: '' });
+        this.refs.reportDetails.setState({ value: '' });
+        this.refs.reportSelect.refs.hail.setState({ checked: false });
+        this.refs.reportSelect.refs.wind.setState({ checked: false });
+        this.refs.reportSelect.refs.rain.setState({ checked: false });
+        this.refs.reportSelect.refs.other.setState({ checked: false });
+    }
+}
+
+export default FreeEstimate;
+
+
+class ErrorModal extends Component {
+
+    constructor(props){
+        super(props);
+
+        this.state = { hidden: true, errors: [] };
+
+    }
+
+    show() {
+        this.setState({ hidden: false });
+    }
+
+
+    closeModal() {
+
+        this.setState({hidden: true});
+    }
+
+
+    render() {
+        return (
+            <div className= {"modalContainer" + (this.state.hidden ? ' hiddenModal' : '')} onClick={this.closeModal.bind(this)}>
+                <div className="modalContent">
+                    <p className="modalHeader">Please correct errors on the following fields and submit again</p>
+                    { this.props.errors.map(err => (
+                        <p key={err} className="errorItem"> {err} </p>
+                    ))}
+                    <button className="errorOkButton">Got It!</button>
+                </div>
+            </div>
+        );
+    }
+}
+
+class SuccessModal extends Component {
 
     constructor(props){
         super(props);
@@ -39,344 +309,12 @@ class Modal extends Component {
 
     render() {
         return (
-            <div className= {"modalContainer" + (this.state.hidden ? ' hiddenModal' : '')} onClick={this.closeModal.bind(this)}>
+            <div className= {"modalContainer" + (this.state.hidden ? ' hiddenModal' : ' animatedModal')} onClick={this.closeModal.bind(this)}>
                 <div className="modalContent">
-
-                    <p className="modalHeader">Please correct errors on the following fields and submit again</p>
-
-                    { this.props.errors.map(err => (
-                        <p key={err} className="errorItem"> {err} </p>
-                    ))}
-
-
-                    <button className="errorOkButton">Got It!</button>
-
-                </div>
-
-            </div>
-        );
-    }
-}
-
-
-function FieldGroup({ id, label, help, ...props }) {
-    return (
-        <FormGroup className="formGroupText" controlId={id}>
-            <ControlLabel className="estimateControlLabel">{label}</ControlLabel>
-            <FormControl className="formGroupInput" {...props} />
-        </FormGroup>
-    );
-}
-
-class FreeEstimate extends Component {
-
-     constructor(props){
-         super(props);
-
-         this.state = { formSubmitted: false, errors: [], stormReportSubmitted: false, stormReportErrors: []};
-         this.submitForm = this.submitForm.bind(this)
-         this.submitFormStormReport = this.submitFormStormReport.bind(this)
-     }
-
-     submitForm( e ) {
-
-         e.preventDefault();
-
-
-
-         // Create Body for API Call
-         const body = {
-             name: e.target.elements[0].value,
-             email: e.target.elements[1].value,
-             phoneNumber: e.target.elements[2].value,
-             address: e.target.elements[3].value,
-             stormDamage: this.refs.damage.state.checked,
-             roof: this.refs.roof.state.checked,
-             siding: this.refs.siding.state.checked,
-             gutters: this.refs.gutters.state.checked,
-             details: e.target.elements[8].value,
-             requestType: 'inspection'
-         };
-
-
-
-         let errors = [];
-
-         // NAME
-         if(body.name.length === 0) {
-             errors.push("Name");
-         }
-
-         // EMAIL
-         const emailRegex = /\S+@\S+\.\S+/;
-         if(!emailRegex.test(body.email.toLowerCase())){
-            errors.push("Email");
-         }
-
-         // PHONE NUMBER
-         if(body.phoneNumber.length < 10) {
-             errors.push("Phone Number")
-         }
-
-         if(errors.length === 0) {
-
-             const self = this;
-             axios.post('https://api.theroofdocs.com/v1/inquiry', body)
-                 .then(function (response) {
-
-                     self.setState({ formSubmitted: true });
-
-                     // TODO: Clear Text Fields
-
-                 }).catch(function (error) {
-                     console.log(error);
-                 });
-         } else {
-
-             this.setState({ errors: errors });
-             this.refs.errorModal.show();
-         }
-
-
-
-     }
-
-     submitFormStormReport( e ) {
-
-        e.preventDefault();
-
-        // Create Body for API Call
-        const body = {
-            name: e.target.elements[0].value,
-            email: e.target.elements[1].value,
-            phoneNumber: e.target.elements[2].value,
-            address: e.target.elements[3].value,
-            requestType: 'stormReport'
-        };
-
-        let errors = [];
-
-        // NAME
-        if(body.name.length === 0) {
-            errors.push("Name");
-        }
-
-        // EMAIL
-        const emailRegex = /\S+@\S+\.\S+/;
-        if(!emailRegex.test(body.email.toLowerCase())){
-            errors.push("Email");
-        }
-
-        if(body.address.length === 0) {
-            errors.push("Address");
-        }
-
-        if(errors.length === 0) {
-
-            const self = this;
-
-            axios.post('https://api.theroofdocs.com/v1/inquiry', body)
-                .then(function (response) {
-
-                    self.setState({ stormReportSubmitted: true });
-
-                    // TODO: Clear Text Fields
-
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-        } else {
-
-            this.setState({ stormReportErrors: errors});
-            this.refs.stormErrorModal.show();
-        }
-
-
-
-    }
-
-    render() {
-        return (
-            <div className="inspection-page-container">
-                <div id="inspection-damage-report-container">
-                    <div className="home-container">
-                        {/* Storm Damage Report*/}
-                        <div className="damage-report" style={ this.state.stormReportSubmitted ? {display: 'none'} : { display: 'inline-block'}}>
-                            <p className="sectionTitle"> FREE STORM REPORT </p>
-                            <p className="sectionSubheader"> Please use the form below to receive a <span className="nameEnding">FREE</span> storm report for your property to see if
-                                your property has been affected by storm damage! </p>
-
-                            <form onSubmit={this.submitFormStormReport}>
-                                <FieldGroup
-                                    id="formControlsName"
-                                    type="text"
-                                    label="NAME"
-                                    placeholder="Enter Name"
-                                />
-                                <FieldGroup
-                                    id="formControlsEmail"
-                                    type="email"
-                                    label="EMAIL"
-                                    placeholder="Enter Email"
-                                />
-                                <FieldGroup
-                                    id="formControlsPhone"
-                                    type="phone"
-                                    label="PHONE NUMBER (OPTIONAL)"
-                                    placeholder="Enter Phone Number"
-                                />
-                                <FieldGroup
-                                    id="formControlsAddress"
-                                    type="address"
-                                    label="ADDRESS"
-                                    placeholder="Enter Address"
-                                />
-                                <Button className="submitButton" type="submit">Get Storm Report</Button>
-                            </form>
-                        </div>
-                        <div className="damage-report" style={ !this.state.stormReportSubmitted ? {display: 'none'} : { display: 'inline-block'}}>
-                            <p className="sectionTitle"> FREE STORM REPORT </p>
-                            <p className="sectionText"> Thank you for requesting your free storm report! Our support team will email you an in-depth report
-                                with additional details within one business day.
-                            </p>
-                        </div>
-                        <Modal errors={this.state.stormReportErrors} ref="stormErrorModal" />
-
-                        {/* Free EInspection */}
-                        <div className="inspection-info-container" style={ this.state.formSubmitted ? {display: 'none'} : { display: 'inline-block'}}>
-                            <p className="sectionTitle noBottomMargin"> Free Inspection </p>
-                            <p className="sectionSubheader"> Fill out the form below to set up a <span className="nameEnding">FREE</span> inspection by one of our Roof Docs today! </p>
-
-                            <form onSubmit={this.submitForm}>
-                                <FieldGroup
-                                    id="formControlsName"
-                                    type="text"
-                                    label="NAME"
-                                    placeholder="Enter Name"
-                                />
-                                <FieldGroup
-                                    id="formControlsEmail"
-                                    type="email"
-                                    label="EMAIL"
-                                    placeholder="Enter Email"
-                                />
-                                <FieldGroup
-                                    id="formControlsPhone"
-                                    type="phone"
-                                    label="PHONE NUMBER"
-                                    placeholder="Enter Phone Number"
-                                />
-                                <FieldGroup
-                                    id="formControlsAddress"
-                                    type="address"
-                                    label="ADDRESS"
-                                    placeholder="Enter Address"
-                                />
-                                <FormGroup className="formGroupCustom">
-                                    <ControlLabel className="estimateControlLabel">INSPECTION ITEMS</ControlLabel>
-                                    <Checkbox ref="roof" name="ROOF"/>
-                                    <Checkbox ref="siding" name="SIDING"/>
-                                    <Checkbox ref="gutters" name="GUTTERS"/>
-                                    <Checkbox ref="damage" name="STORM DAMAGE"/>
-                                </FormGroup>
-
-                                {/* MORE DETAILS */}
-                                <FormGroup className="formGroupCustom formGroupDetails" controlId="formControlsTextarea">
-                                    <ControlLabel className="estimateControlLabel">More Details</ControlLabel>
-                                    <FormControl className="descriptionTextArea" componentClass="textarea" placeholder="Enter more information..." />
-                                </FormGroup>
-                                <Button className="submitButton" type="submit">Submit</Button>
-                            </form>
-                        </div>
-                        <div className="inspection-info-container" style={ !this.state.formSubmitted ? {display: 'none'} : { display: 'inline-block'}}>
-                            <p className="sectionTitle noBottomMargin"> Free Inspection </p>
-                            <p className="sectionText"> Thank you for submitting your information! You will be contacted by one of our
-                                Roof Docs within one business day.
-                            </p>
-                        </div>
-                        <img src={inspection} className="inspection-background-image" alt="Inspection"/>
-                        <Modal errors={this.state.errors} ref="errorModal" />
-                    </div>
-                </div>
-
-                <div className="inspection-process-container">
-
-                    <p className="sectionTitle" id="process"> The <span style={{color: 'black'}}>ROOF</span>ER Process </p>
-                    {/* Diagnose */}
-                    <div className="work-section-inspection">
-                        <div className="work-heading-container">
-                            <img src={diagnoseIcon} className="work-section-icon" alt="Diagnose" />
-                            <p className="work-section-label"> Diagnose </p>
-                        </div>
-                        <div className="work-content-container">
-                            <p className="work-content-background"> Our Roof Docs are trained how to properly diagnose potential issues with your roof.  It is crucial to be able to make the distinction
-                                between storm-related damage and damage resulting from age or weathering.  ROOF<span className="nameEnding">ER</span> uses the following methodology to determine whether
-                                your property has been affected by storm  damage:
-                            </p>
-
-                            <div className="inspection-description-container">
-                                <div className="inspection-desc-info-container">
-                                    {/* Inspect */}
-                                    <div className="logo-line-item">
-                                        <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                        <p className="line-item-text"> Inspect the soft metals of your home, such as gutters, downspouts, or aluminum siding, to search for evidence of hail or flying debris </p>
-                                    </div>
-                                    {/* Perform */}
-                                    <div className="logo-line-item">
-                                        <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                        <p className="line-item-text">Perform a full roof inspection, looking for dislodged granules, fractured matting, or creased shingles</p>
-                                    </div>
-                                    {/* Examine */}
-                                    <div className="logo-line-item">
-                                        <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                        <p className="line-item-text">Examine the findings with a holistic perspective to determine whether an insurance claim is warranted or not</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Prescribe */}
-                    <div className="work-section-inspection" style={{paddingTop: '50px'}}>
-
-                        <div className="work-heading-container" >
-                            <img src={prescribeIcon} className="work-section-icon" alt="Prescribe" />
-                            <p className="work-section-label"> Prescribe </p>
-                        </div>
-                        <div className="work-content-container">
-                            <p className="work-content-background"> If ROOF<span className="nameEnding">ER</span> determines the damage is storm-related, your Roof Doc will prescribe the following steps: </p>
-                            <div className="inspection-description-container">
-                                <div className="inspection-desc-info-container">
-                                    {/* Contact */}
-                                    <div className="logo-line-item">
-                                        <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                        <p className="line-item-text"> Contacting your insurance company to file the claim and report the damages </p>
-                                    </div>
-                                    {/* Notify */}
-                                    <div className="logo-line-item">
-                                        <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                        <p className="line-item-text">Notifying your Roof Doc when the insurance company's adjuster will be inspecting the damages</p>
-                                    </div>
-                                    {/* Provide */}
-                                    <div className="logo-line-item">
-                                        <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                        <p className="line-item-text">Providing ROOF<span className="nameEnding">ER</span> with the insurance scope of loss to ensure it includes all items that were damaged </p>
-                                    </div>
-                                    {/* Meeting */}
-                                    <div className="logo-line-item">
-                                        <img src={rooferIcon} className="line-item-icon" alt="RoofER"/>
-                                        <p className="line-item-text">Meeting with your Roof Doc to discuss all project details, upgrades, and installation timeline </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
+                    <p className="modalHeader">Your request has been submitted, we will reach out to you within 1-2 business days.  Thanks!</p>
+                    <button className="errorOkButton"> Close </button>
                 </div>
             </div>
         );
     }
 }
-
-export default FreeEstimate;

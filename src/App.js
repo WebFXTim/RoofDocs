@@ -18,10 +18,6 @@ import EULA from './components/eula';
 import FAQs from './components/faqs';
 
 
-import './style/components/navigation.css';
-
-
-
 class App extends Component {
 
 

@@ -1,0 +1,57 @@
+.products-background {
+  width: 100%;
+  height: 140px;
+  background-color: #E6E6E6;
+}
+
+.products-container {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: auto;
+    height: 100px;
+    margin-top: 15px;
+  }
+}
+
+/****************** SMALL LAPTOPS ****************/
+@media all and (max-width: 1500px) and (min-width: 850px) {
+  .products-container {
+    width: 90%;
+  }
+}
+
+/****************** TABLETS & MOBILE ****************/
+@media all and (max-width: 849px) {
+  .products-background {
+    height: auto;
+  }
+  .products-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 15px;
+
+    .image-container {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 80%;
+      max-width: 100px;
+      float: right;
+      height: auto;
+      margin: 15px auto 0 auto;
+    }
+  }
+}
