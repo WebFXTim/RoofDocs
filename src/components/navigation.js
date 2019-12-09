@@ -59,7 +59,7 @@ class Navigation extends Component {
                             </NavLink>
                             <NavLink onClick={this.navLinkClicked} className="nav-tag" to='/docs'>
                                 <div className="navigationItem">
-                                    Meet the Docs
+                                    The Docs
                                 </div>
                                 <img src={SLASH} alt="Separator"/>
                             </NavLink>

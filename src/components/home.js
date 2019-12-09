@@ -122,7 +122,7 @@ class Home extends Component {
             <div className="home">
                 <div className="intro">
                     <div className="intro-basics">
-                        <p className="intro-header"> The RoofDocs Difference </p>
+                        <p className="intro-header"> The Roof Docs Difference </p>
                         <p className="intro-description"> A FREE, HONEST roof inspection. Every time. </p>
                         <a href="inspection">
                             <div className="free-inspection-button-container">
@@ -134,7 +134,7 @@ class Home extends Component {
                 </div>
                 <div className="whatWeDo" id="whatWeDo" >
                     <div className="content">
-                        <p className="smallText"> ROOF-ER SERVICES </p>
+                        <p className="smallText"> ROOF<span className="logo-text">ER</span> SERVICES </p>
                         <p className="largeText"> What we do. </p>
                         <div className="services-container">
                             <div className="single-service-container">
