@@ -386,8 +386,14 @@ $redLogoColor: rgb(183, 8, 8);
 }
 
 /** Edge Doesn't Support Space Evently **/
-@supports (-ms-accelerator: true) {
+@supports (-ms-accelerator:true) or (-ms-ime-align:auto)  {
   .google-reviews-list {
       justify-content: space-around;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .google-reviews-list {
+    justify-content: space-around;
   }
 }

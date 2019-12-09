@@ -451,7 +451,16 @@ $redLogoColor: rgb(182, 8, 7);
 }
 
 /** Edge Doesn't Support Space Evently **/
-@supports (-ms-accelerator: true) {
+@supports (-ms-accelerator:true) or (-ms-ime-align:auto)  {
+  .gallery-container {
+    .gallery-images-container {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
   .gallery-container {
     .gallery-images-container {
       justify-content: space-around;
