@@ -34,7 +34,9 @@ const REES_BIO = 'Rees was introduced to the home remodeling industry just out o
 const CHRIS_BIO = 'Chris is not the ideal candidate to inspect a roof, which is why he\'s kept behind a desk.  Chris has a bachelor\'s degree in Computer Science, and is in charge of software development with The Roof ' +
     'Docs.  He enjoys streamlining business processes through software, which helps the Docs when they\'re out in the field.  He\'s slowly learning the industry, who knows, maybe one day he\'ll be qualified enough ' +
     'to help with your inspection';
-const GREG_BIO = 'Greg will be completing this shortly..hopefully..';
+const GREG_BIO = 'Greg went to Shepherd University before moving to California in 1994 where he entered the roofing industry by delivering material to roof tops all over the SoCal area. Greg came back to ' +
+    'the DMV area, played Semi-Pro football, and has worked for roofing suppliers and installers for the past 20+ years. As our production manager Greg has a strong belief that the customer should receive ' +
+    'comprehensive service on each and every job. Greg and his wife Jenn have 2 boys in elementary school and enjoy watching them play sports.';
 
 
 const DOCS = [
