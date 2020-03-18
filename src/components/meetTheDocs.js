@@ -12,6 +12,7 @@ import Oliver from '../resources/images/employees/OliverBrown.png';
 import Matt from '../resources/images/employees/MattFoster.png';
 import Rees from '../resources/images/employees/ReesNalley.png';
 import GregCampbell from '../resources/images/employees/GregCampbell.png';
+import DaveGolladay from '../resources/images/employees/DaveGolladay.png';
 
 import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
 import EXPAND_ICON from "../resources/images/misc/icon_plusred.png";
@@ -37,6 +38,11 @@ const CHRIS_BIO = 'Chris is not the ideal candidate to inspect a roof, which is 
 const GREG_BIO = 'Greg went to Shepherd University before moving to California in 1994 where he entered the roofing industry by delivering material to roof tops all over the SoCal area. Greg came back to ' +
     'the DMV area, played Semi-Pro football, and has worked for roofing suppliers and installers for the past 20+ years. As our production manager Greg has a strong belief that the customer should receive ' +
     'comprehensive service on each and every job. Greg and his wife Jenn have 2 boys in elementary school and enjoy watching them play sports.';
+const DAVE_BIO = 'David is no stranger to the DC Metropolitan area, as he has spent his entire life here and even attended Bowie State University where ' +
+    'he graduated with a Bachelor of Arts in Communications. David also played basketball at Bowie State University and won a Conference Championship in ' +
+    '2013.  Prior to working with RoofER, David worked in the financial field, educating families on how best to build and maintain wealth. Now David uses ' +
+    'these skills to help clients maintain their home. Always a competitor, David is eager to offer the very best deals for his clients. David brings an ' +
+    'in depth knowledge of residential properties, as he doubles as a Realtor in Maryland and Washington, D.C.';
 
 
 const DOCS = [
@@ -46,6 +52,7 @@ const DOCS = [
     { name: 'Matt Foster', position: 'Team Leader', photo: Matt, bio: MATT_BIO },
     { name: 'Rees Nalley', position: 'President / Job Lead', photo: Rees, bio: REES_BIO },
     { name: 'Greg Campbell', position: 'Team Leader', photo: GregCampbell, bio: GREG_BIO },
+    { name: 'Dave Golladay', position: 'Team Leader', photo: DaveGolladay, bio: DAVE_BIO },
 ];
 
 class MeetTheDocs extends Component {
