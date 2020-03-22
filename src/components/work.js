@@ -16,7 +16,7 @@ import BANNER_ICON_UP from '../resources/images/misc/plus_icon_up.png';
 import BANNER_ICON_DOWN from "../resources/images/misc/plus_icon_down.png";
 
 import Roofing1 from '../resources/images/marketing/DSC_2143.JPG';
-import Roofing2 from '../resources/images/marketing/fullsizeoutput_8a.jpeg';
+// import Roofing2 from '../resources/images/marketing/fullsizeoutput_8a.jpeg';
 import Roofing3 from '../resources/images/marketing/fullsizeoutput_8b.jpeg';
 import Roofing4 from '../resources/images/marketing/fullsizeoutput_8c.jpeg';
 import Roofing5 from '../resources/images/marketing/fullsizeoutput_8d.jpeg';
@@ -40,7 +40,7 @@ import COLLAPSE_ICON from "../resources/images/misc/icon_closered.png";
 
 const MARKETING_IMAGES = [
     { title: 'Roofing1', src: Roofing1 },
-    { title: 'Roofing2', src: Roofing2 },
+    // { title: 'Roofing2', src: Roofing2 },
     { title: 'Roofing3', src: Roofing3 },
     { title: 'Roofing4', src: Roofing4 },
     { title: 'Roofing5', src: Roofing5 },

@@ -7,6 +7,48 @@ html {
   overflow: -moz-scrollbars-none;
 }
 
+.covid-19-message {
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: rgba(1.0, 1.0, 1.0, 0.8);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+  p {
+    color: white;
+    padding: 20px 0;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font: 20px Poppins, serif, sans-serif;
+  }
+
+  button {
+    position: absolute;
+    right: 30px;
+    top: calc(50% - 30px);
+    height: 60px;
+    border: none;
+    background: none;
+    color: white;
+    font: 36px PoppinsSemiBold, sans-serif, serif;
+
+    &:hover {
+      color: rgb(183, 8, 8);
+    }
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+
+  }
+
+
+
+}
+
 .home {
 
 }
@@ -35,14 +77,14 @@ html {
   left: 250px;
 
   .intro-header {
-    font: 24px PoppinsBold, sans-serif, serif;
+    font: 22px PoppinsBold, sans-serif, serif;
     color: white;
     text-shadow: 0 0 10px #000000;
     text-transform: uppercase;
   }
 
   .intro-description {
-    font: 56px PoppinsSemiBold, sans-serif, serif;
+    font: 48px PoppinsSemiBold, sans-serif, serif;
     color: white;
     text-shadow: 0 0 10px #000000;
   }
@@ -87,13 +129,13 @@ html {
     margin: 100px auto;
 
     .smallText {
-      font: 24px PoppinsBold, serif, sans-serif;
+      font: 22px PoppinsBold, serif, sans-serif;
       text-transform: uppercase;
       margin-bottom: 10px;
     }
 
     .largeText {
-      font: 62px PoppinsSemiBold, serif, sans-serif;
+      font: 44px PoppinsSemiBold, serif, sans-serif;
       color: $redLogoColor;
     }
 
@@ -126,7 +168,7 @@ html {
         }
 
         .service-header {
-          font: 28px PoppinsSemiBold, serif, sans-serif;
+          font: 24px PoppinsSemiBold, serif, sans-serif;
           color: $redLogoColor;
           margin-top: 10px;
           margin-bottom: 5px;
@@ -134,7 +176,7 @@ html {
         }
 
         .service-description {
-          font: 20px Poppins, serif, sans-serif;
+          font: 18px Poppins, serif, sans-serif;
           color: #414040;
           margin-bottom: 10px;
         }
@@ -223,6 +265,19 @@ PROCESS CONTAINER
 
 /****************** TABLETS ****************/
 @media all and (max-width: 849px) {
+
+  .covid-19-message {
+
+    p {
+      font: 16px Poppins, serif, sans-serif;
+    }
+
+    button {
+      right: 15px;
+      top: calc(50% - 25px);
+      font: 28px PoppinsSemiBold, sans-serif, serif;
+    }
+  }
 
   .intro {
     background: transparent url('../../resources/images/home/background.png') center center repeat padding-box;
