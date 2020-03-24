@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
 import ImageInput from '../components/custom/imageInput';
 
 // Styling
@@ -12,6 +11,7 @@ import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
 import SUBMIT_ICON from '../resources/images/misc/btn_icon_arrow_ko.png';
 import ImageTextArea from "./custom/imageTextArea";
 import ImageMultiSelect from "./custom/imageMultiSelect";
+import DateTimeInput from "./custom/dateTimeInput";
 
 import Products from "./custom/products";
 import GoogleReviews from "./custom/googleReviews";
@@ -40,7 +40,7 @@ class FreeEstimate extends Component {
 
                 <div className="inspection-report-container">
 
-                    <div className="inspection-container">
+                    <div className="schedule-inspection-container">
                         <p className="header-text">1. Free Inspection </p>
                         <p className="header-info-text">Fill out the short form below to set up a FREE inspection by one of our Roof Docs today!</p>
                         <ImageInput ref="inspectionName" type="name" />
@@ -49,26 +49,44 @@ class FreeEstimate extends Component {
                         <ImageInput ref="inspectionPhone" type="phone" />
                         <ImageMultiSelect ref="inspectionSelect" type="inspection" />
                         <ImageTextArea ref="inspectionDetails" />
+                        <DateTimeInput ref="appointmentTime" />
+                        <ImageInput ref="inspectionName" type="code" />
                         <div className="report-submit-button" onClick={this.submitInspection} >
                             <p className="report-submit-label"> Submit Free Inspection Form </p>
                             <img className="report-submit-img" src={SUBMIT_ICON} alt="Submit" />
                         </div>
                     </div>
 
-                    <div className="report-container">
-                        <p className="header-text">2. Storm Report </p>
-                        <p className="header-info-text">Use the form below to get a FREE storm report to see if your property has been affected by storm damage!</p>
-                        <ImageInput ref="reportName" type="name" />
-                        <ImageInput ref="reportAddress" type="address" />
-                        <ImageInput ref="reportEmail" type="email" />
-                        <ImageInput ref="reportPhone" type="phone" />
-                        <ImageMultiSelect ref="reportSelect" type="report"/>
-                        <ImageTextArea ref="reportDetails" />
-                        <div className="report-submit-button" onClick={this.submitReport} >
-                            <p className="report-submit-label"> Submit Storm Report Form </p>
-                            <img className="report-submit-img" src={SUBMIT_ICON} alt="Submit" />
-                        </div>
-                    </div>
+
+                    {/*<div className="inspection-container">*/}
+                    {/*    <p className="header-text">1. Free Inspection </p>*/}
+                    {/*    <p className="header-info-text">Fill out the short form below to set up a FREE inspection by one of our Roof Docs today!</p>*/}
+                    {/*    <ImageInput ref="inspectionName" type="name" />*/}
+                    {/*    <ImageInput ref="inspectionAddress" type="address" />*/}
+                    {/*    <ImageInput ref="inspectionEmail" type="email" />*/}
+                    {/*    <ImageInput ref="inspectionPhone" type="phone" />*/}
+                    {/*    <ImageMultiSelect ref="inspectionSelect" type="inspection" />*/}
+                    {/*    <ImageTextArea ref="inspectionDetails" />*/}
+                    {/*    <div className="report-submit-button" onClick={this.submitInspection} >*/}
+                    {/*        <p className="report-submit-label"> Submit Free Inspection Form </p>*/}
+                    {/*        <img className="report-submit-img" src={SUBMIT_ICON} alt="Submit" />*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+
+                    {/*<div className="report-container">*/}
+                    {/*    <p className="header-text">2. Storm Report </p>*/}
+                    {/*    <p className="header-info-text">Use the form below to get a FREE storm report to see if your property has been affected by storm damage!</p>*/}
+                    {/*    <ImageInput ref="reportName" type="name" />*/}
+                    {/*    <ImageInput ref="reportAddress" type="address" />*/}
+                    {/*    <ImageInput ref="reportEmail" type="email" />*/}
+                    {/*    <ImageInput ref="reportPhone" type="phone" />*/}
+                    {/*    <ImageMultiSelect ref="reportSelect" type="report"/>*/}
+                    {/*    <ImageTextArea ref="reportDetails" />*/}
+                    {/*    <div className="report-submit-button" onClick={this.submitReport} >*/}
+                    {/*        <p className="report-submit-label"> Submit Storm Report Form </p>*/}
+                    {/*        <img className="report-submit-img" src={SUBMIT_ICON} alt="Submit" />*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
                 <WorkBanner />
                 <GoogleReviews />
@@ -76,9 +94,45 @@ class FreeEstimate extends Component {
                 <FreeQuoteBanner />
                 <ErrorModal errors={this.state.errors} ref="errorModal" />
                 <SuccessModal ref="successModal"/>
+                {/*<ConfirmModal parent={this} ref="confirmModal" />*/}
             </div>
         );
     }
+
+    // appointmentConfirmed() {
+    //
+    //     const name = this.refs.inspectionName.state.value;
+    //     const address = this.refs.inspectionAddress.state.value;
+    //     const email = this.refs.inspectionEmail.state.value;
+    //     const phone = this.refs.inspectionPhone.state.value;
+    //     const details = this.refs.inspectionDetails.state.value;
+    //     const roof = this.refs.inspectionSelect.refs.roof.state.checked;
+    //     const siding = this.refs.inspectionSelect.refs.siding.state.checked;
+    //     const gutters = this.refs.inspectionSelect.refs.gutters.state.checked;
+    //     const damage = this.refs.inspectionSelect.refs.damage.state.checked;
+    //     const appointmentTime = this.refs.appointmentTime.state.selectedTime;
+    //     const repEmail = this.refs.appointmentTime.state.repEmail;
+    //
+    //
+    //     // Create Body for API Call
+    //     const inspectionBody = {
+    //         name: name,
+    //         email: email,
+    //         phoneNumber: phone,
+    //         address: address,
+    //         stormDamage: damage,
+    //         roof: roof,
+    //         siding: siding,
+    //         gutters: gutters,
+    //         details: details,
+    //         appointmentTime: appointmentTime,
+    //         repEmail: repEmail,
+    //         requestType: 'inspection'
+    //     };
+    //
+    //
+    //
+    // }
 
     submitInspection = () => {
 
@@ -91,6 +145,9 @@ class FreeEstimate extends Component {
          const siding = this.refs.inspectionSelect.refs.siding.state.checked;
          const gutters = this.refs.inspectionSelect.refs.gutters.state.checked;
          const damage = this.refs.inspectionSelect.refs.damage.state.checked;
+         const appointmentTime = this.refs.appointmentTime.state.selectedTime;
+         const repEmail = this.refs.appointmentTime.state.repEmail;
+
 
         // Create Body for API Call
         const inspectionBody = {
@@ -103,6 +160,8 @@ class FreeEstimate extends Component {
             siding: siding,
             gutters: gutters,
             details: details,
+            appointmentTime: appointmentTime,
+            repEmail: repEmail,
             requestType: 'inspection'
         };
 
@@ -129,6 +188,11 @@ class FreeEstimate extends Component {
             errors.push("Phone Number")
         }
 
+        if(!appointmentTime) {
+            errors.push("Appointment Time")
+        }
+
+
         if(errors.length === 0) {
 
             const self = this;
@@ -142,8 +206,9 @@ class FreeEstimate extends Component {
                     self.clearInspectionFields();
 
                 }).catch(function (error) {
-                    console.log(error);
-                });
+                console.log(error);
+            });
+
         } else {
 
             this.setState({ errors: errors });
@@ -233,6 +298,8 @@ class FreeEstimate extends Component {
         this.refs.inspectionSelect.refs.siding.setState({ checked: false });
         this.refs.inspectionSelect.refs.gutters.setState({ checked: false });
         this.refs.inspectionSelect.refs.damage.setState({ checked: false });
+        this.refs.appointmentTime.setState({ repEmail: null, selectedDate: null, availableTimes: [], selectedTime: null });
+
     }
 
     clearReportFields() {
@@ -287,6 +354,60 @@ class ErrorModal extends Component {
     }
 }
 
+// class ConfirmModal extends Component {
+//
+//     constructor(props){
+//         super(props);
+//
+//         this.state = { hidden: true, appointmentTime: null };
+//
+//     }
+//
+//     setDate ( appointmentTime ){
+//         this.setState({ appointmentTime });
+//     }
+//
+//     show() {
+//         this.setState({ hidden: false});
+//     }
+//
+//
+//     closeModal() {
+//
+//         this.setState({hidden: true});
+//     }
+//
+//     close = () => {
+//
+//         this.setState({hidden: true});
+//     };
+//
+//     accept = () => {
+//
+//         this.props.parent.appointmentConfirmed();
+//         this.setState({hidden: true});
+//
+//     };
+//
+//     render() {
+//
+//
+//         let time = 'N/A';
+//         if(this.state.appointmentTime){
+//             time = moment(this.state.appointmentTime).format('MMMM Do YYYY, h:mm a');
+//         }
+//         return (
+//             <div className= {"modalContainer" + (this.state.hidden ? ' hiddenModal' : ' animatedModal')} onClick={this.closeModal.bind(this)}>
+//                 <div className="modalContent">
+//                     <p className="modalHeader"> You have requested an inspection at { time }, would you like to book this appointment? </p>
+//                     <button onClick={this.close} className="confirm-close-button"> Close </button>
+//                     <button onClick={this.accept} className="confirm-accept-button"> Accept </button>
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
+
 class SuccessModal extends Component {
 
     constructor(props){
@@ -306,13 +427,18 @@ class SuccessModal extends Component {
         this.setState({hidden: true});
     }
 
+    close = () => {
+
+        this.setState({hidden: true});
+    };
+
 
     render() {
         return (
             <div className= {"modalContainer" + (this.state.hidden ? ' hiddenModal' : ' animatedModal')} onClick={this.closeModal.bind(this)}>
                 <div className="modalContent">
-                    <p className="modalHeader">Your request has been submitted, we will reach out to you within 1-2 business days.  Thanks!</p>
-                    <button className="errorOkButton"> Close </button>
+                    <p className="modalHeader">Thanks for scheduling your inspection with Roof-ER! Check your email for additional details and feel free to call us at 703-239-3738 with any questions you may have or to reschedule your appointment! </p>
+                    <button onClick={this.close} className="errorOkButton"> Close </button>
                 </div>
             </div>
         );

@@ -9,12 +9,14 @@ import Address from '../../resources/images/inputIcons/icon_sm_address_gry.png';
 import Name from '../../resources/images/inputIcons/icon_sm_name_gry.png';
 import Email from '../../resources/images/inputIcons/icon_sm_email_gry.png';
 import Phone from '../../resources/images/inputIcons/icon_sm_phone_gry.png';
+import Code from '../../resources/images/inputIcons/code.png';
 
 const Placeholders = {
     address: 'Enter your address',
     name: 'Enter your name',
     email: 'Enter your email',
-    phone: 'Enter your phone number'
+    phone: 'Enter your phone number',
+    code: 'Enter your promotion code'
 
 };
 
@@ -46,6 +48,9 @@ class ImageInput extends Component {
                 break;
             case 'phone':
                 src = Phone;
+                break;
+            case 'code':
+                src = Code;
                 break;
             default: break;
         }
