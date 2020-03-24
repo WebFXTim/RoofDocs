@@ -222,8 +222,12 @@ $redLogoColor: rgb(183, 8, 8);
 
   .inspection-report-container {
     width: 80%;
-    height: 950px;
+    height: auto;
     margin: 50px auto;
+
+    .schedule-inspection-container {
+      min-width: 350px;
+    }
 
     .header-text {
       font: 42px PoppinsSemiBold, serif, sans-serif;
