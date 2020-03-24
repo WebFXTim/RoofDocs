@@ -74,7 +74,7 @@ class DateTimeInput extends Component {
         const formattedDate = format(date, 'MM/dd/yyyy');
 
         const self = this;
-        axios.get(`http://localhost:3000/v1/web/appointments`, {
+        axios.get(`https://api.theroofdocs.com/v1/web/appointments`, {
             params: {
                 date: formattedDate
             },
