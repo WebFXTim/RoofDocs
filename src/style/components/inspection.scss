@@ -271,6 +271,7 @@ $redLogoColor: rgb(183, 8, 8);
     width: 80%;
     height: auto;
     margin: 50px auto;
+    display: block;
 
     .schedule-inspection-container {
       min-width: 350px;
@@ -296,8 +297,11 @@ $redLogoColor: rgb(183, 8, 8);
     }
 
     .report-container {
-      display: none;
-      //width: 100%;
+      //display: none;
+      //clear: both;
+      float: inherit;
+      padding-top: 50px;
+      width: 100%;
       //height: 100%;
       //display: flex;
       //flex-direction: column;

@@ -49,7 +49,7 @@ class FreeEstimate extends Component {
                     <img className="banner-icon" src={BANNER_ICON_UP} alt="Banner Up Icon"/>
                 </div>
 
-                <p className="virus-disclaimer"> With businesses and citizens forced into quarantine over heightened COVID-19 concerns, ROOF-<span className="roofDocsRed">ER</span> has adapted our process to
+                <p className="virus-disclaimer"> With businesses and citizens forced into quarantine over heightened COVID-19 concerns, ROOF<span className="roofDocsRed">ER</span> has adapted our process to
                     the current environment. We are proud to offer a 100% remote roof replacement experience. Sign up for a free
                     inspection today and read more about our 4-step remote process below</p>
 
