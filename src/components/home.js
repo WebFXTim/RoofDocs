@@ -122,7 +122,7 @@ class Home extends Component {
             <div className="home">
                 <div className="covid-19-message" style={this.state.showCovidMessage ? { display: 'block'} : { display: 'none'}}>
                     <p>Due to COVID-19 restrictions, Roof-ER is limiting our direct customer contact as much as possible. We are committed to serving our customers through
-                        less traditional means as we all navigate through these unique times. Give us a call today to learn more on how we can provide you with
+                        less traditional means as we all navigate through these unique times. Give us a call today or <a className="roofDocsRed" href="/inspection">read more</a> on how we can provide you with
                         remote service on all of your exterior remodeling needs!
                     </p>
                     <button onClick={() => { this.setState({ showCovidMessage: false })}}> X </button>
@@ -131,7 +131,7 @@ class Home extends Component {
                     <div className="intro-basics">
                         <p className="intro-header"> The Roof Docs Difference </p>
                         <p className="intro-description"> A FREE, HONEST roof inspection. Every time. </p>
-                        <a href="inspection">
+                        <a href="/inspection">
                             <div className="free-inspection-button-container">
                                 <p className="home-inspection-label"> Sign Up For A Free Inspection </p>
                                 <img className="home-inspection-img" src={ARROW_ICON} alt="Arrow" />

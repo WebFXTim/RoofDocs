@@ -17,7 +17,18 @@ import Products from "./custom/products";
 import GoogleReviews from "./custom/googleReviews";
 import WorkBanner from "./custom/workBanner";
 import FreeQuoteBanner from "./custom/freeQuoteBanner";
+import INSPECT from "../resources/images/ourWork/img_1inspect.png";
+import DIAGNOSE from "../resources/images/ourWork/img_2diagnose.png";
+import PRESCRIBE from "../resources/images/ourWork/img_3prescribe.png";
+import OPERATE from "../resources/images/ourWork/img_4operate.png";
 
+const STEPS = [
+    { name: 'Inspect', icon: INSPECT, info: 'When you use our online scheduling tool to schedule an inspection, one of our trained Roof Docs will arrive on-site at the time and date requested in order to inspect your property. We\'ll let you know we\'ve arrived with a phone call, but will perform the inspection without any direct interaction '},
+    { name: 'Diagnose', icon: DIAGNOSE, info: ['During ', 'ROOF', <span className="logo-text" key="2">ER</span>, '\'s', ' inspection, our Roof Docs will search for evidence of storm damage, wear and tear, or any potential problem areas such as flashing on your roof or wall openings on your siding.']},
+    { name: 'Prescribe', icon: PRESCRIBE, info: 'If your exterior is in need of a repair or replacement due to storm damage, we will walk you through the insurance restoration process. If your roof or siding shows significant wear and tear but no storm damage, we will provide you with a free estimate. Each of these will be done with Zoom, a video conference software' }, // ['Your Roof Doc will provide you with an honest recommendation based on their findings. If damage is found, ROOF', <span className="logo-text" key="3">ER</span>,  ' may suggest filing an insurance claim.']},
+    { name: 'Operate', icon: OPERATE, info: 'Once you\'ve accepted our proposal and all the project details have been finalized, it\'s time for our trusted installation team to take care of the rest while you stay safe indoors' } // ['If your roof, siding, or gutters are found to have an ailment, the last step is to review project details with your Roof Doc and let ROOF',  <span className="logo-text" key="4">ER</span>, '\'s install team take care of the rest. ']},
+
+];
 
 class FreeEstimate extends Component {
 
@@ -38,9 +49,13 @@ class FreeEstimate extends Component {
                     <img className="banner-icon" src={BANNER_ICON_UP} alt="Banner Up Icon"/>
                 </div>
 
+                <p className="virus-disclaimer"> With businesses and citizens forced into quarantine over heightened COVID-19 concerns, ROOF-<span className="roofDocsRed">ER</span> has adapted our process to
+                    the current environment. We are proud to offer a 100% remote roof replacement experience. Sign up for a free
+                    inspection today and read more about our 4-step remote process below</p>
+
                 <div className="inspection-report-container">
 
-                    <div className="schedule-inspection-container">
+                    <div className="inspection-container">
                         <p className="header-text">1. Free Inspection </p>
                         <p className="header-info-text">Fill out the short form below to set up a FREE inspection by one of our Roof Docs today!</p>
                         <ImageInput ref="inspectionName" type="name" />
@@ -57,6 +72,20 @@ class FreeEstimate extends Component {
                         </div>
                     </div>
 
+                    <div className="report-container">
+
+                        { STEPS.map( (step, index) => (
+                            <div key={index} className="inspection-work-item-container">
+                                <div className="inspection-work-item-icon-container">
+                                    <img src={step.icon} alt="Step" />
+                                </div>
+                                <div className="inspection-work-item-info-container">
+                                    <p className="inspection-step-header"> { index + 1}. { step.name } </p>
+                                    <p className="inspection-step-info"> { step.info } </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
 
                     {/*<div className="inspection-container">*/}
                     {/*    <p className="header-text">1. Free Inspection </p>*/}

@@ -4,9 +4,23 @@ $redLogoColor: rgb(183, 8, 8);
   to {transform: translateY(0);opacity: 1;}
 }
 
+.roofDocsRed {
+  color: rgb(183, 8, 8);
+}
+
 .animatedModal {
   animation-name: modalFadeIn;
   animation-duration: .5s;
+}
+
+.virus-disclaimer {
+  width: 80%;
+  margin: 50px auto 0 auto;
+  padding-left: 15px;
+  border-left: 4px solid rgb(183, 8, 8);
+  font: 28px PoppinsSemiBold, serif, sans-serif;
+
+
 }
 
 
@@ -34,11 +48,11 @@ $redLogoColor: rgb(183, 8, 8);
   width: 80%;
   margin: 100px auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  //align-items: center;
+  justify-content: space-evenly;
 
   .header-text {
-    font: 62px PoppinsSemiBold, serif, sans-serif;
+    font: 54px PoppinsSemiBold, serif, sans-serif;
     color: $redLogoColor;
     margin-bottom: 0;
   }
@@ -50,7 +64,7 @@ $redLogoColor: rgb(183, 8, 8);
   }
 
   .inspection-container {
-    width: 45%;
+    width: 40%;
     float: left;
     height: 100%;
     display: flex;
@@ -58,7 +72,7 @@ $redLogoColor: rgb(183, 8, 8);
   }
 
   .report-container {
-    width: 45%;
+    width: 40%;
     float: right;
     height: 100%;
     display: flex;
@@ -158,7 +172,40 @@ $redLogoColor: rgb(183, 8, 8);
   }
 }
 
+/**** Process ****/
 
+.inspection-work-item-container {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+}
+
+.inspection-work-item-icon-container {
+  width: 100px;
+
+  img {
+    width: 90px;
+    height: auto;
+  }
+}
+
+.inspection-work-item-info-container {
+  flex-grow: 1;
+
+  .inspection-step-header {
+    width: 100%;
+    font: 36px PoppinsSemiBold, serif, sans-serif;
+    color: #b70808;
+    border-bottom: 1px solid red;
+    padding-left: 10px;
+  }
+
+  .inspection-step-info {
+    width: 100%;
+    font: 20px Poppins, serif, sans-serif;
+    padding-left: 10px;
+  }
+}
 
 /****
 
