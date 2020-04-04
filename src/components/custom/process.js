@@ -49,7 +49,7 @@ class Process extends Component {
         const step = PROCESS_STEPS[this.state.processIndex];
         return (
             <div className="home-process">
-                <div className="reviews-arrow-container left">
+                <div className="process-arrow-container left">
                     <img id="left" onClick={this.arrowClicked} src={LEFT_ARROW} alt="Previous"/>
                 </div>
                 <div className="process-image-container">
@@ -65,7 +65,7 @@ class Process extends Component {
                         ))}
                     </div>
                 </div>
-                <div className="reviews-arrow-container right">
+                <div className="process-arrow-container right">
                     <img id="right" onClick={this.arrowClicked} src={RIGHT_ARROW} alt="Next"/>
                 </div>
             </div>
