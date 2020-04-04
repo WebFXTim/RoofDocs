@@ -71,6 +71,8 @@ class MeetTheDocs extends Component {
                     <img className="banner-icon" src={BANNER_ICON_UP} alt="Banner Icon" />
                 </div>
 
+                <p className="docs-oath"> Our Hippocratic Oath: to hold a fiduciary responsibility to each and every one of our customers through a commitment to our core values of integrity, quality, and simplicity </p>
+
                 <div className="docs-list-container">
                     { DOCS.map( (doc,index) => (
                         <DocDisplay key={doc.name} parent={this} doc={doc} index={index} />

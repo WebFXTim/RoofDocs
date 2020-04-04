@@ -185,6 +185,22 @@ $redLogoColor: rgb(183, 8, 8);
   }
 }
 
+.social-review-icons {
+  width: 80%;
+  max-width: 500px;
+  height: 90px;
+  margin: 0 auto 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+
 /****************** SMALL LAPTOPS ****************/
 @media all and (max-width: 1500px) and (min-width: 850px) {
 
@@ -265,6 +281,10 @@ $redLogoColor: rgb(183, 8, 8);
       font: 16px Poppins, sans-serif, serif;
     }
   }
+
+  .social-review-icons {
+
+  }
 }
 
 /****************** TABLETS & MOBILE ****************/
@@ -293,7 +313,7 @@ $redLogoColor: rgb(183, 8, 8);
 
 
   .reviews-holder {
-    height: 400px;
+    max-height: 300px;
     margin-top: 10px;
   }
 

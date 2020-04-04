@@ -267,6 +267,10 @@ $redLogoColor: rgb(183, 8, 8);
 
 @media all and (max-width: 849px) {
 
+  .virus-disclaimer {
+    font: 18px PoppinsSemiBold, serif, sans-serif;
+  }
+
   .inspection-report-container {
     width: 80%;
     height: auto;

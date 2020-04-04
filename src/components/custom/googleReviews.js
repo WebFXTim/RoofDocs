@@ -10,6 +10,9 @@ import RIGHT_ARROW from '../../resources/images/custom/googleReviews/icon_carous
 import LEFT_ARROW from '../../resources/images/custom/googleReviews/icon_carouselarrow_left@2x.png';
 // const MYSQL_TIMESTAMP = 'YYYY-MM-DD hh:mm:ss';
 
+import GOOGLE_REVIEWS from '../../resources/images/social/get-google-reviews.png';
+import FACEBOOK_REVIEWS from '../../resources/images/social/facebookReviews.png';
+
 
 // Import OAuth2 & Keys
 // const { OAuth2Client } = require('google-auth-library');
@@ -109,6 +112,11 @@ class GoogleReviews extends Component {
                             <div className="reviews-arrow-container right">
                                 <img id="right" onClick={this.arrowClicked} src={RIGHT_ARROW} alt="Next"/>
                             </div>
+                        </div>
+                        <div className="social-review-icons">
+                            <img src={GOOGLE_REVIEWS} alt="Google" />
+                            <img src={FACEBOOK_REVIEWS} alt="Facebook" />
+
                         </div>
                     </div>
                 </div>
@@ -420,6 +428,7 @@ class GoogleReviewContainer extends Component  {
                     />
                     {/*<p>  </p>*/}
                 </div>
+
             </div>
         )
     }

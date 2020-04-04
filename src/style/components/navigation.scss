@@ -80,6 +80,33 @@ $redLogoColor: rgb(183, 8, 8);
   }
 }
 
+div.nav-tag {
+  width: auto;
+  display: inline-block;
+}
+
+.nav-tag-mobile-only {
+  display: none;
+
+}
+
+.subNavigationItem {
+  color: black;
+  font-family: Poppins, serif, sans-serif;
+  font-size: 16px;
+  width: 100%;
+  //text-align: center;
+  display: inline-block;
+  text-indent: 10px;
+  line-height: 40px;
+  text-transform: uppercase;
+
+  &:hover {
+    color: rgb(183, 8, 8);
+  }
+
+}
+
 .navigation-free-inspection-button {
   height: 50px;
   width: 270px;
@@ -132,12 +159,51 @@ $redLogoColor: rgb(183, 8, 8);
   margin-top: 20px;
 }
 
+// Hacking the Navigation
+
+.about-expanded {
+  //width:
+  position: absolute;
+  width: 120px;
+  left: 25px;
+  top: calc(100% + 5px);
+  height: 120px;
+  background-color: white;
+  visibility: hidden;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.about-expanded.showSub {
+  visibility: visible;
+  -webkit-transition: all 1.3s ease-in-out;
+  -moz-transition: all 1.3s ease-in-out;
+  -o-transition: all 1.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
+}
+
+#aboutTag:hover .about-expanded {
+  visibility: visible;
+  -webkit-transition: all 1.3s ease-in-out;
+  -moz-transition: all 1.3s ease-in-out;
+  -o-transition: all 1.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
+}
+
+
 
 /****************** SMALL LAPTOPS ****************/
 @media all and (max-width: 1500px) and (min-width: 850px) {
 
   .fa-bars {
     display: none;
+  }
+
+  .about-expanded {
+    //width:
+    position: absolute;
+    left: 0;
+    top: calc(100% - 5px);
   }
 
 
@@ -182,6 +248,10 @@ $redLogoColor: rgb(183, 8, 8);
       font-size: 18px;
       padding: 0 6px;
     }
+
+    .about-expanded {
+      top: calc(100% - 10px);
+    }
   }
 }
 
@@ -223,6 +293,26 @@ $redLogoColor: rgb(183, 8, 8);
     //-webkit-transition-timing-function: ease-in;
     //-o-transition-timing-function: ease-in;
     //transition-timing-function: ease-in;
+
+    div.nav-tag {
+      display: none;
+    }
+
+    .nav-tag-mobile-only {
+      display: inline-block;
+
+      .subNavigationItem {
+        color: white !important;
+        border-bottom: 1px solid white;
+        width: 100%;
+        display: inline-block;
+        line-height: 40px;
+        text-transform: uppercase;
+        font-family: PoppinsSemiBold, serif, sans-serif;
+        font-size: 19px;
+        text-align: center;
+      }
+    }
 
     .navigationItem {
       color: white !important;

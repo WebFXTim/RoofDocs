@@ -129,8 +129,8 @@ class Home extends Component {
                 </div>
                 <div className="intro">
                     <div className="intro-basics">
-                        <p className="intro-header"> The Roof Docs Difference </p>
-                        <p className="intro-description"> A FREE, HONEST roof inspection. Every time. </p>
+                        <p className="intro-header"> The Roof-ER Difference </p>
+                        <p className="intro-description"> A FREE,100% REMOTE roof inspection and consultation. No direct contact required.  </p>
                         <a href="/inspection">
                             <div className="free-inspection-button-container">
                                 <p className="home-inspection-label"> Sign Up For A Free Inspection </p>

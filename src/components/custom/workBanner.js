@@ -20,7 +20,7 @@ class WorkBanner extends Component {
                     <img className="banner-image" src={WHO_WE_ARE} alt="Who We Are"/>
                     <div className="work-info-container">
                         <p className="small-header"> Who We Are </p>
-                        <p className="large-header"> Our Hippocratic Oath </p>
+                        <p className="large-header"> Our Mission </p>
                         <p className="work-banner-description"> We are setting the new standard for roofing contractors. Our team is trained and held accountable to prioritize your best interest. </p>
                         <ArrowButton link="docs" text="Meet the Docs" />
                     </div>
