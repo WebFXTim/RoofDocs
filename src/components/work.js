@@ -94,12 +94,11 @@ const DIAGNOSE_STEPS = [
 
     'Our Field-app goes through a step-by-step checklist to ensure we gather all the information needed to properly assess your roof, siding, & gutter systems ',
     'The items we look for include wind and hail damage, weathering effects, faulty installation methods, etc.',
-    'Upon synthesizing our findings, we will determine our recommended course of action! a repair or replacement, an insurance claim for storm damage, or a simple sign off that your exterior is in good shape for a few more years!'
+    'Upon synthesizing our findings, we will determine our recommended course of action: a repair or replacement, an insurance claim for storm damage, or a simple sign off that your exterior is in good shape for a few more years!'
 ];
 
 const PRESCRIBE_STEPS = [
-    'Your Roof Doc will provide you with an honest recommendation based on their findings.',
-    ['Property insurance claim: if ROOF', <span className="logo-text" key="2">ER</span>, ' finds storm-related damage to your roof, siding, or gutters, we may recommend filing a claim with your insurance company. You can learn more about this process by visiting our FAQs page'],
+    ['Property insurance claim: if ROOF', <span className="logo-text" key="2">ER</span>, ' finds storm-related damage to your roof, siding, or gutters, we may recommend filing a claim with your insurance company. You can learn more about this process by visiting our ', <a href="/faqs"><span className="roofDocsRed">FAQs page</span> </a>],
     'Repair/replacement: often times, homeowners ask us to inspect their property because they\'re aware of an issue already. In these cases, our Roof Docs are experts at deciding exactly what needs done to ensure those problems are addressed',
     'Good/great condition: even if your roof/siding/gutters were installed quite a few years ago, there\'s a chance they have maintained their useful life and will remain serviceable for a few more years. We pride ourselves on providing honest recommendations to our homeowners - we won\'t sell you what you don\'t need!'
 ];

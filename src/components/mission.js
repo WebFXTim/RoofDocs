@@ -41,8 +41,8 @@ class OurMission extends Component {
                                 <p className="step-info"> At ROOF<span className="roofDocsRed">ER</span>, our mission is to hold a fiduciary responsibility to our customers, plain and simple. In an
                                     industry known for poor workmanship, lack of communication, and at times, outright deceit, we seek to restore the name of
                                     exterior remodeling contractors nationwide. By committing to our core values of integrity, quality, and simplicity, we promise
-                                    to deliver an experience every homeowner wants when remodeling their home: a simple and straightforward quality installation
-                                    for a fair and honest price.  </p>
+                                    to deliver an experience every homeowner wants when remodeling their home: <span className="step-info-bold">a simple and straightforward quality installation
+                                        for a fair and honest price.</span>  </p>
 
                             </div>
                         </div>

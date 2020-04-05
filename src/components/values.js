@@ -27,7 +27,7 @@ class OurValues extends Component {
                 <div className="values-banner">
                     <div className="values-banner-text-container">
                         <p className="banner-text-small"> Our Values </p>
-                        <p className="banner-text-large"> Integrity. Quality. Simplicity  </p>
+                        <p className="banner-text-large"> Integrity. Quality. Simplicity. </p>
                     </div>
                     <img className="banner-icon" src={BANNER_ICON_UP} alt="Banner Icon Up" />
                 </div>
@@ -71,10 +71,10 @@ class OurValues extends Component {
                             </div>
                             <div className="work-item-info-container">
                                 <p className="step-header"> 3. SIMPLICITY  </p>
-                                <p className="step-info"> Complexity = chaos.  After a storm, this equation has the potential to become even work.
-                                    ROOF<span className="roofDocsRed">ER</span> understands what homeowners want most after a storm: peace of mind and a straightforward
-                                    process to restoring their home.  Leveraging technology and emphasizing simplicity allows ROOF<span className="roofDocsRed">ER</span>
-                                    to offer an unrivaled value proposition: an expert restoration project with minimal headaches.
+                                <p className="step-info"> Complexity = chaos.  After a storm, this equation has the potential to become even worse.
+                                    ROOF<span className="roofDocsRed">ER</span> understands what homeowners want most after noticing an issue with their home exteriors.
+                                    Leveraging technology and emphasizing simplicity allows ROOF<span className="roofDocsRed">ER</span> to offer an unrivaled value
+                                    proposition: an expert restoration project with minimal headaches.
                                 </p>
                             </div>
                         </div>

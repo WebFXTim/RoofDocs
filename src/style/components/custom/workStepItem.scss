@@ -2,10 +2,11 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  //align-items: center;
 
   img {
     height: 20px;
+    margin-top: 7px;
     width: auto;
   }
 
@@ -13,7 +14,7 @@
     font: 16px Poppins, sans-serif, serif;
     padding-left: 10px;
     margin-bottom: 0;
-    padding-top: 5px;
+    //padding-top: 5px;
     padding-bottom: 5px;
   }
 
