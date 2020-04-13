@@ -30,6 +30,29 @@
         gtag('config', 'UA-143999896-1');
       }
   </script>
+  <script type="text/javascript">
+    if(window.location.hostname !== 'localhost') {
+      let a;
+      let rc = new RegExp('_bn_d=([^;]+)');
+      let rq = new RegExp('_bn_d=([^&#]*)', 'i');
+      let aq = rq.exec(window.location.href);
+      if (aq != null) a=aq;
+      else let ac = rc.exec(document.cookie);
+      if (ac != null) a=ac;
+      if (a != null) {
+        let _bn_d = a[1];
+        (function () {
+          let pl = document.createElement('script');
+          pl.type = 'text/javascript';
+          pl.async = true;
+          pl.src = ('https:' === document.location.protocol ? 'https://app' : 'http://app') + '.postaladmin.com/plDataEmbed.js';
+          let s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(pl, s);
+        })();
+    }
+    }
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
 </html>
