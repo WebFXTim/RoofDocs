@@ -44,7 +44,7 @@ class OurValues extends Component {
                                 <p className="step-info"> Great businesses are built on trust: trust in the people, the process, and the product.
                                     ROOF<span className="roofDocsRed">ER</span>'s commitment to integrity starts with our training methods and continues through
                                     our final quality inspection.  Customers know what to expect from us and as a result, are confident in referring us to their friends
-                                    and family.  ROOF<span className="roofDocsRed">ER</span> is proud to stay 90% of our new customers are referrals.
+                                    and family.  ROOF<span className="roofDocsRed">ER</span> is proud to say 90% of our new customers are referrals.
                                 </p>
                             </div>
                         </div>
@@ -57,7 +57,7 @@ class OurValues extends Component {
                             <div className="work-item-info-container">
                                 <p className="step-header"> 2. QUALITY  </p>
                                 <p className="step-info"> Sustainability doesn't come through shortcuts.  By focusing on quality from start-to-finish,
-                                    ROOF<span className="roofDocsRed">ER</span> is quickly becoming the premier roofing contractor in Northern Virginia for those customers
+                                    ROOF<span className="roofDocsRed">ER</span> is quickly becoming the premier roofing contractor in Northern Virginia and Maryland for those customers
                                     looking for a restoration project done right.  Whether it is our detailed inspections or our quality assurance protocol, we focus on
                                     every last detail to ensure our customers know they've received the best service available.
                                 </p>
@@ -72,7 +72,7 @@ class OurValues extends Component {
                             <div className="work-item-info-container">
                                 <p className="step-header"> 3. SIMPLICITY  </p>
                                 <p className="step-info"> Complexity = chaos.  After a storm, this equation has the potential to become even worse.
-                                    ROOF<span className="roofDocsRed">ER</span> understands what homeowners want most after noticing an issue with their home exteriors.
+                                    ROOF<span className="roofDocsRed">ER</span> understands what homeowners want most after noticing an issue with their Home's exterior.
                                     Leveraging technology and emphasizing simplicity allows ROOF<span className="roofDocsRed">ER</span> to offer an unrivaled value
                                     proposition: an expert restoration project with minimal headaches.
                                 </p>
