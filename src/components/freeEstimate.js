@@ -65,7 +65,7 @@ class FreeEstimate extends Component {
                         <ImageMultiSelect ref="inspectionSelect" type="inspection" />
                         <ImageTextArea ref="inspectionDetails" />
                         <DateTimeInput ref="appointmentTime" />
-                        <ImageInput ref="inspectionName" type="code" />
+                        <ImageInput ref="code" type="code" />
                         <div className="report-submit-button" onClick={this.submitInspection} >
                             <p className="report-submit-label"> Submit Free Inspection Form </p>
                             <img className="report-submit-img" src={SUBMIT_ICON} alt="Submit" />
