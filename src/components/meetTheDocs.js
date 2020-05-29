@@ -13,6 +13,7 @@ import Matt from '../resources/images/employees/MattFoster.png';
 import Rees from '../resources/images/employees/ReesNalley.png';
 import GregCampbell from '../resources/images/employees/GregCampbell.png';
 import DaveGolladay from '../resources/images/employees/DaveGolladay.png';
+import AustinStephens from '../resources/images/employees/AustinStephens.png';
 
 import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
 import EXPAND_ICON from "../resources/images/misc/icon_plusred.png";
@@ -43,6 +44,10 @@ const DAVE_BIO = 'David is no stranger to the DC Metropolitan area, as he has sp
     '2013.  Prior to working with RoofER, David worked in the financial field, educating families on how best to build and maintain wealth. Now David uses ' +
     'these skills to help clients maintain their home. Always a competitor, David is eager to offer the very best deals for his clients. David brings an ' +
     'in depth knowledge of residential properties, as he doubles as a Realtor in Maryland and Washington, D.C.';
+const AUSTIN_BIO = 'Austin has been interested in building since a young age, which led him to study Engineering Technology at ' +
+    'Lincoln Tech in Columbia, MD.  He applied what he learned there to help with his father’s building company in southern ' +
+    'Maryland until he decided to venture into home remodeling. He’s an expert in all things residential exterior and he’d love to ' +
+    'make a deal with you in the driveway or on the golf course.';
 
 
 const DOCS = [
@@ -53,6 +58,7 @@ const DOCS = [
     { name: 'Rees Nalley', position: 'President / Job Lead', photo: Rees, bio: REES_BIO },
     { name: 'Greg Campbell', position: 'Team Leader', photo: GregCampbell, bio: GREG_BIO },
     { name: 'Dave Golladay', position: 'Team Leader', photo: DaveGolladay, bio: DAVE_BIO },
+    { name: 'Austin Stephens', position: 'Team Leader', photo: AustinStephens, bio: AUSTIN_BIO },
 ];
 
 class MeetTheDocs extends Component {
