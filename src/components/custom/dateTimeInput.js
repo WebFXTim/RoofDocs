@@ -70,25 +70,29 @@ class DateTimeInput extends Component {
 
     loadAvailableTimes( date) {
 
+        if(date){
 
-        const formattedDate = format(date, 'MM/dd/yyyy');
+            const formattedDate = format(date, 'MM/dd/yyyy');
 
-        const self = this;
-        axios.get(`https://api.theroofdocs.com/v1/web/appointments`, {
-            params: {
-                date: formattedDate
-            },
-            headers: {
-                'Access-Control-Allow-Origin': '*'
-            }
-        }).then(function (response) {
-            console.log(response);
+            const self = this;
+            axios.get(`https://api.theroofdocs.com/v1/web/appointments`, {
+                params: {
+                    date: formattedDate
+                },
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                }
+            }).then(function (response) {
+                console.log(response);
 
-            self.setState( { availableTimes: response.data.data, selectedDate: date, selectedTime: null });
-        }).catch(function (error) {
-            const message = error.message ? error.message : 'Error getting available appointments, please try again';
-            console.log(message);
-        });
+                self.setState( { availableTimes: response.data.data, selectedDate: date, selectedTime: null });
+            }).catch(function (error) {
+                const message = error.message ? error.message : 'Error getting available appointments, please try again';
+                console.log(message);
+            });
+        } else {
+            this.setState( { availableTimes: [], selectedDate: null, selectedTime: null });
+        }
 
     }
 

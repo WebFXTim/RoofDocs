@@ -36,8 +36,7 @@
       let rc = new RegExp('_bn_d=([^;]+)');
       let rq = new RegExp('_bn_d=([^&#]*)', 'i');
       let aq = rq.exec(window.location.href);
-      if (aq != null) a=aq;
-      else let ac = rc.exec(document.cookie);
+      if (aq != null) { a=aq; } else { let ac = rc.exec(document.cookie); }
       if (ac != null) a=ac;
       if (a != null) {
         let _bn_d = a[1];

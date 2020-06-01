@@ -12,6 +12,7 @@ import SUBMIT_ICON from '../resources/images/misc/btn_icon_arrow_ko.png';
 import ImageTextArea from "./custom/imageTextArea";
 import ImageMultiSelect from "./custom/imageMultiSelect";
 import DateTimeInput from "./custom/dateTimeInput";
+import SelectInput from "./custom/selectInput";
 
 import Products from "./custom/products";
 import GoogleReviews from "./custom/googleReviews";
@@ -65,7 +66,8 @@ class FreeEstimate extends Component {
                         <ImageMultiSelect ref="inspectionSelect" type="inspection" />
                         <ImageTextArea ref="inspectionDetails" />
                         <DateTimeInput ref="appointmentTime" />
-                        <ImageInput ref="code" type="code" />
+                        <SelectInput ref="referralMethod"/>
+                        {/*<ImageInput ref="code" type="code" />*/}
                         <div className="report-submit-button" onClick={this.submitInspection} >
                             <p className="report-submit-label"> Submit Free Inspection Form </p>
                             <img className="report-submit-img" src={SUBMIT_ICON} alt="Submit" />
@@ -176,6 +178,8 @@ class FreeEstimate extends Component {
          const damage = this.refs.inspectionSelect.refs.damage.state.checked;
          const appointmentTime = this.refs.appointmentTime.state.selectedTime;
          const repEmail = this.refs.appointmentTime.state.repEmail;
+         const referralMethod = this.refs.referralMethod.state.value;
+         const referralName = this.refs.referralMethod.state.referral;
 
 
         // Create Body for API Call
@@ -191,7 +195,9 @@ class FreeEstimate extends Component {
             details: details,
             appointmentTime: appointmentTime,
             repEmail: repEmail,
-            requestType: 'inspection'
+            requestType: 'inspection',
+            referralMethod: referralMethod,
+            referralName: referralName
         };
 
         let errors = [];
@@ -225,6 +231,7 @@ class FreeEstimate extends Component {
         if(errors.length === 0) {
 
             const self = this;
+            // axios.post('http://localhost:3000/v1/inquiry', inspectionBody)
             axios.post('https://api.theroofdocs.com/v1/inquiry', inspectionBody)
                 .then(function (response) {
 
@@ -327,6 +334,7 @@ class FreeEstimate extends Component {
         this.refs.inspectionSelect.refs.siding.setState({ checked: false });
         this.refs.inspectionSelect.refs.gutters.setState({ checked: false });
         this.refs.inspectionSelect.refs.damage.setState({ checked: false });
+        this.refs.referralMethod.setState({ value: null, refferal: null});
         this.refs.appointmentTime.setState({ repEmail: null, selectedDate: null, availableTimes: [], selectedTime: null });
 
     }
