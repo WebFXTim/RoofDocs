@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
-
+import _ from 'lodash';
 
 // STYLING
 import '../../style/components/custom/selectInput.scss';
 import Inspect from "../../resources/images/inputIcons/icon_sm_inspect_gry.png";
 
-const OPTIONS  = ['Referral/recommendation', 'Doorhanger', 'Mailer', 'Spoke to a Rep', 'Google', 'Facebook', 'Other Online Search', 'Other'];
+const OPTIONS  = [
+    { option: 'Referral/recommendation', placeholder: 'Please type in who referred you' },
+    { option: 'Doorhanger', placeholder: 'Name on doorhanger' },
+    { option: 'Mailer', placeholder: ''},
+    { option: 'Spoke to a Rep', placeholder: 'Rep\'s Name'},
+    { option: 'Google', placeholder: ''},
+    { option: 'Facebook', placeholder: ''},
+    { option: 'Other Online Search', placeholder: ''},
+    { option: 'Other', placeholder: ''}
+    ];
 
 
 class SelectInput extends Component {
@@ -14,7 +23,7 @@ class SelectInput extends Component {
     constructor(props){
         super(props);
 
-        this.state = { value: null, referral: null }
+        this.state = { value: null, referral: null, placeholder: '' }
     }
 
 
@@ -31,17 +40,26 @@ class SelectInput extends Component {
                 <select onChange={this.valueChanged}>
                     <option key={0} value={null}> { 'Select...' } </option>
                     { OPTIONS.map( (opt, index) => (
-                        <option key={index} value={opt}> { opt } </option>
+                        <option key={index} value={opt.option}> { opt.option } </option>
                     ))}
                 </select>
-                <input maxLength={100} style={this.state.value === 'Referral/recommendation' || this.state.value === 'Doorhanger' ? { display: 'block'} : {display: 'none'}} onChange={this.referralChanged} value={ this.state.referral ? this.state.referral : '' } placeholder='Referral /Code '/>
+                <input maxLength={100}
+                       style={this.state.value === 'Referral/recommendation' || this.state.value === 'Doorhanger'
+                       || this.state.value === 'Spoke to a Rep' ? { display: 'block'} : {display: 'none'}}
+                       onChange={this.referralChanged} value={this.state.referral ? this.state.referral : '' }
+                       placeholder={this.state.placeholder}/>
             </div>
         );
     }
 
     valueChanged = e => {
 
-        this.setState({ value: e.target.value, referral: null });
+        let placeholder = _.filter(OPTIONS, opt => {
+            return opt.option === e.target.value
+        })[0]['placeholder'];
+
+
+        this.setState({ value: e.target.value, placeholder, referral: null });
     };
 
     referralChanged = e => {
