@@ -227,12 +227,10 @@ class FreeEstimate extends Component {
             errors.push("Appointment Time")
         }
 
-
         if(errors.length === 0) {
 
             const self = this;
-            // axios.post('http://localhost:3000/v1/inquiry', inspectionBody)
-            axios.post('https://api.theroofdocs.com/v1/inquiry', inspectionBody)
+            axios.post(`${process.env.REACT_APP_API_URL}inquiry`, inspectionBody)
                 .then(function (response) {
 
                     // Show Modal

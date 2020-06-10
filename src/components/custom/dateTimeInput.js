@@ -83,7 +83,7 @@ class DateTimeInput extends Component {
                     'Access-Control-Allow-Origin': '*'
                 }
             }).then(function (response) {
-                console.log(response);
+                // console.log(response);
 
                 self.setState( { availableTimes: response.data.data, selectedDate: date, selectedTime: null });
             }).catch(function (error) {
