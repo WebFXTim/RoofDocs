@@ -14,6 +14,7 @@ import Rees from '../resources/images/employees/ReesNalley.png';
 import GregCampbell from '../resources/images/employees/GregCampbell.png';
 import DaveGolladay from '../resources/images/employees/DaveGolladay.png';
 import AustinStephens from '../resources/images/employees/AustinStephens.png';
+import ShawnRaum from '../resources/images/employees/ShawnRaum.png';
 
 import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
 import EXPAND_ICON from "../resources/images/misc/icon_plusred.png";
@@ -48,6 +49,9 @@ const AUSTIN_BIO = 'Austin has been interested in building since a young age, wh
     'Lincoln Tech in Columbia, MD.  He applied what he learned there to help with his father’s building company in southern ' +
     'Maryland until he decided to venture into home remodeling. He’s an expert in all things residential exterior and he’d love to ' +
     'make a deal with you in the driveway or on the golf course.';
+const SHAWN_BIO = 'Shawn grew up in Long Island, New York and has been involved in several activities and jobs. He has spent time as a machinist, lifeguard, gymnast, ' +
+    'lacrosse player and has volunteered over 400 hours with special needs children. After graduating high school, he attended Mount St. Mary university and played lacrosse all four years. ' +
+    'Shawn’s interest for the industry grew from his desire to help people. ';
 
 
 const DOCS = [
@@ -59,6 +63,7 @@ const DOCS = [
     { name: 'Greg Campbell', position: 'Team Leader', photo: GregCampbell, bio: GREG_BIO },
     { name: 'Dave Golladay', position: 'Team Leader', photo: DaveGolladay, bio: DAVE_BIO },
     { name: 'Austin Stephens', position: 'Team Leader', photo: AustinStephens, bio: AUSTIN_BIO },
+    { name: 'Shawn Raum', position: 'Team Leader', photo: ShawnRaum, bio: SHAWN_BIO },
 ];
 
 class MeetTheDocs extends Component {
