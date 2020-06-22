@@ -18,6 +18,7 @@ import EULA from './components/eula';
 import FAQs from './components/faqs';
 import OurMission from "./components/mission";
 import OurValues from "./components/values";
+import ThankYou from "./components/thankyou";
 
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
                         <Route path="/mission" component={OurMission} />
                         <Route path="/values" component={OurValues} />
                         <Route path="/faqs" component={FAQs} />
+                        <Route path="/inspection/thankyou" component={ThankYou} />
                         <Route path="/inspection" component={FreeEstimate} />
                         <Route path="/privacy" component={PrivacyPolicy} />
                         <Route path="/eula" component={EULA} />

@@ -229,18 +229,21 @@ class FreeEstimate extends Component {
 
         if(errors.length === 0) {
 
-            const self = this;
+            // const self = this;
             axios.post(`${process.env.REACT_APP_API_URL}inquiry`, inspectionBody)
                 .then(function (response) {
 
-                    // Show Modal
-                    self.refs.successModal.show();
+                    // Redirect to Thank You Page
+                    window.location.href = "/inspection/thankyou";
 
-                    // Clear Text Fields
-                    self.clearInspectionFields();
+                    // // Show Modal
+                    // self.refs.successModal.show();
+                    //
+                    // // Clear Text Fields
+                    // self.clearInspectionFields();
 
                 }).catch(function (error) {
-                console.log(error);
+                    console.log(error);
             });
 
         } else {
