@@ -17,6 +17,8 @@ import SLIDE3_SELECTED from '../../resources/images/custom/process/btn_num3_acti
 import SLIDE3_NOT_SELECTED from '../../resources/images/custom/process/btn_num3_inactive.png';
 import SLIDE4_SELECTED from '../../resources/images/custom/process/btn_num4_active.png';
 import SLIDE4_NOT_SELECTED from '../../resources/images/custom/process/btn_num4_inactive.png';
+import LEFT_ARROW from "../../resources/images/custom/googleReviews/icon_carouselarrow_left@2x.png";
+import RIGHT_ARROW from "../../resources/images/custom/googleReviews/icon_carouselarrow_right@2x.png";
 
 
 const SLIDES = [
@@ -30,7 +32,7 @@ const PROCESS_STEPS = [
     { key: 0, image: INSPECT, name: 'Inspect', description: ['ROOF', <span className="logo-text" key="1">ER</span>, ' will perform a FREE inspection of your roof, siding, and gutters to find evidence of wind, hail, or other damage.'] },
     { key: 1, image: DIAGNOSE, name: 'Diagnose', description: ['ROOF', <span className="logo-text">ER</span>, ' and your Roof Doc will properly assess all findings to determine whether your exterior systems are storm-damaged, old, or perfectly fine.']},
     { key: 2, image: PRESCRIBE, name: 'Prescribe', description: ['Your Roof Doc will provide you with an honest recommendation based on their findings. If damage is found, ROOF', <span className="logo-text">ER</span>, ' may suggest filing an insurance claim.']},
-    { key: 3, image: OPERATE, name: 'Operate', description: ['If your roof, siding, or gutters are found to have an ailment, the last step is to review project details with your Roof Doc and let ROOF', <span className="logo-text">ER</span>, '\'s install team take care of the rest.']}
+    { key: 3, image: OPERATE, name: 'Operate', description: ['If your roof, siding, or gutters are found to have an ailment, the last step is to review project details with your Roof Doc (via a video call) and let ROOF', <span className="logo-text">ER</span>, '\'s install team take care of the rest.']}
 ];
 
 class Process extends Component {
@@ -47,6 +49,9 @@ class Process extends Component {
         const step = PROCESS_STEPS[this.state.processIndex];
         return (
             <div className="home-process">
+                <div className="process-arrow-container left">
+                    <img id="left" onClick={this.arrowClicked} src={LEFT_ARROW} alt="Previous"/>
+                </div>
                 <div className="process-image-container">
                     <img src={step.image} alt="Process Icon"/>
                 </div>
@@ -60,10 +65,35 @@ class Process extends Component {
                         ))}
                     </div>
                 </div>
+                <div className="process-arrow-container right">
+                    <img id="right" onClick={this.arrowClicked} src={RIGHT_ARROW} alt="Next"/>
+                </div>
             </div>
 
         );
     }
+
+    arrowClicked = e => {
+
+        let newIndex = this.state.processIndex;
+        if(e.target.id === 'left'){
+            if(newIndex === 0) {
+                newIndex = 3
+            } else {
+                newIndex -= 1
+            }
+
+        } else {
+            if(newIndex === 3) {
+                newIndex = 0
+            } else {
+                newIndex += 1
+            }
+        }
+
+        this.setState({ processIndex: newIndex });
+
+    };
 
     slideClicked = e => {
         this.setState ({  processIndex: parseInt(e.target.id) })

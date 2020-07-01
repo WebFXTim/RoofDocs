@@ -1,0 +1,47 @@
+
+.date-input-container {
+  width: 100%;
+  border-bottom: 3px solid #707070;
+  margin-bottom: 30px;
+}
+
+.schedule-date-help-text {
+  margin-top: 15px;
+  font: 20px PoppinsSemiBold, serif, sans-serif;
+}
+
+.schedule-time-container {
+  width: 405px;
+  margin: 20px 0;
+  height: 250px;
+  overflow-y: auto;
+  border: 2px solid rgb(183, 8, 8);
+  border-radius: 5px;
+
+  p {
+    text-align: center;
+    line-height: 40px !important;
+    height: 40px;
+    width: 100px;
+    display: inline-block;
+    float: left;
+    font: 18px Poppins, serif, sans-serif;
+    margin-bottom: 0;
+  }
+
+  .sel-time {
+    background-color: rgb(183, 8, 8);
+    color: white;
+  }
+
+  p:hover {
+    cursor: pointer;
+    background-color: rgb(183, 8, 8);
+    color: white
+  }
+
+}
+
+.schedule-date-picker {
+  width: 400px;
+}

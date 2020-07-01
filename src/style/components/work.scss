@@ -92,6 +92,7 @@ $redLogoColor: rgb(182, 8, 7);
 
     .work-display-image-container {
       width: 30%;
+
       display: flex;
       margin-bottom: 30px;
       background-color: white;
@@ -100,7 +101,7 @@ $redLogoColor: rgb(182, 8, 7);
 
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
 
         &:hover {
           cursor: pointer;
@@ -202,6 +203,12 @@ $redLogoColor: rgb(182, 8, 7);
           width: 100%;
           font: 20px Poppins, serif, sans-serif;
           padding-left: 10px;
+        }
+
+        .step-info-bold {
+
+          font: 20px PoppinsSemiBold, serif, sans-serif;
+
         }
       }
     }
@@ -407,7 +414,7 @@ $redLogoColor: rgb(182, 8, 7);
 
       .work-display-image-container {
         width: 90%;
-        display: block;
+        display: flex;
         margin-bottom: 30px;
         background-color: white;
         box-shadow: 0 0 10px #00000052;
@@ -443,9 +450,34 @@ $redLogoColor: rgb(182, 8, 7);
           .step-header {
             font: 42px PoppinsSemiBold, serif, sans-serif;
           }
+
+          .step-container {
+            width: 100%;
+            height: 50px;
+            background-color: red;
+          }
+
+
         }
       }
     }
   }
+}
 
+/** Edge Doesn't Support Space Evently **/
+@supports (-ms-accelerator:true) or (-ms-ime-align:auto)  {
+  .gallery-container {
+    .gallery-images-container {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .gallery-container {
+    .gallery-images-container {
+      justify-content: space-around;
+    }
+  }
 }

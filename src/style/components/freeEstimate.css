@@ -129,6 +129,15 @@ label.container {
     display: block;
 }
 
+.thankYouMessage {
+    width: 90%;
+    margin: 50px auto 50px;
+    padding-top: 25px;
+    text-align: center;
+    font: 30px PoppinsMedium, serif, sans-serif;
+    color: rgb(183, 8, 8);
+}
+
 
 
 
@@ -223,6 +232,15 @@ label.container {
 
     .showEstimate {
         display: block;
+    }
+
+    .thankYouMessage {
+        width: 90%;
+        margin: 50px auto 50px;
+        padding-top: 25px;
+        text-align: center;
+        font: 22px PoppinsMedium, serif, sans-serif;
+        color: rgb(183, 8, 8);
     }
 
 }

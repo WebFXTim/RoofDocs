@@ -12,6 +12,9 @@ import Oliver from '../resources/images/employees/OliverBrown.png';
 import Matt from '../resources/images/employees/MattFoster.png';
 import Rees from '../resources/images/employees/ReesNalley.png';
 import GregCampbell from '../resources/images/employees/GregCampbell.png';
+import DaveGolladay from '../resources/images/employees/DaveGolladay.png';
+import AustinStephens from '../resources/images/employees/AustinStephens.png';
+import ShawnRaum from '../resources/images/employees/ShawnRaum.png';
 
 import BANNER_ICON_UP from "../resources/images/misc/plus_icon_up.png";
 import EXPAND_ICON from "../resources/images/misc/icon_plusred.png";
@@ -34,7 +37,21 @@ const REES_BIO = 'Rees was introduced to the home remodeling industry just out o
 const CHRIS_BIO = 'Chris is not the ideal candidate to inspect a roof, which is why he\'s kept behind a desk.  Chris has a bachelor\'s degree in Computer Science, and is in charge of software development with The Roof ' +
     'Docs.  He enjoys streamlining business processes through software, which helps the Docs when they\'re out in the field.  He\'s slowly learning the industry, who knows, maybe one day he\'ll be qualified enough ' +
     'to help with your inspection';
-const GREG_BIO = 'Greg will be completing this shortly..hopefully..';
+const GREG_BIO = 'Greg went to Shepherd University before moving to California in 1994 where he entered the roofing industry by delivering material to roof tops all over the SoCal area. Greg came back to ' +
+    'the DMV area, played Semi-Pro football, and has worked for roofing suppliers and installers for the past 20+ years. As our production manager Greg has a strong belief that the customer should receive ' +
+    'comprehensive service on each and every job. Greg and his wife Jenn have 2 boys in elementary school and enjoy watching them play sports.';
+const DAVE_BIO = 'David is no stranger to the DC Metropolitan area, as he has spent his entire life here and even attended Bowie State University where ' +
+    'he graduated with a Bachelor of Arts in Communications. David also played basketball at Bowie State University and won a Conference Championship in ' +
+    '2013.  Prior to working with RoofER, David worked in the financial field, educating families on how best to build and maintain wealth. Now David uses ' +
+    'these skills to help clients maintain their home. Always a competitor, David is eager to offer the very best deals for his clients. David brings an ' +
+    'in depth knowledge of residential properties, as he doubles as a Realtor in Maryland and Washington, D.C.';
+const AUSTIN_BIO = 'Austin has been interested in building since a young age, which led him to study Engineering Technology at ' +
+    'Lincoln Tech in Columbia, MD.  He applied what he learned there to help with his father’s building company in southern ' +
+    'Maryland until he decided to venture into home remodeling. He’s an expert in all things residential exterior and he’d love to ' +
+    'make a deal with you in the driveway or on the golf course.';
+const SHAWN_BIO = 'Shawn grew up in Long Island, New York and has been involved in several activities and jobs. He has spent time as a machinist, lifeguard, gymnast, ' +
+    'lacrosse player and has volunteered over 400 hours with special needs children. After graduating high school, he attended Mount St. Mary university and played lacrosse all four years. ' +
+    'Shawn’s interest for the industry grew from his desire to help people. ';
 
 
 const DOCS = [
@@ -44,6 +61,9 @@ const DOCS = [
     { name: 'Matt Foster', position: 'Team Leader', photo: Matt, bio: MATT_BIO },
     { name: 'Rees Nalley', position: 'President / Job Lead', photo: Rees, bio: REES_BIO },
     { name: 'Greg Campbell', position: 'Team Leader', photo: GregCampbell, bio: GREG_BIO },
+    { name: 'Dave Golladay', position: 'Team Leader', photo: DaveGolladay, bio: DAVE_BIO },
+    { name: 'Austin Stephens', position: 'Team Leader', photo: AustinStephens, bio: AUSTIN_BIO },
+    { name: 'Shawn Raum', position: 'Team Leader', photo: ShawnRaum, bio: SHAWN_BIO },
 ];
 
 class MeetTheDocs extends Component {
@@ -61,6 +81,8 @@ class MeetTheDocs extends Component {
                     </div>
                     <img className="banner-icon" src={BANNER_ICON_UP} alt="Banner Icon" />
                 </div>
+
+                <p className="docs-oath"> Our Hippocratic Oath: to hold a fiduciary responsibility to each and every one of our customers through a commitment to our core values of integrity, quality, and simplicity </p>
 
                 <div className="docs-list-container">
                     { DOCS.map( (doc,index) => (

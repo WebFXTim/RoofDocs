@@ -1,0 +1,102 @@
+$redLogoColor: rgb(183, 8, 8);
+$borderGray: rgb(93, 93, 93);
+
+.mission-container {
+  padding-bottom: 20px;
+}
+
+.black-text {
+  color: black;
+}
+
+.logo-text {
+  color: rgb(183, 8, 8);
+}
+
+.mission-banner {
+  background: transparent url('../../resources/images/misc/background_banner.png') center center repeat padding-box;
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 290px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .banner-icon {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50px);
+  }
+}
+
+.mission-banner-text-container {
+  position: absolute;
+  top: 50%;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .banner-text-small {
+    text-transform: uppercase;
+    color: white;
+    font: 24px PoppinsBold, serif, sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+    text-shadow: 0 0 10px #000000;
+  }
+  .banner-text-large {
+    color: white;
+    font: 56px PoppinsSemiBold, serif, sans-serif;
+    text-align: center;
+    text-shadow: 0 0 10px #000000;
+  }
+}
+
+
+/****************** SMALL LAPTOPS ****************/
+@media all and (max-width: 1500px) and (min-width: 850px) {
+
+  .mission-banner-text-container {
+
+    .banner-text-large {
+      font: 42px PoppinsSemiBold, serif, sans-serif;
+    }
+  }
+
+}
+
+@media all and (max-width: 849px) and (min-width: 620px) {
+
+  .mission-banner-text-container {
+    width: 100%;
+
+    .banner-text-small {
+      font-size: 20px;
+    }
+
+    .banner-text-large {
+      font: 34px PoppinsSemiBold, serif, sans-serif;
+    }
+  }
+
+
+}
+
+@media all and (max-width: 619px) {
+
+  .mission-banner-text-container {
+    width: 100%;
+
+    .banner-text-small {
+      font-size: 20px;
+    }
+
+    .banner-text-large {
+      font: 34px PoppinsSemiBold, serif, sans-serif;
+    }
+  }
+}

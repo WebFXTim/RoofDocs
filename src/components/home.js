@@ -34,7 +34,7 @@ class Home extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { formSubmitted: false, errors: [ ], phoneNumber: ''};
+        this.state = { formSubmitted: false, errors: [ ], phoneNumber: '', showCovidMessage: true };
     }
 
     phoneChanged = e => {
@@ -120,11 +120,18 @@ class Home extends Component {
         return (
 
             <div className="home">
+                <div className="covid-19-message" style={this.state.showCovidMessage ? { display: 'block'} : { display: 'none'}}>
+                    <p>Due to COVID-19 restrictions, Roof-ER is limiting our direct customer contact as much as possible. We are committed to serving our customers through
+                        less traditional means as we all navigate through these unique times. Give us a call today or <a className="roofDocsRed" href="/inspection">read more</a> on how we can provide you with
+                        remote service on all of your exterior remodeling needs!
+                    </p>
+                    <button onClick={() => { this.setState({ showCovidMessage: false })}}> X </button>
+                </div>
                 <div className="intro">
                     <div className="intro-basics">
-                        <p className="intro-header"> The RoofDocs Difference </p>
-                        <p className="intro-description"> A FREE, HONEST roof inspection. Every time. </p>
-                        <a href="inspection">
+                        <p className="intro-header"> The Roof-ER Difference </p>
+                        <p className="intro-description"> A FREE, 100% REMOTE roof inspection and consultation. No direct contact required.  </p>
+                        <a href="/inspection">
                             <div className="free-inspection-button-container">
                                 <p className="home-inspection-label"> Sign Up For A Free Inspection </p>
                                 <img className="home-inspection-img" src={ARROW_ICON} alt="Arrow" />
@@ -134,7 +141,7 @@ class Home extends Component {
                 </div>
                 <div className="whatWeDo" id="whatWeDo" >
                     <div className="content">
-                        <p className="smallText"> ROOF-ER SERVICES </p>
+                        <p className="smallText"> ROOF<span className="logo-text">ER</span> SERVICES </p>
                         <p className="largeText"> What we do. </p>
                         <div className="services-container">
                             <div className="single-service-container">

@@ -14,13 +14,13 @@ $redLogoColor: rgb(183, 8, 8);
       text-align: center;
       margin-top: 100px;
       margin-bottom: 0;
-      font: 62px PoppinsSemiBold, serif, sans-serif;
+      font: 48px PoppinsSemiBold, serif, sans-serif;
       color: $redLogoColor
     }
 
     .success-subheader {
       text-align: center;
-      font: 28px Poppins, serif, sans-serif;
+      font: 24px Poppins, serif, sans-serif;
       color: #302F2F;
     }
   }
@@ -96,7 +96,7 @@ $redLogoColor: rgb(183, 8, 8);
   flex-direction: column;
 
   .review-name {
-    font: 25px PoppinsMedium, sans-serif, serif;
+    font: 22px PoppinsMedium, sans-serif, serif;
     margin-bottom: 0;
     text-indent: 15px;
   }
@@ -107,14 +107,14 @@ $redLogoColor: rgb(183, 8, 8);
   float: right;
   max-height: 325px;
   margin: auto;
-  overflow: scroll;
+  overflow: hidden;
 
   p {
-    font: 18px Poppins, sans-serif, serif;
+    font: 16px Poppins, sans-serif, serif;
   }
 
   .LinesEllipsis {
-    font: 18px Poppins, sans-serif, serif;
+    font: 16px Poppins, sans-serif, serif;
     color: #302F2F;
 
 
@@ -184,6 +184,22 @@ $redLogoColor: rgb(183, 8, 8);
     transform: rotate(35deg);
   }
 }
+
+.social-review-icons {
+  width: 80%;
+  max-width: 500px;
+  height: 90px;
+  margin: 0 auto 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
 
 /****************** SMALL LAPTOPS ****************/
 @media all and (max-width: 1500px) and (min-width: 850px) {
@@ -265,6 +281,10 @@ $redLogoColor: rgb(183, 8, 8);
       font: 16px Poppins, sans-serif, serif;
     }
   }
+
+  .social-review-icons {
+
+  }
 }
 
 /****************** TABLETS & MOBILE ****************/
@@ -293,7 +313,7 @@ $redLogoColor: rgb(183, 8, 8);
 
 
   .reviews-holder {
-    height: 400px;
+    max-height: 300px;
     margin-top: 10px;
   }
 
@@ -353,7 +373,7 @@ $redLogoColor: rgb(183, 8, 8);
     float: inherit;
     max-height: 325px;
     margin: auto;
-    overflow: scroll;
+    overflow: hidden;
 
     p {
       text-align: center;
@@ -382,5 +402,18 @@ $redLogoColor: rgb(183, 8, 8);
       .google-reviews-background {
         display: none;
       }
+  }
+}
+
+/** Edge Doesn't Support Space Evently **/
+@supports (-ms-accelerator:true) or (-ms-ime-align:auto)  {
+  .google-reviews-list {
+      justify-content: space-around;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .google-reviews-list {
+    justify-content: space-around;
   }
 }

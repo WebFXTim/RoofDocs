@@ -25,7 +25,7 @@ class Navigation extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { collapsed: false };
+        this.state = { collapsed: false, showSubnav: false };
     }
 
     render() {
@@ -51,15 +51,35 @@ class Navigation extends Component {
                     <div className="navigation-items-container">
                         <i className="fa fa-bars"  aria-hidden="true"  onClick={ () => this.setState({ collapsed: !this.state.collapsed })} />
                         <div className={`navigation-links-container ${this.state.collapsed ? "is-expanded" : ""}`}>
+                            <NavLink onClick={this.navLinkClicked} className="nav-tag-mobile-only" id="mission" to='/mission'>
+                                <div className="subNavigationItem"> Our Mission</div>
+                            </NavLink>
+                            <NavLink onClick={this.navLinkClicked} className="nav-tag-mobile-only" id="values" to='/values'>
+                                <div className="subNavigationItem"> Our Values</div>
+                            </NavLink>
+                            <NavLink onClick={this.navLinkClicked} className="nav-tag-mobile-only" id="docs" to='/docs'>
+                                <div className="subNavigationItem"> Our Team</div>
+                            </NavLink>
+                            <div className="nav-tag" id="aboutTag" >
+                                <div onClick={this.navLinkClicked} id="about" className="navigationItem">
+                                    About Us
+                                </div>
+                                <div className={`about-expanded ${this.state.showSubnav ? ' showSub' : ''}`}>
+                                    <NavLink onClick={this.navLinkClicked} className="nav-tag" id="mission" to='/mission'>
+                                        <div className="subNavigationItem"> Our Mission</div>
+                                    </NavLink>
+                                    <NavLink onClick={this.navLinkClicked} className="nav-tag" id="values" to='/values'>
+                                        <div className="subNavigationItem"> Our Values</div>
+                                    </NavLink>
+                                    <NavLink onClick={this.navLinkClicked} className="nav-tag" id="docs" to='/docs'>
+                                        <div className="subNavigationItem"> Our Team</div>
+                                    </NavLink>
+                                </div>
+                                <img src={SLASH} alt="Separator"/>
+                            </div>
                             <NavLink onClick={this.navLinkClicked} className="nav-tag" to='/work'>
                                 <div className="navigationItem">
                                     Our Work
-                                </div>
-                                <img src={SLASH} alt="Separator"/>
-                            </NavLink>
-                            <NavLink onClick={this.navLinkClicked} className="nav-tag" to='/docs'>
-                                <div className="navigationItem">
-                                    Meet the Docs
                                 </div>
                                 <img src={SLASH} alt="Separator"/>
                             </NavLink>
@@ -92,7 +112,15 @@ class Navigation extends Component {
     }
 
 
-    navLinkClicked = () => {
+    navLinkClicked = e => {
+
+
+        // Toggle Subnav
+        if(e.target.id === 'about'){
+            this.setState({ showSubnav: !this.state.showSubnav });
+        } else {
+            this.setState({ showSubnav: false });
+        }
 
         this.setState ({ collapsed: false });
 

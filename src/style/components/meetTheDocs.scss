@@ -43,13 +43,21 @@
     }
   }
 
+  .docs-oath {
+    width: 80%;
+    margin: 50px auto 0 auto;
+    padding-left: 15px;
+    border-left: 4px solid #b70808;
+    font: 28px PoppinsSemiBold, serif, sans-serif;
+  }
+
   .docs-list-container {
     width: 80%;
     margin: 100px auto 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
 }
@@ -208,8 +216,13 @@
 /*************** TABLETS ***************/
 @media all and (max-width: 849px) and (min-width: 700px) {
 
+
+
   .meet-the-docs-container {
 
+    .docs-oath {
+      font: 20px PoppinsSemiBold, serif, sans-serif;
+    }
 
     .docs-banner-text-container {
       width: 100%;
@@ -287,7 +300,13 @@
 /*************** MOBILE ***************/
 @media all and (max-width: 699px) {
 
+
+
   .meet-the-docs-container {
+
+    .docs-oath {
+      font: 17px PoppinsSemiBold, serif, sans-serif;
+    }
 
     .docs-banner-text-container {
       width: 100%;
@@ -307,7 +326,7 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
     }
   }
