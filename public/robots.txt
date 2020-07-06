@@ -1,2 +1,3 @@
 User-Agent: *
 Disallow: /downloads/
+Sitemap: https://www.theroofdocs.com/sitemap.xml  
